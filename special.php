@@ -160,7 +160,6 @@ function viewSlide(className, slideNo = -1)
 <?php endif; ?>
 </ul>
 <section id="post">
-<a class="onmouse_button" href="/sign/submit.php" target="_parent">色と記号を投稿する</a>
 <input type="range" id="slide_speed" value="7500" min="5000" max="10000">
 </section>
 </body>

@@ -31,7 +31,7 @@ $(function(){
 $("#").load("");
 })
 </script>
-<link rel="stylesheet" type="text/css" href="http://newlifecollection.pe.hu/sign/symbol_color.css" />
+<link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
 <title>自分の気持ちを知る・表す | creative-community.space</title>
 <style type="text/css">
 body  {overflow-x:hidden;}

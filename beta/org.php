@@ -29,14 +29,13 @@ fclose($fp);
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title> 令和三年三月 | 言葉の強さと方向と感情 </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://creative-community.pe.hu/coding/js/org.js"></script>
+<script src="/coding/js/org.js"></script>
 <script type="text/javascript">
 $(function(){
 $("#").load("");
 })
 </script>
-<link rel="stylesheet" href="/css/org.css"/>
-<link rel="stylesheet" href="http://creative-community.pe.hu/coding/css/popup.css"/>
+<link rel="stylesheet" href="/sign/org.css"/>
 <style type="text/css">
 </style>
 </head>

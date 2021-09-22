@@ -32,8 +32,8 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="symbol_color.css" />
-<title>自分の気持ちを知る・表す</title>
+<link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
+<title>自分の気持ちを知る・表す | creative-community.space</title>
 <style type="text/css">
 body  {overflow-x:hidden;}
 #bg_link {

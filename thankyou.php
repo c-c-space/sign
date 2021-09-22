@@ -38,18 +38,17 @@ fclose($fp);
 </style>
 </head>
 <body>
-<section id="post">
-<a id="button" href="/members/">Members Only</a>
-</section>
   
 <ul id="symbol_color">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
-<li id="bg_color" style="background:#<?=h($row[1])?>;"><span id="bg_symbol" class="fontmotion"><?=h($row[0])?></span></li>
+<li class="bg_color" style="background:#<?=h($row[1])?>;">
+<span class="bg_symbol"><?=h($row[0])?></span>
+</li>
 <?php endforeach; ?>
 <?php else: ?>
-<li id="bg_color" style="background:#fff;">
-<span id="bg_symbol">✔</span>
+<li class="bg_color" style="background:#fff;">
+<span class="bg_symbol">✔</span>
 </li>
 <?php endif; ?>
 </ul>

@@ -123,7 +123,7 @@ print "".date("m.d.y H:i",$mod);
 ?>
 </i> 更新</span>
 
-<div id="more" class="none">
+<div id="log" class="none">
 more
 </div>
 </div>
@@ -147,14 +147,14 @@ more
     })
 
     let btn = document.querySelector('#bg_link');
-    let more = document.querySelector('#more');
+    let log = document.querySelector('#log');
      
     let btnToggleclass = function(el) {
       el.classList.toggle('open');
     }
      
     btn.addEventListener('click', function() {
-      btnToggleclass(more);
+      btnToggleclass(log);
     }, false);
 </script>
 </body>

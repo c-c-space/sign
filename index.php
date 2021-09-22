@@ -67,6 +67,24 @@ body  {overflow-x:hidden;}
   background-size: 500% 500%;
   animation: gradient 50s ease infinite;
 }
+.none {
+    z-index: 50;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    overflow-y: auto;
+    transition: all 1500ms ease;
+    position: fixed;
+}
+.open {
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    overflow-y: auto;
+    transition: all 5555ms ease;
+    position: fixed;
+}
 @keyframes gradient {
   0% {
     background-position: 100% 0%;
@@ -100,6 +118,11 @@ print "".date("m.d.y H:i",$mod);
 ?>
 </i> 更新</span>
 
+<div id="more" class="none">
+more
+</div>
+</div>
+
 <ul id="symbol_color">
 <li id="bg_color" style="background-image: linear-gradient(180deg,
 <?php if (!empty($rows)): ?>
@@ -111,4 +134,22 @@ print "".date("m.d.y H:i",$mod);
 #fff);">
 </li>
 </ul>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+    $(function(){
+    $("#").load("");
+    })
+
+    let btn = document.querySelector('#bg_link');
+    let more = document.querySelector('#more');
+     
+    let btnToggleclass = function(el) {
+      el.classList.toggle('open');
+    }
+     
+    btn.addEventListener('click', function() {
+      btnToggleclass(more);
+    }, false);
+</script>
 </body>

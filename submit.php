@@ -7,12 +7,11 @@ function h($str) {
 $timestamp = time() ;
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
-$_SERVER['REMOTE_ADDR']
 
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$timestamp, $symbol, $color, $_SERVER]);
+    fputcsv($fp, [$timestamp, $symbol, $color]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);

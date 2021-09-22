@@ -91,7 +91,7 @@ body  {overflow-x:hidden;}
 <body>
 
 <span id="bg_link">
-<b>色と記号</b>
+<b>自分の気持ちを知る・表す</b>
 <i>
 <?php
 $mod = filemtime("symbol_color.csv");

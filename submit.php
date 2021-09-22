@@ -4,13 +4,15 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
+$timestamp = time() ;
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+$_SERVER['REMOTE_ADDR']
 
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color]);
+    fputcsv($fp, [$timestamp, $symbol, $color, $_SERVER]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);
@@ -25,7 +27,7 @@ fclose($fp);
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
+<link rel="stylesheet" type="text/css" href="symbol_color.css" />
 <title>投稿する | 自分の気持ちを知る・表す</title>
 <style type="text/css">
     #post {background:#fff;}
@@ -33,7 +35,7 @@ fclose($fp);
 </head>
 <body>
 <section id="post">
-<form action="/sign/thankyou.php" method="post">
+<form action="thankyou.php" method="post">
 <div id="symbol">
 <p class="title"><b>Choose A Symbol That Suits Your Feelings</b><br/>
 今の気持ちに合う記号を選んでください。</p>

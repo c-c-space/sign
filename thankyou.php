@@ -34,7 +34,6 @@ fclose($fp);
 <link rel="stylesheet" type="text/css" href="symbol_color.css" />
 <title>完了 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
-#post #button {top:12.5%; text-decoration:none; color:#000;}
 </style>
 </head>
 <body>

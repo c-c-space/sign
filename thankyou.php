@@ -8,10 +8,14 @@ $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
 $timestamp = time() ;
 
+$forwardedFor = $_SERVER["HTTP_X_FORWARDED_FOR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp,]);
+    fputcsv($fp, [$symbol, $color, $timestamp, $ip]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);

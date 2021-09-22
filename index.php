@@ -124,7 +124,7 @@ print "".date("m.d.y H:i",$mod);
 </i> 更新</span>
 
 <div id="log" class="none">
-more
+Log
 </div>
 </div>
 

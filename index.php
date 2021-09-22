@@ -123,9 +123,7 @@ print "".date("m.d.y H:i",$mod);
 ?>
 </i> 更新</span>
 
-<div id="log" class="none">
-Log
-</div>
+<div id="log" class="none"></div>
 </div>
 
 <ul id="symbol_color">
@@ -143,7 +141,7 @@ Log
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
     $(function(){
-    $("#").load("");
+    $("#log").load("log.php");
     })
 
     let btn = document.querySelector('#bg_link');

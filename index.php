@@ -27,15 +27,11 @@ fclose($fp);
 
 ?>
 <!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-$("#").load("");
-})
-</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
 <title>自分の気持ちを知る・表す | creative-community.space</title>
 <style type="text/css">
@@ -156,3 +152,4 @@ print "".date("m.d.y H:i",$mod);
     }, false);
 </script>
 </body>
+</html>

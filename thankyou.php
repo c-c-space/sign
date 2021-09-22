@@ -4,14 +4,14 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$timestamp = time() ;
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+$timestamp = time() ;
 
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$timestamp, $symbol, $color]);
+    fputcsv($fp, [$symbol, $color, $timestamp,]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);

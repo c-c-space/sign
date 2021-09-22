@@ -4,13 +4,14 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
+$timestamp = time() ;
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
 
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color]);
+    fputcsv($fp, [$timestamp, $symbol, $color]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);
@@ -26,7 +27,7 @@ fclose($fp);
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
+<link rel="stylesheet" type="text/css" href="symbol_color.css" />
 <title>完了 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
 #post #button {top:12.5%; text-decoration:none; color:#000;}

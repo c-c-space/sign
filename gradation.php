@@ -72,7 +72,7 @@ body  {overflow-x:hidden;}
     position: fixed;
 }
 .open {
-    z-index: 50;
+    z-index: 1;
     width: 100%;
     opacity: 1;
     overflow-y: auto;

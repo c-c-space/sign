@@ -36,7 +36,7 @@ fclose($fp);
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 #log_items {
-  width:55%;
+  width:45%;
   height:70vh;
   padding-top:2.5vh;
   padding-bottom:2.5vh;

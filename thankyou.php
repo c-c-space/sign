@@ -6,7 +6,7 @@ function h($str) {
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
-$log = array($_POST['moji'], date("Y年/m月/d日", time()));
+$log = date("Y年/m月/d日", time()));
 
 $timestamp = time() ;
 

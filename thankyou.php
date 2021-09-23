@@ -6,7 +6,6 @@ function h($str) {
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
-$log = new DateTime();
 $timestamp = time() ;
 date_default_timezone_set('Asia/Tokyo');
 
@@ -17,7 +16,7 @@ $ip = $ips[0];
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $log, $ip]);
+    fputcsv($fp, [$symbol, $color, $timestamp, $ip]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);

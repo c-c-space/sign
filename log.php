@@ -35,14 +35,17 @@ fclose($fp);
 <link rel="stylesheet" type="text/css" href="" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
-#log_items {
+#log {
+  font-size:4vw;
   width:45%;
   height:70vh;
   padding-top:2.5vh;
   padding-bottom:2.5vh;
   margin:12.5vh auto;
-  font-size:4vw;
   background:rgba(255,255,255,0.75);
+  overflow-y:auto;
+}
+#log_items {
   list-style: none;
   display: -webkit-flex;
   display: flex;
@@ -71,6 +74,7 @@ fclose($fp);
 </style>
 </head>
 <body>
+<div id="log">
 <ul id="log_items">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
@@ -89,5 +93,6 @@ Posted on <i>00.00.00 00:00</i></p>
 <u>投稿履歴</u>
 </li>
 </ul>
+</div>
 </body>
 </html>

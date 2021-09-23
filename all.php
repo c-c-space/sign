@@ -32,7 +32,7 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 </style>

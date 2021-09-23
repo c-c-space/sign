@@ -48,7 +48,7 @@ fclose($fp);
   align-content: flex-start;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
-  overflow:auto;
+  overflow-x:scroll;
 }
 #log_items li {
   width:100%;
@@ -70,7 +70,6 @@ fclose($fp);
 </style>
 </head>
 <body>
-
 <ul id="log_items">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>

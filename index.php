@@ -76,7 +76,7 @@ body  {overflow-x:hidden;}
     height: 100vh;
     opacity: 1;
     overflow-y: auto;
-    transition: all 5555ms ease;
+    transition: all 2500ms ease;
     position: fixed;
 }
 @keyframes gradient {

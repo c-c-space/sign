@@ -4,23 +4,81 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>目次 | 自分の気持ちを知る・表す</title>
+<title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 body {padding:0; margin: 0;}
 
-  #about {
-    width:75%;
-    height:75vh;
-    margin:10vh auto;
-    overflow-y: auto;
-  }
+#about {
+  position: relative;
+  width:75%;
+  max-width: 55rem;
+  height:90vh;
+  margin:5vh auto;
+  overflow-y: auto;
+}
+.members {
+  width:95%;
+  margin: 5rem 0;
+  text-align: center;
+}
+.members a,
+.members u {
+  color:#000;
+  text-decoration: none;
+  background-color: #fff;
+  border:2px solid;
+  padding:0.5rem 2rem;
+  border-radius: 50%;
+}
+#about h1,
+#about b {
+  font-family: 'Times New Roman', serif;
+  font-weight:500;
+  font-stretch: condensed;
+  font-variant: common-ligatures tabular-nums;
+  display:inline-block;
+  transform: scale(1,1.1);
+  word-spacing: -.125ch;
+}
+#about h1 {
+  font-size:1.5rem;
+  line-height:200%;
+}
+#about h2 {
+  float:right;
+  font-size:1.25rem;
+  font-weight:500;
+  padding: 0.5rem 0;
+  margin: 1rem 0 1rem 1rem;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-family: "SimSong", "MS Mincho", serif;
+  background-color: #fff;
+}
+#about p {
+  font-size:1rem;
+  font-weight:500;
+  padding: 0.5rem;
+  width:75%;
+  background-color: #fff;
+  font-family: "SimSong", "MS Mincho", serif;
+}
+#about b {
+  font-size:125%;
+  line-height:150%;
+}
 
 </style>
 </head>
 <body>
   <div id="about">
-    <h1>Choose A Symbol and Color That Suits Your Current Feelings</h1>
-    <h2>誰もが共通の印象を持つことができる「色」と「記号」を使って、自分の気持ちを知る・表す</h2>
+    <h2>「色」と「記号」を使って、自分の気持ちを知る・表す</h2>
+    <p>これは、<b>New Life Collection</b> 会員限定コンテンツです。<br/>
+      <b>New Life Collection</b> に入会すると、色と記号の投稿／これまでの色と記号を閲覧することができます。</p>
+    <p><b>This is A Communication Web App for Members of New Life Collection.<br/>
+      Only Members Can be Posting Color and Symbol Here and Can Browsing All of The Collection.</b></p>
+    <h1 class="members"><a>Members Only</a></h1>
+    <h1>Choose A Color and Symbol That Suits Your Feelings.</h1>
   </div>
 </body>
 </html>

@@ -42,6 +42,7 @@ body  {overflow-x:hidden;}
   top:1rem;
   right:1rem;
   font-family: "SimSong", "MS Mincho", serif;
+	transition:.5s all;
 }
 #bg_link b {
   font-weight:500;

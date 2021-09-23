@@ -20,14 +20,6 @@ body {
   display:inline-block;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-}
-#bg_link a {
-  color:#000;
-  line-height:1.5rem;
-  letter-spacing:.1rem;
-  font-family: "SimSong", "MS Mincho", serif;
-  text-decoration:none;
-  padding:0.25rem 0.125rem;
 	transition:.5s all;
 }
 #bg_link i {padding:0.25rem 0.125rem;}

@@ -110,7 +110,7 @@ $mod = filemtime("symbol_color.csv");
 date_default_timezone_set('Asia/Tokyo');
 print "".date("m.d.y H:i",$mod);
 ?>
-</i> 更新
+</i> Update
 </span>
 
 <div id="open" class="none"></div>

@@ -130,19 +130,19 @@ html, body {
 window.addEventListener('load', function () {
 	viewSlide('.flash li');
 });
-function viewSlide(className, slideNo = -1)
+function viewSlide(className, flashNo = -1)
 {
 	let imgArray = document.querySelectorAll(className);
-	if (slideNo >= 0) {
-		imgArray[slideNo].style.opacity = 0;
+	if (flashNo >= 0) {
+		imgArray[flashNo].style.opacity = 0;
 	}
-	slideNo++;
-	if (slideNo >= imgArray.length) {
-		slideNo = 0;
+	flashNo++;
+	if (flashNo >= imgArray.length) {
+		flashNo = 0;
 	}
-	imgArray[slideNo].style.opacity = 1;
+	imgArray[flashNo].style.opacity = 1;
 	let msec = document.getElementById('flash_speed').max - document.getElementById('flash_speed').value;
-	setTimeout(function(){viewSlide(className, slideNo);}, msec);
+	setTimeout(function(){viewSlide(className, flashNo);}, msec);
 }
 </script>
 </body>

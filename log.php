@@ -36,7 +36,8 @@ fclose($fp);
 <style type="text/css">
 #log {
   font-size:4vw;
-  width:45%;
+  width:75%;
+  max-width:45rem;
   height:70vh;
   margin:12.5vh auto;
   background:rgba(255,255,255,0.75);

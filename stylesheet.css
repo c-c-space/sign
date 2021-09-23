@@ -9,8 +9,8 @@ body {
   z-index:50;
 }
 #bg_link {
-  position:absolute;
-  z-index:100;
+  position:fixed;
+  z-index:5;
   color:#000;
   line-height:1.5rem;
   letter-spacing:.1rem;

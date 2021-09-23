@@ -4,19 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="infomation/menu.css" />
 <title>目次 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
 body {padding:0; margin: 0;}
 
-  #about {
-    border: solid;
-    width:75%;
-    height:75vh;
-    padding:2.5%;
-    margin:10vh auto;
-    overflow-y: auto;
-  }
   #all {
     overflow-y: auto;
   }
@@ -25,7 +16,7 @@ body {padding:0; margin: 0;}
     height: 100%;
     border: none;
   }
-  
+
 </style>
 </head>
 <body>
@@ -36,11 +27,8 @@ body {padding:0; margin: 0;}
 <div><a class="tab" href="#flash">Flash Animation</a><span class="check"><b>✔</b></span></div>
 </div>
 
-<div id="infomation" class="change">
-  <div id="about">
-    About
-  </div>
-</div>
+<div id="infomation" class="change"></div>
+
 <div id="gradation"></div>
 <div id="flash" class="change"><iframe src="flash.php"></iframe></div>
 <div id="all" class="change"></div>
@@ -50,6 +38,7 @@ body {padding:0; margin: 0;}
 <script src="infomation/menu.js"></script>
 <script type="text/javascript">
 $(function(){
+$("#infomation").load("infomation/");
 $("#gradation").load("gradation.php");
 $("#all").load("all.php");
 })

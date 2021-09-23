@@ -113,7 +113,7 @@ print "".date("m.d.y H:i",$mod);
 </i> 更新
 </span>
 
-<div id="log" class="none"></div>
+<div id="open" class="none"></div>
 
 <ul id="symbol_color">
 <li class="bg_gradient" style="background-image: linear-gradient(180deg,
@@ -130,11 +130,11 @@ print "".date("m.d.y H:i",$mod);
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
     $(function(){
-    $("#log").load("log.php");
+    $("#open").load("log.php");
     })
 
     let btn = document.querySelector('#bg_link');
-    let log = document.querySelector('#log');
+    let log = document.querySelector('#open');
      
     let btnToggleclass = function(el) {
       el.classList.toggle('open');

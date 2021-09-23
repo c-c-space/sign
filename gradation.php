@@ -32,7 +32,7 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/sign/stylesheet.css" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 body  {overflow-x:hidden;}
@@ -130,7 +130,7 @@ print "".date("m.d.y H:i",$mod);
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
     $(function(){
-    $("#open").load("log.php");
+    $("#open").load("/sign/log.php");
     })
 
     let btn = document.querySelector('#bg_link');

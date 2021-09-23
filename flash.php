@@ -75,7 +75,7 @@ html, body {
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }
-#slide_speed {transform:rotateY(180deg);}
+#flash_speed {transform:rotateY(180deg);}
 
 #post {
   z-index:100;

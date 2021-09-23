@@ -48,6 +48,7 @@ fclose($fp);
   align-content: flex-start;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
+  overflow:auto;
 }
 #log_items li {
   width:100%;

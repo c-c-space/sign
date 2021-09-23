@@ -36,7 +36,7 @@ body {
   height:100vh;
 }
 #post {
-  position:fixed;
+  position:relative;
 }
 #symbol_color {
   position:relative;
@@ -202,9 +202,6 @@ button,
 
 
 @media screen and (max-width: 550px){
-#post {
-  height:95vh;
-}
 #symbol,
 #color {
   display:block;

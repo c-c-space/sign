@@ -91,7 +91,7 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> <b><?=h($row[3])?></b><br/>
+<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> IP <b><?=h($row[3])?></b><br/>
 Posted on <i><?=h($row[2])?></i></p>
 </li>
 <?php endforeach; ?>
@@ -102,7 +102,7 @@ Posted on <i>00.00.00 00:00</i></p>
 </li>
 <?php endif; ?>
 <li>
-Update Log
+Log
 </li>
 </ul>
 </div>

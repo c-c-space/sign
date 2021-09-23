@@ -43,12 +43,12 @@ fclose($fp);
   margin:12.5vh auto;
   font-size:4vw;
   background:rgba(255,255,255,0.75);
+  display: -webkit-flex;
   display: flex;
-  list-style: none;
-  align-content: flex-start;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  overflow-y:scroll;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 #log_items li {
   width:100%;

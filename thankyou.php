@@ -6,6 +6,8 @@ function h($str) {
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+$log = array($_POST['moji'], date("Y年/m月/d日", time()));
+
 $timestamp = time() ;
 
 $forwardedFor = $_SERVER["HTTP_X_FORWARDED_FOR"];
@@ -15,7 +17,7 @@ $ip = $ips[0];
 $fp = fopen('symbol_color.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp, $ip]);
+    fputcsv($fp, [$symbol, $color, $log, $ip]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);

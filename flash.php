@@ -121,7 +121,7 @@ html, body {
 <?php endif; ?>
 </ul>
 <section id="post">
-<input type="range" id="slide_speed" value="7500" min="5000" max="10000">
+<input type="range" id="flash_speed" value="7500" min="5000" max="10000">
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -141,7 +141,7 @@ function viewSlide(className, slideNo = -1)
 		slideNo = 0;
 	}
 	imgArray[slideNo].style.opacity = 1;
-	let msec = document.getElementById('slide_speed').max - document.getElementById('slide_speed').value;
+	let msec = document.getElementById('flash_speed').max - document.getElementById('flash_speed').value;
 	setTimeout(function(){viewSlide(className, slideNo);}, msec);
 }
 </script>

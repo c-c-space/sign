@@ -39,7 +39,7 @@ html, body {
   font-weight: 500;
   padding:0; margin:0;
 }
-.slide {
+.flash {
   position:fixed;
   z-index: 50;
   top:0; left:0;
@@ -47,7 +47,7 @@ html, body {
   width:100%; height:100vh;
   display: flex;
 }
-.slide li {
+.flash li {
   opacity:0;
   width:100%;
   height:100%;
@@ -55,18 +55,18 @@ html, body {
   top:0; left:0;
   padding:0; margin:0;
   list-style: none;
-  position:absolute;
+  position: absolute;
   transition:all 0s ease-in-out;
 }
 
-.bg_color {
+.flash .color {
   width:100%;
   height:100%;
   display:block;
   top:0; left:0;
   padding:0; margin:0;
 }
-.bg_symbol {
+.flash .symbol {
   z-index:10;
   position:absolute;
   padding:0; margin:0;
@@ -82,7 +82,7 @@ html, body {
   position:fixed;
   top:0; left:0;
   padding:0; margin:0;
-  width:100%; height:100vh;
+  width:100%;
 }
 #post input[type="range"] {
   width:95%;
@@ -98,24 +98,24 @@ html, body {
 }
 
 @media screen and (max-width: 550px){
-  .bg_symbol {font-size:20vw;}
+  .flash .symbol {font-size:20vw;}
 }
 </style>
 </head>
 <body>
-<ul id="random" class="slide">
+<ul id="random" class="flash">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<span class="bg_color" style="background:#<?=h($row[1])?>;">
-<span class="bg_symbol"><?=h($row[0])?></span>
+<span class="color" style="background:#<?=h($row[1])?>;">
+<span class="symbol"><?=h($row[0])?></span>
 </span>
 </li>
 <?php endforeach; ?>
 <?php else: ?>
 <li>
-<span class="bg_color" style="background:#<?=h($row[1])?>;">
-<span class="bg_symbol"><?=h($row[0])?></span>
+<span class="color" style="background:#<?=h($row[1])?>;">
+<span class="symbol"><?=h($row[0])?></span>
 </span>
 </li>
 <?php endif; ?>

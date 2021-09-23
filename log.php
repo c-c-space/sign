@@ -102,7 +102,7 @@ Posted on <i>00.00.00 00:00</i></p>
 </li>
 <?php endif; ?>
 <li>
-<u>投稿履歴</u>
+Update Log
 </li>
 </ul>
 </div>

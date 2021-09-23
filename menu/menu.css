@@ -8,8 +8,15 @@ body  {
   bottom:0; left:0;
   width:95%;
   padding:0.25rem 2.5%;
-  font-size:1rem;
-  line-height: 2rem;
+  font-family: 'Times New Roman', serif;
+  font-size:1.5vw;
+  font-weight:500;
+  line-height:200%;
+  font-stretch: condensed;
+  font-variant: common-ligatures tabular-nums;
+  display:inline-block;
+  transform: scale(1,1.1);
+  word-spacing: -.25ch;
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;

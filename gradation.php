@@ -63,9 +63,9 @@ body  {overflow-x:hidden;}
   animation: gradient 50s ease infinite;
 }
 .none {
-    z-index: 50;
+    z-index: -1;
     width: 100%;
-    height: 0;
+    height: 100vh;
     opacity: 0;
     overflow-y: auto;
     transition: all 1500ms ease;
@@ -74,7 +74,6 @@ body  {overflow-x:hidden;}
 .open {
     z-index: 50;
     width: 100%;
-    height: 100vh;
     opacity: 1;
     overflow-y: auto;
     transition: all 2500ms ease;

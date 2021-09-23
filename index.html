@@ -7,7 +7,9 @@
 <link rel="stylesheet" type="text/css" href="menu/menu.css" />
 <title>目次 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
-  #gradation {
+  #gradation,
+  #flash,
+  #all {
     position:fixed;
     top:0;
     left:0;
@@ -34,6 +36,8 @@
 <script type="text/javascript">
 $(function(){
 $("#gradation").load("gradation.php");
+$("#flash").load("flash.php");
+$("#all").load("all.php");
 })
 
 $('a[href^="#"]').click(function(){

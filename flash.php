@@ -48,7 +48,6 @@ html, body {
   display: flex;
 }
 .flash li {
-  opacity:0;
   width:100%;
   height:100%;
   display:block;

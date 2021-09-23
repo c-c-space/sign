@@ -77,7 +77,7 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<p>IP <b><?=h($row[3])?></b><br/>
+<p><?=h($row[0])?> <b style="background:#<?=h($row[1])?>;"><?=h($row[3])?></b><br/>
 Posted on <i><?=h($row[2])?></i></p>
 </li>
 <?php endforeach; ?>

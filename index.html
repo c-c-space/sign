@@ -15,7 +15,11 @@
     left:0;
     width: 100%;
     height: 100vh;
-    z-index: 0;
+  }
+  #flash iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 </style>
 </head>
@@ -26,9 +30,9 @@
 <div><a class="tab" href="#all">All Posts</a><span class="check"><b>✔</b></span></div>
 </div>
 
-<div id="gradation">Color Gradation</div>
-<div id="flash" class="change">Flash Animation</div>
-<div id="all" class="change">All Posts</div>
+<div id="gradation"></div>
+<div id="flash" class="change"><iframe src="flash.php"></iframe></div>
+<div id="all" class="change"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -36,7 +40,6 @@
 <script type="text/javascript">
 $(function(){
 $("#gradation").load("gradation.php");
-$("#flash").load("flash.php");
 $("#all").load("all.php");
 })
 

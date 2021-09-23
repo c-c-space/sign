@@ -40,7 +40,8 @@ html, body {
   padding:0; margin:0;
 }
 .slide {
-  position:relative;
+  position:fixed;
+  z-index: 50;
   top:0; left:0;
   padding:0; margin:0;
   width:100%; height:100vh;
@@ -75,6 +76,7 @@ html, body {
   -webkit-transform:translate(-50%,-50%);
 }
 #slide_speed {transform:rotateY(180deg);}
+
 #post {
   z-index:100;
   position:fixed;

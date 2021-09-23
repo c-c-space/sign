@@ -58,6 +58,10 @@ fclose($fp);
   font-size:75%;
   line-height:150%;
 }
+#log_items p {
+  margin:0;
+  padding:2.5vw 0 0;
+}
 #log_items b {
   font-size:150%;
 }

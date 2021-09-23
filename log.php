@@ -39,8 +39,6 @@ fclose($fp);
   font-size:4vw;
   width:45%;
   height:70vh;
-  padding-top:2.5vh;
-  padding-bottom:2.5vh;
   margin:12.5vh auto;
   background:rgba(255,255,255,0.75);
   overflow-y:auto;

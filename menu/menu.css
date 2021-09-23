@@ -35,7 +35,7 @@ body  {
   float:left;
   display:inline-block;
   width:2.5rem;
-  margin-right:1rem;
+  margin-right:0rem;
   text-align:center;
 }
 .check:before {

@@ -56,7 +56,6 @@ fclose($fp);
   width:100%;
   position:relative;
   margin:0;
-  padding:2.5vw 0 0;
 }
 #log_items p {
   margin:0;

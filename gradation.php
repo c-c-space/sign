@@ -39,8 +39,8 @@ body  {overflow-x:hidden;}
 #bg_link {
   position:absolute;
   z-index:100;
-  top:0;
-  right:0;
+  top:1rem;
+  right:1rem;
   font-family: "SimSong", "MS Mincho", serif;
 }
 #bg_link b {

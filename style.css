@@ -11,8 +11,6 @@ body {
 #bg_link {
   position:absolute;
   z-index:100;
-  top:0;
-  right:0;
   color:#000;
   line-height:1.5rem;
   letter-spacing:.1rem;

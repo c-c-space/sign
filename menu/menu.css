@@ -21,7 +21,7 @@ body  {
 .tab:hover,
 .check b {
   cursor: pointer;
-  color:blue;
+  color:#fff;
   transition: all 500ms ease;
 }
 .check {

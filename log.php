@@ -44,7 +44,7 @@ fclose($fp);
   overflow-y:auto;
 }
 #log_items {
-  padding:0;
+  padding:0 2.5vw;
   list-style: none;
   display: -webkit-flex;
   display: flex;

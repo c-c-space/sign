@@ -63,6 +63,20 @@ fclose($fp);
   font-size:75%;
   line-height:150%;
 }
+#log_items u {
+  display:inline-block;
+  width:4vw;
+  height:4vw;
+  position:relative;
+}
+#log_items span {
+  position:absolute;
+  padding:0;
+  margin:0;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
 #log_items b {
   font-size:150%;
 }
@@ -77,7 +91,7 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<p><?=h($row[0])?> <b style="background:#<?=h($row[1])?>;"><?=h($row[3])?></b><br/>
+<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> <b><?=h($row[3])?></b><br/>
 Posted on <i><?=h($row[2])?></i></p>
 </li>
 <?php endforeach; ?>

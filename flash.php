@@ -94,7 +94,7 @@ html, body {
   outline: none;
   background-color:rgba(255,255,255,0.25);
   border-radius: 5rem;
-  padding:0; margin:2.5%;
+  padding:0; margin:2.5rem 12.5%;
 }
 
 @media screen and (max-width: 550px){

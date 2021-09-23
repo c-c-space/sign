@@ -128,7 +128,7 @@ html, body {
 <script src="http://creative-community.space/coding/js/random.js"></script>
 <script>
 window.addEventListener('load', function () {
-	viewSlide('.slide li');
+	viewSlide('.flash li');
 });
 function viewSlide(className, slideNo = -1)
 {

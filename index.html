@@ -7,15 +7,6 @@
 <link rel="stylesheet" type="text/css" href="menu/menu.css" />
 <title>目次 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
-  #gradation,
-  #flash,
-  #all {
-    position:fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100vh;
-  }
   #all {
     overflow-y: auto;
   }
@@ -29,10 +20,12 @@
 <body>
 
 <div id="menu">
+<div><a class="tab" href="#infomation">Infomation</a><span class="check"><b>✔</b></span></div>
 <div><a class="tab" href="#flash">Flash Animation</a><span class="check"><b>✔</b></span></div>
 <div><a class="tab" href="#all">All Posts</a><span class="check"><b>✔</b></span></div>
 </div>
 
+<div id="infomation"></div>
 <div id="gradation"></div>
 <div id="flash" class="change"><iframe src="flash.php"></iframe></div>
 <div id="all" class="change"></div>

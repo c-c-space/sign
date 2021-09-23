@@ -7,7 +7,6 @@ function h($str) {
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
 $log = new DateTime();
-$log->format("Y-m-d H:i:s");
 $timestamp = time() ;
 date_default_timezone_set('Asia/Tokyo');
 

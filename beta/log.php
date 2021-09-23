@@ -101,9 +101,6 @@ Posted on <i><?=h($row[2])?></i></p>
 Posted on <i>00.00.00 00:00</i></p>
 </li>
 <?php endif; ?>
-<li>
-Update
-</li>
 </ul>
 </div>
 </body>

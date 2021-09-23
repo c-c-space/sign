@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="menu/menu.css" />
+<title>目次 | 自分の気持ちを知る・表す</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<div id="menu">
+<div><a class="tab" href="#flash">Flash Animation</a><span class="check"><b>✔</b></span></div>
+<div><a class="tab" href="#all">All Posts</a><span class="check"><b>✔</b></span></div>
+</div>
+
+<div id="gradation">Color Gradation</div>
+<div id="flash" class="change">Flash Animation</div>
+<div id="all" class="change">All Posts</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="menu/menu.js"></script>
+<script type="text/javascript">
+$(function(){
+$("#gradation").load("gradation.php");
+$("#flash").load("flash.php");
+$("#all").load("all.php");
+})
+
+$('a[href^="#"]').click(function(){
+   var speed = 500;　//スクロールスピード
+   var href= $(this).attr("href");
+   var target = $(href == "#" || href == "" ? 'html' : href);
+   var position = target.offset().top;
+   $("html, body").animate({scrollTop:position}, speed, "swing");
+   return false;
+ });
+</script>
+</body>
+</html>

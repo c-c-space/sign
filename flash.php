@@ -85,7 +85,7 @@ html, body {
 #post input[type="range"] {
   width:95%;
   position:absolute;
-  bottom:0; left:0;
+  top:0; left:0;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;

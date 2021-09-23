@@ -103,8 +103,7 @@ body  {overflow-x:hidden;}
 <body>
 
 <span id="bg_link">
-<b>令和三年三月</b><br/>
-<i>自分の気持ちを知る・表す</i>
+<b>令和三年三月</b>
 </span>
 
 <div id="open" class="none"></div>

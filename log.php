@@ -43,6 +43,7 @@ fclose($fp);
   margin:12.5vh auto;
   font-size:4vw;
   background:rgba(255,255,255,0.75);
+  list-style: none;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;

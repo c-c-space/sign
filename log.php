@@ -32,124 +32,58 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="/sign/symbol_color.css" />
-<title>自分の気持ちを知る・表す | creative-community.space</title>
+<link rel="stylesheet" type="text/css" href="" />
+<title>自分の気持ちを知る・表す</title>
 <style type="text/css">
-body  {overflow-x:hidden;}
-#bg_link {
-  position:absolute;
-  z-index:100;
-  top:0;
-  right:0;
-  color:#000;
-  line-height:1.5rem;
-  letter-spacing:.1rem;
-  font-family: "MS 明朝","MS Mincho", serif;
-  font-size:0.9rem;
-  text-decoration:none;
-  display:inline-block;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-	transition:.5s all;
+#log_items {
+  width:55%;
+  height:70vh;
+  padding-top:2.5vh;
+  padding-bottom:2.5vh;
+  margin:12.5vh auto;
+  font-size:4vw;
+  background:rgba(255,255,255,0.75);
+  display: flex;
+  list-style: none;
+  align-content: flex-start;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
 }
-#bg_link b {
-  color:#000;
-  font-weight:500;
-  line-height:1.5rem;
-  letter-spacing:.1rem;
-  font-family: "MS 明朝","MS Mincho", serif;
-  background:#fff;
-  text-decoration:none;
-  padding:0.5rem 0.25rem;
+#log_items li {
+  width:100%;
+  position:relative;
+  margin:0;
+  padding:2.5vw 0 0;
+  font-size:75%;
+  line-height:150%;
 }
-#bg_link i {padding:0.5rem 0.25rem;}
-
-#bg_color {
-  background-size: 500% 500%;
-  animation: gradient 50s ease infinite;
+#log_items b {
+  font-size:150%;
 }
-.none {
-    z-index: 50;
-    width: 100%;
-    height: 0;
-    opacity: 0;
-    overflow-y: auto;
-    transition: all 1500ms ease;
-    position: fixed;
-}
-.open {
-    z-index: 50;
-    width: 100%;
-    height: 100vh;
-    opacity: 1;
-    overflow-y: auto;
-    transition: all 5555ms ease;
-    position: fixed;
-}
-@keyframes gradient {
-  0% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-
-@media print {
-#bg_link {display: none;}
-#bg_color {
-  background-size: 100% 100%;
-  animation: gradient none;
-}
+#log_items i {
+  font-size:125%;
 }
 </style>
 </head>
 <body>
 
-<span id="bg_link">
-<b>自分の気持ちを知る・表す</b><br/>
-<i>
-<?php
-$mod = filemtime("symbol_color.csv");
-date_default_timezone_set('Asia/Tokyo');
-print "".date("m.d.y H:i",$mod);
-?>
-</i> 更新</span>
-
-<div id="log" class="none"></div>
-</div>
-
-<ul id="symbol_color">
-<li id="bg_color" style="background-image: linear-gradient(180deg,
+<ul id="log_items">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
-#<?=h($row[1])?>,
+<li>
+<p>IP <b><?=h($row[3])?></b><br/>
+Posted on <i><?=h($row[2])?></i></p>
+</li>
 <?php endforeach; ?>
 <?php else: ?>
+<li>
+<p>IP <b>000.00.00.00</b><br/>
+Posted on <i>00.00.00 00:00</i></p>
+</li>
 <?php endif; ?>
-#fff);">
+<li>
+<u>投稿履歴</u>
 </li>
 </ul>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>
-    $(function(){
-    $("#log").load("log.php");
-    })
-
-    let btn = document.querySelector('#bg_link');
-    let log = document.querySelector('#log');
-     
-    let btnToggleclass = function(el) {
-      el.classList.toggle('open');
-    }
-     
-    btn.addEventListener('click', function() {
-      btnToggleclass(log);
-    }, false);
-</script>
 </body>
 </html>

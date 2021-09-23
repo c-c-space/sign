@@ -32,7 +32,7 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="symbol_color.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 body  {overflow-x:hidden;}
@@ -41,30 +41,23 @@ body  {overflow-x:hidden;}
   z-index:100;
   top:0;
   right:0;
-  color:#000;
-  line-height:1.5rem;
-  letter-spacing:.1rem;
-  font-family: "MS 明朝","MS Mincho", serif;
-  font-size:0.9rem;
-  text-decoration:none;
-  display:inline-block;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-	transition:.5s all;
+  font-family: "SimSong", "MS Mincho", serif;
 }
 #bg_link b {
-  color:#000;
   font-weight:500;
-  line-height:1.5rem;
-  letter-spacing:.1rem;
-  font-family: "MS 明朝","MS Mincho", serif;
   background:#fff;
-  text-decoration:none;
   padding:0.5rem 0.25rem;
 }
-#bg_link i {padding:0.5rem 0.25rem;}
+#bg_link i {padding:0.5rem 0.125rem;}
 
-#bg_color {
+.bg_gradient {
+  position:relative;
+  top:0; left:0;
+  display:block;
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100vh;
   background-size: 500% 500%;
   animation: gradient 50s ease infinite;
 }
@@ -100,7 +93,7 @@ body  {overflow-x:hidden;}
 
 @media print {
 #bg_link {display: none;}
-#bg_color {
+.bg_gradient {
   background-size: 100% 100%;
   animation: gradient none;
 }
@@ -117,13 +110,13 @@ $mod = filemtime("symbol_color.csv");
 date_default_timezone_set('Asia/Tokyo');
 print "".date("m.d.y H:i",$mod);
 ?>
-</i> 更新</span>
+</i> 更新
+</span>
 
 <div id="log" class="none"></div>
-</div>
 
 <ul id="symbol_color">
-<li id="bg_color" style="background-image: linear-gradient(180deg,
+<li class="bg_gradient" style="background-image: linear-gradient(180deg,
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 #<?=h($row[1])?>,

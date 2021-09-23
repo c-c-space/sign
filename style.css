@@ -30,6 +30,7 @@ body {
   font-family: "SimSong", "MS Mincho", serif;
   text-decoration:none;
   padding:0.25rem 0.125rem;
+	transition:.5s all;
 }
 #bg_link i {padding:0.25rem 0.125rem;}
 
@@ -199,6 +200,7 @@ body {
 #bg_link:hover {
   cursor:pointer;
   background:#eee;
+	transition:.5s all;
 }
 button,
 #button {

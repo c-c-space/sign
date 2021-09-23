@@ -27,11 +27,12 @@ fclose($fp);
 
 ?>
 <!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="symbol_color.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
 </style>
@@ -52,3 +53,4 @@ fclose($fp);
 <?php endif; ?>
 </ul>
 </body>
+</html>

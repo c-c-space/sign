@@ -8,6 +8,11 @@
 <title>目次 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
 body {padding:0; margin: 0;}
+#index {
+    position: fixed;
+    z-index: 1000;
+    top:0;
+}
 
   #all,
   #infomation {
@@ -31,6 +36,7 @@ body {padding:0; margin: 0;}
 </style>
 </head>
 <body>
+<div id="index"></div>
 
 <div id="menu">
 <div><a class="tab" href="#infomation">Infomation</a><span class="check"><b>✔</b></span></div>
@@ -49,6 +55,7 @@ body {padding:0; margin: 0;}
 <script src="infomation/menu.js"></script>
 <script type="text/javascript">
 $(function(){
+$("#index").load("/menu.html");
 $("#infomation").load("infomation/");
 $("#gradation").load("gradation.php");
 $("#all").load("all.php");

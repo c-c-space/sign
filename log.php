@@ -57,6 +57,7 @@ fclose($fp);
   position:relative;
   margin:0;
   padding:2.5vw 0 0;
+  word-break: break-word;
 }
 #log_items p {
   margin:0;

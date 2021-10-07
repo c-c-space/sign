@@ -108,9 +108,9 @@ html, body {
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<div class="color" style="color:#<?=h($row[1])?>;">
-<span class="symbol" style="background:#<?=h($row[1])?>;"><?=h($row[0])?></span>
-</div>
+<span class="color" style="background:#<?=h($row[1])?>;">
+<span class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></span>
+</span>
 </li>
 <?php endforeach; ?>
 <?php else: ?>

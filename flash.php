@@ -108,8 +108,8 @@ html, body {
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<div class="color" style="background:#<?=h($row[1])?>;">
-<span class="symbol"><?=h($row[0])?></span>
+<div class="color" style="color:#<?=h($row[1])?>;">
+<span class="symbol" style="background:#<?=h($row[1])?>;"><?=h($row[0])?></span>
 </div>
 </li>
 <?php endforeach; ?>

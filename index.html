@@ -34,7 +34,7 @@ body {padding:0; margin: 0;}
 
 <div id="menu">
 <div><a class="tab" href="#infomation">Infomation</a><span class="check"><b>✔</b></span></div>
-<div><a class="tab" href="#all">View The Collection</a><span class="check"><b>✔</b></span></div>
+<div><a class="tab" href="/members/sign/">Members Only</a><span class="check"><b>✔</b></span></div>
 <div><a class="tab" href="#flash">Flash</a><span class="check"><b>✔</b></span></div>
 </div>
 
@@ -42,7 +42,6 @@ body {padding:0; margin: 0;}
 
 <div id="gradation"></div>
 <div id="flash" class="change"><iframe src="flash.php"></iframe></div>
-<div id="all" class="change"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -52,7 +51,6 @@ $(function(){
 $("#index").load("/menu.html");
 $("#infomation").load("infomation/");
 $("#gradation").load("gradation.php");
-$("#all").load("all.php");
 })
 
 $('a[href^="#"]').click(function(){

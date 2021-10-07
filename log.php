@@ -37,7 +37,7 @@ fclose($fp);
 #log {
   font-size:4vw;
   width:45%;
-  height:55vh;
+  height:75vh;
   margin:12.5vh auto;
   background:rgba(255,255,255,0.75);
   overflow-y:auto;
@@ -92,8 +92,8 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> IP <b><?=h($row[3])?></b><br/>
-Posted on <i><?=h($row[2])?></i></p>
+<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> IP <b style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[3])?></b><br/>
+Posted on <i style="color:#<?=h($row[1])?>;"><?=h($row[2])?></i></p>
 </li>
 <?php endforeach; ?>
 <?php else: ?>

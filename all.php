@@ -43,7 +43,7 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li class="bg_color" style="background:#<?=h($row[1])?>;">
-<span class="bg_symbol"><?=h($row[0])?></span>
+<span class="bg_symbol" style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[0])?></span>
 </li>
 <?php endforeach; ?>
 <?php else: ?>

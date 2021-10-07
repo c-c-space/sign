@@ -107,10 +107,10 @@ html, body {
 <ul id="random" class="flash">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
-<li class="color" style="background:#<?=h($row[1])?>;">
-<span>
+<li>
+<div class="color" style="background:#<?=h($row[1])?>;">
 <span class="symbol"><?=h($row[0])?></span>
-</span>
+</div>
 </li>
 <?php endforeach; ?>
 <?php else: ?>

@@ -72,6 +72,7 @@ html, body {
   padding:0; margin:0;
   font-size:15vw;
   top:50%; left:50%;
+  filter: invert();
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }
@@ -108,14 +109,14 @@ html, body {
 <?php foreach ($rows as $row): ?>
 <li>
 <span class="color" style="background:#<?=h($row[1])?>;">
-<span class="symbol"><?=h($row[0])?></span>
+<span class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></span>
 </span>
 </li>
 <?php endforeach; ?>
 <?php else: ?>
 <li>
 <span class="color" style="background:#<?=h($row[1])?>;">
-<span class="symbol"><?=h($row[0])?></span>
+<span class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></span>
 </span>
 </li>
 <?php endif; ?>

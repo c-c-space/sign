@@ -115,9 +115,8 @@ html, body {
 <?php endforeach; ?>
 <?php else: ?>
 <li>
-<span class="color" style="background:#<?=h($row[1])?>;">
 <span class="symbol"><?=h($row[0])?></span>
-</span>
+<div class="color" style="background:#<?=h($row[1])?>;"></div>
 </li>
 <?php endif; ?>
 </ul>

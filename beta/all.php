@@ -32,7 +32,7 @@ fclose($fp);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="/sign/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="https://creative-community.space/sign/stylesheet.css" />
 <title>令和三年三月 | 自分の気持ちを知る・表す</title>
 <style type="text/css">
 </style>
@@ -43,7 +43,7 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li class="bg_color" style="background:#<?=h($row[1])?>;">
-<span class="bg_symbol"><?=h($row[0])?></span>
+<span class="bg_symbol" style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[0])?></span>
 </li>
 <?php endforeach; ?>
 <?php else: ?>

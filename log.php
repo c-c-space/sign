@@ -103,7 +103,7 @@ Posted on <i>00.00.00 00:00</i></p>
 </li>
 <?php endif; ?>
 <li>
-<u>Log</u>
+Log
 </li>
 </ul>
 </div>

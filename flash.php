@@ -107,8 +107,8 @@ html, body {
 <ul id="random" class="flash">
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
-<li>
-<span class="color" style="background:#<?=h($row[1])?>;">
+<li class="color" style="background:#<?=h($row[1])?>;">
+<span>
 <span class="symbol"><?=h($row[0])?></span>
 </span>
 </li>

@@ -65,6 +65,7 @@ html, body {
   display:block;
   top:0; left:0;
   padding:0; margin:0;
+	mix-blend-mode: difference;
 }
 .flash .symbol {
   z-index:10;
@@ -72,7 +73,6 @@ html, body {
   padding:0; margin:0;
   font-size:15vw;
   top:50%; left:50%;
-  filter: invert();
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }

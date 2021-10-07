@@ -72,6 +72,7 @@ html, body {
   padding:0; margin:0;
   font-size:15vw;
   top:50%; left:50%;
+  filter: invert();
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
 }

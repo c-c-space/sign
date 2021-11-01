@@ -116,7 +116,7 @@ print "".date("m.d.y H:i",$mod);
 <div id="open" class="none"></div>
 
 <ul id="symbol_color">
-<li class="bg_gradient" style="background-image: linear-gradient(180deg,
+<li class="bg_gradient" style="background-image: linear-gradient(0deg,
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 #<?=h($row[1])?>,

@@ -92,14 +92,15 @@ fclose($fp);
 <?php if (!empty($rows)): ?>
 <?php foreach ($rows as $row): ?>
 <li>
-<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u> IP <b style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[3])?></b><br/>
-Posted on <i style="color:#<?=h($row[1])?>;"><?=h($row[2])?></i></p>
+<p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u><br/>
+Posted on <i style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[2])?></i></p>
 </li>
 <?php endforeach; ?>
 <?php else: ?>
 <li>
-<p>IP <b>000.00.00.00</b><br/>
-Posted on <i>00.00.00 00:00</i></p>
+<p>
+Posted on <i>00.00.00 00:00</i>
+</p>
 </li>
 <?php endif; ?>
 <li>

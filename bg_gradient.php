@@ -35,7 +35,6 @@ fclose($fp);
 <link rel="stylesheet" type="text/css" href="/sign/stylesheet.css" />
 <title>自分の気持ちを知る・表す</title>
 <style type="text/css">
-body  {overflow-x:hidden;}
 .bg_gradient {
   position:relative;
   top:0; left:0;

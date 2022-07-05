@@ -6,19 +6,17 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("d");
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
-$symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
-$color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+
+
+$today = date("d");
+$symbol = (string)filter_input(INPUT_POST, 'symbol');
+$color = (string)filter_input(INPUT_POST, 'color');
 $timestamp = date("g:i:s A T");
 $filename =  $today . ".csv"; 
 
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
-
-$fp = fopen($filename, 'a+b');
+$fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
@@ -165,24 +163,16 @@ fclose($fp);
 
 <body>
 
-    <a id="update" href="submit.html" target="_parent">
-      <b>自分の気持ちを知る・表す</b>
-    </a>
+    <span id="update">
+      <b>令和 __ 年 __ 月</b>
+    </span>
 
     <div id="menu" class="nlc">
-        <div><a class="tab" href="#sign">
-        <?php
-        date_default_timezone_set('Asia/Tokyo');
-        print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-        ?>
-        </a><span class="check"><b>✔</b></span></div>
+        <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>
         <div><a class="tab" href="#flash">
             <?php
-            $mod = filemtime($filename);
-            date_default_timezone_set('Asia/Tokyo');
-            print "".date("G:i:s",$mod);
+            echo sizeof(file($filename));
             ?>
-            更新
         </a><span class="check"><b>✔</b></span></div>
     </div>
 

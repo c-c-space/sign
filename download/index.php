@@ -64,11 +64,6 @@ fclose($fp);
             writing-mode: vertical-rl;
             transition: .5s all;
         }
-        #update:hover {
-            cursor:pointer;
-            background:#eee;
-            transition:.5s all;
-        }
         
         #update b {
             font-weight: 500;
@@ -161,6 +156,10 @@ fclose($fp);
 
     <span id="update">
       <b>令和 __ 年 __ 月</b>
+      <form method="post" action="{$myself}" enctype="multipart/form-data">
+      <input name="file" type="file" size="80" />
+      <input type="submit" name="submit" value="日" />
+      </form>
     </span>
 
     <div id="menu" class="nlc">

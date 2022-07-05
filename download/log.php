@@ -154,7 +154,7 @@ fclose($fp);
                 <?php else: ?>
                 <li>
                     <p>
-                        <u style="background:#000;"><span style="color:#fff;">IP</span></u>
+                        <u style="background:#000;"><span style="color:#fff;">☑︎</span></u>
                         <b style="color:#000;"><?php echo $_SERVER['REMOTE_ADDR']; ?></b>
                     </p>
                     <p id="showTime"></p>

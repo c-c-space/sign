@@ -155,7 +155,7 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">IP</span></u>
-                        <b style="color:#000; filter: invert();"><?php echo $_SERVER['REMOTE_ADDR']; ?></b>
+                        <b style="color:#000;"><?php echo $_SERVER['REMOTE_ADDR']; ?></b>
                     </p>
                     <p id="showTime"></p>
                 </li>

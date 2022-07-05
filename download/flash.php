@@ -145,8 +145,8 @@ fclose($fp);
             <?php endforeach; ?>
             <?php else: ?>
             <li>
-                <span class="color" style="background:#000;">
-                  <b class="symbol" style="color:#000;">?</b>
+                <span class="color" style="background:#fff;">
+                  <b class="symbol" style="color:#fff;">?</b>
                 </span>
             </li>
             <?php endif; ?>

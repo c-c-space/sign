@@ -154,13 +154,10 @@ fclose($fp);
 
 <body>
 
-    <span id="update">
-      <b>令和 __ 年 __ 月</b>
-      <form method="post" action="{$myself}" enctype="multipart/form-data">
-      <input name="file" type="file" size="80" />
+      <form id="update" method="post" action="#" enctype="multipart/form-data">
+      <input type="date" name="view" min="2022-07-01" max="2022-07-31" required>
       <input type="submit" name="submit" value="日" />
       </form>
-    </span>
 
     <div id="menu" class="nlc">
         <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>

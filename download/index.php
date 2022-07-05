@@ -161,6 +161,13 @@ fclose($fp);
         print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
         ?>
       </b>
+      投稿数 
+      <i>
+          <?php
+          echo sizeof(file($source_file));
+          ?>
+      </i>
+      件
     </span>
 
     <div id="menu" class="nlc">

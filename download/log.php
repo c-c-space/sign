@@ -159,13 +159,13 @@ fclose($fp);
                         <?php
                         echo sizeof(file($source_file));
                         ?>
-                        <b>
+                        </b>
                         Colors and 
                         <b>
                         <?php
                         echo sizeof(file($source_file));
                         ?>
-                        <b>
+                        </b>
                         Symbols
                         <br/>That expresses<br/>
                         <i>

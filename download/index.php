@@ -173,7 +173,7 @@ fclose($fp);
         </div>
         <div><a class="tab" href="#flash">
             <?php
-            $mod = filemtime($filename);
+            $mod = filemtime($source_file);
             date_default_timezone_set('Asia/Tokyo');
             print "".date("G:i:s",$mod);
             ?>

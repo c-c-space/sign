@@ -8,13 +8,7 @@ function h($str) {
 
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
-
-
-$today = date("d");
-$symbol = (string)filter_input(INPUT_POST, 'symbol');
-$color = (string)filter_input(INPUT_POST, 'color');
-$timestamp = date("g:i:s A T");
-$filename =  $today . ".csv"; 
+$source_file =  $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -169,10 +163,11 @@ fclose($fp);
 
     <div id="menu" class="nlc">
         <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>
-        <div><a class="tab" href="#flash">
+        <div><a class="tab" href="#flash">投稿数 
             <?php
             echo sizeof(file($filename));
-            ?>
+            ?> 
+            件
         </a><span class="check"><b>✔</b></span></div>
     </div>
 

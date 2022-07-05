@@ -144,8 +144,8 @@ fclose($fp);
                         echo sizeof(file($source_file));
                         ?>
                         </b>
-                        Posts
-                        <br/>by Members of New Life Collection<br/>
+                        Posts by <i>Members</i> of 
+                        <br/><b>New Life Collection</b><br/>
                     </p>
                 </li>
                 <?php if (!empty($rows)): ?>

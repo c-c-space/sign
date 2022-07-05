@@ -153,14 +153,8 @@ fclose($fp);
 </head>
 
 <body>
-
-    <span id="update">
-      <b>
-        <?php
-        date_default_timezone_set('Asia/Tokyo');
-        print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-        ?>
-      </b>
+<a id="update" href="submit.html" target="_parent">
+      <b>自分の気持ちを知る・表す</b>
       投稿数 
       <i>
           <?php
@@ -168,7 +162,7 @@ fclose($fp);
           ?>
       </i>
       件
-    </span>
+    </a>
 
     <div id="menu" class="nlc">
         <div><a class="tab" href="#sign">

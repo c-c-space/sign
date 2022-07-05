@@ -19,7 +19,7 @@ $ip = $ips[0];
 $fp = fopen($filename, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp, $today, $ip,]);
+    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
     rewind($fp);
 }
 flock($fp, LOCK_SH);
@@ -36,7 +36,7 @@ fclose($fp);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="refresh" content="3;URL=/bnaaltermuseum/">
+<meta http-equiv="refresh" content="3;URL=index.php">
 <title> 完了 | 自分の気持ちを知る・表す </title>
 <style type="text/css">
 .inside h1 {

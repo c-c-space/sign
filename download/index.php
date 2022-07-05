@@ -164,13 +164,22 @@ fclose($fp);
     </span>
 
     <div id="menu" class="nlc">
-        <div><a class="tab" href="#sign">_ 日</a><span class="check"><b>✔</b></span></div>
-        <div><a class="tab" href="#flash">投稿数 
+        <div><a class="tab" href="#sign">
+        <?php
+        date_default_timezone_set('Asia/Tokyo');
+        print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+        ?></a>
+        <span class="check"><b>✔</b></span>
+        </div>
+        <div><a class="tab" href="#flash">
             <?php
-            echo sizeof(file($source_file));
-            ?> 
-            件
-        </a><span class="check"><b>✔</b></span></div>
+            $mod = filemtime($filename);
+            date_default_timezone_set('Asia/Tokyo');
+            print "".date("G:i:s",$mod);
+            ?>
+            更新
+        </a><span class="check"><b>✔</b></span>
+        </div>
     </div>
 
     <div id="background"></div>

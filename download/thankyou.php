@@ -6,7 +6,7 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$sign = date("Ym");
+$sign = date("d");
 $source_file =  $sign . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');

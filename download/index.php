@@ -9,7 +9,7 @@ function h($str) {
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
-$sign = date("Ym");
+$sign = date("d");
 $source_file =  $sign . ".csv";
 
 $fp = fopen($source_file, 'a+b');

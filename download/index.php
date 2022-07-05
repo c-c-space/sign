@@ -159,7 +159,7 @@ fclose($fp);
 
 <body>
 <a id="update" href="submit.html" target="_parent">
-      <b>自分の気持ちを知る・表す</b><br/>
+      <b>自分の気持ちを知る・表す</b>
       <i>
           <?php
           echo sizeof(file($source_file));

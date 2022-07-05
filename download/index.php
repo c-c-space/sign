@@ -155,11 +155,11 @@ fclose($fp);
 <body>
 
     <span id="update">
-      <b>令和 __ 年 __ 月</b>
+      <b>令和 _ 年 _ 月</b>
     </span>
 
     <div id="menu" class="nlc">
-        <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>
+        <div><a class="tab" href="#sign">_ 日</a><span class="check"><b>✔</b></span></div>
         <div><a class="tab" href="#flash">投稿数 
             <?php
             echo sizeof(file($source_file));

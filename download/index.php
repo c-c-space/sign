@@ -155,7 +155,12 @@ fclose($fp);
 <body>
 
     <span id="update">
-      <b>令和 _ 年 _ 月</b>
+      <b>
+        <?php
+        date_default_timezone_set('Asia/Tokyo');
+        print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+        ?>
+      </b>
     </span>
 
     <div id="menu" class="nlc">

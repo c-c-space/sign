@@ -154,8 +154,20 @@ fclose($fp);
                 </li>
                 <?php endif; ?>
                 <li>
-                    <p>This is The Collection of 
-                        <br/>Colors and Symbols That expresses<br/>
+                    <p>
+                        <b>
+                        <?php
+                        echo sizeof(file($source_file));
+                        ?>
+                        <b>
+                        Colors and 
+                        <b>
+                        <?php
+                        echo sizeof(file($source_file));
+                        ?>
+                        <b>
+                        Symbols
+                        <br/>That expresses<br/>
                         <i>
                           <?php
                           date_default_timezone_set('Asia/Tokyo');

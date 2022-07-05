@@ -7,9 +7,16 @@ function h($str) {
 }
 
 $today = date("d");
-$source_file =  $today . ".csv";
+$symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
+$color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+$timestamp = date("g:i:s A T");
+$filename =  $today . ".csv"; 
 
-$fp = fopen($source_file, 'a+b');
+$forwardedFor = $_SERVER["REMOTE_ADDR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
+$fp = fopen($filename, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);

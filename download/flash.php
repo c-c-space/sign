@@ -146,7 +146,7 @@ fclose($fp);
             <?php else: ?>
             <li>
                 <span class="color" style="background:#000;">
-                  <b class="symbol" style="color:#000;">☑︎</b>
+                  <b class="symbol" style="color:#000;">?</b>
                 </span>
             </li>
             <?php endif; ?>

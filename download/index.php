@@ -78,7 +78,7 @@ fclose($fp);
         }
         
         #update i {
-            padding: 0.5rem 0.125rem;
+            padding: 0.5rem 0.125rem 0.25rem;
         }
         
         #menu {

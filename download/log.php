@@ -147,7 +147,7 @@ fclose($fp);
                 <?php foreach ($rows as $row): ?>
                 <li>
                     <p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[4])?></b></p>
+                        <b style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[3])?></b></p>
                     <p style="user-select:none; pointer-events:none;">Posted on <i><?=h($row[2])?></i></p>
                 </li>
                 <?php endforeach; ?>
@@ -175,7 +175,7 @@ fclose($fp);
                 </li>
             </ul>
         </div>
-        
+
 <script type="text/javascript">
 function set2(num) {
   let ret;

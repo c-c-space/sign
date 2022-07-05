@@ -11,6 +11,7 @@ $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
 $today = date("d");
 $source_file =  $today . ".csv";
+
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
@@ -166,7 +167,7 @@ fclose($fp);
         <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>
         <div><a class="tab" href="#flash">投稿数 
             <?php
-            echo sizeof(file($filename));
+            echo sizeof(file($source_file));
             ?> 
             件
         </a><span class="check"><b>✔</b></span></div>

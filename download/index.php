@@ -154,15 +154,13 @@ fclose($fp);
 
 <body>
 <a id="update" href="submit.html" target="_parent">
-      <b>
-      投稿数 
+      <b>自分の気持ちを知る・表す</b><br/>
       <i>
           <?php
           echo sizeof(file($source_file));
           ?>
       </i>
       件
-      </b>
     </a>
 
     <div id="menu" class="nlc">

@@ -10,8 +10,7 @@ $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
 $today = date("d");
-$update = (string)filter_input(INPUT_POST, 'update');
-$source_file =  $update . ".csv";
+$source_file =  $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

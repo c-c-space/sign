@@ -138,7 +138,7 @@ fclose($fp);
             <ul id="log_items">
                 <li>
                     <hr/>
-                    <p>
+                    <p style="text-align:center;">
                         <b>
                         <?php
                         echo sizeof(file($source_file));

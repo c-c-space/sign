@@ -136,6 +136,18 @@ fclose($fp);
 
         <div id="log">
             <ul id="log_items">
+                <li>
+                    <hr/>
+                    <p>
+                        <b>
+                        <?php
+                        echo sizeof(file($source_file));
+                        ?>
+                        </b>
+                        Posts
+                        <br/>by Members of New Life Collection<br/>
+                    </p>
+                </li>
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                 <li>
@@ -155,19 +167,7 @@ fclose($fp);
                 <?php endif; ?>
                 <li>
                     <p>
-                        <b>
-                        <?php
-                        echo sizeof(file($source_file));
-                        ?>
-                        </b>
-                        Colors and 
-                        <b>
-                        <?php
-                        echo sizeof(file($source_file));
-                        ?>
-                        </b>
-                        Symbols
-                        <br/>That expresses<br/>
+                        Colors and Symbols That expresses<br/>
                         <i>
                           <?php
                           date_default_timezone_set('Asia/Tokyo');

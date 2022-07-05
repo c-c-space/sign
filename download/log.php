@@ -175,6 +175,7 @@ fclose($fp);
                 </li>
             </ul>
         </div>
+        
 <script type="text/javascript">
 function set2(num) {
   let ret;

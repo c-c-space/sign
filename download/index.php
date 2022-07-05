@@ -59,6 +59,7 @@ fclose($fp);
             font-family: "SimSong", "MS Mincho", serif;
             font-size: 0.9rem;
             text-decoration: none;
+            text-orientation: upright;
             display: inline-block;
             -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
@@ -74,7 +75,6 @@ fclose($fp);
             font-weight: 500;
             background: #fff;
             padding: 0.5rem 0.25rem;
-            text-orientation: upright;
         }
         
         #update i {

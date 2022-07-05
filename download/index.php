@@ -10,7 +10,8 @@ $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
 $today = date("d");
-$source_file =  $today . ".csv";
+$update = (string)filter_input(INPUT_POST, 'update');
+$source_file =  $update . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -154,10 +155,17 @@ fclose($fp);
 
 <body>
 
-      <form id="update" method="post" action="#" enctype="multipart/form-data">
-      <input type="date" name="collection" min="2022-07-01" max="2022-07-31" required>
+    <span id="update">
+      <b>令和 __ 年 __ 月</b>
+      <form method="post" action="#" enctype="multipart/form-data">
+      <select name="example">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+      </select>
       <input type="submit" name="submit" value="日" />
       </form>
+    </span>
 
     <div id="menu" class="nlc">
         <div><a class="tab" href="#sign">__ 日</a><span class="check"><b>✔</b></span></div>

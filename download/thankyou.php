@@ -7,8 +7,8 @@ function h($str) {
 }
 
 $today = date("d");
-$symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
-$color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
+$symbol = (string)filter_input(INPUT_POST, 'symbol');
+$color = (string)filter_input(INPUT_POST, 'color');
 $timestamp = date("g:i:s A T");
 $filename =  $today . ".csv"; 
 

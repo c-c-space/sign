@@ -156,8 +156,8 @@ fclose($fp);
 
     <span id="update">
       <b>令和 __ 年 __ 月</b>
-      <form method="post" action="#" enctype="multipart/form-data">
-      <select name="example">
+      <form method="post" action="" enctype="multipart/form-data">
+      <select name="view">
           <option value="01">1</option>
           <option value="02">2</option>
           <option value="03">3</option>

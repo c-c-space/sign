@@ -9,10 +9,6 @@ function h($str) {
 $today = date("d");
 $filename =  $today . ".csv"; 
 
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
-
 $fp = fopen($filename, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);

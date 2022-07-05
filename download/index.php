@@ -155,7 +155,7 @@ fclose($fp);
 <body>
 
       <form id="update" method="post" action="#" enctype="multipart/form-data">
-      <input type="date" name="view" min="2022-07-01" max="2022-07-31" required>
+      <input type="date" name="collection" min="2022-07-01" max="2022-07-31" required>
       <input type="submit" name="submit" value="日" />
       </form>
 

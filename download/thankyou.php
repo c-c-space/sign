@@ -6,17 +6,18 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("d");
+$sign = date("Ym");
+$source_file =  $sign . ".csv";
+
 $symbol = (string)filter_input(INPUT_POST, 'symbol');
 $color = (string)filter_input(INPUT_POST, 'color');
 $timestamp = date("g:i:s A T");
-$filename =  $today . ".csv"; 
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 $ips = explode(",", $forwardedFor);
 $ip = $ips[0];
 
-$fp = fopen($filename, 'a+b');
+$fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);

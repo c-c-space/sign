@@ -6,10 +6,10 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("d");
-$filename =  $today . ".csv";
+$sign = date("Ym");
+$source_file =  $sign . ".csv";
 
-$fp = fopen($filename, 'a+b');
+$fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);

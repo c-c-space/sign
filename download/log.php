@@ -6,8 +6,8 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("d");
-$source_file =  $today . ".csv";
+$sign = date("Ym");
+$source_file =  $sign . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

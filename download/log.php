@@ -154,8 +154,8 @@ fclose($fp);
                 <?php else: ?>
                 <li>
                     <p>
-                        <u style="background:#000;"><span style="color:#fff;">☑︎</span></u>
-                        <b style="color:#000;"><?php echo $_SERVER['REMOTE_ADDR']; ?></b>
+                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                        <b style="color:#000;">Under Construction</b>
                     </p>
                     <p id="showTime"></p>
                 </li>
@@ -187,7 +187,7 @@ function showClock() {
   const nowHour = set2(nowTime.getHours());
   const nowMin = set2(nowTime.getMinutes());
   const nowSec = set2(nowTime.getSeconds());
-  const msg = "Under Construction" + nowHour + ":" + nowMin + ":" + nowSec + " JST";
+  const msg = "" + nowHour + ":" + nowMin + ":" + nowSec + " JST";
   document.getElementById("showTime").innerHTML = msg;
 }
 setInterval('showClock()', 1000);

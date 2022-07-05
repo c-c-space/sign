@@ -9,7 +9,7 @@ function h($str) {
 $today = date("d");
 $symbol = (string)filter_input(INPUT_POST, 'symbol'); // $_POST['symbol']
 $color = (string)filter_input(INPUT_POST, 'color'); // $_POST['color']
-$timestamp = date("g:i:s A \J\S\T");
+$timestamp = date("g:i:s A T");
 $filename =  $today . ".csv"; 
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
@@ -187,7 +187,7 @@ function showClock() {
   const nowHour = set2(nowTime.getHours());
   const nowMin = set2(nowTime.getMinutes());
   const nowSec = set2(nowTime.getSeconds());
-  const msg = "" + nowHour + ":" + nowMin + ":" + nowSec + "";
+  const msg = "" + nowHour + ":" + nowMin + ":" + nowSec + "JST";
   document.getElementById("showTime").innerHTML = msg;
 }
 setInterval('showClock()', 1000);

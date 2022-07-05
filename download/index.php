@@ -154,7 +154,7 @@ fclose($fp);
 
 <body>
 <a id="update" href="submit.html" target="_parent">
-      <b>自分の気持ちを知る・表す</b>
+      <b>自分の気持ちを知る・表す</b><br/>
       投稿数 
       <i>
           <?php

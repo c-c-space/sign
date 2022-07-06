@@ -177,7 +177,7 @@ fclose($fp);
                         <br/>
                     </p>
                     <hr/>
-                    <p style="text-align:center;">
+                    <p>
                     Last Modified on 
                         <?php
                         $mod = filemtime($source_file);

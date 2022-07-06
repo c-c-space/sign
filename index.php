@@ -53,7 +53,7 @@ fclose($fp);
             right: 2.5vw;
             z-index: 50;
             color: #000;
-            border: solid #000 0.1vw;
+            border: solid transparent 0.1vw;
             border-radius: 50%;
             text-decoration: none;
             transition: .5s all;
@@ -159,7 +159,6 @@ fclose($fp);
         @media screen and (max-width: 550px) {
             #update {
                 z-index: 50;
-                border: solid #000 1px;
                 width: 2rem;
                 height: 2rem;
             }
@@ -179,8 +178,8 @@ fclose($fp);
 </head>
 
 <body>
-    <a id="update" href="infomation/" target="_parent">
-        <b>i</b>
+    <a id="update" href="submit/" target="_parent">
+        <b>⎷</b>
     </a>
 
     <div id="menu" class="nlc">

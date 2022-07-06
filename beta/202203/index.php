@@ -212,12 +212,6 @@ fclose($fp);
                 $($(this).attr('href')).fadeToggle(1000);
             });
         });
-
-        $('a[href^="#"]').click(function() {
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            return false;
-        });
     </script>
 </body>
 

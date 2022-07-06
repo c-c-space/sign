@@ -53,7 +53,6 @@ fclose($fp);
             right: 2.5vw;
             z-index: 50;
             color: #000;
-            border: solid transparent 0.1vw;
             border-radius: 50%;
             text-decoration: none;
             transition: .5s all;
@@ -63,8 +62,7 @@ fclose($fp);
         
         #update:hover {
             cursor: pointer;
-            color: #fff;
-            border: solid #fff 0.1vw;
+            color: #fff
             transition: .5s all;
         }
         

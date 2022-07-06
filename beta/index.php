@@ -28,7 +28,7 @@ fclose($fp);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>自分の気持ちを知る・表す</title>
     <style type="text/css">
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 750px) {
       .library li {
         height: 90vh;
       }

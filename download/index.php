@@ -170,14 +170,7 @@ fclose($fp);
         ?></a>
         <span class="check"><b>✔</b></span>
         </div>
-        <div><a class="tab" href="#flash">
-            <?php
-            $mod = filemtime($source_file);
-            date_default_timezone_set('Asia/Tokyo');
-            print "".date("G:i:s",$mod);
-            ?>
-            更新
-        </a><span class="check"><b>✔</b></span>
+        <div><a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>
         </div>
     </div>
 
@@ -207,6 +200,22 @@ fclose($fp);
             var target = $(href == "#" || href == "" ? 'html' : href);
             return false;
         });
+
+function set2(num) {
+  let ret;
+  if (num < 10) { ret = "0" + num; }
+  else { ret = num; }
+  return ret;
+}
+function showClock() {
+  const nowTime = new Date();
+  const nowHour = set2(nowTime.getHours());
+  const nowMin = set2(nowTime.getMinutes());
+  const nowSec = set2(nowTime.getSeconds());
+  const msg = "" + nowHour + ":" + nowMin + ":" + nowSec + " JST";
+  document.getElementById("showTime").innerHTML = msg;
+}
+setInterval('showClock()', 1000);
     </script>
 </body>
 

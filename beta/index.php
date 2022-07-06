@@ -40,7 +40,8 @@ fclose($fp);
             margin: 0;
             height: 100vh;
             white-space: nowrap;
-            overflow: auto;
+            overflow-x: auto;
+            overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
         }
         

@@ -84,7 +84,7 @@ fclose($fp);
         #menu {
             position: fixed;
             z-index: 1000;
-            bottom: 97.5vh;
+            bottom: 95vh;
             left: 0;
             width: 95%;
             padding: 0.25rem 2.5%;

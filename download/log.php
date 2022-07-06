@@ -137,7 +137,7 @@ fclose($fp);
                 <li>
                     <hr/>
                     <p style="text-align:center;">
-                    <u>Last Modified</u><br/> 
+                    Last Modified<br/> 
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');

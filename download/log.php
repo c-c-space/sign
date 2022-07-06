@@ -134,6 +134,19 @@ fclose($fp);
 
         <div id="log">
             <ul id="log_items">
+                <li>
+                    <hr/>
+                    <p style="text-align:center;">
+                    Last Modified<br/> 
+                    <sup style="text-transform: uppercase;">
+                        <?php
+                        $mod = filemtime($source_file);
+                        date_default_timezone_set('Asia/Tokyo');
+                        print "#".date("jMyD g:i:s A T",$mod);
+                        ?>
+                    </sup>
+                    </p>
+                </li>
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                 <li>
@@ -169,19 +182,9 @@ fclose($fp);
                         </b>
                         <br/>
                     </p>
+                    <hr/>
                 </li>
             </ul>
-            <hr/>
-            <p id="mod" style="text-align:center;">
-            Last Modified<br/>
-            <span style="text-transform: uppercase;">
-            <?php
-            $mod = filemtime($source_file);
-            date_default_timezone_set('Asia/Tokyo');
-            print "#".date("jMyD g:i:s A T",$mod);
-            ?>
-            </span>
-            </p>
         </div>
 
 <script type="text/javascript">

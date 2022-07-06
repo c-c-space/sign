@@ -76,7 +76,7 @@ fclose($fp);
                 flex-wrap: wrap;
             }
             
-            #mod #sign,
+            #mod #credit,
             #mod #ed {
                 display: none;
             }
@@ -189,7 +189,7 @@ fclose($fp);
                     color: #000;
                     background-color: #fff;
                 }
-                #mod #sign,
+                #mod #credit,
                 #mod #today {
                     position: absolute;
                     top: 1vw;
@@ -202,7 +202,7 @@ fclose($fp);
                     padding: 1vw 0;
                     border: solid 1px #000;
                 }
-                #mod #sign {
+                #mod #credit {
                     text-align: left;
                     right: 0;
                     margin: 0.5vw 1.25vw 2vw;

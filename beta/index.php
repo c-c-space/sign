@@ -49,6 +49,7 @@ fclose($fp);
         
         .library li {
             width: 45rem;
+            height: 100%;
             max-width: 90vw;
             overflow: hidden;
         }

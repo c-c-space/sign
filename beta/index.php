@@ -31,7 +31,7 @@ fclose($fp);
     </style>
     
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
   
   </head>
   <body>

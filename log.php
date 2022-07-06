@@ -312,7 +312,7 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
                     </p>
                     <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
                         <?=h($row[2])?>
@@ -323,7 +323,7 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
                     </p>
                     <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>

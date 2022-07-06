@@ -312,11 +312,11 @@ fclose($fp);
             <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
             <p>
                 <sup id="no" style="text-transform: uppercase;">
-        #
+        VOL.
         <?php
         $mod = filemtime($source_file);
         date_default_timezone_set('Asia/Tokyo');
-        print "".date("jMyD",$mod);
+        print "".date("MY",$mod);
         ?>
     </sup>
                 <sup id="time" style="text-transform: uppercase;">

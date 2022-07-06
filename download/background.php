@@ -76,7 +76,7 @@
             <?php endforeach; ?>
             <?php else: ?>
             <?php endif; ?>
-            #fff);">
+            #ccc);">
         </li>
     </ul>
 </body>

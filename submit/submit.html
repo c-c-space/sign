@@ -42,36 +42,12 @@
             right: 0;
         }
         
-        #symbol .title,
-        #color .title {
-            display: block;
-            position: absolute;
-            pointer-events: none;
-            width: 100%;
-            text-align: center;
-            font-size: 1.25vw;
-            padding: 1.25% 0;
-        }
-        
-        #symbol .title b,
-        #color .title b {
-            font-family: 'Times New Roman', serif;
-            font-size: 1.5vw;
-            font-weight: 500;
-            line-height: 200%;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-        }
-        
         #symbol ul,
         #color ul {
             position: absolute;
             padding: 0;
             margin: 0;
-            top: 55%;
+            top: 50%;
             left: 50%;
             z-index: 10;
             padding: 0;
@@ -179,7 +155,7 @@
             }
             #symbol ul,
             #color ul {
-                top: 60%;
+                top: 50%;
                 left: 50%;
                 width: 60%;
                 z-index: 5;
@@ -214,15 +190,6 @@
             #color input[type="radio"]:checked+label {
                 border: #000 solid 0.5vw;
             }
-            #symbol .title,
-            #color .title {
-                font-size: 2.5vw;
-                top: -4.5vw;
-            }
-            #symbol .title b,
-            #color .title b {
-                font-size: 3vw;
-            }
         }
     </style>
     <title>投稿する | 自分の気持ちを知る・表す</title>
@@ -232,8 +199,6 @@
     <section id="post">
         <form action="/sign/thankyou.php" method="post" target="_parent">
             <div id="symbol">
-                <p class="title"><b>Choose A Symbol That Suits on Now Feelings</b><br/> 今の気持ちに合う記号を選んでください。
-                </p>
                 <ul>
                     <li>
                         <input type="radio" name="symbol" value="⎮" id="a" required>
@@ -344,8 +309,6 @@
             </div>
 
             <div id="color">
-                <p class="title"><b>Choose A Color That Suits on Now Feelings</b><br/> 今の気持ちに合う色を選んでください。
-                </p>
                 <ul>
                     <li>
                         <input type="radio" name="color" value="ff0000" id="ff0000" required>

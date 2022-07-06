@@ -157,6 +157,28 @@ fclose($fp);
             }
             
             @media screen and (max-width: 550px) {
+                #mod b {
+                    font-size: 7.5vw;
+                }
+                #mod p {
+                    font-size: 4.5vw;
+                }
+                #log {
+                    font-size: 4vw;
+                    width: 70%;
+                    height: 55vh;
+                    margin: 12.5vh 15% 0;
+                }
+                #log_items {
+                    padding: 0 5vw;
+                }
+                #log_items u {
+                    width: 7.5vw;
+                    height: 7.5vw;
+                }
+            }
+            
+            @media print {
                 #mod {
                     padding: 1vw 0;
                     position: relative;

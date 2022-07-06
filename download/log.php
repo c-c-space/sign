@@ -133,9 +133,6 @@ fclose($fp);
     <body>
 
         <div id="log">
-            <ul id="log_items">
-                <li>
-                    <hr/>
                     <p style="text-align:center;">
                     Last Modified<br/> 
                     <sup style="text-transform: uppercase;">
@@ -146,7 +143,7 @@ fclose($fp);
                         ?>
                     </sup>
                     </p>
-                </li>
+            <ul id="log_items">
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                 <li>

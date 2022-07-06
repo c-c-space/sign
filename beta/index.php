@@ -74,7 +74,7 @@ fclose($fp);
         
         @media screen and (max-width: 550px) {
             .library {
-                height: 85vh;
+                height: 75vh;
             }
             .library::-webkit-scrollbar {
                 height: 0;

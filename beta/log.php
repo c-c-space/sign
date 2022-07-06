@@ -276,6 +276,7 @@ fclose($fp);
             <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
             <p id="today">
                 <sup id="no" style="text-transform: uppercase;">令和三年三月</sup>
+                <sup id="time" style="text-transform: uppercase;">自分の気持ちを知る・表す</sup>
                 <sup id="post" style="text-transform: uppercase;">
                 <?php
                 echo sizeof(file($source_file));

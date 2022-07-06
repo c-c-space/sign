@@ -198,13 +198,15 @@ fclose($fp);
                 }
                 #mod #today {
                     left: 0;
+                    width: 15%;
                     margin: 0.5vw 1.25vw 2vw;
                     padding: 1vw 0;
                     border: solid 1px #000;
                 }
                 #mod #credit {
-                    text-align: left;
+                    text-align: right;
                     right: 0;
+                    width: 10%;
                     margin: 0vw 1.25vw;
                     padding: 0;
                     font-size:1.5vw;
@@ -296,13 +298,7 @@ fclose($fp);
                     Posts
         </sup>
             </p>
-            <p id="credit">
-                <?php
-                date_default_timezone_set('Asia/Tokyo');
-                print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-                ?>
-                    <sup>自分の気持ちを知る・表す 色と記号 を 集める</sup>
-            </p>
+            <p id="credit"><img src="qr.png" width="100%"></p>
         </div>
 
         <div id="log">

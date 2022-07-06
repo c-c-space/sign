@@ -6,6 +6,7 @@ body {
 .library {
     padding: 0;
     margin: 0;
+    height: 100vh;
     white-space: nowrap;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
@@ -18,7 +19,6 @@ body {
 .library li {
     width: 45rem;
     max-width: 90vw;
-    height: 94vh;
     overflow: hidden;
 }
 
@@ -38,6 +38,15 @@ body {
 
 .library::-webkit-scrollbar-thumb {
     background: #fff;
+}
+
+@media screen and (max-width: 750px) {
+    .library {
+        height: 95vh;
+    }
+    .library::-webkit-scrollbar {
+        height: 2.5vh;
+    }
 }
 
 @keyframes gradientBG {

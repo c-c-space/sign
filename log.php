@@ -192,11 +192,11 @@ fclose($fp);
                 #mod #credit,
                 #mod #today {
                     position: absolute;
-                    top: 1vw;
                     width: 15%;
                     display: block;
                 }
                 #mod #today {
+                    top: 1vw;
                     left: 0;
                     width: 15%;
                     margin: 0.5vw 1.25vw 2vw;
@@ -205,8 +205,9 @@ fclose($fp);
                 }
                 #mod #credit {
                     text-align: right;
+                    top: 0;
                     right: 0;
-                    width: 7.5%;
+                    width: 10%;
                     margin: 0vw 1.25vw;
                     padding: 0;
                     font-size:1.5vw;

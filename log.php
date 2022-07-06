@@ -207,10 +207,9 @@ fclose($fp);
                     text-align: right;
                     top: 0;
                     right: 0;
-                    width: 9.5%;
-                    margin: 0vw 1.25vw;
+                    width: 10%;
+                    margin: 0vw;
                     padding: 0;
-                    font-size:1.5vw;
                 }
                 #mod #ed {
                     display: inline-block;

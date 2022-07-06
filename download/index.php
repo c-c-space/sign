@@ -52,8 +52,8 @@ fclose($fp);
             top: 2.5vw;
             right: 2.5vw;
             z-index: 50;
-            color: #fff;
-            border: solid #fff 0.1vw;
+            color: #000;
+            border: solid #000 0.1vw;
             border-radius: 50%;
             text-decoration: none;
             transition: .5s all;
@@ -63,9 +63,8 @@ fclose($fp);
         
         #update:hover {
             cursor: pointer;
-            color: #000;
-            border: solid #000 0.1vw;
-            background: #fff;
+            color: #fff;
+            border: solid #fff 0.1vw;
             transition: .5s all;
         }
         
@@ -160,7 +159,7 @@ fclose($fp);
         @media screen and (max-width: 550px) {
             #update {
                 z-index: 50;
-                border: solid #fff 1px;
+                border: solid #000 1px;
                 width: 2rem;
                 height: 2rem;
             }

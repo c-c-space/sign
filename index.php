@@ -178,6 +178,7 @@ fclose($fp);
 </head>
 
 <body>
+    <div id="index"></div>
     <a id="update" href="submit/" target="_parent">
         <b>⎷</b>
     </a>
@@ -205,6 +206,7 @@ fclose($fp);
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
+            $("#index").load("/menu/");
             $("#background").load("background.php");
             $("#sign").load("log.php");
         })

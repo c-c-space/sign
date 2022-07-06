@@ -207,7 +207,7 @@ fclose($fp);
                     right: 0;
                     margin: 0.5vw 1.25vw 2vw;
                     padding: 0;
-                    font-size: 2vw;
+                    font-size:1.25vw;
                 }
                 #mod #ed {
                     display: inline-block;

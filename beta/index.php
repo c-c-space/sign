@@ -72,7 +72,7 @@ fclose($fp);
             background: #fff;
         }
         
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 550px) {
             .library {
                 height: 90vh;
             }

@@ -235,7 +235,7 @@ fclose($fp);
         <?php
         $mod = filemtime($source_file);
         date_default_timezone_set('Asia/Tokyo');
-        print "".date("M.Y",$mod);
+        print "".date("MY",$mod);
         ?>
     </sup>
                 <sup id="time" style="text-transform: uppercase;">

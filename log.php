@@ -206,7 +206,7 @@ fclose($fp);
                 #mod #credit {
                     text-align: right;
                     right: 0;
-                    width: 9.5%;
+                    width: 8%;
                     margin: 0vw 1.25vw;
                     padding: 0;
                     font-size:1.5vw;

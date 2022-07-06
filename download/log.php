@@ -261,9 +261,9 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
                     </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">
                         <?=h($row[2])?>
                     </p>
                 </li>

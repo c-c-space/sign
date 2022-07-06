@@ -7,7 +7,7 @@ function h($str) {
 $date = (string)filter_input(INPUT_POST, 'date'); // $_POST['date']
 $link = (string)filter_input(INPUT_POST, 'link'); // $_POST['link']
 
-$fp = fopen('all.csv', 'a+b');
+$fp = fopen('index.csv', 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color]);
@@ -31,7 +31,7 @@ fclose($fp);
     </style>
     
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="index.css" />
   
   </head>
   <body>

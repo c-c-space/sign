@@ -166,6 +166,7 @@ fclose($fp);
                 <?php endif; ?>
                 <li>
                     <p style="text-align:center;">
+                        <b>
                         <i>
                         <?php
                         echo sizeof(file($source_file));
@@ -177,6 +178,7 @@ fclose($fp);
                           date_default_timezone_set('Asia/Tokyo');
                           print(date('F Y'))
                           ?>
+                        </b>
                         </b>
                         <br/>
                     </p>

@@ -165,7 +165,7 @@ fclose($fp);
                 </li>
                 <?php endif; ?>
                 <li>
-                    <p style="font-size:125%; text-align:center;">
+                    <p style="font-size:2.5vw; text-align:center;">
                         <i>
                         <?php
                         echo sizeof(file($source_file));

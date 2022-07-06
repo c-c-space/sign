@@ -95,7 +95,7 @@ fclose($fp);
 <body>
 
     <ul id="gradient">
-        <li class="bg" style="background-image: linear-gradient(0deg,
+        <li class="bg" style="background-image: linear-gradient(180deg,
             <?php if (!empty($rows)): ?>
             <?php foreach ($rows as $row): ?>
             #<?=h($row[1])?>,

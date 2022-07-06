@@ -63,7 +63,7 @@ fclose($fp);
         #update:hover {
             cursor: pointer;
             color: #fff;
-            transition: .5s all;
+            transition: 1s all;
         }
         
         #update b {

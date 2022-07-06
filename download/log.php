@@ -131,29 +131,6 @@ fclose($fp);
     </head>
 
     <body>
-
-        <div id="log">
-            <ul id="log_items">
-                <?php if (!empty($rows)): ?>
-                <?php foreach ($rows as $row): ?>
-                <li>
-                    <p>
-                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
-                    </p>
-                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;"><?=h($row[2])?></p>
-                </li>
-                <?php endforeach; ?>
-                <?php else: ?>
-                <li>
-                    <p>
-                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
-                    </p>
-                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
-                </li>
-                <?php endif; ?>
-                <li>
                     <p id="mod" style="text-align:center;">
                     Last Modified<br/> 
                     <sup id="vol" style="text-transform: uppercase;">
@@ -178,7 +155,28 @@ fclose($fp);
                     </sup>
                     </p>
                     <hr/>
+
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)): ?>
+                <?php foreach ($rows as $row): ?>
+                <li>
+                    <p>
+                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
+                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                    </p>
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;"><?=h($row[2])?></p>
                 </li>
+                <?php endforeach; ?>
+                <?php else: ?>
+                <li>
+                    <p>
+                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                    </p>
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                </li>
+                <?php endif; ?>
             </ul>
         </div>
 

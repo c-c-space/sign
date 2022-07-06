@@ -275,7 +275,7 @@ fclose($fp);
         <div id="mod">
             <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
             <p id="today">
-                <sup id="no" style="text-transform: uppercase;">令和三年十月</sup>
+                <sup id="no" style="text-transform: uppercase;">令和三年九月</sup>
                 <sup id="post" style="text-transform: uppercase;">
                 <?php
                 echo sizeof(file($source_file));

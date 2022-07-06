@@ -84,8 +84,8 @@ fclose($fp);
         @media print {
             .bg {
                 margin-top: 7.5vh;
-                height: 90vh;
-                margin-top: 2.5vh;
+                height: 92vh;
+                margin-top: 0.5vh;
                 background-size: 100% 100%;
                 animation: gradient none;
             }

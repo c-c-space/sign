@@ -134,19 +134,6 @@ fclose($fp);
 
         <div id="log">
             <ul id="log_items">
-                <li>
-                    <hr/>
-                    <p style="text-align:center;">
-                    Last Modified<br/> 
-                    <sup style="text-transform: uppercase;">
-                        <?php
-                        $mod = filemtime($source_file);
-                        date_default_timezone_set('Asia/Tokyo');
-                        print "#".date("jMyD g:i:s A T",$mod);
-                        ?>
-                    </sup>
-                    </p>
-                </li>
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                 <li>
@@ -167,20 +154,15 @@ fclose($fp);
                 </li>
                 <?php endif; ?>
                 <li>
-                    <p style="font-size:2.5vw; text-align:center;">
-                        <i>
+                    <p style="text-align:center;">
+                    Last Modified<br/> 
+                    <sup style="text-transform: uppercase;">
                         <?php
-                        echo sizeof(file($source_file));
+                        $mod = filemtime($source_file);
+                        date_default_timezone_set('Asia/Tokyo');
+                        print "#".date("jMyD g:i:s A T",$mod);
                         ?>
-                        </i>
-                        Colors and Symbols<br/> That expresses
-                        <b>
-                          <?php
-                          date_default_timezone_set('Asia/Tokyo');
-                          print(date('F Y'))
-                          ?>
-                        </b>
-                        <br/>
+                    </sup>
                     </p>
                     <hr/>
                 </li>

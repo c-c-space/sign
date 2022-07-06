@@ -169,9 +169,9 @@ fclose($fp);
                         </b>
                         <br/>
                     </p>
-                    <hr/>
                 </li>
             </ul>
+            <hr/>
             <p id="mod" style="text-align:center;">
             Last Modified<br/>
             <span style="text-transform: uppercase;">

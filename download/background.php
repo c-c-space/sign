@@ -102,7 +102,7 @@ fclose($fp);
             <?php endforeach; ?>
             <?php else: ?>
             <?php endif; ?>
-            );">
+            #fff);">
         </li>
     </ul>
 </body>

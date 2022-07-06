@@ -301,7 +301,7 @@ fclose($fp);
                 date_default_timezone_set('Asia/Tokyo');
                 print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
                 ?>
-                    <sup>今日の気持ちを知る・表す 色と記号 のコレクション</sup>
+                    <sup>今日の気持ちを知る・表す 色と記号 を集める</sup>
             </p>
         </div>
 

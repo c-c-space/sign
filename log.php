@@ -205,7 +205,7 @@ fclose($fp);
                 #mod #credit {
                     text-align: left;
                     right: 0;
-                    margin: 0.5vw 1.25vw 2vw;
+                    margin: 0vw 1.25vw;
                     padding: 0;
                     font-size:1.5vw;
                 }

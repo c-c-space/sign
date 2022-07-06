@@ -162,7 +162,7 @@ fclose($fp);
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
                         <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
                     </p>
-                    <p style="user-select:none; pointer-events:none;">Posted on <i><?=h($row[2])?></i></p>
+                    <p style="user-select:none; pointer-events:none;"><?=h($row[2])?></p>
                 </li>
                 <?php endforeach; ?>
                 <?php else: ?>

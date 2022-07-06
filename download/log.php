@@ -44,6 +44,7 @@ fclose($fp);
                 width: 100%;
                 height: 100%;
                 font-family: 'Times New Roman', serif;
+                color:#fff;
                 text-align: center;
                 margin: 0;
                 padding: 0;
@@ -181,6 +182,7 @@ fclose($fp);
                 #mod {
                     position: relative;
                     height: auto;
+                    color:#000;
                     background-color: #fff;
                 }
                 #mod p {

@@ -177,7 +177,7 @@ fclose($fp);
 </head>
 
 <body>
-    <a id="update" href="#" target="_parent">
+    <a id="update" href="print.pdf" target="_parent">
         <b>⎷</b>
     </a>
 
@@ -211,6 +211,12 @@ fclose($fp);
                 $('.change').not($($(this).attr('href'))).hide();
                 $($(this).attr('href')).fadeToggle(1000);
             });
+        });
+
+        $('a[href^="#"]').click(function() {
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            return false;
         });
     </script>
 </body>

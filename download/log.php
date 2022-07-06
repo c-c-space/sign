@@ -50,8 +50,7 @@ fclose($fp);
             }
             
             #mod b {
-                padding: 0.45rem 1.25% 0.25rem;
-                display: inline-block;
+                padding: 0rem 1.25% 0.25rem;
                 font-size: 5.5vw;
                 transform: scale(1, 1.5);
             }
@@ -74,7 +73,7 @@ fclose($fp);
                 flex-wrap: wrap;
             }
             
-            #mod sup#ed {
+            #mod #ed {
                 display: none;
             }
             
@@ -156,7 +155,29 @@ fclose($fp);
                 padding: 0;
             }
             
-            @media screen and (max-width: 1000px) {
+            @media screen and (max-width: 550px) {
+                #mod b {
+                    font-size: 7.5vw;
+                }
+                #mod p {
+                    font-size: 4.5vw;
+                }
+                #log {
+                    font-size: 4vw;
+                    width: 70%;
+                    height: 55vh;
+                    margin: 12.5vh 15% 0;
+                }
+                #log_items {
+                    padding: 0 5vw;
+                }
+                #log_items u {
+                    width: 7.5vw;
+                    height: 7.5vw;
+                }
+            }
+            
+            @media print {
                 #mod {
                     position: relative;
                     height: auto;
@@ -166,12 +187,15 @@ fclose($fp);
                     position: absolute;
                     top: 0;
                     width: 15%;
-                    margin: 2.5vw 1.25vw;
-                    padding: 0.5vw 0;
+                    margin: 0.5vw 1.25vw 2vw;
+                    padding: 1vw 0;
                     border: solid 1px #000;
                     display: block;
                     justify-content: space-between;
                     flex-wrap: wrap;
+                }
+                #mod #ed {
+                    display: inline-block;
                 }
                 #mod sup {
                     display: block;
@@ -183,7 +207,7 @@ fclose($fp);
                     position: relative;
                     top: 0;
                     right: 0;
-                    font-size: 1vw;
+                    font-size: 2.5vw;
                     width: 100%;
                     height: auto;
                     margin: 0;
@@ -196,23 +220,29 @@ fclose($fp);
                     margin: 0;
                     border-top: 1px solid #000;
                     border-bottom: 1px solid #000;
-                    overflow-x: auto;
                     display: -webkit-flex;
                     display: flex;
                     -webkit-align-items: start;
                     align-items: start;
-                    -webkit-flex-direction: row-reverse;
-                    flex-direction: row-reverse;
+                    flex-flow: row-reverse nowrap;
                 }
                 #log_items li {
                     display: inline-flex;
                     padding: 0.25vw;
                     margin: 0;
-                    width: 100%;
+                }
+                #log_items p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 100%;
+                    line-height: 150%;
                 }
                 #log_items u {
+                    margin: 0.5vw 1vw 0;
                     width: 2.5vw;
                     height: 2.5vw;
+                    font-size: 1.25vw;
+                    clear: both;
                 }
                 #log_items .post,
                 #log_items b,
@@ -226,14 +256,15 @@ fclose($fp);
     <body>
 
         <div id="mod">
-            <b>𝕮𝖔𝖑𝖔𝖗𝖘 𝖆𝖓𝖉 𝕾𝖞𝖒𝖇𝖔𝖑𝖘</b>
+            <sup id="time" style="font-size: 1.25rem; padding:1.25rem;">Last Modified</sup>
+            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
             <p>
                 <sup id="no" style="text-transform: uppercase;">
-        Vol.
+        #
         <?php
         $mod = filemtime($source_file);
         date_default_timezone_set('Asia/Tokyo');
-        print "".date("MY",$mod);
+        print "".date("jMyD",$mod);
         ?>
     </sup>
                 <sup id="time" style="text-transform: uppercase;">
@@ -259,9 +290,9 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
                     </p>
-                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
                         <?=h($row[2])?>
                     </p>
                 </li>
@@ -270,9 +301,9 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
                     </p>
-                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>
                 <?php endif; ?>
             </ul>

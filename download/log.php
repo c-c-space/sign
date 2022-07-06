@@ -191,19 +191,19 @@ fclose($fp);
                     position: absolute;
                     top: 1vw;
                     width: 15%;
-                    margin: 0.5vw 1.25vw 2vw;
-                    padding: 1vw 0;
                     display: block;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
                 }
                 #mod #today {
                     left: 0;
+                    margin: 0.5vw 1.25vw 2vw;
+                    padding: 1vw 0;
                     border: solid 1px #000;
                 }
                 #mod #sign {
                     text-align: left;
                     right: 0;
+                    margin: 0.5vw 1.25vw 2vw;
+                    padding: 0;
                     font-size: 0.5rem;
                 }
                 #mod #ed {

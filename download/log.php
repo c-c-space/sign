@@ -301,7 +301,7 @@ fclose($fp);
                 date_default_timezone_set('Asia/Tokyo');
                 print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
                 ?>
-                    <sup>自分の気持ちを知る・表す<br/>
+                    <sup>自分の気持ちを知る・表す 
                     <?php
                     echo sizeof(file($source_file));
                     ?> 

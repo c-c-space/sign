@@ -221,7 +221,7 @@ fclose($fp);
                 #log {
                     position: relative;
                     top: 0;
-                    right: 0;
+                    left: 0;
                     font-size: 2.5vw;
                     width: 100%;
                     height: auto;

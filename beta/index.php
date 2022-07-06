@@ -80,7 +80,7 @@ fclose($fp);
                 height: 95%;
             }
             .library::-webkit-scrollbar {
-                height: 2.5vh;
+                height: 0;
             }
         }
         

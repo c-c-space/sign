@@ -154,13 +154,20 @@ fclose($fp);
                 </li>
                 <?php endif; ?>
                 <li>
-                    <p style="text-align:center;">
+                    <p id="mod" style="text-align:center;">
                     Last Modified<br/> 
-                    <sup style="text-transform: uppercase;">
+                    <sup id="date" style="text-transform: uppercase;">
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
-                        print "#".date("jMyD g:i:s A T",$mod);
+                        print "#".date("jMyD",$mod);
+                        ?>
+                    </sup>
+                    <sup id="time" style="text-transform: uppercase;">
+                        <?php
+                        $mod = filemtime($source_file);
+                        date_default_timezone_set('Asia/Tokyo');
+                        print "#".date("g:i:s A T",$mod);
                         ?>
                     </sup>
                     </p>

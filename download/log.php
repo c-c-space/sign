@@ -207,6 +207,7 @@ fclose($fp);
                     display: inline-flex;
                     padding: 0.25vw;
                     margin: 0;
+                    text-align:center;
                 }
                 #log_items .post {
                     display: none;

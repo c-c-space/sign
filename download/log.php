@@ -141,7 +141,7 @@ fclose($fp);
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
-                        print "".date("l jS F Y G:i:s T",$mod);
+                        print "".date("j.M.D.y g:i:s A T",$mod);
                         ?>
                     </p>
                 </li>

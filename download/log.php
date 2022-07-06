@@ -45,8 +45,8 @@ fclose($fp);
             #log {
                 font-size: 2.5vw;
                 width: 45%;
-                height: 75vh;
-                margin: 10vh 25% 0;
+                height: 70vh;
+                margin: 12.5vh 25% 0;
                 z-index: 1000;
                 overflow-y: auto;
                 font-family: "MS Mincho", "SimSong", serif;
@@ -117,7 +117,7 @@ fclose($fp);
                     font-size: 4vw;
                     width: 70%;
                     height: 55vh;
-                    margin: 10vh 15% 0;
+                    margin: 12.5vh 15% 0;
                 }
                 #log_items {
                     padding: 0 5vw;
@@ -131,31 +131,6 @@ fclose($fp);
     </head>
 
     <body>
-                    <p id="mod" style="text-align:center;">
-                    Last Modified<br/> 
-                    <sup id="vol" style="text-transform: uppercase;">
-                        <?php
-                        $mod = filemtime($source_file);
-                        date_default_timezone_set('Asia/Tokyo');
-                        print "#".date("jMyD",$mod);
-                        ?>
-                    </sup>
-                    <sup id="time" style="text-transform: uppercase;">
-                        <?php
-                        $mod = filemtime($source_file);
-                        date_default_timezone_set('Asia/Tokyo');
-                        print "".date("g:i:s A T",$mod);
-                        ?>
-                    </sup>
-                    <sup id="ed" style="text-transform: uppercase;">
-                        <?php
-                        echo sizeof(file($source_file));
-                        ?>
-                        Posts
-                    </sup>
-                    </p>
-                    <hr/>
-
         <div id="log">
             <ul id="log_items">
                 <?php if (!empty($rows)): ?>

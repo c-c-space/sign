@@ -6,7 +6,7 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$sign = date("d");
+$sign = date("Ym");
 $source_file =  $sign . ".csv";
 
 $fp = fopen($source_file, 'a+b');

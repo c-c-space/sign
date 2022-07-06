@@ -6,8 +6,8 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("Ymd");
-$source_file =  $today . ".csv";
+$sign = date("Ym");
+$source_file =  $sign . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -147,6 +147,15 @@ fclose($fp);
                         Posts by <i>Members</i> of 
                         <br/><b>New Life Collection</b><br/>
                     </p>
+                    <hr/>
+                    <p style="text-align:center;">
+                    Last Modified on 
+                        <?php
+                        $mod = filemtime($source_file);
+                        date_default_timezone_set('Asia/Tokyo');
+                        print "".date("G:i:s T",$mod);
+                        ?>
+                    </p>
                 </li>
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
@@ -167,23 +176,14 @@ fclose($fp);
                 <?php endif; ?>
                 <li>
                     <p>
-                        Colors and Symbols That expresses<br/>
+                        Colors and Symbols<br/> That expresses
                         <i>
                           <?php
                           date_default_timezone_set('Asia/Tokyo');
-                          print(date('l jS \o\f F Y'))
+                          print(date('F Y'))
                           ?>
                         </i>
                         <br/>
-                    </p>
-                    <hr/>
-                    <p>
-                    Last Modified on 
-                        <?php
-                        $mod = filemtime($source_file);
-                        date_default_timezone_set('Asia/Tokyo');
-                        print "".date("G:i:s T",$mod);
-                        ?>
                     </p>
                     <hr/>
                 </li>

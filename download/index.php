@@ -9,8 +9,8 @@ function h($str) {
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
-$today = date("Ymd");
-$source_file =  $today . ".csv";
+$sign = date("Ym");
+$source_file =  $sign . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

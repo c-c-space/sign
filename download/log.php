@@ -309,7 +309,7 @@ fclose($fp);
 
         <div id="mod">
             <sup id="time" style="font-size: 1.25rem; padding:1.25rem;">Last Modified</sup>
-            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <b id="ed">New Life Collection</b>
             <p>
                 <sup id="no" style="text-transform: uppercase;">
         VOL.

@@ -32,6 +32,7 @@ fclose($fp);
         body {
             margin: 0;
             padding: 0;
+            overflow-y: hidden;
         }
         
         .library {
@@ -75,7 +76,6 @@ fclose($fp);
         @media screen and (max-width: 550px) {
             .library {
                 height: 90vh;
-                overflow-y: hidden;
             }
             .library li {
                 height: 94.5%;

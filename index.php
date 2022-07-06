@@ -179,7 +179,7 @@ fclose($fp);
 </head>
 
 <body>
-    <a id="update" href="submit.html" target="_parent">
+    <a id="update" href="infomation/" target="_parent">
         <b>i</b>
     </a>
 

@@ -131,6 +131,31 @@ fclose($fp);
     </head>
 
     <body>
+        
+        <p id="mod" style="text-align:center;">
+        Last Modified<br/> 
+        <sup id="vol" style="text-transform: uppercase;">
+        <?php
+        $mod = filemtime($source_file);
+        date_default_timezone_set('Asia/Tokyo');
+        print "#".date("jMyD",$mod);
+        ?>
+        </sup>
+        <sup id="time" style="text-transform: uppercase;">
+        <?php
+        $mod = filemtime($source_file);
+        date_default_timezone_set('Asia/Tokyo');
+        print "".date("g:i:s A T",$mod);
+        ?>
+        </sup>
+        <sup id="ed" style="text-transform: uppercase;">
+        <?php
+        echo sizeof(file($source_file));
+        ?>
+        Posts
+        </sup>
+        </p>
+
         <div id="log">
             <ul id="log_items">
                 <?php if (!empty($rows)): ?>

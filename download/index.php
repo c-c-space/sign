@@ -170,8 +170,7 @@ fclose($fp);
         ?></a>
         <span class="check"><b>✔</b></span>
         </div>
-        <div><a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>
-        </div>
+        <div><a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span></div>
     </div>
 
     <div id="background"></div>

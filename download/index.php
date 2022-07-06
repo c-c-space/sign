@@ -9,8 +9,8 @@ function h($str) {
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 
-$sign = date("Ymd");
-$source_file =  $sign . ".csv";
+$today = date("Ymd");
+$source_file =  $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -188,9 +188,9 @@ fclose($fp);
         <div>
             <a class="tab" href="#sign">
                 <?php
-date_default_timezone_set('Asia/Tokyo');
-print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-?>
+                date_default_timezone_set('Asia/Tokyo');
+                print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+                ?>
             </a>
             <span class="check"><b>✔</b></span>
         </div>

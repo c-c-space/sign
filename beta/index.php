@@ -28,9 +28,15 @@ fclose($fp);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>自分の気持ちを知る・表す</title>
     <style type="text/css">
+    @media screen and (max-width: 550px) {
+      .library li {
+        height: 90vh;
+      }
+      .library::-webkit-scrollbar {
+        height: 0;
+      }
+    }
     </style>
-    
-    <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
   
   </head>

@@ -210,7 +210,7 @@ fclose($fp);
                     top: 0;
                     right: 0;
                     font-size: 2.5vw;
-                    width: 100vw;
+                    width: 100%;
                     height: auto;
                     margin: 0;
                     padding: 0 0 2.5vw;

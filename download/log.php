@@ -136,7 +136,7 @@ fclose($fp);
             <ul id="log_items">
                 <li>
                     <hr/>
-                    <p style="text-align:center;">
+                    <p style="text-align:center; text-transform: uppercase;">
                     Last Modified<br/> 
                         <?php
                         $mod = filemtime($source_file);
@@ -152,7 +152,7 @@ fclose($fp);
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
                         <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
                     </p>
-                    <p style="user-select:none; pointer-events:none;"><?=h($row[2])?></p>
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;"><?=h($row[2])?></p>
                 </li>
                 <?php endforeach; ?>
                 <?php else: ?>
@@ -161,7 +161,7 @@ fclose($fp);
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
                         <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
                     </p>
-                    <p style="user-select:none; pointer-events:none;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>
                 <?php endif; ?>
                 <li>

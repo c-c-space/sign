@@ -147,11 +147,11 @@ fclose($fp);
                     </p>
                     <hr/>
                     <p style="text-align:center;">
-                    Last Modified on 
+                    Last Modified<br/> 
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
-                        print "".date("l jS \o\f F Y G:i:s T",$mod);
+                        print "".date("l jS F Y G:i:s T",$mod);
                         ?>
                     </p>
                 </li>

@@ -301,7 +301,11 @@ fclose($fp);
                 date_default_timezone_set('Asia/Tokyo');
                 print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
                 ?>
-                    <sup>の気持ちを表す色と記号</sup>
+                    <sup>自分の気持ちを知る・表す<br/>
+                    <?php
+                    echo sizeof(file($source_file));
+                    ?> 
+                    の 色と記号</sup>
             </p>
         </div>
 

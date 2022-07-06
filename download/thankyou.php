@@ -11,7 +11,7 @@ $source_file =  $sign . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');
 $color = (string)filter_input(INPUT_POST, 'color');
-$timestamp = date("g:i:s A T");
+$timestamp = date("Y.m.d g:i:s A T");
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 $ips = explode(",", $forwardedFor);

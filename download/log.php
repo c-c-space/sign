@@ -137,16 +137,6 @@ fclose($fp);
                 <li>
                     <hr/>
                     <p style="text-align:center;">
-                        <b>
-                        <?php
-                        echo sizeof(file($source_file));
-                        ?>
-                        </b>
-                        Posts by <i>Members</i> of 
-                        <br/><b>New Life Collection</b><br/>
-                    </p>
-                    <hr/>
-                    <p style="text-align:center;">
                     Last Modified<br/> 
                         <?php
                         $mod = filemtime($source_file);
@@ -175,14 +165,19 @@ fclose($fp);
                 </li>
                 <?php endif; ?>
                 <li>
-                    <p>
-                        Colors and Symbols<br/> That expresses
+                    <p style="text-align:center;">
                         <i>
+                        <?php
+                        echo sizeof(file($source_file));
+                        ?>
+                        </i>
+                        Colors and Symbols<br/> That expresses
+                        <b>
                           <?php
                           date_default_timezone_set('Asia/Tokyo');
                           print(date('F Y'))
                           ?>
-                        </i>
+                        </b>
                         <br/>
                     </p>
                     <hr/>

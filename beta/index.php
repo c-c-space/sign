@@ -77,7 +77,7 @@ fclose($fp);
                 height: 90vh;
             }
             .library li {
-                height: 90%;
+                height: 95%;
             }
             .library::-webkit-scrollbar {
                 height: 2.5vh;

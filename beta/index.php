@@ -49,7 +49,7 @@ fclose($fp);
         
         .library li {
             width: 45rem;
-            height: 99%;
+            height: 100%;
             max-width: 90vw;
             overflow: hidden;
         }
@@ -62,7 +62,7 @@ fclose($fp);
         
         .library::-webkit-scrollbar {
             width: 0;
-            height: 5vh;
+            height: 4.5vh;
             background-size: 400% 400%;
             animation: gradientBG 5s ease infinite;
             background: linear-gradient(-90deg, #fffafa, #483d8b, #f0ffff, #f0ffff, #d2b48c, #0000cd, #ff8c00, #008080, #808080, #fffafa, #fff000, #fffafa, #b0c4de, #808080, #b0c4de, #d2b48c, #808080, #ffdab9, #b0c4de, #808080, #ba55d3, #ff0000, #90ee90, #fff);

@@ -147,6 +147,15 @@ fclose($fp);
                         Posts by <i>Members</i> of 
                         <br/><b>New Life Collection</b><br/>
                     </p>
+                        <hr/>
+                    <p style="text-align:center;">
+                    Last Modified
+                        <?php
+                        $mod = filemtime($source_file);
+                        date_default_timezone_set('Asia/Tokyo');
+                        print "".date("G:i:s",$mod);
+                        ?>
+                    </p>
                 </li>
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>

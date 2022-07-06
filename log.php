@@ -163,7 +163,7 @@ fclose($fp);
                 #mod b {
                     font-size: 7.5vw;
                 }
-                #mod p {
+                #mod #today {
                     font-size: 4.5vw;
                 }
                 #log {

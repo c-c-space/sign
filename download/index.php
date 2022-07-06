@@ -158,8 +158,6 @@ fclose($fp);
             @media screen and (max-width: 550px) {
         
         #menu {
-            position: fixed;
-            z-index: 1000;
             bottom: 0;
         }
             }

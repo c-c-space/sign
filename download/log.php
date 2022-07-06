@@ -178,11 +178,11 @@ fclose($fp);
                     </p>
                     <hr/>
                     <p style="text-align:center;">
-                    Last Modified
+                    Last Modified on 
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
-                        print "".date("G:i:s",$mod);
+                        print "".date("G:i:s T",$mod);
                         ?>
                     </p>
                     <hr/>

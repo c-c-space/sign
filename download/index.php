@@ -49,6 +49,7 @@ fclose($fp);
         }
         
         #update {
+            display:none;
             position: fixed;
             top: 1rem;
             right: 1rem;
@@ -83,7 +84,7 @@ fclose($fp);
         #menu {
             position: fixed;
             z-index: 1000;
-            bottom: 0;
+            top: 0;
             left: 0;
             width: 95%;
             padding: 0.25rem 2.5%;

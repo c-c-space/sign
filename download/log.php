@@ -156,7 +156,7 @@ fclose($fp);
                 <li>
                     <p id="mod" style="text-align:center;">
                     Last Modified<br/> 
-                    <sup id="date" style="text-transform: uppercase;">
+                    <sup id="vol" style="text-transform: uppercase;">
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
@@ -167,8 +167,14 @@ fclose($fp);
                         <?php
                         $mod = filemtime($source_file);
                         date_default_timezone_set('Asia/Tokyo');
-                        print "#".date("g:i:s A T",$mod);
+                        print "".date("g:i:s A T",$mod);
                         ?>
+                    </sup>
+                    <sup id="ed" style="text-transform: uppercase;">
+                        <?php
+                        echo sizeof(file($source_file));
+                        ?>
+                        Posts
                     </sup>
                     </p>
                     <hr/>

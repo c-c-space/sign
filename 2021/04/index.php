@@ -177,7 +177,7 @@ fclose($fp);
 </head>
 
 <body>
-    <a id="update" href="submit/" target="_parent">
+    <a id="update" href="/sign/submit/" target="_parent">
         <b>⎷</b>
     </a>
 

@@ -202,6 +202,7 @@ fclose($fp);
                     align-items: stretch;
                     -webkit-flex-direction: row;
                     flex-direction: row;
+                    flex-flow: row-reverse nowrap;
                 }
                 #log_items li {
                     display: inline-flex;

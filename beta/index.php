@@ -38,7 +38,6 @@ fclose($fp);
     }
     </style>
     <link rel="stylesheet" href="style.css" />
-  
   </head>
   <body>
     <ul class="mousedragscrollable library">

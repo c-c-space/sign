@@ -183,16 +183,11 @@ fclose($fp);
 
     <div id="menu" class="nlc">
         <div>
-            <a class="tab" href="#sign">令和三年四月</a>
+            <a class="tab" href="#sign">April 2021</a>
             <span class="check"><b>✔</b></span>
         </div>
         <div>
-            <a class="tab" href="#flash">
-                <?php
-                echo sizeof(file($source_file));
-                ?> 
-                の 色と記号
-            </a>
+            <a class="tab" href="#flash">View The Collection</a>
             <span class="check"><b>✔</b></span>
         </div>
     </div>

@@ -170,7 +170,8 @@ fclose($fp);
         
         @media print {
             #menu,
-            #update {
+            #update,
+            #index {
                 display: none;
             }
         }

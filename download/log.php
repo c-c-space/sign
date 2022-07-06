@@ -171,7 +171,7 @@ fclose($fp);
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
                         <b style="color:#000;">Under Construction</b>
                     </p>
-                    <p id="showTime"></p>
+                    <p>IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>
                 <?php endif; ?>
                 <li>

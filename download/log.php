@@ -101,8 +101,6 @@ fclose($fp);
             
             #log_items b {
                 font-size: 150%;
-                user-select:none;
-                pointer-events:none;
             }
             
             #log_items i {
@@ -160,8 +158,10 @@ fclose($fp);
                 <?php if (!empty($rows)): ?>
                 <?php foreach ($rows as $row): ?>
                 <li>
-                    <p><u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[3])?></b></p>
+                    <p>
+                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
+                        <b style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                    </p>
                     <p style="user-select:none; pointer-events:none;">Posted on <i><?=h($row[2])?></i></p>
                 </li>
                 <?php endforeach; ?>
@@ -169,7 +169,7 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b style="color:#000;">Under Construction</b>
+                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
                     </p>
                     <p style="user-select:none; pointer-events:none;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>

@@ -231,11 +231,11 @@ fclose($fp);
             <b>𝕮𝖔𝖑𝖔𝖗𝖘 𝖆𝖓𝖉 𝕾𝖞𝖒𝖇𝖔𝖑𝖘</b>
             <p>
                 <sup id="no" style="text-transform: uppercase;">
-        #
+        Vol.
         <?php
         $mod = filemtime($source_file);
         date_default_timezone_set('Asia/Tokyo');
-        print "".date("jMyD",$mod);
+        print "".date("MY",$mod);
         ?>
     </sup>
                 <sup id="time" style="text-transform: uppercase;">

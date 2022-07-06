@@ -156,7 +156,7 @@ fclose($fp);
                 padding: 0;
             }
             
-            @media screen and (max-width: 550px) {
+            @media screen and (max-width: 1000px) {
                 #mod {
                     position: relative;
                     height: auto;
@@ -196,27 +196,25 @@ fclose($fp);
                     margin: 0;
                     border-top: 1px solid #000;
                     border-bottom: 1px solid #000;
+                    overflow-x: auto;
                     display: -webkit-flex;
                     display: flex;
-                    -webkit-align-items: stretch;
-                    align-items: stretch;
-                    -webkit-flex-direction: row;
-                    flex-direction: row;
+                    -webkit-align-items: start;
+                    align-items: start;
+                    -webkit-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
                 }
                 #log_items li {
-                    flex-flow: row-reverse nowrap;
+                    display: inline-flex;
                     padding: 0.25vw;
                     margin: 0;
-                    text-align:center;
-                }
-                #log_items .post {
-                    display: none;
+                    width: 100%;
                 }
                 #log_items u {
-                    display: block;
                     width: 2.5vw;
                     height: 2.5vw;
                 }
+                #log_items .post,
                 #log_items b,
                 #log_items i {
                     display: none;
@@ -272,9 +270,9 @@ fclose($fp);
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
                     </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    <p style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>
                 <?php endif; ?>
             </ul>

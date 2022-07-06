@@ -154,6 +154,89 @@ fclose($fp);
             height: 100%;
             border: none;
         }
+            
+            @media screen and (max-width: 550px) {
+        
+        #menu {
+            position: fixed;
+            z-index: 1000;
+            top: 95vh;
+        }
+            }
+            
+            @media print {
+                #mod {
+                    position: relative;
+                    height: auto;
+                    background-color: #fff;
+                }
+                #mod p {
+                    position: absolute;
+                    top: 0;
+                    width: 15%;
+                    margin: 0.5vw 1.25vw 2vw;
+                    padding: 1vw 0;
+                    border: solid 1px #000;
+                    display: block;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+                #mod #ed {
+                    display: inline-block;
+                }
+                #mod sup {
+                    display: block;
+                }
+                #mod sup#time {
+                    display: none;
+                }
+                #log {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    font-size: 2.5vw;
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                    padding: 0 0 2.5vw;
+                    background-color: #fff;
+                    z-index: 0;
+                }
+                #log_items {
+                    padding: 0 0 0.25vw;
+                    margin: 0;
+                    border-top: 1px solid #000;
+                    border-bottom: 1px solid #000;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-align-items: start;
+                    align-items: start;
+                    flex-flow: row-reverse nowrap;
+                }
+                #log_items li {
+                    display: inline-flex;
+                    padding: 0.25vw;
+                    margin: 0;
+                }
+                #log_items p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 100%;
+                    line-height: 150%;
+                }
+                #log_items u {
+                    margin: 0.5vw 1vw 0;
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    font-size: 1.25vw;
+                    clear: both;
+                }
+                #log_items .post,
+                #log_items b,
+                #log_items i {
+                    display: none;
+                }
+            }
     </style>
 </head>
 

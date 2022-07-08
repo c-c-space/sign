@@ -30,8 +30,9 @@ while ($row = fgetcsv($fp)) {
 flock($fp, LOCK_UN);
 fclose($fp);
 
-?><html lang="ja">
+?>
 
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

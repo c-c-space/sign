@@ -170,7 +170,41 @@ fclose($fp);
                 viewSlide(className, flashNo);
             }, msec);
         }
-    </script>
+        
+		const oscillators = [];
+		const bassFreq = 32;
+
+		for (let i = 0; i < 8; i++) {
+			oscillators.push(new Tone.Oscillator({
+				frequency: bassFreq * i,
+				type: "sawtooth4",
+				volume: -Infinity,
+				detune: Math.random() * 30 - 15,
+			}).toDestination());
+		}
+
+		// bind the interface
+		document.querySelector("tone-play-toggle").addEventListener("start", e => {
+			oscillators.forEach(o => {
+				o.start();
+				o.volume.rampTo(-20, 1);
+			});
+		});
+		
+		document.querySelector("tone-play-toggle").addEventListener("stop", e => {
+			oscillators.forEach(o => {
+				o.stop("+1.2");
+				o.volume.rampTo(-Infinity, 1);
+			});
+		});
+
+		document.querySelector("tone-slider").addEventListener("input", e => {
+			oscillators.forEach((osc, i) => {
+				osc.frequency.rampTo(bassFreq * i * parseFloat(e.target.value), 0.4);
+			});
+		});
+
+	</script>
 </body>
 
 </html>

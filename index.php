@@ -206,7 +206,7 @@ fclose($fp);
 <div id="background"></div>
 <div id="sign" class="change"></div>
 <div id="flash" class="change"><iframe src="flash.php"></iframe></div>
-<div id="submit"><iframe src="submit/"></iframe></div>
+<div id="submit" class="change"><iframe src="submit/"></iframe></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

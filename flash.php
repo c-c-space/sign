@@ -97,7 +97,7 @@ fclose($fp);
                 transform: rotateY(180deg);
             }
             
-            #post {
+            #speed {
                 z-index: 1000;
                 position: fixed;
                 top: 0;
@@ -107,7 +107,7 @@ fclose($fp);
                 width: 100%;
             }
             
-            #post input[type="range"] {
+            #speed input[type="range"] {
                 width: 75%;
                 position: absolute;
                 top: 0;
@@ -148,7 +148,7 @@ fclose($fp);
             </li>
             <?php endif; ?>
         </ul>
-        <section id="post">
+        <section id="speed">
             <input type="range" id="flash_speed" value="" min="0" max="5000">
         </section>
 

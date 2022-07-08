@@ -153,7 +153,8 @@ fclose($fp);
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="flash.js">var synth = new Tone.PolySynth(5, Tone.Synth).toMaster();
+        <script src="">
+            var synth = new Tone.PolySynth(5, Tone.Synth).toMaster();
 var notes = Tone.Frequency("F#4").harmonize([
     1, 3, 6, 8, 10,
     3, 6, 8, 10, 13,
@@ -206,7 +207,8 @@ function viewSlide(className, flashNo = -1) {
     setTimeout(function() {
         viewSlide(className, flashNo);
     }, msec);
-}</script>
+}
+        </script>
     </body>
 
     </html>

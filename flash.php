@@ -103,7 +103,7 @@ fclose($fp);
             width: 100%;
         }
         
-        #flash_speed {
+        #post input[type="range"] {
             width: 75%;
             position: absolute;
             top: 0;
@@ -145,8 +145,7 @@ fclose($fp);
         <?php endif; ?>
     </ul>
     <section id="post">
-        <tone-play-toggle></tone-play-toggle>
-        <tone-slider id="flash_speed" label="harmonicity" value="7500" min="5000" max="10000"></tone-slider>
+        <input type="range" id="flash_speed" value="7500" min="5000" max="10000">
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -172,44 +171,6 @@ fclose($fp);
             }, msec);
         }
     </script>
-
-
-	<script type="text/javascript">
-		const oscillators = [];
-
-		const bassFreq = 32;
-
-		for (let i = 0; i < 8; i++) {
-			oscillators.push(new Tone.Oscillator({
-				frequency: bassFreq * i,
-				type: "sawtooth4",
-				volume: -Infinity,
-				detune: Math.random() * 30 - 15,
-			}).toDestination());
-		}
-
-		// bind the interface
-		document.querySelector("tone-play-toggle").addEventListener("start", e => {
-			oscillators.forEach(o => {
-				o.start();
-				o.volume.rampTo(-20, 1);
-			});
-		});
-		
-		document.querySelector("tone-play-toggle").addEventListener("stop", e => {
-			oscillators.forEach(o => {
-				o.stop("+1.2");
-				o.volume.rampTo(-Infinity, 1);
-			});
-		});
-
-		document.querySelector("tone-slider").addEventListener("input", e => {
-			oscillators.forEach((osc, i) => {
-				osc.frequency.rampTo(bassFreq * i * parseFloat(e.target.value), 0.4);
-			});
-		});
-
-	</script>
 </body>
 
 </html>

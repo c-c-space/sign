@@ -149,7 +149,7 @@ fclose($fp);
             <?php endif; ?>
         </ul>
         <section id="post">
-            <input type="range" id="flash_speed" value="" min="0" max="2500">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
         </section>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

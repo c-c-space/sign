@@ -1,5 +1,5 @@
 var wheel = new Tone.Synth(Tone.Synth).toMaster();
-var scrool = Tone.Frequency("A3").harmonize([
+var scrool = Tone.Frequency("G3").harmonize([
     1, 3, 6, 8, 10,
     3, 6, 8, 10, 13,
     6, 8, 10, 13, 15,

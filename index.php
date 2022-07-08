@@ -51,7 +51,7 @@ fclose($fp);
             position: fixed;
             top: 2.5vw;
             right: 2.5vw;
-            z-index: 50;
+            z-index: 100;
             color: #000;
             border-radius: 50%;
             text-decoration: none;
@@ -160,7 +160,7 @@ fclose($fp);
         }
 
         .open #submit {
-            z-index: 49;
+            z-index: 99;
             background: #fff;
             display: block;
         }

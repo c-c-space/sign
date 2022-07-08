@@ -16,7 +16,7 @@ var notes = Tone.Frequency("G4").harmonize([
 ]);
 var noteIndex = 0;
 
-$("#click li").click(function(e) {
+$("#click .click").click(function(e) {
     var randNote = Math.floor(Math.random() * notes.length);
     click.triggerAttackRelease(notes[randNote], "10n");
 });

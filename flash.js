@@ -1,14 +1,14 @@
-var synth = new Tone.AMSynth(5, Tone.Synth).toMaster();
-var notes = Tone.Frequency("F3").harmonize([
+var synth = new Tone.PolySynth(5, Tone.Synth).toMaster();
+var notes = Tone.Frequency("F#4").harmonize([
     1, 3, 6, 8, 10,
     3, 6, 8, 10, 13,
     6, 8, 10, 13, 15,
     8, 10, 13, 15, 18,
     10, 13, 15, 18, 20,
     13, 15, 18, 20, 22,
-    15, 18, 20, 22, 25
+    15, 18, 20, 22, 25,
 ]);
-var noteIndex = 0;
+var noteIndex = 1;
 
 StartAudioContext(Tone.context, window);
 $(window).click(function() {
@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
 
 function viewSlide(className, flashNo = -1) {
     var randNote = Math.floor(Math.random() * notes.length);
-    synth.triggerAttackRelease(notes[randNote], "0n");
+    synth.triggerAttackRelease(notes[randNote], "5");
 
     let imgArray = document.querySelectorAll(className);
     if (flashNo >= 0) {

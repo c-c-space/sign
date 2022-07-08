@@ -1,12 +1,8 @@
 var synth = new Tone.PolySynth(5, Tone.Synth).toMaster();
-var notes = Tone.Frequency("F2").harmonize([
-    1, 3, 6, 8, 10,
-    3, 6, 8, 10, 13,
-    6, 8, 10, 13, 15,
-    8, 10, 13, 15, 18,
-    10, 13, 15, 18, 20,
-    13, 15, 18, 20, 22,
-    15, 18, 20, 22, 25,
+var notes = Tone.Frequency("E3").harmonize([
+    7, 10, 12,
+    10, 12, 14,
+    12, 14, 17,
 ]);
 var noteIndex = 1;
 

@@ -160,7 +160,7 @@ fclose($fp);
         }
 
         .open #submit {
-            z-index: 100;
+            z-index: 49;
             background: #fff;
             display: block;
         }

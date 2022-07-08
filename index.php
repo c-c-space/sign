@@ -149,7 +149,7 @@ fclose($fp);
             z-index: -1;
         }
         
-        #flash iframe,
+        #background iframe,
         #submit iframe {
             width: 100%;
             height: 100%;
@@ -206,8 +206,8 @@ fclose($fp);
 </div>
 
 <div id="background"></div>
-<div id="sign" class="change"></div>
-<div id="flash" class="change"><iframe src="flash.php"></iframe></div>
+<div id="sign" class="change"><iframe src="background.php"></iframe></div>
+<div id="flash" class="change"></div>
 <div id="submit"><iframe src="submit/"></iframe></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -225,7 +225,7 @@ fclose($fp);
     }, false);
 
     $(function() {
-        $("#background").load("background.php");
+        $("#flash").load("flash.php");
         $("#sign").load("log.php");
     })
 

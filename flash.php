@@ -103,7 +103,7 @@ fclose($fp);
             width: 100%;
         }
         
-        #post input[type="range"] {
+        #flash_speed {
             width: 75%;
             position: absolute;
             top: 0;
@@ -145,7 +145,8 @@ fclose($fp);
         <?php endif; ?>
     </ul>
     <section id="post">
-        <input type="range" id="flash_speed" value="7500" min="5000" max="10000">
+        <tone-play-toggle></tone-play-toggle>
+        <tone-slider id="flash_speed" label="harmonicity" value="7500" min="5000" max="10000"></tone-slider>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -188,21 +189,21 @@ fclose($fp);
 		}
 
 		// bind the interface
-		document.querySelector("input[type="range"]").addEventListener("start", e => {
+		document.querySelector("tone-play-toggle").addEventListener("start", e => {
 			oscillators.forEach(o => {
 				o.start();
 				o.volume.rampTo(-20, 1);
 			});
 		});
 		
-		document.querySelector("input[type="range"]").addEventListener("stop", e => {
+		document.querySelector("tone-play-toggle").addEventListener("stop", e => {
 			oscillators.forEach(o => {
 				o.stop("+1.2");
 				o.volume.rampTo(-Infinity, 1);
 			});
 		});
 
-		document.querySelector("input[type="range"]").addEventListener("input", e => {
+		document.querySelector("tone-slider").addEventListener("input", e => {
 			oscillators.forEach((osc, i) => {
 				osc.frequency.rampTo(bassFreq * i * parseFloat(e.target.value), 0.4);
 			});

@@ -3,7 +3,7 @@ $(window).click(function() {
     Tone.context.resume();
 });
 
-var volume = new Tone.Volume(7);
+var volume = new Tone.Volume(5);
 var click = new Tone.FMSynth(7, Tone.Synth).chain(volume, Tone.Master);
 var notes = Tone.Frequency("G4").harmonize([
     1, 3, 6, 8, 10,

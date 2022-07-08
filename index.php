@@ -47,7 +47,7 @@ fclose($fp);
             word-spacing: -.25ch;
         }
         
-        #update {
+        #btn {
             position: fixed;
             top: 2.5vw;
             right: 2.5vw;
@@ -60,13 +60,13 @@ fclose($fp);
             height: 3vw;
         }
         
-        #update:hover {
+        #btn:hover {
             cursor: pointer;
             color: #fff;
             transition: 1s all;
         }
         
-        #update b {
+        #btn b {
             position: absolute;
             padding: 0;
             margin: 0;
@@ -136,7 +136,8 @@ fclose($fp);
         
         #background,
         #flash,
-        #sign {
+        #sign,
+        #submit {
             position: fixed;
             width: 100vw;
             height: 100vh;
@@ -148,19 +149,27 @@ fclose($fp);
             z-index: -1;
         }
         
-        #flash iframe {
+        #flash iframe,
+        #submit iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+        #submit {
+            display: none;
+        }
+
+        .open #submit {
+            display: block;
+        }
         
         @media screen and (max-width: 550px) {
-            #update {
+            #btn {
                 z-index: 50;
                 width: 2rem;
                 height: 2rem;
             }
-            #update b {
+            #btn b {
                 letter-spacing: .1rem;
                 font-size: 1.5rem;
             }
@@ -168,7 +177,7 @@ fclose($fp);
         
         @media print {
             #menu,
-            #update,
+            #btn,
             #index {
                 display: none;
             }
@@ -176,53 +185,63 @@ fclose($fp);
     </style>
 </head>
 
-<body>
-    <a id="update" href="submit/" target="_parent">
-        <b>⎷</b>
-    </a>
+<body id="open">
+<a id="btn"><b>⎷</b></a>
 
-    <div id="menu" class="nlc">
-        <div>
-            <a class="tab" href="#sign">
-                <?php
-                date_default_timezone_set('Asia/Tokyo');
-                print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-                ?>
-            </a>
-            <span class="check"><b>✔</b></span>
-        </div>
-        <div>
-            <a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>
-        </div>
+<div id="menu" class="nlc">
+    <div>
+        <a class="tab" href="#sign">
+            <?php
+            date_default_timezone_set('Asia/Tokyo');
+            print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+            ?>
+        </a>
+        <span class="check"><b>✔</b></span>
     </div>
+    <div>
+        <a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>
+    </div>
+</div>
 
-    <div id="background"></div>
-    <div id="sign" class="change"></div>
-    <div id="flash" class="change"><iframe src="flash.php"></iframe></div>
+<div id="background"></div>
+<div id="sign" class="change"></div>
+<div id="flash" class="change"><iframe src="flash.php"></iframe></div>
+<div id="submit"><iframe src="submit/"></iframe></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#background").load("background.php");
-            $("#sign").load("log.php");
-        })
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    let btn = document.querySelector('#btn');
+    let box = document.querySelector('#open');
 
-        $(function() {
-            $('.change').hide();
+    let btnToggleclass = function(el) {
+        el.classList.toggle('open');
+    }
 
-            $('.tab').on('click', function() {
-                $('.change').not($($(this).attr('href'))).hide();
-                $($(this).attr('href')).fadeToggle(1000);
-            });
+    btn.addEventListener('click', function() {
+        btnToggleclass(box);
+    }, false);
+
+    $(function() {
+        $("#background").load("background.php");
+        $("#sign").load("log.php");
+    })
+
+    $(function() {
+        $('.change').hide();
+
+        $('.tab').on('click', function() {
+            $('.change').not($($(this).attr('href'))).hide();
+            $($(this).attr('href')).fadeToggle(1000);
         });
+    });
 
-        $('a[href^="#"]').click(function() {
-            var href = $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            return false;
-        });
-    </script>
+    $('a[href^="#"]').click(function() {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        return false;
+    });
+</script>
 </body>
 
 </html>

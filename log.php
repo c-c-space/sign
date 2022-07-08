@@ -34,6 +34,10 @@ fclose($fp);
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>自分の気持ちを知る・表す</title>
+        <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+        <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+        <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+        <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
         <style type="text/css">
             body {
                 padding: 0;
@@ -326,6 +330,9 @@ fclose($fp);
                 <?php endif; ?>
             </ul>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="log.js"></script>
 
         <script type="text/javascript">
             function set2(num) {

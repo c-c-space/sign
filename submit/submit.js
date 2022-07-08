@@ -4,7 +4,7 @@ $(window).click(function() {
 });
 
 var volume = new Tone.Volume(7);
-var click = new Tone.AMSynth(6, Tone.Synth).chain(volume, Tone.Master);
+var click = new Tone.AMSynth(7, Tone.Synth).chain(volume, Tone.Master);
 var notes = Tone.Frequency("G4").harmonize([
     1, 3, 6, 8, 10,
     3, 6, 8, 10, 13,

@@ -155,7 +155,8 @@ fclose($fp);
             height: 100%;
             border: none;
         }
-        #submit {
+        #submit,
+        .open #menu {
             display: none;
         }
 
@@ -167,7 +168,6 @@ fclose($fp);
         
         @media screen and (max-width: 550px) {
             #btn {
-                z-index: 50;
                 width: 2rem;
                 height: 2rem;
             }

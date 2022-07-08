@@ -1,5 +1,5 @@
 var synth = new Tone.PolySynth(5, Tone.Synth).toMaster();
-var notes = Tone.Frequency("F#4").harmonize([
+var notes = Tone.Frequency("F4").harmonize([
     1, 3, 6, 8, 10,
     3, 6, 8, 10, 13,
     6, 8, 10, 13, 15,

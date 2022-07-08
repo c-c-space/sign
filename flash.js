@@ -37,6 +37,7 @@ window.addEventListener('load', function() {
 function viewSlide(className, flashNo = -1) {
     var randNote = Math.floor(Math.random() * notes.length);
     synth.triggerAttackRelease(notes[randNote], "2n");
+    randNote.loop = false;
 
     let imgArray = document.querySelectorAll(className);
     if (flashNo >= 0) {

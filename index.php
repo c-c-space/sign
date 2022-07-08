@@ -205,8 +205,8 @@ fclose($fp);
     </div>
 </div>
 
-<div id="background"></div>
-<div id="sign" class="change"><iframe src="background.php"></iframe></div>
+<div id="background"><iframe src="background.php"></iframe></div>
+<div id="sign" class="change"></div>
 <div id="flash" class="change"></div>
 <div id="submit"><iframe src="submit/"></iframe></div>
 

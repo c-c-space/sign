@@ -3,7 +3,8 @@ $(window).click(function() {
     Tone.context.resume();
 });
 
-var click = new Tone.PolySynth(3, Tone.Synth).toMaster();
+var volume = new Tone.Volume(-5);
+var click = new Tone.PolySynth(3, Tone.Synth).chain(volume, Tone.Master);
 var number = Tone.Frequency("B5").harmonize([
     7, 10, 12,
     10, 12, 14,

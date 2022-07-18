@@ -214,7 +214,7 @@ fclose($fp);
         
         @media print {
             #mod #ed {
-                transform: scale(0.75, 1.75);
+                transform: scale(0.55, 1.75);
             }
         }
     </style>

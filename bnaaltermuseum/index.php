@@ -138,7 +138,7 @@ fclose($fp);
         #mod #credit b {
             text-align: center;
             font-size: 150%;
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.5rem;
             font-family: Arial, sans-serif;
         }
         

@@ -120,6 +120,13 @@ fclose($fp);
             letter-spacing: 0.05em;
         }
         
+        #mod #credit a {
+            position: absolute;
+            width:100%;
+            height:0;
+            z-index: 100;
+        }
+        
         #mod #credit b {
             text-align: center;
             font-size: 150%;
@@ -259,6 +266,7 @@ fclose($fp);
             <b class="print">Colors and Symbols</b>
             <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
             <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
+            <a href="submit/"></a>
         </div>
         <div id="collection">
                 <ul class="flash">

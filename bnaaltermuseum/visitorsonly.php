@@ -234,7 +234,7 @@ fclose($fp);
     $(function() {
         $("#flash").load("flash.php");
         $("#sign").load("log.php");
-        $("#submit").load("submit/");
+        $("#submit").load("submit.html");
     })
 
     $(function() {

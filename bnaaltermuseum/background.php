@@ -103,7 +103,8 @@ fclose($fp);
             <?php endforeach; ?>
             <?php else: ?>
             <?php endif; ?>
-            #fff);">
+            #fff,
+            #000);">
         </li>
     </ul>
 </body>

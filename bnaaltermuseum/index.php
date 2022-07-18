@@ -143,7 +143,9 @@ fclose($fp);
         #collection ul {
             padding: 0;
             margin: 0 0.5rem;
-            display: -webkit-flex;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            display: -ms-flexbox;
             display: flex;
             white-space: nowrap;
             overflow: auto;
@@ -151,7 +153,6 @@ fclose($fp);
             justify-content: space-between;
             -webkit-flex-direction: row-reverse;
             flex-direction: row-reverse;
-            -webkit-overflow-scrolling: touch;
         }
         
         #collection li {

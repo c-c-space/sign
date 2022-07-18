@@ -151,7 +151,7 @@ fclose($fp);
 
         #submit {
             position: absolute;
-            z-index: 100;
+            z-index: 99;
             width:100%;
             min-height: 100vh;
             background-color: rgba(255,255,255,0.75);

@@ -75,7 +75,7 @@
         }
         
         @media print {
-            #submit {
+            #form {
                 display: none;
             }
             .print {
@@ -87,7 +87,7 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
-            $("#").load("");
+            $("#form").load("submit/form.html");
         })
     </script>
 </head>
@@ -103,6 +103,7 @@
         <p>本日 <b>BnA Alter Museume</b> に <b>宿泊</b> する <b>皆様</b> は、この投稿フォームから <b>今の気持ち</b> に合う <b>色</b> と <b>記号</b> を投稿し、この作品の制作に参加できます。</p>
         <hr/>
     </div>
+    <div id="form"></div>
     <div id="about">
         <hr/>
         <br/>

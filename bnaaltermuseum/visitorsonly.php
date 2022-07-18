@@ -148,6 +148,12 @@ fclose($fp);
         #background {
             z-index: -1;
         }
+
+        #submit {
+            z-index: 99;
+            background-color: #fff;
+            display: block;
+        }
         
         #background iframe,
         #submit iframe {
@@ -159,10 +165,7 @@ fclose($fp);
         #menu {
             display: none;
         }
-
-        #submit {
-            z-index: 99;
-            background-color: #fff;
+        .open #menu {
             display: block;
         }
         

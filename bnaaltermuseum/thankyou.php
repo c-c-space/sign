@@ -37,7 +37,7 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="3;URL=index.php">
+    <meta http-equiv="refresh" content="3;URL=visitorsonly.php">
     <title> 完了 | 自分の気持ちを知る・表す </title>
     <style type="text/css">
         .inside h1 {

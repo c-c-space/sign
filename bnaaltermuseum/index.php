@@ -120,6 +120,11 @@ fclose($fp);
             letter-spacing: 0.05em;
         }
         
+        #mod #credit a {
+            color:#000;
+            text-decoration:none;
+        }
+        
         #mod #credit b {
             text-align: center;
             font-size: 150%;

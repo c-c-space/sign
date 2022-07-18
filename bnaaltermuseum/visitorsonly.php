@@ -137,8 +137,7 @@ fclose($fp);
         
         #background,
         #flash,
-        #sign,
-        #submit {
+        #sign {
             position: fixed;
             width: 100vw;
             height: 100vh;
@@ -151,7 +150,10 @@ fclose($fp);
         }
 
         #submit {
-            z-index: 99;
+            position: absolute;
+            z-index: 100;
+            width:100%;
+            min-height: 100vh;
             background-color: rgba(255,255,255,0.75);
             display: block;
             overflow: auto;

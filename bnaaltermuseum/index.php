@@ -83,7 +83,7 @@ fclose($fp);
         #mod #today {
             top: 0;
             left: 0;
-            width: 10rem;
+            width: 12.5rem;
             height: 5rem;
             margin: 1rem 2rem;
             padding: 0;
@@ -114,7 +114,7 @@ fclose($fp);
             top: 0;
             right: 0;
             margin: 1rem 2rem;
-            width: 10rem;
+            width: 12.5rem;
             text-align: justify;
             word-wrap: break-word;
             letter-spacing: 0.05em;

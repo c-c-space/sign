@@ -148,23 +148,27 @@ fclose($fp);
             display: -ms-flexbox;
             display: flex;
             white-space: nowrap;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
         }
         
         #collection li {
-            display: inline-block;
             list-style: none;
-            white-space:normal;
             position: relative;
-            padding: 0;
-            margin: 0.25rem 0.5rem;
-            font-size:1rem;
+            display: block;
             width: 1.5rem;
             height: 1.5rem;
+            white-space:normal;
+            padding: 0;
+            margin: 0.25rem 0.5rem;
         }
         
         #collection li b {
             position: absolute;
-            display: block;
+            display: inline-block;
+            font-size:1rem;
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);

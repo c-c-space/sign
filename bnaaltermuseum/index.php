@@ -210,12 +210,20 @@ fclose($fp);
             transform: scale(1, 1.1);
             word-spacing: -.25ch;
         }
+
+        #credit .print {
+            display:none;
+        }
         
         
         @media print {
             #mod #ed {
                 transform: scale(0.55, 1.75);
             }
+            #credit .print {
+                display:none;
+            }
+            #credit .display,
             #weather {
                 display:none;
             }

@@ -114,7 +114,7 @@ fclose($fp);
             top: 0;
             right: 0;
             margin: 1rem 2rem;
-            width: 12.5rem;
+            width: 10rem;
             text-align: justify;
             word-wrap: break-word;
             letter-spacing: 0.05em;

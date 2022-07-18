@@ -63,7 +63,6 @@ fclose($fp);
         }
         
         #mod b {
-            display: block;
             margin: 0;
             padding: 0;
         }
@@ -215,13 +214,17 @@ fclose($fp);
             display:none;
         }
         
+        #credit .display {
+            display:block;
+        }
+        
         
         @media print {
             #mod #ed {
                 transform: scale(0.55, 1.75);
             }
             #credit .print {
-                display:none;
+                display:block;
             }
             #credit .display,
             #weather {

@@ -151,7 +151,7 @@ fclose($fp);
 
         #submit {
             z-index: 99;
-            background-color: #fff;
+            background-color: rgba(255,255,255,0.55);
             display: block;
         }
         

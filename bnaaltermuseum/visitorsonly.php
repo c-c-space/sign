@@ -155,12 +155,12 @@ fclose($fp);
             height: 100%;
             border: none;
         }
-        #submit,
-        .open #menu {
+        .open #submit,
+        #menu {
             display: none;
         }
 
-        .open #submit {
+        #submit {
             z-index: 99;
             background-color: #fff;
             display: block;

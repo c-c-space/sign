@@ -122,6 +122,7 @@ fclose($fp);
         
         #mod #credit a {
             position: absolute;
+            display:block;
             width:100%;
             height:0;
             z-index: 100;

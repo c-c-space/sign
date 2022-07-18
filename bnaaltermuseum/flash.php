@@ -78,19 +78,22 @@ fclose($fp);
                 margin: 0;
             }
             
-            .flash .symbol {
+            .flash b {
                 z-index: 10;
                 position: absolute;
                 padding: 0;
                 margin: 0;
-                font-size: 15vw;
                 font-family: "YuGothic", "Yu Gothic", "游ゴシック体";
                 font-weight: 500;
                 top: 50%;
                 left: 50%;
-                filter: invert();
                 transform: translate(-50%, -50%);
                 -webkit-transform: translate(-50%, -50%);
+            }
+            
+            .flash .symbol {
+                font-size: 15vw;
+                filter: invert();
             }
             
             #flash_speed {
@@ -143,7 +146,7 @@ fclose($fp);
             <?php else: ?>
             <li>
                 <span class="color" style="background:#fff;">
-                  <b class="symbol" style="color:#fff;">No Posts Yet, Today</b>
+                  <b class="" style="color:#fff;">No Posts Yet, Today</b>
                 </span>
             </li>
             <?php endif; ?>

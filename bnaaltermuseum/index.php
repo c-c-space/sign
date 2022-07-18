@@ -148,6 +148,10 @@ fclose($fp);
             display: -ms-flexbox;
             display: flex;
             white-space: nowrap;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
         }
         
         #collection li {

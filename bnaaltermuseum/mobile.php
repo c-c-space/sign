@@ -188,7 +188,6 @@ fclose($fp);
 </head>
 
 <body id="open">
-<a id="btn"><b>⎷</b></a>
 
 <div id="menu" class="nlc">
     <div>

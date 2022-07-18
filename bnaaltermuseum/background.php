@@ -82,7 +82,7 @@ fclose($fp);
         }
         
         @media print {
-            .bg 
+            .bg {
                 background-size: 100% 100%;
                 animation: gradient none;
             }

@@ -238,7 +238,7 @@ fclose($fp);
                 display:none;
             }
             #collection ul {
-                overflow-x: none;
+                overflow-x: hidden;
             }
         }
     </style>

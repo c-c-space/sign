@@ -160,6 +160,8 @@ fclose($fp);
             display: block;
             width: 1.5rem;
             height: 1.5rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
             white-space:normal;
             padding: 0;
             margin: 0.25rem 0.5rem;

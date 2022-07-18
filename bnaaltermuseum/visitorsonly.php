@@ -195,7 +195,7 @@ fclose($fp);
 
 <div id="menu" class="nlc">
     <div>
-        <a class="tab" href="#sign">
+        <a class="tab" href="#flash">
             <?php
             date_default_timezone_set('Asia/Tokyo');
             print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
@@ -204,13 +204,13 @@ fclose($fp);
         <span class="check"><b>✔</b></span>
     </div>
     <div>
-        <a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>
+        <a id="showTime" class="tab" href="#sign"></a><span class="check"><b>✔</b></span>
     </div>
 </div>
 
 <div id="background"><iframe src="background.php"></iframe></div>
-<div id="sign" class="change"></div>
 <div id="flash" class="change"></div>
+<div id="sign" class="change"></div>
 <div id="submit"><iframe src="submit/"></iframe></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

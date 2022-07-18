@@ -146,7 +146,6 @@ fclose($fp);
             display: -webkit-flex;
             display: flex;
             overflow: auto;
-            width:100%;
             -webkit-justify-content: space-between;
             justify-content: space-between;
             -webkit-flex-direction: row-reverse;

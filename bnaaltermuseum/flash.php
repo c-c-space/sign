@@ -79,12 +79,13 @@ fclose($fp);
             }
             
             .flash b {
-                z-index: 10;
-                position: absolute;
-                padding: 0;
-                margin: 0;
                 font-family: "YuGothic", "Yu Gothic", "游ゴシック体";
                 font-weight: 500;
+                filter: invert();
+                position: absolute;
+                z-index: 10;
+                padding: 0;
+                margin: 0;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -93,7 +94,6 @@ fclose($fp);
             
             .flash .symbol {
                 font-size: 15vw;
-                filter: invert();
             }
             
             #flash_speed {

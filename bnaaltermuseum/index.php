@@ -226,6 +226,11 @@ fclose($fp);
         
         
         @media print {
+            #sign {
+                margin-top: 12.5vh;
+                height: 87.5vh;
+                margin-bottom: 0;
+            }
             #mod #ed {
                 padding: 0.25rem 0.25rem 0;
                 transform: scale(0.75, 1.75);

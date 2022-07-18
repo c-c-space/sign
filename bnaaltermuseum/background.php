@@ -102,9 +102,9 @@ fclose($fp);
             #<?=h($row[1])?>,
             <?php endforeach; ?>
             <?php else: ?>
+            #000,
             <?php endif; ?>
-            #fff,
-            #000);">
+            #fff);">
         </li>
     </ul>
 </body>

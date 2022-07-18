@@ -88,6 +88,7 @@ fclose($fp);
             width: 95%;
             padding: 0.25rem 2.5%;
             font-size: 1rem;
+            display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
@@ -165,7 +166,7 @@ fclose($fp);
             display: none;
         }
         .open #menu {
-            display: fixed;
+            display: inline-block;
         }
         
         @media screen and (max-width: 550px) {

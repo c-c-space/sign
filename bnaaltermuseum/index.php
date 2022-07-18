@@ -227,7 +227,7 @@ fclose($fp);
         
         @media print {
             #sign {
-                height: 80vh;
+                height: 87.5vh;
             }
             #mod #ed {
                 padding: 0.25rem 0.25rem 0;

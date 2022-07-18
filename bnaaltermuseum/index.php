@@ -143,7 +143,7 @@ fclose($fp);
         #collection ul {
             padding: 0;
             margin: 0 0.5rem;
-            overflow-x: scroll;
+            overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             display: -ms-flexbox;
             display: flex;

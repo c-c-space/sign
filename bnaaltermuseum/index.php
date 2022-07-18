@@ -286,7 +286,7 @@ fclose($fp);
                     </li>
                     <?php endforeach; ?>
                     <?php else: ?>
-                    <b class="symbol" style="color:#000;">No Posts Yet</b>
+                    <b class="symbol" style="color:#000;">No Posts Yet, Today</b>
                     <?php endif; ?>
                 </ul>
         </div>

@@ -157,9 +157,9 @@ fclose($fp);
             position: relative;
             padding: 0;
             margin: 0.25rem 0.5rem;
-            font-size:1.5rem;
-            width: 2rem;
-            height: 2rem;
+            font-size:1rem;
+            width: 1.5rem;
+            height: 1.5rem;
         }
         
         #collection li b {

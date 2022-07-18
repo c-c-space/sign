@@ -166,7 +166,7 @@ fclose($fp);
             display: none;
         }
         .open #menu {
-            display: inline-block;
+            display: flex;
         }
         
         @media screen and (max-width: 550px) {

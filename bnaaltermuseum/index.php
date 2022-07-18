@@ -123,6 +123,16 @@ fclose($fp);
         #mod #credit a {
             color:#000;
             text-decoration:none;
+            animation: flash 1s linear infinite;
+        }
+
+        @keyframes flash {
+            0% {
+                color:#000;
+            }
+            50% {
+                color:#fff;
+            }
         }
         
         #mod #credit b {

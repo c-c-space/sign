@@ -322,7 +322,7 @@ fclose($fp);
                 <?php else: ?>
                 <li>
                     <p>
-                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">No Posts Yet, Today</b>
+                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">No Posts Yet</b>
                     </p>
                     <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>

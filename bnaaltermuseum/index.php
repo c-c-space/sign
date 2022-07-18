@@ -183,7 +183,7 @@ fclose($fp);
             right: 0;
             z-index: -1;
             width: 100%;
-            height: 87.5vh;
+            height: 100vh;
             overflow: hidden;
             pointer-events: none;
             user-select: none;
@@ -226,6 +226,9 @@ fclose($fp);
         
         
         @media print {
+            #sign {
+                height: 87.5vh;
+            }
             #mod #ed {
                 padding: 0.25rem 0.25rem 0;
                 transform: scale(0.75, 1.75);

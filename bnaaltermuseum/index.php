@@ -85,7 +85,7 @@ fclose($fp);
             left: 0;
             width: 12.5rem;
             height: 5rem;
-            margin: 1rem 2rem;
+            margin: 1rem;
             padding: 0;
             border: solid 1px #000;
             font-weight: 500;
@@ -113,7 +113,7 @@ fclose($fp);
             height: 5rem;
             top: 0;
             right: 0;
-            margin: 1rem 2rem;
+            margin: 1rem;
             width: 12.5rem;
             text-align: justify;
             word-wrap: break-word;
@@ -142,7 +142,7 @@ fclose($fp);
         
         #collection ul {
             padding: 0;
-            margin: 0;
+            margin: 0 0.5rem;
             display: -webkit-flex;
             display: flex;
             -webkit-justify-content: space-between;
@@ -221,7 +221,7 @@ fclose($fp);
         
         @media print {
             #mod #ed {
-                transform: scale(0.55, 1.75);
+                transform: scale(0.75, 1.75);
             }
             #credit .print {
                 display:block;

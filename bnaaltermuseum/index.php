@@ -63,6 +63,7 @@ fclose($fp);
         }
         
         #mod b {
+            display: block;
             margin: 0;
             padding: 0;
         }

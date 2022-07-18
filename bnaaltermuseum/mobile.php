@@ -47,39 +47,6 @@ fclose($fp);
             word-spacing: -.25ch;
         }
         
-        #btn {
-            position: fixed;
-            top: 2.5vw;
-            right: 2.5vw;
-            z-index: 100;
-            color: #000;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: .5s all;
-            width: 3vw;
-            height: 3vw;
-        }
-        
-        #btn:hover {
-            cursor: pointer;
-            color: #fff;
-            transition: 1s all;
-        }
-        
-        #btn b {
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            font-weight: 500;
-            letter-spacing: .1vw;
-            font-family: "SimSong", "MS Mincho", serif;
-            font-size: 2.5vw;
-        }
-        
         #menu {
             position: fixed;
             z-index: 100;
@@ -166,20 +133,8 @@ fclose($fp);
             display: block;
         }
         
-        @media screen and (max-width: 550px) {
-            #btn {
-                width: 2rem;
-                height: 2rem;
-            }
-            #btn b {
-                letter-spacing: .1rem;
-                font-size: 1.5rem;
-            }
-        }
-        
         @media print {
             #menu,
-            #btn,
             #index {
                 display: none;
             }

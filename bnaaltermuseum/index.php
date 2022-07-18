@@ -236,6 +236,7 @@ fclose($fp);
         
         @media print {
             #mod #ed {
+                padding: 0.25rem 0.25rem 0;
                 transform: scale(0.75, 1.75);
             }
             #credit .print {

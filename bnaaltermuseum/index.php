@@ -216,6 +216,9 @@ fclose($fp);
             #mod #ed {
                 transform: scale(0.55, 1.75);
             }
+            #weather {
+                display:none;
+            }
         }
     </style>
 </head>

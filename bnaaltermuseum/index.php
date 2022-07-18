@@ -257,7 +257,7 @@ fclose($fp);
             <b class="display">宿泊者限定</b>
             <span class="display">35 の 記号 と 18 の 色 から 今の気持ちに合う色と記号を投稿し、このオンライン作品の制作に参加することができます。</span>
             <b class="print">Colors and Symbols</b>
-            <span class="print">This Work created by Today's Visitors of BnA Alter Museum is Show Today's Feeling of Us.</span>
+            <span class="print">This Work created by Today's Visitors of BnA Alter Museum are Show Today's Feeling of Today's Visitors of BnA Alter Museum.</span>
         </div>
         <div id="collection">
                 <ul class="flash">

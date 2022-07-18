@@ -287,14 +287,7 @@ fclose($fp);
                     print "".date("jMyD",$mod);
                     ?>
             </sup>
-                <sup id="time" style="text-transform: uppercase;">
-                    Last Modified 
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("g:i:s A T",$mod);
-                    ?>
-            </sup>
+                <sup id="time" style="text-transform: uppercase;">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</sup>
                 <sup id="post" style="text-transform: uppercase;">
                     <?php
                     echo sizeof(file($source_file));

@@ -211,6 +211,12 @@ fclose($fp);
             word-spacing: -.25ch;
         }
         
+        
+        @media print {
+            #mod #ed {
+                transform: scale(0.75, 1.5);
+            }
+        }
     </style>
 </head>
   <script>

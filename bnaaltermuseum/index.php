@@ -237,6 +237,9 @@ fclose($fp);
             #weather {
                 display:none;
             }
+            #collection ul {
+                overflow-x: none;
+            }
         }
     </style>
 </head>

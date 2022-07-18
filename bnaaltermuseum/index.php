@@ -120,7 +120,6 @@ fclose($fp);
         }
         
         #mod #credit b {
-            display: block;
             text-align: center;
             font-size: 150%;
             padding-bottom: 0.25rem;

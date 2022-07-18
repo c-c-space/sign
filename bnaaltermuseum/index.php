@@ -192,7 +192,7 @@ fclose($fp);
             right: 0;
             z-index: -1;
             width: 100%;
-            height: 95vh;
+            height: 100vh;
             overflow: hidden;
             pointer-events: none;
             user-select: none;

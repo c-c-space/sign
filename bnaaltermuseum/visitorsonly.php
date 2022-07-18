@@ -154,6 +154,7 @@ fclose($fp);
             z-index: 99;
             background-color: rgba(255,255,255,0.75);
             display: block;
+            overflow: auto;
         }
         
         #background iframe,

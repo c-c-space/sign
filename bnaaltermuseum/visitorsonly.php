@@ -48,7 +48,7 @@ fclose($fp);
         }
         
         #btn {
-            position: fixed;
+            position: absolute;
             top: 2.5vw;
             right: 2.5vw;
             z-index: 100;

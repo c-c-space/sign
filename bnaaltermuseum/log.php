@@ -317,7 +317,17 @@ fclose($fp);
                     <p>
                         <b class="post" style="color:#000; user-select:none; pointer-events:none;">No Posts Yet</b>
                     </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                    
+                    Last Modified 
+                    <i>
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "".date("g:i:s A T",$mod);
+                    ?>
+                    </i>
+                    </p>
                 </li>
                 <?php endif; ?>
             </ul>

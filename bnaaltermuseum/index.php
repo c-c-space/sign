@@ -114,7 +114,7 @@ fclose($fp);
             top: 0;
             right: 0;
             margin: 1rem 2rem;
-            width: 10rem;
+            width: 12.5rem;
             text-align: justify;
             word-wrap: break-word;
             letter-spacing: 0.05em;
@@ -214,7 +214,7 @@ fclose($fp);
         
         @media print {
             #mod #ed {
-                transform: scale(0.75, 1.5);
+                transform: scale(0.75, 1.75);
             }
         }
     </style>

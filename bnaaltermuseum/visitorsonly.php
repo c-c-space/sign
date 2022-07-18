@@ -212,7 +212,7 @@ fclose($fp);
 <div id="background"><iframe src="background.php"></iframe></div>
 <div id="flash" class="change"></div>
 <div id="sign" class="change"></div>
-<div id="submit"><iframe src="submit/"></iframe></div>
+<div id="submit"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -231,6 +231,7 @@ fclose($fp);
     $(function() {
         $("#flash").load("flash.php");
         $("#sign").load("log.php");
+        $("#submit").load("submit/");
     })
 
     $(function() {

@@ -237,7 +237,7 @@ fclose($fp);
             }
             #mod #ed {
                 padding: 0.25rem 0.25rem 0;
-                transform: scale(0.65, 1.75);
+                transform: scale(0.60, 1.75);
             }
             #credit .print {
                 display:block;

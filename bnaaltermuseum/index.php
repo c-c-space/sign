@@ -169,6 +169,7 @@ fclose($fp);
         }
         
         #collection li i {
+            display:inline-block;
             padding: 0.25rem 0;
         }
         

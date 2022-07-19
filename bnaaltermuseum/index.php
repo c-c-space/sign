@@ -168,7 +168,7 @@ fclose($fp);
             margin: 0.25rem 0.5rem;
         }
         
-        #collection li i {
+        #collection i {
             display:inline-block;
             padding: 0.5rem 0;
         }

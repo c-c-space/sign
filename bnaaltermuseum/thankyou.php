@@ -37,7 +37,7 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="5;URL=visitorsonly.php">
+    <meta http-equiv="refresh" content="3;URL=visitorsonly.php">
     <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
@@ -107,7 +107,7 @@ fclose($fp);
         var text = ["Thank You", "for", "Submit"];
         var counter = 0;
         var elem = document.getElementById("thankyou");
-        var inst = setInterval(change, 250);
+        var inst = setInterval(change, 550);
 
         elem.innerHTML = text[counter];
 

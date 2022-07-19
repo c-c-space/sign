@@ -37,7 +37,10 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="3;URL=visitorsonly.php">
+    <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
     <title> 完了 | 自分の気持ちを知る・表す </title>
     <style type="text/css">
         .inside h1 {
@@ -86,6 +89,20 @@ fclose($fp);
         <p class="notice"><b>自分の気持ちを知る・表す</b></p>
     </div>
     <script>
+        var volume = new Tone.Volume(-5);
+        var synth = new Tone.PolySynth(5, Tone.Synth).chain(volume, Tone.Master);
+        var notes = Tone.Frequency("E3").harmonize([
+            7, 10, 12,
+            10, 12, 14,
+            12, 14, 17,
+        ]);
+        var noteIndex = 1;
+
+        StartAudioContext(Tone.context, window);
+        $(window).click(function() {
+            Tone.context.resume();
+        });
+
         var text = ["Thank You", "for", "Submit"];
         var counter = 0;
         var elem = document.getElementById("thankyou");
@@ -99,6 +116,9 @@ fclose($fp);
             if (counter >= text.length) {
                 counter = 0;
             }
+    
+            let randNote = Math.floor(Math.random() * notes.length);
+            synth.triggerAttackRelease(notes[randNote], "5");
         };
     </script>
 </body>

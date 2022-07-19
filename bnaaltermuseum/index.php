@@ -268,7 +268,7 @@ fclose($fp);
 
         <div id="credit">
             <b class="display">宿泊者限定</b>
-            <span class="display">35 の 記号 と 18 の 色 から 今の気持ちに合う色と記号を投稿し、このオンライン作品の制作に参加することができます。</span>
+            <span class="display">35 の 記号 と 18 の 色 から 今の気持ちに合う色と記号を投稿し、このインターネットアート作品の制作に参加することができます。</span>
             <b class="print">Colors and Symbols</b>
             <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
             <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>

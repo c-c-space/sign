@@ -168,6 +168,10 @@ fclose($fp);
             margin: 0.25rem 0.5rem;
         }
         
+        #collection li i {
+            padding: 0.25rem 0;
+        }
+        
         #collection li b {
             position: absolute;
             display: inline-block;

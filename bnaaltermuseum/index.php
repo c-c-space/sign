@@ -85,7 +85,7 @@ fclose($fp);
             left: 0;
             width: 12.5rem;
             height: 5rem;
-            margin: 1rem;
+            margin: 0.25rem 1rem;
             padding: 0;
             border: solid 1px #000;
             font-weight: 500;
@@ -113,7 +113,7 @@ fclose($fp);
             height: 5rem;
             top: 0;
             right: 0;
-            margin: 1rem;
+            margin: 0.25rem 1rem;
             width: 12.5rem;
             text-align: justify;
             word-wrap: break-word;
@@ -239,6 +239,11 @@ fclose($fp);
                 padding: 0.25rem 0.25rem 0;
                 transform: scale(0.60, 1.75);
             }
+        
+        #mod #today,        
+        #mod #credit {
+            margin: 1rem;
+        }
             #credit .print {
                 display:block;
             }

@@ -91,6 +91,40 @@ fclose($fp);
             opacity: 1;
         }
         
+        #btn {
+            position: fixed;
+            top: 2.5vw;
+            right: 2.5vw;
+            z-index: 100;
+            color: #000;
+            border: solid 0.1vw #000;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: .5s all;
+            width: 3vw;
+            height: 3vw;
+        }
+        
+        #btn:hover {
+            cursor: pointer;
+            color: #fff;
+            transition: 1s all;
+        }
+        
+        #btn b {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            font-weight: 500;
+            letter-spacing: .1vw;
+            font-family: "SimSong", "MS Mincho", serif;
+            font-size: 2.5vw;
+        }
+        
         .check b {
             opacity: 0;
             transition: all 1000ms ease;
@@ -116,8 +150,7 @@ fclose($fp);
             z-index: -1;
         }
         
-        #background iframe,
-        #submit iframe {
+        #background iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -128,9 +161,13 @@ fclose($fp);
         }
 
         .open #submit {
+            position: absolute;
             z-index: 99;
-            background-color: #fff;
+            width:100%;
+            min-height: 100vh;
+            background-color: rgba(255,255,255,0.75);
             display: block;
+            overflow: auto;
         }
         
         @media print {
@@ -143,6 +180,7 @@ fclose($fp);
 </head>
 
 <body id="open">
+<a id="btn"><b>i</b></a>
 
 <div id="menu" class="nlc">
     <div>
@@ -162,7 +200,7 @@ fclose($fp);
 <div id="background"><iframe src="background.php"></iframe></div>
 <div id="flash" class="change"></div>
 <div id="sign" class="change"></div>
-<div id="submit"><iframe src="submit/"></iframe></div>
+<div id="submit"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -171,6 +209,7 @@ fclose($fp);
     $(function() {
         $("#flash").load("flash.php");
         $("#sign").load("log.php");
+        $("#submit").load("submit.html");
     })
 
     $(function() {

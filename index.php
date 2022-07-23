@@ -198,7 +198,7 @@ fclose($fp);
             print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
             ?>
         </a>
-        <span class="check"><b>✔</b></span>
+        <span class="check"><b>Click Here</b></span>
     </div>
     <div>
         <a id="showTime" class="tab" href="#flash"></a><span class="check"><b>✔</b></span>

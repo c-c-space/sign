@@ -94,7 +94,7 @@ fclose($fp);
         #btn {
             position: fixed;
             top: 2.5vw;
-            right: 2.5vw;
+            right: 4.5vw;
             z-index: 100;
             color: #000;
             text-shadow: 0.25vw 0.25vw 0.25vw #fff;

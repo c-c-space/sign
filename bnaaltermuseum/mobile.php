@@ -97,8 +97,6 @@ fclose($fp);
             right: 2.5vw;
             z-index: 100;
             color: #000;
-            border: solid 0.1vw #000;
-            border-radius: 50%;
             text-decoration: none;
             transition: .5s all;
             width: 3vw;

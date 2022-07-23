@@ -97,6 +97,7 @@ fclose($fp);
             right: 2.5vw;
             z-index: 100;
             color: #000;
+            text-shadow: 0.25vw 0.25vw 0.25vw #fff;
             text-decoration: none;
             transition: .5s all;
             width: 3vw;
@@ -106,6 +107,7 @@ fclose($fp);
         #btn:hover {
             cursor: pointer;
             color: #fff;
+            text-shadow: 0.25vw 0.25vw 0.25vw #000;
             transition: 1s all;
         }
         

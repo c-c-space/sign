@@ -96,8 +96,8 @@ fclose($fp);
             top: 2.5vw;
             right: 4.5vw;
             z-index: 100;
-            color: #000;
-            text-shadow: 0.25vw 0.25vw 0.25vw #fff;
+            color: #fff;
+            text-shadow: 0.25vw 0.25vw 0.25vw #000;
             text-decoration: none;
             transition: .5s all;
             width: 3vw;
@@ -106,8 +106,8 @@ fclose($fp);
         
         #btn:hover {
             cursor: pointer;
-            color: #fff;
-            text-shadow: 0.25vw 0.25vw 0.25vw #000;
+            color: #000;
+            text-shadow: 0.25vw 0.25vw 0.25vw #fff;
             transition: 1s all;
         }
         

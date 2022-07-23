@@ -180,7 +180,7 @@ fclose($fp);
 </head>
 
 <body id="open">
-<a id="btn"><b>i</b></a>
+<a id="btn"><b>Click Here</b></a>
 
 <div id="menu" class="nlc">
     <div>
@@ -190,7 +190,7 @@ fclose($fp);
             print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
             ?>
         </a>
-        <span class="check"><b>Click Here</b></span>
+        <span class="check"><b>✔</b></span>
     </div>
     <div>
         <a id="showTime" class="tab" href="#sign"></a><span class="check"><b>✔</b></span>

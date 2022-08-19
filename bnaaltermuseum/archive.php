@@ -191,7 +191,7 @@ while ($row = fgetcsv($fp)) {
             <?php endforeach; ?>
             <?php else: ?>
                 #000,
-            <?php endif; ?>
+        <?php endif; ?>
                 #fff);">
         </li>
     </ul>

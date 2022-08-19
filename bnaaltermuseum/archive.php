@@ -51,11 +51,6 @@ while ($row = fgetcsv($fp)) {
             top: 0;
             left: 0;
         }
-
-        #flash,
-        #all {
-            z-index: 50;
-        }
         
         #background {
             z-index: -1;
@@ -64,6 +59,7 @@ while ($row = fgetcsv($fp)) {
         #date {
             position:fixed;
             top:0;
+            z-index: 0;
             margin: 1.25%;
             width:97.5%;
         }

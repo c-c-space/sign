@@ -28,7 +28,7 @@ while ($row = fgetcsv($fp)) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>自分の気持ちを知る・表す</title>
+    <title>𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</title>
 
     <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
@@ -42,7 +42,6 @@ while ($row = fgetcsv($fp)) {
     <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
     
     <style type="text/css">
-        
         #background,
         #flash,
         #all,
@@ -72,6 +71,46 @@ while ($row = fgetcsv($fp)) {
             z-index: 99;
             background-color: #fff;
             display: block;
+        }
+
+        #date {
+            position:fixed;
+            top:0;
+            margin: 1.25%;
+            width:97.5%;
+        }
+        
+        #date select {
+            font-size: 1rem;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+            width:70%;
+            padding: 1.25%;
+            margin: 1.25%;
+            display:block;
+            float:left;
+
+        }
+        
+        #date input[type="submit"] {
+            font-size: 1rem;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+            width:20%;
+            padding: 1.25%;
+            margin: 1.25%;
+            display:block;
+            float:right;
         }
         
         @media print {
@@ -124,7 +163,7 @@ while ($row = fgetcsv($fp)) {
 </div>
 <div id="all" class="change">
     <div id="mod">
-            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
             <p id="today">
                 <sup id="no" style="text-transform: uppercase;">
                     #

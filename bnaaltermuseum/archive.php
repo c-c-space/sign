@@ -32,24 +32,19 @@ while ($row = fgetcsv($fp)) {
     <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
     <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
     <style>
-        body,
-        #sign {
+        body {
             padding: 0;
             margin: 0;
         }
         
         #sign {
-            position: fixed;
-            bottom: 0;
-            right: 0;
             z-index: -1;
-            width: 100%;
-            height: 100vh;
             overflow: hidden;
             pointer-events: none;
             user-select: none;
         }
 
+        #sign,
         #flash,
         #all {
             position: fixed;
@@ -57,6 +52,8 @@ while ($row = fgetcsv($fp)) {
             height: 100vh;
             top: 0;
             left: 0;
+            padding: 0;
+            margin: 0;
         }
         
         li {
@@ -64,14 +61,11 @@ while ($row = fgetcsv($fp)) {
         }
         
         #gradient {
-            position: relative;
-            top: 0;
-            left: 0;
+            display: block;
+            width: 100%;
+            height: 100vh;
             padding: 0;
             margin: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
             overflow-y: auto;
             overflow-x: hidden;
             display: flex;
@@ -79,9 +73,6 @@ while ($row = fgetcsv($fp)) {
         }
         
         .bg {
-            position: relative;
-            top: 0;
-            left: 0;
             display: block;
             padding: 0;
             margin: 0;

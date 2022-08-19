@@ -308,7 +308,7 @@ while ($row = fgetcsv($fp)) {
 
         <div id="credit">
             <b class="print">令和四年版　夏の自由研究</b>
-            <span class="print">２０２２年７月２３日（土）〜　８月２１日（日）</span>
+            <span class="print">７月２３日（土）〜　８月２１日（日）</span>
             <span class="print">ビーエヌエーオルターミュージアムに宿泊した人たちに気持ちを知る・表す色と記号</span>
         </div>
         <div id="collection">

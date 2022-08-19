@@ -6,6 +6,9 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
+
 $today = date("Y/m/d");
 $source_file =  $today . ".csv";
 

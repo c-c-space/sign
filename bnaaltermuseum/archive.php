@@ -43,7 +43,7 @@ while ($row = fgetcsv($fp)) {
             right: 0;
             z-index: -1;
             width: 100%;
-            height: 87.5vh;
+            height: 100vh;
             overflow: hidden;
             pointer-events: none;
             user-select: none;
@@ -83,8 +83,8 @@ while ($row = fgetcsv($fp)) {
         #date {
             position:fixed;
             top: 0;
-            margin: 2.5%;
-            width: 95%;
+            margin: 1.25%;
+            width: 97.5%;
         }
         
         #date select {

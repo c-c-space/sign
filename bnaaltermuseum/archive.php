@@ -162,7 +162,7 @@ while ($row = fgetcsv($fp)) {
         }
         
         #date select {
-            font-size: 1.25rem;
+            font-size: 2.5vw;
             font-family: 'Times New Roman', serif;
             font-weight: 500;
             font-stretch: condensed;
@@ -179,7 +179,7 @@ while ($row = fgetcsv($fp)) {
         }
         
         #date input[type="submit"] {
-            font-size: 1.25rem;
+            font-size: 2.5vw;
             font-family: 'Times New Roman', serif;
             font-weight: 500;
             font-stretch: condensed;

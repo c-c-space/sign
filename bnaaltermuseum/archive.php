@@ -40,7 +40,6 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="refresh" content="60; URL=">
     <style>
         body,
         #sign {
@@ -264,12 +263,7 @@ fclose($fp);
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
-            <?php
-            date_default_timezone_set('Asia/Tokyo');
-            $w = date("w");
-            $week_name = array("日", "月", "火", "水", "木", "金", "土");
-            print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
-            ?>
+            日付
             <br/>今日の気持ちを表す色と記号</sup>
         </p>
 

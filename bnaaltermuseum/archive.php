@@ -191,9 +191,9 @@ while ($row = fgetcsv($fp)) {
         </p>
 
         <div id="credit">
-            <b class="print">Colors and Symbols</b>
-            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
-            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
+            <b class="print">令和四年版　夏の自由研究</b>
+            <span class="print">２０２２年７月２３日（土）〜　８月２１日（日）</span>
+            <span class="print">ビーエヌエーオルターミュージアムに宿泊した人たちに気持ちを知る・表す色と記号</span>
         </div>
     </div>
     <ul id="log_items">

@@ -34,7 +34,7 @@ while ($row = fgetcsv($fp)) {
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
-    <script src="flash.js"></script>
+    <script src="https://creative-community.space/sign/flash.js"></script>
 
     <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
     <link rel="stylesheet" href="https://creative-community.space/sign/all.css" />
@@ -237,7 +237,6 @@ while ($row = fgetcsv($fp)) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://creative-community.space/sign/flash.js"></script>
 <script type="text/javascript">
     $(function() {
         $('.change').hide();

@@ -35,17 +35,18 @@ fclose($fp);
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>自分の気持ちを知る・表す</title>
+
+    <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
+    <script src="https://creative-community.space/sign/flash.js"></script>
+
+    <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/all.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
+    
     <style type="text/css">
-        .nlc {
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            line-height: 200%;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-        }
         
         #btn {
             position: fixed;
@@ -80,63 +81,9 @@ fclose($fp);
             font-size: 2.5vw;
         }
         
-        #menu {
-            position: fixed;
-            z-index: 100;
-            bottom: 0;
-            left: 0;
-            width: 95%;
-            padding: 0.25rem 2.5%;
-            font-size: 1rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        #menu .tab {
-            color: #000;
-            text-decoration: none;
-            transition: all 500ms ease;
-        }
-        
-        #menu .tab:hover,
-        #menu .check b {
-            cursor: pointer;
-            color: #fff;
-            transition: all 500ms ease;
-        }
-        
-        #menu .check {
-            float: left;
-            display: inline-block;
-            width: 2.5rem;
-            margin-right: 0rem;
-            text-align: center;
-        }
-        
-        #menu .check:before {
-            content: '[';
-            opacity: 1;
-        }
-        
-        #menu .check:after {
-            content: ']';
-            opacity: 1;
-        }
-        
-        .check b {
-            opacity: 0;
-            transition: all 1000ms ease;
-        }
-        
-        .tab:hover+.check b {
-            opacity: 1;
-            transition: all 1000ms ease;
-        }
-        
         #background,
         #flash,
-        #sign,
+        #all,
         #submit {
             position: fixed;
             width: 100vw;
@@ -149,7 +96,6 @@ fclose($fp);
             z-index: -1;
         }
         
-        #background iframe,
         #submit iframe {
             width: 100%;
             height: 100%;
@@ -205,13 +151,103 @@ fclose($fp);
     </div>
 </div>
 
-<div id="background"><iframe src="background.php"></iframe></div>
-<div id="sign" class="change"></div>
-<div id="flash" class="change"></div>
+<div id="background">
+    <ul id="gradient">
+        <li class="bg" style="background-image: linear-gradient(180deg,
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            #<?=h($row[1])?>,
+            <?php endforeach; ?>
+            <?php else: ?>
+            <?php endif; ?>
+            #fff);">
+        </li>
+    </ul>
+</div>
+<div id="all" class="change">
+    <div id="mod">
+            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <p id="today">
+                <sup id="no" style="text-transform: uppercase;">
+                    #
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "".date("jMyD",$mod);
+                    ?>
+            </sup>
+                <sup id="time" style="text-transform: uppercase;">
+                    Last Modified 
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "".date("g:i:s A T",$mod);
+                    ?>
+            </sup>
+                <sup id="post" style="text-transform: uppercase;">
+                    <?php
+                    echo sizeof(file($source_file));
+                    ?>
+                    Posts
+        </sup>
+            </p>
+            <p id="credit"><img src="qr.png" width="100%"></p>
+        </div>
+
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)): ?>
+                <?php foreach ($rows as $row): ?>
+                <li>
+                    <p>
+                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
+                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                    </p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                        <?=h($row[2])?>
+                    </p>
+                </li>
+                <?php endforeach; ?>
+                <?php else: ?>
+                <li>
+                    <p>
+                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                    </p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+</div>
+<div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            <li>
+                <span class="color" style="background:#<?=h($row[1])?>;">
+                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
+                </span>
+            </li>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <li>
+                <span class="color" style="background:#fff;">
+                  <b class="symbol" style="color:#fff;">?</b>
+                </span>
+            </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
+</div>
 <div id="submit"><iframe src="submit/"></iframe></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        </script>
 <script type="text/javascript">
     let btn = document.querySelector('#btn');
     let box = document.querySelector('#open');
@@ -224,9 +260,28 @@ fclose($fp);
         btnToggleclass(box);
     }, false);
 
+    function set2(num) {
+        let ret;
+        if (num < 10) {
+            ret = "0" + num;
+        } else {
+            ret = num;
+        }
+        return ret;
+    }
+    
+    function showClock() {
+        const nowTime = new Date();
+        const nowHour = set2(nowTime.getHours());
+        const nowMin = set2(nowTime.getMinutes());
+        const nowSec = set2(nowTime.getSeconds());
+        const msg = "" + nowHour + ":" + nowMin + ":" + nowSec + "";
+        document.getElementById("showTime").innerHTML = msg;
+    }
+    setInterval('showClock()', 1000);
+
     $(function() {
         $("#flash").load("flash.php");
-        $("#sign").load("log.php");
     })
 
     $(function() {

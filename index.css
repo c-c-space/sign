@@ -1,0 +1,11 @@
+
+        .nlc {
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            line-height: 200%;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+        }

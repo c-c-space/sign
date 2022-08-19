@@ -44,7 +44,7 @@ while ($row = fgetcsv($fp)) {
     <style type="text/css">
         #background,
         #flash,
-        #all,
+        #log,
         #submit {
             position: fixed;
             width: 100vw;
@@ -126,19 +126,17 @@ while ($row = fgetcsv($fp)) {
 
 <div id="menu" class="nlc">
     <div>
-        <a class="tab" href="#all">
-            #
-            <?php
-            if(isset($_POST["today"])) {
-                $today = $_POST["today"];
-                echo $today;
-            }
+        <a class="tab" href="#flash">
+            #<?php
+            $mod = filemtime($source_file);
+            date_default_timezone_set('Asia/Tokyo');
+            print "".date("jMyD",$mod);
             ?>
         </a>
         <span class="check"><b>✔</b></span>
     </div>
     <div>
-        <a id="showTime" class="tab" href="#flash">
+        <a id="showTime" class="tab" href="#log">
             <?php
             echo sizeof(file($source_file));
             ?>
@@ -161,40 +159,10 @@ while ($row = fgetcsv($fp)) {
         </li>
     </ul>
 </div>
-<div id="all" class="change">
-    <div id="mod">
-            <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-            <p id="today">
-                <sup id="no" style="text-transform: uppercase;">
-                    #
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("jMyD",$mod);
-                    ?>
-            </sup>
-                <sup id="time" style="text-transform: uppercase;">
-                    Last Modified 
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("g:i:s A T",$mod);
-                    ?>
-            </sup>
-                <sup id="post" style="text-transform: uppercase;">
-                    <?php
-                    echo sizeof(file($source_file));
-                    ?>
-                    Posts
-        </sup>
-            </p>
-            <p id="credit"><img src="qr.png" width="100%"></p>
-        </div>
-
-        <div id="log">
-            <ul id="log_items">
-                <?php if (!empty($rows)): ?>
-                <?php foreach ($rows as $row): ?>
+<div id="log" class="change">
+    <ul id="log_items">
+        <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
                 <li>
                     <p>
                         <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
@@ -204,8 +172,8 @@ while ($row = fgetcsv($fp)) {
                         <?=h($row[2])?>
                     </p>
                 </li>
-                <?php endforeach; ?>
-                <?php else: ?>
+            <?php endforeach; ?>
+            <?php else: ?>
                 <li>
                     <p>
                         <u style="background:#000;"><span style="color:#fff;">?</span></u>
@@ -213,9 +181,8 @@ while ($row = fgetcsv($fp)) {
                     </p>
                     <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                 </li>
-                <?php endif; ?>
-            </ul>
-        </div>
+        <?php endif; ?>
+    </ul>
 </div>
 <div id="flash" class="change">
         <ul id="random" class="flash">

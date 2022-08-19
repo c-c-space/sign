@@ -227,11 +227,18 @@ while ($row = fgetcsv($fp)) {
         }
         
         #date select {
-            width:100%;
+            width:70%;
+            margin: 2.5%;
+            display:block;
+            float:left;
 
         }
         
         #date input[type="submit"] {
+            width:20%;
+            margin: 2.5%;
+            display:block;
+            float:right;
         }
         
         @keyframes gradient {

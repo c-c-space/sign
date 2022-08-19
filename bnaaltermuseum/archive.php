@@ -30,6 +30,17 @@ while ($row = fgetcsv($fp)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <style>
+        .nlc {
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            line-height: 200%;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+        }
+
         body,
         #sign {
             padding: 0;
@@ -51,6 +62,7 @@ while ($row = fgetcsv($fp)) {
         #flash,
         #log {
             position: fixed;
+            z-index: 10;
             width: 100vw;
             height: 100vh;
             top: 0;
@@ -87,16 +99,6 @@ while ($row = fgetcsv($fp)) {
             height: 100%;
             background-size: 500% 500%;
             animation: gradient 50s ease infinite;
-        }
-        .nlc {
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            line-height: 200%;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
         }
         
         #menu {
@@ -298,7 +300,6 @@ while ($row = fgetcsv($fp)) {
     $(function() {
         $("#flash").load("flash.php");
         $("#log").load("log.php");
-        $("#form").load("submit.html");
     })
 
     $(function() {

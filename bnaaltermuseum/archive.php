@@ -75,7 +75,7 @@ while ($row = fgetcsv($fp)) {
             padding: 0;
             margin: 0;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-size: 500% 500%;
             animation: gradient 50s ease infinite;
         }

@@ -268,7 +268,7 @@ fclose($fp);
                 echo $today;
             }
             ?>
-            <form action="" method="POST">
+            <form action="#" method="POST">
                 <select name="today">
                     <option value="">Choose The Date</option>
                     <option value="0723">2022 年 7 月 23 日 (土)</option>

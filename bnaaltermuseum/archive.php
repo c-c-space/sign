@@ -273,7 +273,7 @@ fclose($fp);
                 <option value="0728">2022 年 7 月 28 日 (木)</option>
                 <option value="0729">2022 年 7 月 29 日 (金)</option>
             </select>
-            <br/>今日の気持ちを表す色と記号</sup>
+            <br/>の気持ちを表す色と記号</sup>
         </p>
 
         <div id="credit">

@@ -5,50 +5,8 @@
             }
             
             #mod {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                font-family: 'Times New Roman', serif;
-                color: #fff;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-            }
-            
-            #mod b {
-                padding: 0rem 1.25% 0.25rem;
-                font-size: 5.5vw;
-                transform: scale(1, 1.5);
-            }
-            
-            #mod #today {
-                position: absolute;
-                top: 0;
-                width: 97.5%;
-                margin: 0;
-                padding: 0.5rem 1.25% 0.25rem;
-                font-size: 2vw;
-                font-weight: 500;
-                font-stretch: condensed;
-                font-variant: common-ligatures tabular-nums;
-                display: inline-block;
-                transform: scale(1, 1.1);
-                word-spacing: -.25ch;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-            
-            #mod #credit,
-            #mod #ed {
                 display: none;
             }
-            
-            #mod sup {
-                display: inline-flex;
-            }
-            
             li {
                 list-style: none;
             }
@@ -124,12 +82,6 @@
             }
             
             @media screen and (max-width: 550px) {
-                #mod b {
-                    font-size: 7.5vw;
-                }
-                #mod #today {
-                    font-size: 4.5vw;
-                }
                 #log {
                     font-size: 4vw;
                     width: 70%;
@@ -147,43 +99,82 @@
             
             @media print {
                 #mod {
-                    padding: 1vw 0;
-                    position: relative;
-                    height: auto;
+                    display: block;
                     color: #000;
+                    width: 100%;
+                    height: 6rem;
                     background-color: #fff;
+                    padding: 1rem 0 0;
+                    margin: 0;
+                    color: #000;
+                    font-family: 'Times New Roman', serif;
+                    text-align: center;
                 }
+            
+                #mod #ed {
+                    font-size: 3.33rem;
+                    padding: 0.25rem 0.25rem 0;
+                    transform: scale(0.60, 1.75);
+                }
+                
+                #mod b {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                }
+    
                 #mod #credit,
                 #mod #today {
                     position: absolute;
-                    width: 15%;
                     display: block;
+                    margin: 1rem;
                 }
+                
                 #mod #today {
-                    top: 1vw;
+                    top: 0;
                     left: 0;
-                    width: 15%;
-                    margin: 0.5vw 1.25vw 2vw;
-                    padding: 1vw 0;
+                    width: 12.5rem;
+                    height: 5rem;
+                    padding: 0;
                     border: solid 1px #000;
+                    font-weight: 500;
+                    font-stretch: condensed;
+                    font-variant: common-ligatures tabular-nums;
+                    display: inline-block;
+                    transform: scale(1, 1.1);
+                    word-spacing: -.25ch;
                 }
+            
                 #mod #credit {
+                    font-size: 0.55rem;
                     text-align: right;
+                    height: 5rem;
                     top: 0;
                     right: 0;
-                    width: 10%;
-                    margin: 0vw;
-                    padding: 0;
+                    width: 12.5rem;
+                    text-align: justify;
+                    word-wrap: break-word;
+                    letter-spacing: 0.05em;
                 }
-                #mod #ed {
-                    display: inline-block;
+                
+                #mod #credit b {
+                    text-align: center;
+                    font-size: 150%;
+                    padding: 0.25rem 0 0.5rem;
+                    font-family: Arial, sans-serif;
                 }
+            
                 #mod sup {
-                    display: block;
+                    font-size: 0.75rem;
+                    line-height: 200%;
+                    width: 90%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
                 }
-                #mod sup#time {
-                    display: none;
-                }
+
                 #log {
                     position: relative;
                     top: 0;

@@ -263,7 +263,16 @@ fclose($fp);
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
-            日付
+            <select name="prefecture">
+                <option value="">選択してください</option>
+                <option value="0723">2022 年 7 月 23 日 (土)</option>
+                <option value="0724">2022 年 7 月 24 日 (日)</option>
+                <option value="0725">2022 年 7 月 25 日 (月)</option>
+                <option value="0726">2022 年 7 月 26 日 (火)</option>
+                <option value="0727">2022 年 7 月 27 日 (水)</option>
+                <option value="0728">2022 年 7 月 28 日 (木)</option>
+                <option value="0729">2022 年 7 月 29 日 (金)</option>
+            </select>
             <br/>今日の気持ちを表す色と記号</sup>
         </p>
 

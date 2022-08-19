@@ -118,7 +118,7 @@ while ($row = fgetcsv($fp)) {
                 $today = $_POST["today"];
                 echo $today;
             }
-            ?>
+            ?>MONTH__
         </a>
         <span class="check"><b>✔</b></span>
     </div>
@@ -180,7 +180,7 @@ while ($row = fgetcsv($fp)) {
                 $today = $_POST["today"];
                 echo $today;
             }
-            ?>
+            ?>MONTH__
             を表す
             <br/>
             <?php
@@ -224,27 +224,27 @@ while ($row = fgetcsv($fp)) {
 <form id="date" action="" method="POST">
         <select name="today">
             <option value="">令和__年__月</option>
-            <option value="20220801">1 日 (月)</option>
-            <option value="20220802">2 日 (火)</option>
-            <option value="20220803">3 日 (水)</option>
-            <option value="20220804">4 日 (木)</option>
-            <option value="20220805">5 日 (金)</option>
-            <option value="20220806">6 日 (土)</option>
-            <option value="20220807">7 日 (日)</option>
-            <option value="20220808">8 日 (月)</option>
-            <option value="20220809">9 日 (火)</option>
-            <option value="20220810">10 日 (水)</option>
-            <option value="20220811">11 日 (木)</option>
-            <option value="20220812">12 日 (金)</option>
-            <option value="20220813">13 日 (土)</option>
-            <option value="20220814">14 日 (日)</option>
-            <option value="20220815">15 日 (月)</option>
-            <option value="20220816">16 日 (火)</option>
-            <option value="20220817">17 日 (水)</option>
-            <option value="20220818">18 日 (木)</option>
-            <option value="20220819">19 日 (金)</option>
-            <option value="20220820">20 日 (土)</option>
-            <option value="20220821">21 日 (日)</option>
+            <option value="01">1 日 (月)</option>
+            <option value="02">2 日 (火)</option>
+            <option value="03">3 日 (水)</option>
+            <option value="04">4 日 (木)</option>
+            <option value="05">5 日 (金)</option>
+            <option value="06">6 日 (土)</option>
+            <option value="07">7 日 (日)</option>
+            <option value="08">8 日 (月)</option>
+            <option value="09">9 日 (火)</option>
+            <option value="10">10 日 (水)</option>
+            <option value="11">11 日 (木)</option>
+            <option value="12">12 日 (金)</option>
+            <option value="13">13 日 (土)</option>
+            <option value="14">14 日 (日)</option>
+            <option value="15">15 日 (月)</option>
+            <option value="16">16 日 (火)</option>
+            <option value="17">17 日 (水)</option>
+            <option value="18">18 日 (木)</option>
+            <option value="19">19 日 (金)</option>
+            <option value="20">20 日 (土)</option>
+            <option value="21">21 日 (日)</option>
         </select>
         <input type="submit" name="submit" value="View The Collection"/>
     </form>

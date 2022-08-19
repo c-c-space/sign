@@ -185,14 +185,14 @@ while ($row = fgetcsv($fp)) {
     <div id="sign">
     <ul id="gradient">
         <li class="bg" style="background-image: linear-gradient(180deg,
-            <?php if (!empty($rows)): ?>
+        <?php if (!empty($rows)): ?>
             <?php foreach ($rows as $row): ?>
-            #<?=h($row[1])?>,
+                #<?=h($row[1])?>,
             <?php endforeach; ?>
             <?php else: ?>
-            #000,
+                #000,
             <?php endif; ?>
-            #fff);">
+                #fff);">
         </li>
     </ul>
     </div>

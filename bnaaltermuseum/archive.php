@@ -206,6 +206,56 @@ fclose($fp);
         #credit .print {
             display:block;
         }
+        
+        li {
+            list-style: none;
+        }
+        
+        #gradient {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            z-index: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        
+        .bg {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: 500% 500%;
+            animation: gradient 50s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+        
+        @media print {
+            .bg {
+                background-size: 100% 100%;
+                animation: gradient none;
+            }
+        }
     </style>
 </head>
 

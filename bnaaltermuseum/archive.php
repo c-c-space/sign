@@ -264,7 +264,8 @@ fclose($fp);
             <sup style="text-transform: uppercase;">
             <?php
             if(isset($_POST["today"])) {
-                $fruit = $_POST["today"];
+                $today = $_POST["today"];
+                echo $today;
             }
             ?>
             <select name="today">

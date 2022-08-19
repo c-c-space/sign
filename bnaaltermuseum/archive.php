@@ -44,33 +44,21 @@ while ($row = fgetcsv($fp)) {
     <style type="text/css">
         #background,
         #flash,
-        #all,
-        #submit {
+        #all {
             position: fixed;
             width: 100vw;
             height: 100vh;
             top: 0;
             left: 0;
         }
+
+        #flash,
+        #all {
+            z-index: 100;
+        }
         
         #background {
             z-index: -1;
-        }
-        
-        #submit iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #submit,
-        .open #menu {
-            display: none;
-        }
-
-        .open #submit {
-            z-index: 99;
-            background-color: #fff;
-            display: block;
         }
 
         #date {

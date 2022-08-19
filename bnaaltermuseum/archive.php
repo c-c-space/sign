@@ -6,17 +6,12 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$source_file = $today . ".csv";
+if(isset($_POST["today"])) {
+    $today = $_POST["today"];
+    $source_file = $today . ".csv";
+    $fp = fopen($source_file, 'r');
+}
 
-$symbol = (string)filter_input(INPUT_POST, 'symbol');
-$color = (string)filter_input(INPUT_POST, 'color');
-$timestamp = date("j.M.y.D g:i:s A");
-
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
-
-$fp = fopen($source_file, 'r');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
@@ -262,12 +257,6 @@ fclose($fp);
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <form action="#" method="POST">
-            <sup style="text-transform: uppercase;">
-            <?php
-            if(isset($_POST["today"])) {
-                $today = $_POST["today"];
-            }
-            ?>
             <select name="today">
                 <option value="">Choose The Date</option>
                 <option value="0723">2022 年 7 月 23 日 (土)</option>
@@ -278,8 +267,16 @@ fclose($fp);
                 <option value="0728">2022 年 7 月 28 日 (木)</option>
                 <option value="0729">2022 年 7 月 29 日 (金)</option>
             </select>
-            <input type="submit" name="submit" value="気持ちを表す色と記号"/></sup>
             </form>
+            <input type="submit" name="submit" value="気持ちを表す色と記号"/>
+            <sup style="text-transform: uppercase;">
+            <?php
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
+            ?>
+            </sup>
         </p>
 
         <div id="credit">

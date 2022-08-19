@@ -31,11 +31,11 @@ while ($row = fgetcsv($fp)) {
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
-    <script src="https://creative-community.space/sign/flash.js"></script>
+    <script src="flash.js"></script>
 
-    <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
-    <link rel="stylesheet" href="https://creative-community.space/sign/all.css" />
-    <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="flash.css" />
     
     <style type="text/css">
         

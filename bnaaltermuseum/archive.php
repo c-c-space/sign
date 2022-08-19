@@ -77,8 +77,7 @@ while ($row = fgetcsv($fp)) {
         
         #background,
         #flash,
-        #all,
-        #submit {
+        #all {
             position: fixed;
             width: 100vw;
             height: 100vh;
@@ -86,24 +85,8 @@ while ($row = fgetcsv($fp)) {
             left: 0;
         }
         
-        #background {
-            z-index: -1;
-        }
-        
-        #submit iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #submit,
         .open #menu {
             display: none;
-        }
-
-        .open #submit {
-            z-index: 99;
-            background-color: #fff;
-            display: block;
         }
         
         @media screen and (max-width: 550px) {
@@ -165,35 +148,43 @@ while ($row = fgetcsv($fp)) {
         </li>
     </ul>
 </div>
+
 <div id="all" class="change">
     <div id="mod">
-            <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-            <p id="today">
-                <sup id="no" style="text-transform: uppercase;">
-                    #
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("jMyD",$mod);
-                    ?>
+        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
+        <p id="today">
+            <sup style="text-transform: uppercase;">
+            #
+            <?php
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
+            ?>
+            <br/>自分の気持ちを表す色と記号
             </sup>
-                <sup id="time" style="text-transform: uppercase;">
-                    Last Modified 
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("g:i:s A T",$mod);
-                    ?>
-            </sup>
-                <sup id="post" style="text-transform: uppercase;">
-                    <?php
-                    echo sizeof(file($source_file));
-                    ?>
-                    Posts
-        </sup>
-            </p>
-            <p id="credit"><img src="qr.png" width="100%"></p>
+        </p>
+
+        <div id="credit">
+            <b class="print">Colors and Symbols</b>
+            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
+            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
         </div>
+        
+        <div id="collection">
+                <ul class="flash">
+                    <?php if (!empty($rows)): ?>
+                    <?php foreach ($rows as $row): ?>
+                    <li style="background:#<?=h($row[1])?>;">
+                        <b class="symbol" style="color:#<?=h($row[1])?>; filter: invert();"><?=h($row[0])?></b>
+                    </li>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                    <i style="color:#000;">No Posts Yet, Today</i>
+                    <?php endif; ?>
+                </ul>
+        </div>
+    </div>
 
         <div id="log">
             <ul id="log_items">

@@ -54,7 +54,7 @@ while ($row = fgetcsv($fp)) {
 
         #flash,
         #all {
-            z-index: 100;
+            z-index: 50;
         }
         
         #background {

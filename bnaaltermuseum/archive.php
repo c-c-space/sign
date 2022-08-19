@@ -48,6 +48,15 @@ while ($row = fgetcsv($fp)) {
             user-select: none;
         }
         
+        #flash,
+        #log {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        }
+        
         li {
             list-style: none;
         }
@@ -225,6 +234,8 @@ while ($row = fgetcsv($fp)) {
         <span class="check"><b>✔</b></span>
     </div>
 </div>
+<div id="flash" class="change"></div>
+<div id="log" class="change"></div>
 
 <div id="sign">
     <ul id="gradient">
@@ -284,6 +295,12 @@ while ($row = fgetcsv($fp)) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
+    $(function() {
+        $("#flash").load("flash.php");
+        $("#log").load("log.php");
+        $("#form").load("submit.html");
+    })
+
     $(function() {
         $('.change').hide();
 

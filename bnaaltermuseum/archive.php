@@ -30,6 +30,7 @@ while ($row = fgetcsv($fp)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
     <style>
         body,
         #sign {
@@ -48,7 +49,7 @@ while ($row = fgetcsv($fp)) {
             pointer-events: none;
             user-select: none;
         }
-        
+
         #flash,
         #all {
             position: fixed;

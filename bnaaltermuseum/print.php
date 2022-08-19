@@ -253,7 +253,7 @@ while ($row = fgetcsv($fp)) {
             display: inline-block;
             transform: scale(1, 1.1);
             word-spacing: -.25ch;
-            width:20%;
+            width:25%;
             padding: 0.5rem;
             margin: 1.25%;
             display:block;

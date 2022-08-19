@@ -29,130 +29,49 @@ while ($row = fgetcsv($fp)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <style>
-        .nlc {
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            line-height: 200%;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-        }
 
-        body,
-        #sign {
-            padding: 0;
-            margin: 0;
-        }
+    <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
+    <script src="https://creative-community.space/sign/flash.js"></script>
+
+    <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/all.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/background.css" />
+    <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
+
+    <style>
         
-        #sign {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            pointer-events: none;
-            user-select: none;
-        }
-        
+        #background,
         #flash,
-        #log {
+        #all,
+        #submit {
             position: fixed;
-            z-index: 10;
             width: 100vw;
             height: 100vh;
             top: 0;
             left: 0;
         }
         
-        li {
-            list-style: none;
+        #background {
+            z-index: -1;
         }
         
-        #gradient {
-            position: relative;
-            top: 0;
-            left: 0;
-            padding: 0;
-            margin: 0;
+        #submit iframe {
             width: 100%;
             height: 100%;
-            z-index: 0;
-            overflow-y: auto;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column-reverse;
+            border: none;
         }
-        
-        .bg {
-            position: relative;
-            top: 0;
-            left: 0;
+        #submit,
+        .open #menu {
+            display: none;
+        }
+
+        .open #submit {
+            z-index: 99;
+            background-color: #fff;
             display: block;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            background-size: 500% 500%;
-            animation: gradient 50s ease infinite;
-        }
-        
-        #menu {
-            position: fixed;
-            z-index: 100;
-            bottom: 0;
-            left: 0;
-            width: 95%;
-            padding: 0.25rem 2.5%;
-            font-size: 1rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        #menu .tab {
-            color: #000;
-            text-decoration: none;
-            transition: all 500ms ease;
-        }
-        
-        #menu .tab:hover,
-        #menu .check b {
-            cursor: pointer;
-            color: #fff;
-            transition: all 500ms ease;
-        }
-        
-        #menu .check {
-            float: left;
-            display: inline-block;
-            width: 2.5rem;
-            margin-right: 0rem;
-            text-align: center;
-        }
-        
-        #menu .check:before {
-            content: '[';
-            opacity: 1;
-        }
-        
-        #menu .check:after {
-            content: ']';
-            opacity: 1;
-        }
-        
-        .check b {
-            opacity: 0;
-            transition: all 1000ms ease;
-        }
-        
-        .tab:hover+.check b {
-            opacity: 1;
-            transition: all 1000ms ease;
         }
 
         #date {
@@ -193,22 +112,6 @@ while ($row = fgetcsv($fp)) {
             display:block;
             float:right;
         }
-        
-        .open #menu {
-            display: none;
-        }
-        
-        @keyframes gradient {
-            0% {
-                background-position: 100% 0%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            100% {
-                background-position: 100% 0%;
-            }
-        }
     </style>
 </head>
 
@@ -236,10 +139,7 @@ while ($row = fgetcsv($fp)) {
         <span class="check"><b>✔</b></span>
     </div>
 </div>
-<div id="flash" class="change"></div>
-<div id="log" class="change"></div>
-
-<div id="sign">
+<div id="background">
     <ul id="gradient">
         <li class="bg" style="background-image: linear-gradient(180deg,
             <?php if (!empty($rows)): ?>
@@ -247,11 +147,88 @@ while ($row = fgetcsv($fp)) {
             #<?=h($row[1])?>,
             <?php endforeach; ?>
             <?php else: ?>
-            #000,
             <?php endif; ?>
             #fff);">
         </li>
     </ul>
+</div>
+<div id="all" class="change">
+    <div id="mod">
+            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <p id="today">
+                <sup id="no" style="text-transform: uppercase;">
+                    #
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "".date("jMyD",$mod);
+                    ?>
+            </sup>
+                <sup id="time" style="text-transform: uppercase;">
+                    Last Modified 
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "".date("g:i:s A T",$mod);
+                    ?>
+            </sup>
+                <sup id="post" style="text-transform: uppercase;">
+                    <?php
+                    echo sizeof(file($source_file));
+                    ?>
+                    Posts
+        </sup>
+            </p>
+            <p id="credit"><img src="qr.png" width="100%"></p>
+        </div>
+
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)): ?>
+                <?php foreach ($rows as $row): ?>
+                <li>
+                    <p>
+                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
+                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
+                    </p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                        <?=h($row[2])?>
+                    </p>
+                </li>
+                <?php endforeach; ?>
+                <?php else: ?>
+                <li>
+                    <p>
+                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                    </p>
+                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+</div>
+<div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            <li>
+                <span class="color" style="background:#<?=h($row[1])?>;">
+                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
+                </span>
+            </li>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <li>
+                <span class="color" style="background:#fff;">
+                  <b class="symbol" style="color:#fff;">?</b>
+                </span>
+            </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
 </div>
 
 
@@ -296,11 +273,19 @@ while ($row = fgetcsv($fp)) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        </script>
 <script type="text/javascript">
-    $(function() {
-        $("#flash").load("ramdom.php");
-        $("#log").load("all.php");
-    })
+    let btn = document.querySelector('#btn');
+    let box = document.querySelector('#open');
+
+    let btnToggleclass = function(el) {
+        el.classList.toggle('open');
+    }
+
+    btn.addEventListener('click', function() {
+        btnToggleclass(box);
+    }, false);
 
     $(function() {
         $('.change').hide();
@@ -317,4 +302,6 @@ while ($row = fgetcsv($fp)) {
         return false;
     });
 </script>
+</body>
+
 </html>

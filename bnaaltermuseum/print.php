@@ -225,27 +225,13 @@ while ($row = fgetcsv($fp)) {
             background-size: 500% 500%;
             animation: gradient 50s ease infinite;
         }
-
-        #date {
-            position:relative;
-            width:100%;
-            height: 75vh;
-        }
         
         #date select {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            width:100%;
+
         }
         
         #date input[type="submit"] {
-            position: absolute;
-            top: 75%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
         }
         
         @keyframes gradient {

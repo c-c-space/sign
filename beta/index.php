@@ -8,11 +8,6 @@ function h($str) {
 $source_file = "symbol_color.csv";
 
 $fp = fopen($source_file, 'r');
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
-    rewind($fp);
-}
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
     $rows[] = $row;

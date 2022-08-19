@@ -163,7 +163,7 @@ while ($row = fgetcsv($fp)) {
     </div>
 </div>
 
-    <div id="sign">
+<div id="sign">
     <ul id="gradient">
         <li class="bg" style="background-image: linear-gradient(180deg,
             <?php if (!empty($rows)): ?>
@@ -176,7 +176,7 @@ while ($row = fgetcsv($fp)) {
             #fff);">
         </li>
     </ul>
-    </div>
+</div>
 
 
     <form id="date" action="" method="POST">

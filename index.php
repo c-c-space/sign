@@ -49,6 +49,7 @@ while ($row = fgetcsv($fp)) {
             right: 2.5vw;
             z-index: 100;
             color: #000;
+            border: solid 0.1vw #000;
             border-radius: 50%;
             text-decoration: none;
             transition: .5s all;
@@ -129,7 +130,7 @@ while ($row = fgetcsv($fp)) {
 </head>
 
 <body id="open">
-<a id="btn"><b>⎷</b></a>
+<a id="btn"><b>i</b></a>
 
 <div id="menu" class="nlc">
     <div>

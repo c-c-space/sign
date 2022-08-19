@@ -52,6 +52,10 @@ while ($row = fgetcsv($fp)) {
             left: 0;
         }
         
+        #flash {
+            z-index: 50;
+        }
+        
         #background {
             z-index: -1;
         }
@@ -146,15 +150,6 @@ while ($row = fgetcsv($fp)) {
     </ul>
 </div>
 <div id="all" class="change">
-    <div id="mod">
-            <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-        <div id="credit">
-            <b class="print">Colors and Symbols</b>
-            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
-            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
-        </div>
-        </div>
-
         <div id="log">
             <ul id="log_items">
                 <?php if (!empty($rows)): ?>

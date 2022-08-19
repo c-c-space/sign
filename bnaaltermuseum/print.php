@@ -340,7 +340,7 @@ while ($row = fgetcsv($fp)) {
 
     <form id="date" action="" method="POST">
         <select name="today">
-            <option value="">令和四年版　夏の自由研究</option>
+            <option value="">自分の気持を知る・表す</option>
             <option value="20220723">2022 年 7 月 23 日 (土)</option>
             <option value="20220724">2022 年 7 月 24 日 (日)</option>
             <option value="20220725">2022 年 7 月 25 日 (月)</option>
@@ -372,7 +372,7 @@ while ($row = fgetcsv($fp)) {
             <option value="20220820">2022 年 8 月 20 日 (土)</option>
             <option value="20220821">2022 年 8 月 21 日 (日)</option>
         </select>
-        <input type="submit" name="submit" value="決定"/>
+        <input type="submit" name="submit" value="View The Collection"/>
     </form>
 
 </body>

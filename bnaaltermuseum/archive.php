@@ -5,7 +5,6 @@ date_default_timezone_set('Asia/Tokyo');
 function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
-
 $source_file = $today . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');

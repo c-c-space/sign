@@ -8,8 +8,10 @@ function h($str) {
 $source_file = "symbol_color.csv";
 
 $fp = fopen($source_file, 'r');
-flock($fp, LOCK_UN);
-fclose($fp);
+flock($fp, LOCK_SH);
+while ($row = fgetcsv($fp)) {
+    $rows[] = $row;
+}
 
 ?>
 

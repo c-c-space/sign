@@ -59,47 +59,6 @@ while ($row = fgetcsv($fp)) {
         #background {
             z-index: -1;
         }
-
-        #date {
-            position:fixed;
-            top:0;
-            z-index: 0;
-            margin: 1.25%;
-            width:97.5%;
-        }
-        
-        #date select {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:70%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:left;
-
-        }
-        
-        #date input[type="submit"] {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:20%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:right;
-        }
         
         @media print {
             #menu,

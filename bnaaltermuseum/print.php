@@ -253,12 +253,14 @@ while ($row = fgetcsv($fp)) {
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
+            #
             <?php
             if(isset($_POST["today"])) {
                 $today = $_POST["today"];
                 echo $today;
             }
             ?>
+            <br/>自分の気持ちを表す色と記号
             </sup>
         </p>
 
@@ -300,7 +302,7 @@ while ($row = fgetcsv($fp)) {
 
     <form action="#" method="POST">
                 <select name="today">
-                    <option value="">Choose The Date</option>
+                    <option value="">令和四年版　夏の自由研究</option>
                     <option value="20220723">2022 年 7 月 23 日 (土)</option>
                     <option value="20220724">2022 年 7 月 24 日 (日)</option>
                     <option value="20220725">2022 年 7 月 25 日 (月)</option>
@@ -309,7 +311,7 @@ while ($row = fgetcsv($fp)) {
                     <option value="20220728">2022 年 7 月 28 日 (木)</option>
                     <option value="20220729">2022 年 7 月 29 日 (金)</option>
                 </select>
-                <input type="submit" name="submit" value="気持ちを表す色と記号"/>
+                <input type="submit" name="submit" value="決定"/>
             </form>
 
 </body>

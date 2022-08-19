@@ -265,20 +265,6 @@ fclose($fp);
             ?>
             </sup>
         </p>
-        
-            <form action="#" method="POST">
-            <select name="today">
-                <option value="">Choose The Date</option>
-                <option value="0723">2022 年 7 月 23 日 (土)</option>
-                <option value="0724">2022 年 7 月 24 日 (日)</option>
-                <option value="0725">2022 年 7 月 25 日 (月)</option>
-                <option value="0726">2022 年 7 月 26 日 (火)</option>
-                <option value="0727">2022 年 7 月 27 日 (水)</option>
-                <option value="0728">2022 年 7 月 28 日 (木)</option>
-                <option value="0729">2022 年 7 月 29 日 (金)</option>
-            </select>
-            <input type="submit" name="submit" value="気持ちを表す色と記号"/>
-            </form>
 
         <div id="credit">
             <b class="print">Colors and Symbols</b>
@@ -298,6 +284,20 @@ fclose($fp);
                     <?php endif; ?>
                 </ul>
         </div>
+        
+        <form action="#" method="POST">
+        <select name="today">
+            <option value="">Choose The Date</option>
+            <option value="0723">2022 年 7 月 23 日 (土)</option>
+            <option value="0724">2022 年 7 月 24 日 (日)</option>
+            <option value="0725">2022 年 7 月 25 日 (月)</option>
+            <option value="0726">2022 年 7 月 26 日 (火)</option>
+            <option value="0727">2022 年 7 月 27 日 (水)</option>
+            <option value="0728">2022 年 7 月 28 日 (木)</option>
+            <option value="0729">2022 年 7 月 29 日 (金)</option>
+        </select>
+        <input type="submit" name="submit" value="気持ちを表す色と記号"/>
+        </form>
     </div>
 
     <div id="sign">

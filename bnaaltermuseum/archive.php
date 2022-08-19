@@ -143,6 +143,30 @@ while ($row = fgetcsv($fp)) {
         </li>
     </ul>
 </div>
+
+<div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            <li>
+                <span class="color" style="background:#<?=h($row[1])?>;">
+                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
+                </span>
+            </li>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <li>
+                <span class="color" style="background:#fff;">
+                  <b class="symbol" style="color:#fff;">?</b>
+                </span>
+            </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
+</div>
+
 <div id="log" class="change">
     <ul id="log_items">
         <?php if (!empty($rows)): ?>
@@ -167,28 +191,6 @@ while ($row = fgetcsv($fp)) {
                 </li>
         <?php endif; ?>
     </ul>
-</div>
-<div id="flash" class="change">
-        <ul id="random" class="flash">
-            <?php if (!empty($rows)): ?>
-            <?php foreach ($rows as $row): ?>
-            <li>
-                <span class="color" style="background:#<?=h($row[1])?>;">
-                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
-                </span>
-            </li>
-            <?php endforeach; ?>
-            <?php else: ?>
-            <li>
-                <span class="color" style="background:#fff;">
-                  <b class="symbol" style="color:#fff;">?</b>
-                </span>
-            </li>
-            <?php endif; ?>
-        </ul>
-        <section id="speed">
-            <input type="range" id="flash_speed" value="" min="0" max="5000">
-        </section>
 </div>
 
 <form id="date" action="" method="POST">
@@ -230,6 +232,7 @@ while ($row = fgetcsv($fp)) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://creative-community.space/sign/flash.js"></script>
 <script type="text/javascript">
     $(function() {
         $('.change').hide();

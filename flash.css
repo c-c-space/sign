@@ -1,9 +1,4 @@
 
-            body {
-                padding: 0;
-                margin: 0;
-            }
-            
             #random {
                 position: fixed;
                 z-index: 500;

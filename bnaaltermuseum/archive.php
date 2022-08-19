@@ -114,7 +114,6 @@ while ($row = fgetcsv($fp)) {
             width: 100%;
             height: auto;
             background-color: #fff;
-            border-bottom: solid 1px #000;
             padding: 1rem 0;
             margin: 0;
             color: #000;

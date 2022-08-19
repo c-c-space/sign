@@ -58,20 +58,8 @@ while ($row = fgetcsv($fp)) {
             z-index: -1;
         }
         
-        #submit iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #submit,
         .open #menu {
             display: none;
-        }
-
-        .open #submit {
-            z-index: 99;
-            background-color: #fff;
-            display: block;
         }
 
         #date {

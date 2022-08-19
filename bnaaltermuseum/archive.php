@@ -8,12 +8,15 @@ function h($str) {
 
 if(isset($_POST["today"])) {
     $today = $_POST["today"];
-    $source_file = $today . ".csv";
-    $fp = fopen($source_file, 'r');
-    flock($fp, LOCK_SH);
-    while ($row = fgetcsv($fp)) {
-        $rows[] = $row;
-    }
+}
+
+$source_file = $today . ".csv";
+
+$fp = fopen($source_file, 'r');
+
+flock($fp, LOCK_SH);
+while ($row = fgetcsv($fp)) {
+    $rows[] = $row;
 }
 
 ?>

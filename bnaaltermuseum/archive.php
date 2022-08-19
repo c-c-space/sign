@@ -152,31 +152,11 @@ while ($row = fgetcsv($fp)) {
 <div id="all" class="change">
     <div id="mod">
             <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-            <p id="today">
-                <sup id="no" style="text-transform: uppercase;">
-                    #
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("jMyD",$mod);
-                    ?>
-            </sup>
-                <sup id="time" style="text-transform: uppercase;">
-                    Last Modified 
-                    <?php
-                    $mod = filemtime($source_file);
-                    date_default_timezone_set('Asia/Tokyo');
-                    print "".date("g:i:s A T",$mod);
-                    ?>
-            </sup>
-                <sup id="post" style="text-transform: uppercase;">
-                    <?php
-                    echo sizeof(file($source_file));
-                    ?>
-                    Posts
-        </sup>
-            </p>
-            <p id="credit"><img src="qr.png" width="100%"></p>
+        <div id="credit">
+            <b class="print">Colors and Symbols</b>
+            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
+            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
+        </div>
         </div>
 
         <div id="log">

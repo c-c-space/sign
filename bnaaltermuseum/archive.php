@@ -6,7 +6,6 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("Ymd");
 $source_file = $today . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');
@@ -263,8 +262,13 @@ fclose($fp);
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
-            <select name="prefecture">
-                <option value="">選択してください</option>
+            <?php
+            if(isset($_POST["today"])) {
+                $fruit = $_POST["today"];
+            }
+            ?>
+            <select name="today">
+                <option value="">Choose The Date</option>
                 <option value="0723">2022 年 7 月 23 日 (土)</option>
                 <option value="0724">2022 年 7 月 24 日 (日)</option>
                 <option value="0725">2022 年 7 月 25 日 (月)</option>
@@ -273,7 +277,7 @@ fclose($fp);
                 <option value="0728">2022 年 7 月 28 日 (木)</option>
                 <option value="0729">2022 年 7 月 29 日 (金)</option>
             </select>
-            <br/>気持ちを表す色と記号</sup>
+            <input type="submit"name="submit"value="気持ちを表す色と記号"/></sup>
         </p>
 
         <div id="credit">

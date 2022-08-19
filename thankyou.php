@@ -107,7 +107,7 @@ fclose($fp);
         var text = ["Thank You", "for", "Submit"];
         var counter = 0;
         var elem = document.getElementById("thankyou");
-        var inst = setInterval(change, 1000);
+        var inst = setInterval(change, 500);
 
         elem.innerHTML = text[counter];
 

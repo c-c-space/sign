@@ -275,10 +275,6 @@ while ($row = fgetcsv($fp)) {
     setInterval('showClock()', 1000);
 
     $(function() {
-        $("#flash").load("flash.php");
-    })
-
-    $(function() {
         $('.change').hide();
 
         $('.tab').on('click', function() {

@@ -151,6 +151,7 @@ while ($row = fgetcsv($fp)) {
         <span class="check"><b>✔</b></span>
     </div>
 </div>
+
 <div id="background">
     <ul id="gradient">
         <li class="bg" style="background-image: linear-gradient(180deg,
@@ -242,7 +243,6 @@ while ($row = fgetcsv($fp)) {
             <input type="range" id="flash_speed" value="" min="0" max="5000">
         </section>
 </div>
-
 
     <form id="date" action="" method="POST">
         <select name="today">

@@ -101,9 +101,94 @@ while ($row = fgetcsv($fp)) {
             float:right;
         }
         
+        #mod {
+            display: none;
+        }
+        
         @media print {
+        
+        #mod {
+            display: block;
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+            border-bottom: solid 1px #000;
+            padding: 1rem 0 0;
+            margin: 0;
+            color: #000;
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+        }
+        
+        #mod b {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #mod #ed {
+            font-size: 3.33rem;
+            padding: 0.25rem 0.25rem 0;
+            transform: scale(0.60, 1.75);
+        }
+        
+        #mod #credit,
+        #mod #today {
+            position: absolute;
+            display: block;
+            margin: 1rem;
+        }
+        
+        #mod #today {
+            top: 0;
+            left: 0;
+            width: 12.5rem;
+            height: 5rem;
+            padding: 0;
+            border: solid 1px #000;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+        }
+        
+        #mod sup {
+            font-size: 0.75rem;
+            line-height: 200%;
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        #mod #credit {
+            font-size: 0.55rem;
+            text-align: right;
+            height: 5rem;
+            top: 0;
+            right: 0;
+            width: 12.5rem;
+            text-align: justify;
+            word-wrap: break-word;
+            letter-spacing: 0.05em;
+        }
+        
+        #mod #credit b {
+            text-align: center;
+            font-size: 150%;
+            padding: 0.25rem 0 0.5rem;
+            font-family: Arial, sans-serif;
+        }
+
+
             #menu,
-            #index {
+            #date {
                 display: none;
             }
         }
@@ -173,6 +258,27 @@ while ($row = fgetcsv($fp)) {
 </div>
 
 <div id="log" class="change">
+    <div id="mod">
+        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
+        <p id="today">
+            <sup style="text-transform: uppercase;">
+            #
+            <?php
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
+            ?>
+            <br/>自分の気持ちを表す色と記号
+            </sup>
+        </p>
+
+        <div id="credit">
+            <b class="print">Colors and Symbols</b>
+            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
+            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
+        </div>
+    </div>
     <ul id="log_items">
         <?php if (!empty($rows)): ?>
             <?php foreach ($rows as $row): ?>

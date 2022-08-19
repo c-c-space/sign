@@ -57,9 +57,9 @@ while ($row = fgetcsv($fp)) {
         }
         
         #mod #ed {
-            padding: 0 0.25rem;
             font-size: 3.33rem;
-            transform: scale(1, 1.5);
+            padding: 0.25rem 0.25rem 0;
+            transform: scale(0.60, 1.75);
         }
         
         #mod #credit,
@@ -186,11 +186,6 @@ while ($row = fgetcsv($fp)) {
             display:block;
         }
 
-
-        #mod #ed {
-            padding: 0.25rem 0.25rem 0;
-            transform: scale(0.60, 1.75);
-        }
         #credit .print {
             display:block;
         }

@@ -133,7 +133,7 @@ while ($row = fgetcsv($fp)) {
 
 <div id="menu" class="nlc">
     <div>
-        <a class="tab" href="#sign">
+        <a class="tab" href="#all">
             <?php
             date_default_timezone_set('Asia/Tokyo');
             print(date('Y 年 n 月 j 日'). " ($week_name[$w])")

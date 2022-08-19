@@ -291,14 +291,18 @@ while ($row = fgetcsv($fp)) {
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
-            #
-            <?php
+            #<?php
             if(isset($_POST["today"])) {
                 $today = $_POST["today"];
                 echo $today;
             }
             ?>
-            <br/>自分の気持ちを表す色と記号
+            を表す
+            <br/>
+            <?php
+            echo sizeof(file($source_file));
+            ?>
+            の 色と記号
             </sup>
         </p>
 

@@ -180,7 +180,8 @@ while ($row = fgetcsv($fp)) {
                 $today = $_POST["today"];
                 echo $today;
             }
-            ?>を表す
+            ?>
+            を表す
             <br/>
             <?php
             echo sizeof(file($source_file));

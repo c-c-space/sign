@@ -107,7 +107,7 @@ while ($row = fgetcsv($fp)) {
 
 <div id="menu" class="nlc">
     <div>
-        <a class="tab" href="#flash">
+        <a class="tab" href="#all">
             #<?php
             if(isset($_POST["today"])) {
                 $today = $_POST["today"];
@@ -118,7 +118,7 @@ while ($row = fgetcsv($fp)) {
         <span class="check"><b>✔</b></span>
     </div>
     <div>
-        <a id="showTime" class="tab" href="#sign">
+        <a id="showTime" class="tab" href="#log">
             <?php
             echo sizeof(file($source_file));
             ?>

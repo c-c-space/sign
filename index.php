@@ -38,6 +38,7 @@ while ($row = fgetcsv($fp)) {
 
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="background.css" />
     <link rel="stylesheet" href="flash.css" />
     
     <style type="text/css">

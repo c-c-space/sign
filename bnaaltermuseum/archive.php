@@ -44,7 +44,6 @@ while ($row = fgetcsv($fp)) {
     <style type="text/css">
         #background,
         #flash,
-        #log,
         #submit {
             position: fixed;
             width: 100vw;
@@ -55,22 +54,6 @@ while ($row = fgetcsv($fp)) {
         
         #background {
             z-index: -1;
-        }
-        
-        #submit iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #submit,
-        .open #menu {
-            display: none;
-        }
-
-        .open #submit {
-            z-index: 99;
-            background-color: #fff;
-            display: block;
         }
 
         #date {
@@ -128,9 +111,10 @@ while ($row = fgetcsv($fp)) {
     <div>
         <a class="tab" href="#flash">
             #<?php
-            $mod = filemtime($source_file);
-            date_default_timezone_set('Asia/Tokyo');
-            print "".date("jMyD",$mod);
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
             ?>
         </a>
         <span class="check"><b>✔</b></span>

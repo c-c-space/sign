@@ -167,7 +167,7 @@ while ($row = fgetcsv($fp)) {
 </div>
 <div id="all" class="change">
     <div id="mod">
-            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
             <p id="today">
                 <sup id="no" style="text-transform: uppercase;">
                     #
@@ -285,8 +285,6 @@ while ($row = fgetcsv($fp)) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript">
-        </script>
 <script type="text/javascript">
     let btn = document.querySelector('#btn');
     let box = document.querySelector('#open');

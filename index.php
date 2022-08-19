@@ -241,8 +241,6 @@ while ($row = fgetcsv($fp)) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript">
-        </script>
 <script type="text/javascript">
     let btn = document.querySelector('#btn');
     let box = document.querySelector('#open');

@@ -42,6 +42,38 @@ while ($row = fgetcsv($fp)) {
     <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
 
     <style>
+        #btn {
+            position: fixed;
+            top: 2.5vw;
+            right: 2.5vw;
+            z-index: 100;
+            color: #000;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: .5s all;
+            width: 3vw;
+            height: 3vw;
+        }
+        
+        #btn:hover {
+            cursor: pointer;
+            color: #fff;
+            transition: 1s all;
+        }
+        
+        #btn b {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            font-weight: 500;
+            letter-spacing: .1vw;
+            font-family: "SimSong", "MS Mincho", serif;
+            font-size: 2.5vw;
+        }
         
         #background,
         #flash,
@@ -58,47 +90,39 @@ while ($row = fgetcsv($fp)) {
             z-index: -1;
         }
         
+        #submit iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #submit,
         .open #menu {
             display: none;
         }
 
-        #date {
-            position:fixed;
-            top:0;
-            width:100%;
+        .open #submit {
+            z-index: 99;
+            background-color: #fff;
+            display: block;
         }
         
-        #date select {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:70%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:left;
-
+        @media screen and (max-width: 550px) {
+            #btn {
+                width: 2rem;
+                height: 2rem;
+            }
+            #btn b {
+                letter-spacing: .1rem;
+                font-size: 1.5rem;
+            }
         }
         
-        #date input[type="submit"] {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            display: inline-block;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:20%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:right;
+        @media print {
+            #menu,
+            #btn,
+            #index {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -118,7 +142,7 @@ while ($row = fgetcsv($fp)) {
         <span class="check"><b>✔</b></span>
     </div>
     <div>
-        <a id="showTime" class="tab" href="#log">
+        <a id="showTime" class="tab" href="#flash">
             <?php
             echo sizeof(file($source_file));
             ?>

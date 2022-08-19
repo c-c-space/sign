@@ -281,4 +281,22 @@ while ($row = fgetcsv($fp)) {
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.change').hide();
+
+        $('.tab').on('click', function() {
+            $('.change').not($($(this).attr('href'))).hide();
+            $($(this).attr('href')).fadeToggle(1000);
+        });
+    });
+
+    $('a[href^="#"]').click(function() {
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        return false;
+    });
+</script>
 </html>

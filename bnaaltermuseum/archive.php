@@ -254,8 +254,6 @@ fclose($fp);
 
 <body>
     <div id="mod">
-        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-        <p id="today">
             <form action="#" method="POST">
             <select name="today">
                 <option value="">Choose The Date</option>
@@ -267,8 +265,10 @@ fclose($fp);
                 <option value="0728">2022 年 7 月 28 日 (木)</option>
                 <option value="0729">2022 年 7 月 29 日 (金)</option>
             </select>
-            </form>
             <input type="submit" name="submit" value="気持ちを表す色と記号"/>
+            </form>
+        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
+        <p id="today">
             <sup style="text-transform: uppercase;">
             <?php
             if(isset($_POST["today"])) {

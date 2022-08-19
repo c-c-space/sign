@@ -228,7 +228,8 @@ while ($row = fgetcsv($fp)) {
         
         #date select {
             width:70%;
-            margin: 2.5%;
+            padding: 1.25%;
+            margin: 1.25%;
             display:block;
             float:left;
 
@@ -236,7 +237,8 @@ while ($row = fgetcsv($fp)) {
         
         #date input[type="submit"] {
             width:20%;
-            margin: 2.5%;
+            padding: 1.25%;
+            margin: 1.25%;
             display:block;
             float:right;
         }

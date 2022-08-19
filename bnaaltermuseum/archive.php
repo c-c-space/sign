@@ -254,6 +254,18 @@ fclose($fp);
 
 <body>
     <div id="mod">
+        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
+        <p id="today">
+            <sup style="text-transform: uppercase;">
+            <?php
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
+            ?>
+            </sup>
+        </p>
+        
             <form action="#" method="POST">
             <select name="today">
                 <option value="">Choose The Date</option>
@@ -267,17 +279,6 @@ fclose($fp);
             </select>
             <input type="submit" name="submit" value="気持ちを表す色と記号"/>
             </form>
-        <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
-        <p id="today">
-            <sup style="text-transform: uppercase;">
-            <?php
-            if(isset($_POST["today"])) {
-                $today = $_POST["today"];
-                echo $today;
-            }
-            ?>
-            </sup>
-        </p>
 
         <div id="credit">
             <b class="print">Colors and Symbols</b>

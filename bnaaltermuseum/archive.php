@@ -10,19 +10,11 @@ if(isset($_POST["today"])) {
     $today = $_POST["today"];
     $source_file = $today . ".csv";
     $fp = fopen($source_file, 'r');
+    flock($fp, LOCK_SH);
+    while ($row = fgetcsv($fp)) {
+        $rows[] = $row;
+    }
 }
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
-    rewind($fp);
-}
-flock($fp, LOCK_SH);
-while ($row = fgetcsv($fp)) {
-    $rows[] = $row;
-}
-flock($fp, LOCK_UN);
-fclose($fp);
 
 ?>
 
@@ -266,7 +258,7 @@ fclose($fp);
         </select>
         <input type="submit" name="submit" value="気持ちを表す色と記号"/>
     </form>
-    
+
     <div id="mod">
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">

@@ -6,7 +6,6 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 $source_file = "symbol_color.csv";
-
 $fp = fopen($source_file, 'r');
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {

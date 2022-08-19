@@ -49,6 +49,15 @@ while ($row = fgetcsv($fp)) {
             user-select: none;
         }
         
+        #flash,
+        #all {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        }
+        
         li {
             list-style: none;
         }
@@ -187,6 +196,28 @@ while ($row = fgetcsv($fp)) {
     </ul>
     </div>
 
+    <div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            <li>
+                <span class="color" style="background:#<?=h($row[1])?>;">
+                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
+                </span>
+            </li>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <li>
+                <span class="color" style="background:#fff;">
+                  <b class="symbol" style="color:#fff;">?</b>
+                </span>
+            </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
+    </div>
 
     <form id="date" action="" method="POST">
         <select name="today">

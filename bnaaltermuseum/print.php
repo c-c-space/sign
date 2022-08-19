@@ -237,7 +237,7 @@ while ($row = fgetcsv($fp)) {
             transform: scale(1, 1.1);
             word-spacing: -.25ch;
             width:70%;
-            padding: 1.25%;
+            padding: 0.5rem;
             margin: 1.25%;
             display:block;
             float:left;
@@ -254,7 +254,7 @@ while ($row = fgetcsv($fp)) {
             transform: scale(1, 1.1);
             word-spacing: -.25ch;
             width:20%;
-            padding: 1.25%;
+            padding: 0.5rem;
             margin: 1.25%;
             display:block;
             float:right;

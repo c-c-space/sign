@@ -81,7 +81,7 @@ while ($row = fgetcsv($fp)) {
 
         #date {
             position:fixed;
-            bottom:0;
+            top:0;
             width:100%;
         }
         

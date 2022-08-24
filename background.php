@@ -33,10 +33,6 @@ fclose($fp);
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>自分の気持ちを知る・表す</title>
     <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
         
         li {
             list-style: none;
@@ -81,22 +77,11 @@ fclose($fp);
                 background-position: 100% 0%;
             }
         }
-        
-        @media print {
-            .bg {
-                margin-top: 12.5vh;
-                height: 85vh;
-                margin-bottom: 2.5vh;
-                background-size: 100% 100%;
-                animation: gradient none;
-            }
-        }
     </style>
 </head>
 
-<body>
-
-    <ul id="gradient">
+<body id="gradient">
+    <ul>
         <li class="bg" style="background-image: linear-gradient(180deg,
             <?php if (!empty($rows)): ?>
             <?php foreach ($rows as $row): ?>

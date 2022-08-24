@@ -6,29 +6,18 @@ function h($str) {
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("Ymd");
+if(isset($_POST["today"])) {
+    $today = $_POST["today"];
+}
+
 $source_file = $today . ".csv";
 
-$symbol = (string)filter_input(INPUT_POST, 'symbol');
-$color = (string)filter_input(INPUT_POST, 'color');
-$timestamp = date("j.M.y.D g:i:s A");
+$fp = fopen($source_file, 'r');
 
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
-
-$fp = fopen($source_file, 'a+b');
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    flock($fp, LOCK_EX);
-    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
-    rewind($fp);
-}
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
     $rows[] = $row;
 }
-flock($fp, LOCK_UN);
-fclose($fp);
 
 ?>
 
@@ -40,7 +29,6 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="refresh" content="60; URL=">
     <style>
         body,
         #sign {
@@ -69,15 +57,16 @@ fclose($fp);
         }
         
         #mod #ed {
-            padding: 0 0.25rem;
             font-size: 3.33rem;
-            transform: scale(1, 1.5);
+            padding: 0.25rem 0.25rem 0;
+            transform: scale(0.60, 1.75);
         }
         
         #mod #credit,
         #mod #today {
             position: absolute;
             display: block;
+            margin: 1rem;
         }
         
         #mod #today {
@@ -85,7 +74,6 @@ fclose($fp);
             left: 0;
             width: 12.5rem;
             height: 5rem;
-            margin: 0.25rem 1rem;
             padding: 0;
             border: solid 1px #000;
             font-weight: 500;
@@ -113,7 +101,6 @@ fclose($fp);
             height: 5rem;
             top: 0;
             right: 0;
-            margin: 0.25rem 1rem;
             width: 12.5rem;
             text-align: justify;
             word-wrap: break-word;
@@ -144,7 +131,7 @@ fclose($fp);
             padding: 0;
             margin: 0 0.5rem;
             min-height:1.5rem;
-            overflow-x: auto;
+            overflow-x: hidden;
             -webkit-overflow-scrolling: touch;
             display: -ms-flexbox;
             display: flex;
@@ -189,30 +176,59 @@ fclose($fp);
             right: 0;
             z-index: -1;
             width: 100%;
-            height: 100vh;
+            height: 87.5vh;
             overflow: hidden;
             pointer-events: none;
             user-select: none;
         }
         
-        #sign iframe {
-            border: none;
+        #credit .display {
+            display:block;
+        }
+
+        #credit .print {
+            display:block;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        #gradient {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 0;
+            margin: 0;
             width: 100%;
-            height: 100%;
+            z-index: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column-reverse;
         }
         
-        #weather {
-            position: fixed;
-            bottom: 0;
-            width:100%;
+        .bg {
+            position: relative;
+            top: 0;
+            left: 0;
             display: block;
-            font-size: 0.75rem;
-            letter-spacing: .5rem;
-            padding: 0.25rem 0;
-            margin: 1rem 0 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-size: 500% 500%;
+            animation: gradient 50s ease infinite;
+        }
+
+        #date {
+            position:fixed;
+            bottom:0;
+            width:100%;
         }
         
-        #weather span {
+        #date select {
+            font-size: 1rem;
             font-family: 'Times New Roman', serif;
             font-weight: 500;
             font-stretch: condensed;
@@ -220,69 +236,85 @@ fclose($fp);
             display: inline-block;
             transform: scale(1, 1.1);
             word-spacing: -.25ch;
-        }
-
-        #credit .print {
-            display:none;
-        }
-        
-        #credit .display {
+            width:70%;
+            padding: 0.5rem;
+            margin: 1.25%;
             display:block;
+            float:left;
+
         }
         
+        #date input[type="submit"] {
+            font-size: 1rem;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            display: inline-block;
+            transform: scale(1, 1.1);
+            word-spacing: -.25ch;
+            width:25%;
+            padding: 0.5rem;
+            margin: 1.25%;
+            display:block;
+            float:right;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
+        }
         
         @media print {
-            #sign {
-                height: 87.5vh;
+            .bg {
+                background-size: 100% 100%;
+                animation: gradient none;
             }
-            #mod #ed {
-                padding: 0.25rem 0.25rem 0;
-                transform: scale(0.60, 1.75);
-            }
-        
-        #mod #today,        
-        #mod #credit {
-            margin: 1rem;
-        }
-            #credit .print {
-                display:block;
-            }
-            #credit .display,
-            #weather {
-                display:none;
-            }
-            #collection ul {
-                overflow-x: hidden;
+
+            #date {
+                display: none;
             }
         }
     </style>
-</head>
   <script>
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    redirect:window.location.replace("mobile.php");
+    redirect:window.location.replace("visitorsonly.php");
   }
   </script>
+</head>
 
 <body>
+
     <div id="mod">
         <b id="ed">𝕿𝖍𝖊 𝕭𝖓𝕬 𝕿𝖎𝖒𝖊𝖘</b>
         <p id="today">
             <sup style="text-transform: uppercase;">
-            <?php
-            date_default_timezone_set('Asia/Tokyo');
-            $w = date("w");
-            $week_name = array("日", "月", "火", "水", "木", "金", "土");
-            print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+            #<?php
+            if(isset($_POST["today"])) {
+                $today = $_POST["today"];
+                echo $today;
+            }
             ?>
-            <br/>今日の気持ちを表す色と記号</sup>
+            を表す
+            <br/>
+            <?php
+            echo sizeof(file($source_file));
+            ?>
+            の 色と記号
+            </sup>
         </p>
 
         <div id="credit">
-            <b class="display">宿泊者限定</b>
-            <span class="display">35 の 記号 と 18 の 色 から 今の気持ちに合う色と記号を投稿し、このインターネットアート作品の制作に参加できます。</span>
-            <b class="print">Colors and Symbols</b>
-            <span class="print">This is The Collection of Colors and Symbols That Fits On Today.</span>
-            <span class="print">Those Colors and Symbols had Posted by Today's Visitors of BnA Alter Museum for Create this Work.</span>
+            <b class="print">令和四年版　夏の自由研究</b>
+            <span class="print">７月２３日（土）〜　８月２１日（日）</span>
+            <span class="print">ビーエヌエーオルターミュージアムに宿泊した人たちに気持ちを知る・表す色と記号</span>
         </div>
         <div id="collection">
                 <ul class="flash">
@@ -300,56 +332,58 @@ fclose($fp);
     </div>
 
     <div id="sign">
-        <iframe src="background.php"></iframe>
+    <ul id="gradient">
+        <li class="bg" style="background-image: linear-gradient(180deg,
+            <?php if (!empty($rows)): ?>
+            <?php foreach ($rows as $row): ?>
+            #<?=h($row[1])?>,
+            <?php endforeach; ?>
+            <?php else: ?>
+            #000,
+            <?php endif; ?>
+            #fff);">
+        </li>
+    </ul>
     </div>
-    
-    <div id="weather">
-        <marquee></marquee>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        var messageList = $('#weather marquee');
-
-        //openweathermap（天気予報API）に接続
-        var request = new XMLHttpRequest();
-        var targetCityName = "kyoto";
-        var appId = "557b466129cf7d7427b03e5b7886a4bb";
-        var owmURL = "https://api.openweathermap.org/data/2.5/weather?APPID=" + appId + "&lang=ja&units=metric&q=" + targetCityName + ",jp;";
 
 
-        request.open('GET', owmURL, true);
-        //結果をjson型で受け取る
-        request.responseType = 'json';
+    <form id="date" action="" method="POST">
+        <select name="today">
+            <option value="">自分の気持を知る・表す</option>
+            <option value="20220723">2022 年 7 月 23 日 (土)</option>
+            <option value="20220724">2022 年 7 月 24 日 (日)</option>
+            <option value="20220725">2022 年 7 月 25 日 (月)</option>
+            <option value="20220726">2022 年 7 月 26 日 (火)</option>
+            <option value="20220727">2022 年 7 月 27 日 (水)</option>
+            <option value="20220728">2022 年 7 月 28 日 (木)</option>
+            <option value="20220729">2022 年 7 月 29 日 (金)</option>
+            <option value="20220730">2022 年 7 月 30 日 (土)</option>
+            <option value="20220731">2022 年 7 月 31 日 (日)</option>
+            <option value="20220801">2022 年 8 月 1 日 (月)</option>
+            <option value="20220802">2022 年 8 月 2 日 (火)</option>
+            <option value="20220803">2022 年 8 月 3 日 (水)</option>
+            <option value="20220804">2022 年 8 月 4 日 (木)</option>
+            <option value="20220805">2022 年 8 月 5 日 (金)</option>
+            <option value="20220806">2022 年 8 月 6 日 (土)</option>
+            <option value="20220807">2022 年 8 月 7 日 (日)</option>
+            <option value="20220808">2022 年 8 月 8 日 (月)</option>
+            <option value="20220809">2022 年 8 月 9 日 (火)</option>
+            <option value="20220810">2022 年 8 月 10 日 (水)</option>
+            <option value="20220811">2022 年 8 月 11 日 (木)</option>
+            <option value="20220812">2022 年 8 月 12 日 (金)</option>
+            <option value="20220813">2022 年 8 月 13 日 (土)</option>
+            <option value="20220814">2022 年 8 月 14 日 (日)</option>
+            <option value="20220815">2022 年 8 月 15 日 (月)</option>
+            <option value="20220816">2022 年 8 月 16 日 (火)</option>
+            <option value="20220817">2022 年 8 月 17 日 (水)</option>
+            <option value="20220818">2022 年 8 月 18 日 (木)</option>
+            <option value="20220819">2022 年 8 月 19 日 (金)</option>
+            <option value="20220820">2022 年 8 月 20 日 (土)</option>
+            <option value="20220821">2022 年 8 月 21 日 (日)</option>
+        </select>
+        <input type="submit" name="submit" value="View The Collection"/>
+    </form>
 
-        request.onload = function() {
-            var data = this.response;
-            console.log(data);
-            var messageElement = $(
-                "<span>" +
-                data["name"] +
-                " - " +
-                data["weather"][0]["description"] +
-                " | " +
-                data["weather"][0]["main"] +
-                " | 気温 " +
-                data["main"]["temp"] +
-                " ℃ | 最高気温 " +
-                data["main"]["temp_max"] +
-                "℃ | 最低気温 " +
-                data["main"]["temp_min"] +
-                "℃ | 風速 " +
-                data["wind"]["speed"] +
-                " ㎞ | 雲量 " +
-                data["clouds"]["all"] +
-                " % </span>"
-            );
-            //HTMLに取得したデータを追加する
-            messageList.append(messageElement);
-        };
-
-        request.send();
-    </script>
 </body>
 
 </html>

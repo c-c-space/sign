@@ -33,13 +33,17 @@ fclose($fp);
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>自分の気持ちを知る・表す</title>
     <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
         
         li {
             list-style: none;
         }
         
         #gradient {
-            position: fixed;
+            position: relative;
             top: 0;
             left: 0;
             padding: 0;
@@ -80,8 +84,8 @@ fclose($fp);
     </style>
 </head>
 
-<body id="gradient">
-    <ul>
+<body>
+    <ul id="gradient">
         <li class="bg" style="background-image: linear-gradient(180deg,
             <?php if (!empty($rows)): ?>
             <?php foreach ($rows as $row): ?>

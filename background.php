@@ -43,12 +43,13 @@ fclose($fp);
         }
         
         #gradient {
-            position: relative;
+            position: fixed;
             top: 0;
             left: 0;
             padding: 0;
             margin: 0;
             width: 100%;
+            height: 100vh;
             z-index: 0;
             overflow-y: auto;
             overflow-x: hidden;
@@ -64,7 +65,7 @@ fclose($fp);
             padding: 0;
             margin: 0;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-size: 500% 500%;
             animation: gradient 50s ease infinite;
         }

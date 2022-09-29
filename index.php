@@ -2,7 +2,8 @@
 
 date_default_timezone_set('Asia/Tokyo');
 
-function h($str) {
+function h($str)
+{
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
@@ -43,7 +44,14 @@ while ($row = fgetcsv($fp)) {
     <link rel="icon" sizes="192x192" href="アンドロイド端末用WEBクリップアイコンのURL (PNG)">
     <link rel="apple-touch-icon" sizes="180x180" href="アップル端末用WEBクリップアイコンのURL (PNG)">
 
+    <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="background.css" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="flash.css" />
 </head>
 
 <body id="open">
@@ -53,7 +61,7 @@ while ($row = fgetcsv($fp)) {
             <a class="tab" href="#all">
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
-                print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
+                print(date('Y 年 n 月 j 日') . " ($week_name[$w])")
                 ?>
             </a>
             <span class="check"><b>✔</b></span>
@@ -64,18 +72,78 @@ while ($row = fgetcsv($fp)) {
         </div>
     </div>
 
-    <div id="background"></div>
-    <div id="all" class="change"></div>
-    <div id="flash" class="change"></div>
+    <main id="gradient">
+        <section class="bg" style="background-image: linear-gradient(180deg,
+            <?php if (!empty($rows)) : ?>
+            <?php foreach ($rows as $row) : ?>
+            #<?= h($row[1]) ?>,
+            <?php endforeach; ?>
+            <?php else : ?>
+            #000,
+            <?php endif; ?>
+            #fff);">
+        </section>
+    </main>
+
+    <div id="all" class="change">
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)) : ?>
+                    <?php foreach ($rows as $row) : ?>
+                        <li>
+                            <p>
+                                <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
+                                <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                            </p>
+                            <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                                <?= h($row[2]) ?>
+                            </p>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <li>
+                        <p>
+                            <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                            <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        </p>
+                        <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+    <div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)) : ?>
+                <?php foreach ($rows as $row) : ?>
+                    <li>
+                        <span class="color" style="background:#<?= h($row[1]) ?>;">
+                            <b class="symbol" style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
+                        </span>
+                    </li>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <li>
+                    <span class="color" style="background:#fff;">
+                        <b class="symbol" style="color:#fff;">?</b>
+                    </span>
+                </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="flash.js"></script>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <script src="now.js"></script>
     <script type="text/javascript">
-        $(function () {
-            $("#background").load("background.php");
+        $(function() {
             $("#all").load("all.php");
-            $("#flash").load("flash.php");
         })
     </script>
 </body>

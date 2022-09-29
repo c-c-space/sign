@@ -32,6 +32,8 @@ body {
     margin: 0;
     display: -webkit-flex;
     display: flex;
+    -webkit-align-items: flex-start;
+    align-items: end;
     -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse;
 }

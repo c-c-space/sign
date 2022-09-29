@@ -4,7 +4,11 @@ $today = date("Ymd");
 $source_file =  $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    flock($fp, LOCK_EX);
+    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
+    rewind($fp);
+}
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
     $rows[] = $row;

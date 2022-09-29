@@ -170,7 +170,7 @@ body {
     #symbol,
     #color {
         width: 100%;
-        height: 55vh;
+        height: 57.5vh;
         position: relative;
         transform: rotate(90deg);
     }

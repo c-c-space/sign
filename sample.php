@@ -74,7 +74,7 @@ flock($fp, LOCK_UN);
 <body id="box">
 
   <main id="gradient">
-    <section class="bg" style="background-image: linear-gradient(180deg,
+    <section class="bg" style="background-image: linear-gradient(0deg,
         <?php if (!empty($rows)) : ?>
         <?php foreach ($rows as $row) : ?>
         #<?= h($row[1]) ?>,

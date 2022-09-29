@@ -352,10 +352,6 @@ flock($fp, LOCK_UN);
         <span class="check"><b>✔</b></span>
       </div>
       <div>
-        <input type="submit" name="enter" class="nlc tab" value="自分の気持ちを知る・表す">
-        <span class="check"><b>✔</b></span>
-      </div>
-      <div>
         <a id="showTime" class="tab" href="#flash"></a>
         <span class="check"><b>✔</b></span>
       </div>

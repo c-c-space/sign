@@ -12,7 +12,7 @@ $week_name = array("日", "月", "火", "水", "木", "金", "土");
 $today = date("Ymd");
 $source_file =  $today . ".csv";
 
-$fp = fopen($source_file, 'r');
+$fp = fopen($source_file, 'a+b');
 
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {

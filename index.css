@@ -22,16 +22,18 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 #enter {
     top: 0;
     left: 0;
 }
+
 #menu {
     bottom: 0;
     left: 0;
 }
 
-#menu input[type="submit"] {
+#enter input[type="submit"] {
     color: #000;
     font-size: 1rem;
     border: none;

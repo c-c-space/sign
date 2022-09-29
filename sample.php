@@ -61,12 +61,11 @@ flock($fp, LOCK_UN);
       position: relative;
       z-index: 5;
       width: 100%;
-      padding: 0 2.5% 7.5%;
+      padding: 2.5%;
     }
 
-    #enter #greeting,
-    #enter .enter {
-      padding: 2.5% 5% 0;
+    #enter #greeting {
+      padding: 2.5% 0;
     }
 
     #enter hr {

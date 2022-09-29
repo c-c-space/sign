@@ -22,14 +22,13 @@ body {
 #log_items {
     position: absolute;
     width: 45%;
-    height: 70vh;
+    height: 65vh;
     top: 45%;
     left:50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     overflow-y: auto;
     list-style: none;
-    padding: 2.5vw;
     margin: 0;
     display: -webkit-flex;
     display: flex;
@@ -42,7 +41,7 @@ body {
 #log_items li {
     width: 100%;
     margin: 0;
-    padding: 2.5vw 0 0;
+    padding: 2.5vw 2.5vw 0;
     word-break: break-word;
 }
 

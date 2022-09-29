@@ -169,7 +169,6 @@ body {
 
     #symbol,
     #color {
-        display: block;
         width: 100%;
         height: 55vh;
         position: relative;

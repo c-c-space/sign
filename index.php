@@ -140,14 +140,8 @@ fclose($fp);
         <script src="flash.js"></script>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
     <script src="now.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#all").load("all.php");
-        })
-    </script>
 </body>
 
 </html>

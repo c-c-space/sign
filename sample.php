@@ -9,8 +9,13 @@ function h($str)
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("Ymd");
-$source_file =  $today . ".csv";
+$day = date("d");
+if (isset($_POST["day"])) {
+    $day = $_POST["day"];
+}
+
+$month = date("Ym");
+$source_file = $month . $day . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');
 $color = (string)filter_input(INPUT_POST, 'color');

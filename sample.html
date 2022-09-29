@@ -1,3 +1,26 @@
+<?php
+
+date_default_timezone_set('Asia/Tokyo');
+
+function h($str) {
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
+
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
+
+$today = date("Ymd");
+$source_file =  $today . ".csv";
+
+$fp = fopen($source_file, 'a+b');
+
+flock($fp, LOCK_SH);
+while ($row = fgetcsv($fp)) {
+    $rows[] = $row;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 

@@ -2,7 +2,8 @@
 
 date_default_timezone_set('Asia/Tokyo');
 
-function h($str) {
+function h($str)
+{
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
@@ -32,71 +33,22 @@ fclose($fp);
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>自分の気持ちを知る・表す</title>
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        
-        li {
-            list-style: none;
-        }
-        
-        #gradient {
-            position: relative;
-            top: 0;
-            left: 0;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: 0;
-            overflow-y: auto;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column-reverse;
-        }
-        
-        .bg {
-            position: relative;
-            top: 0;
-            left: 0;
-            display: block;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            background-size: 500% 500%;
-            animation: gradient 50s ease infinite;
-        }
-        
-        @keyframes gradient {
-            0% {
-                background-position: 100% 0%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            100% {
-                background-position: 100% 0%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="background.css" />
 </head>
 
 <body>
-    <ul id="gradient">
-        <li class="bg" style="background-image: linear-gradient(180deg,
-            <?php if (!empty($rows)): ?>
-            <?php foreach ($rows as $row): ?>
-            #<?=h($row[1])?>,
+    <main id="gradient">
+        <section class="bg" style="background-image: linear-gradient(180deg,
+            <?php if (!empty($rows)) : ?>
+            <?php foreach ($rows as $row) : ?>
+            #<?= h($row[1]) ?>,
             <?php endforeach; ?>
-            <?php else: ?>
+            <?php else : ?>
             #000,
             <?php endif; ?>
             #fff);">
-        </li>
-    </ul>
+        </section>
+    </main>
 </body>
 
 </html>

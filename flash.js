@@ -8,17 +8,17 @@ var notes = Tone.Frequency("E3").harmonize([
 var noteIndex = 1;
 
 StartAudioContext(Tone.context, window);
-$(window).click(function() {
+$(window).click(function () {
     Tone.context.resume();
 });
 
 
-$(function() {
+$(function () {
     var arr = [];
-    $("#random li").each(function() {
+    $("#random li").each(function () {
         arr.push($(this).html());
     });
-    arr.sort(function() {
+    arr.sort(function () {
         return Math.random() - Math.random();
     });
     $("#random").empty();
@@ -27,7 +27,7 @@ $(function() {
     }
 });
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     viewSlide('.flash li');
 });
 
@@ -45,7 +45,7 @@ function viewSlide(className, flashNo = -1) {
     }
     imgArray[flashNo].style.opacity = 1;
     let msec = document.getElementById('flash_speed').max - document.getElementById('flash_speed').value;
-    setTimeout(function() {
+    setTimeout(function () {
         viewSlide(className, flashNo);
     }, msec);
 }

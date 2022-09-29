@@ -111,17 +111,17 @@ flock($fp, LOCK_UN);
   <?php else : ?>
 
     <form id="enter" method="post">
+      <p class="enter">
+        <input type="submit" name="enter" value="自分の気持ちを知る・表す">
+      </p>
+      <hr />
+      <div id="greeting"></div>
+      <hr />
       <select id="voice-select"></select>
       <input type="button" id="speak-btn" value="Play">
       <input type="button" id="cancel-btn" value="Stop">
       <input type="hidden" id="pause-btn" value="Pause">
       <input type="hidden" id="resume-btn" value="Resume">
-      <hr />
-      <div id="greeting"></div>
-
-      <p class="enter">
-        <input type="submit" name="enter" value="自分の気持ちを知る・表す">
-      </p>
     </form>
     <script src="/speech.js"></script>
 

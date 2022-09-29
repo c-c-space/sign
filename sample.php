@@ -326,12 +326,12 @@ flock($fp, LOCK_UN);
   <?php elseif ($page_flag === 2) : ?>
 
     <section id="fin" method="post">
-      <div id="greeting">Hi</div>
       <select id="voice-select"></select>
       <input type="button" id="speak-btn" value="Play">
       <input type="button" id="cancel-btn" value="Stop">
       <input type="hidden" id="pause-btn" value="Pause">
       <input type="hidden" id="resume-btn" value="Resume">
+      <div id="greeting">Hi</div>
     </section>
 
 

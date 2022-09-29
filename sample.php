@@ -12,6 +12,14 @@ function h($str)
 $today = date("Ymd");
 $source_file =  $today . ".csv";
 
+$symbol = (string)filter_input(INPUT_POST, 'symbol');
+$color = (string)filter_input(INPUT_POST, 'color');
+$timestamp = date("j.M.y.D g:i:s A");
+
+$forwardedFor = $_SERVER["REMOTE_ADDR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
 $fp = fopen($source_file, 'a+b');
 
 $w = date("w");

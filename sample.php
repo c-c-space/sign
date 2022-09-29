@@ -76,7 +76,7 @@ flock($fp, LOCK_UN);
       font-size: 1rem;
       border: none;
       margin: 2.5%;
-      padding: 2.5%;
+      cursor: pointer;
       background: transparent;
       display: inline-block;
       text-decoration: none;

@@ -64,7 +64,7 @@ while ($row = fgetcsv($fp)) {
         </div>
     </div>
 
-    <div id="gradient"></div>
+    <div id="background"></div>
     <div id="all" class="change"></div>
     <div id="flash" class="change"></div>
 
@@ -73,7 +73,7 @@ while ($row = fgetcsv($fp)) {
     <script src="now.js"></script>
     <script type="text/javascript">
         $(function () {
-            $("#gradient").load("gradient.php");
+            $("#background").load("background.php");
             $("#all").load("all.php");
             $("#flash").load("flash.php");
         })

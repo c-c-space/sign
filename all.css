@@ -32,7 +32,6 @@ body {
     margin: 0;
     display: -webkit-flex;
     display: flex;
-    align-items: flex-end; 
     -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse;
 }

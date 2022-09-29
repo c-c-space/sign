@@ -87,13 +87,13 @@ fclose($fp);
     <div id="menu" class="nlc">
         <div>
             <a class="tab" href="#flash">
-                #<?php
-                    if (isset($_POST["today"])) {
-                        $today = $_POST["today"];
-                        echo $today;;
-                    }
-                    print(date('My'))
-                    ?>
+                <?php
+                if (isset($_POST["today"])) {
+                    $today = $_POST["today"];
+                    echo '#' . $today;
+                }
+                print(date('My'))
+                ?>
             </a>
             <span class="check"><b>✔</b></span>
         </div>

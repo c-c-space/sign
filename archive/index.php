@@ -8,8 +8,8 @@ function h($str)
 }
 
 $day = date("d");
-if (isset($_POST["day"])) {
-    $day = $_POST["day"];
+if (isset($_GET["day"])) {
+    $day = $_GET["day"];
 }
 
 $month = date("Ym");
@@ -52,7 +52,7 @@ fclose($fp);
 
 <body id="open">
 
-    <form id="collection" method="POST">
+    <form id="collection" method="GET">
         <select id="date" name="day"></select>
         <input type="submit" name="submit" value="View The Collection" />
         <script src="collection.js"></script>

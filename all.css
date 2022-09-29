@@ -34,8 +34,8 @@ body {
     display: flex;
     -webkit-align-items: end;
     align-items: end;
-    -webkit-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 }
 
 #log_items li {

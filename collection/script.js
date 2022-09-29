@@ -1,6 +1,7 @@
 const date = new Date()
+const today = date.getDate()
 const year = date.getFullYear()
-const month = ("0" + (date.getMonth() + 1)).slice(-2)
+const month = date.getMonth()
 
 const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
 const endDate = new Date(year, month, 0) // 月の最後の日を取得
@@ -15,7 +16,7 @@ for (let d = 0; d < 31; d++) {
         calendarHtml += '<option value="0' + dayCount + '">0' + dayCount + '</option>'
         dayCount++
     }
-    else if (dayCount > endDayCount) {
+    else if (dayCount > today) {
     }
     else {
         calendarHtml += '<option value="' + dayCount + '">' + dayCount + '</option>'

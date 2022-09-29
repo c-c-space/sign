@@ -12,9 +12,8 @@ if (isset($_POST["day"])) {
     $day = $_POST["day"];
 }
 
-$year = date("Y");
-$month = date("m");
-$source_file = "../" . $year . "/" . $month . "/" . $day . ".csv";
+$month = date("Ym");
+$source_file = "../" . $month . $day . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

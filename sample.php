@@ -350,6 +350,7 @@ flock($fp, LOCK_UN);
 
         <div id="post">
           <input type="submit" name="submit" value="Submit">
+          <br/>
           <input type="button" value="Back" onClick="history.back(); return false;">
         </div>
       </form>

@@ -170,13 +170,12 @@ body {
     #symbol,
     #color {
         width: 100%;
-        height: 60vh;
+        height: 55vh;
         position: relative;
         transform: rotate(90deg);
     }
 
     #post {
-        top:52.5%;
         left: 33.333%;
         transform: rotate(90deg);
     }

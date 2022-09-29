@@ -103,7 +103,9 @@ flock($fp, LOCK_UN);
       <form method="post">
 
         <div id="symbol">
-          <p class="title"><b>Choose A Symbol That Suits on Now Feelings</b><br /> 今の気持ちに合う記号を選んでください。
+          <p class="title">
+            <b>Choose A Symbol That Suits on Now Feelings</b>
+            <br />今の気持ちに合う記号を選んでください。
           </p>
           <ul>
             <li class="click">
@@ -250,7 +252,9 @@ flock($fp, LOCK_UN);
         </div>
 
         <div id="color">
-          <p class="title"><b>Choose A Color That Suits on Now Feelings</b><br /> 今の気持ちに合う色を選んでください。
+          <p class="title">
+            <b>Choose A Color That Suits on Now Feelings</b>
+            <br />今の気持ちに合う色を選んでください。
           </p>
           <ul>
             <li class="click">

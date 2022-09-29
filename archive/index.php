@@ -12,6 +12,9 @@ if (isset($_POST["today"])) {
     $today = $_POST["today"];
 }
 
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
+
 $month = date("Ym");
 $source_file = "../" . $month . $today . ".csv";
 
@@ -89,8 +92,7 @@ fclose($fp);
         <div>
             <a class="tab" href="#flash">
                 <?php
-                print "#" . $today;
-                print(date('My'))
+                print(date('Y 年 n 月') . $today . "日" . " ($week_name[$w])")
                 ?>
             </a>
             <span class="check"><b>✔</b></span>

@@ -43,13 +43,3 @@ body {
         background-position: 100% 0%;
     }
 }
-
-@media print {
-    .bg {
-        margin-top: 15vh;
-        height: 85vh;
-        margin-bottom: 0vh;
-        background-size: 100% 100%;
-        animation: gradient none;
-    }
-}

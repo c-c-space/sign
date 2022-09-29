@@ -70,15 +70,19 @@ flock($fp, LOCK_UN);
 
     #enter input[type="submit"] {
       position: absolute;
-      top:0;
-      right:0;
+      top: 0;
+      right: 0;
       color: #000;
       font-size: 1rem;
       border: none;
+      margin: 2.5%;
+      padding: 2.5%;
       background: transparent;
       display: inline-block;
       text-decoration: none;
       font-weight: 500;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
     }
 
     #enter #voice-select,

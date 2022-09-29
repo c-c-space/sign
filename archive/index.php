@@ -88,9 +88,10 @@ fclose($fp);
         <div>
             <a class="tab" href="#flash">
                 <?php
+                print "#";
                 if (isset($_POST["today"])) {
                     $today = $_POST["today"];
-                    echo '#' . $today;
+                    echo $today;
                 }
                 print(date('My'))
                 ?>

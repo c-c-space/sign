@@ -28,7 +28,7 @@ $week_name = array("日", "月", "火", "水", "木", "金", "土");
 // 変数の初期化
 $page_flag = 0;
 
-if (!empty($_POST['menu'])) {
+if (!empty($_POST['enter'])) {
   $page_flag = 1;
   session_start();
   $_SESSION['page'] = true;
@@ -338,9 +338,9 @@ flock($fp, LOCK_UN);
 
   <?php else : ?>
 
-    <form id="menu" class="nlc">
+    <form id="menu" class="nlc" method="post">
       <div>
-        <input type="submit" name="enter" class="nlc" value="自分の気持ちを知る・表す">
+        <input type="submit" name="enter" class="tab" value="自分の気持ちを知る・表す">
         <span class="check"><b>✔</b></span>
       </div>
       <div>

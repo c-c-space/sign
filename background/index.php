@@ -7,10 +7,8 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$day = date("d");
-$year = date("Y");
-$month = date("m");
-$source_file = "../" . $year . "/" . $month . "/" . $day . ".csv";
+$today = date("Ymd");
+$source_file =  "../" . $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

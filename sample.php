@@ -9,10 +9,8 @@ function h($str)
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$day = date("d");
-$year = date("Y");
-$month = date("m");
-$source_file = $year . "/" . $month . "/" . $day . ".csv";
+$today = date("Ymd");
+$source_file =  $today . ".csv";
 
 $symbol = (string)filter_input(INPUT_POST, 'symbol');
 $color = (string)filter_input(INPUT_POST, 'color');
@@ -395,7 +393,7 @@ flock($fp, LOCK_UN);
         </ul>
       </div>
     </div>
-
+    
     <div id="flash" class="change">
       <ul id="random" class="flash">
         <?php if (!empty($rows)) : ?>

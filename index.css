@@ -9,11 +9,10 @@
     word-spacing: -.25ch;
 }
 
+#enter,
 #menu {
     position: fixed;
     z-index: 100;
-    bottom: 0;
-    left: 0;
     box-sizing: border-box;
     width: 100%;
     margin: 0;
@@ -22,6 +21,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+#enter {
+    top: 0;
+    left: 0;
+}
+#menu {
+    bottom: 0;
+    left: 0;
 }
 
 #menu input[type="submit"] {

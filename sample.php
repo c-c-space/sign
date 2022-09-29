@@ -337,7 +337,11 @@ flock($fp, LOCK_UN);
 
   <?php else : ?>
 
-    <form id="menu" class="nlc" method="post">
+    <form id="enter" method="post">
+      <input type="submit" name="enter" class="nlc tab" value="自分の気持ちを知る・表す">
+    </form>
+
+    <div id="menu" class="nlc">
       <div>
         <a class="tab" href="#all">
           <?php
@@ -355,7 +359,7 @@ flock($fp, LOCK_UN);
         <a id="showTime" class="tab" href="#flash"></a>
         <span class="check"><b>✔</b></span>
       </div>
-    </form>
+    </div>
 
     <div id="all" class="change">
       <div id="log">

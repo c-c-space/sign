@@ -1,0 +1,19 @@
+
+    <form id="collection" method="POST">
+        <select id="date" name="day"></select>
+        <script>
+            let now = new Date();
+            let date = now.getDay();
+
+            const collection = document.getElementById('date');
+            const select = document.createDocumentFragment();
+
+            for (let start = 0; start < 31 - date; start++) {
+                const option = document.createElement('option');
+
+                select.appendChild(collection);
+                option.appendChild(select);
+            }
+        </script>
+        <input type="submit" name="submit" value="View The Collection" />
+    </form>

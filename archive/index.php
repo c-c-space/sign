@@ -100,7 +100,7 @@ fclose($fp);
             <span class="check"><b>✔</b></span>
         </div>
         <div>
-            <a id="showTime" class="tab" href="#all">
+            <a class="tab" href="#all">
                 <?php
                 echo sizeof(file($source_file));
                 ?>
@@ -178,7 +178,6 @@ fclose($fp);
     <script src="../index.js"></script>
     <script src="../click.js"></script>
     <script src="../flash/script.js"></script>
-    <script src="../now.js"></script>
 </body>
 
 </html>

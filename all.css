@@ -38,7 +38,6 @@ body {
 }
 
 #log_items li {
-    width: 100%;
     margin: 0;
     padding: 2.5vw 2.5vw 0;
     word-break: break-word;

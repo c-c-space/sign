@@ -68,12 +68,21 @@ flock($fp, LOCK_UN);
       padding: 2.5% 0;
     }
 
-    #enter a,
+    #enter input[type="submit"] {
+      position: absolute;
+      top:0;
+      right:0;
+      color: #000;
+      font-size: 1rem;
+      border: none;
+      background: transparent;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
     #enter #voice-select,
-    #enter input[type="submit"],
     #enter input[type="button"] {
-      pointer-events: auto;
-      user-select: text;
       color: #000;
       font-size: 1rem;
       padding: 0.5rem 1rem;

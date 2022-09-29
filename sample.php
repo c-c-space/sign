@@ -115,7 +115,7 @@ flock($fp, LOCK_UN);
         <input type="submit" name="enter" value="自分の気持ちを知る・表す">
       </p>
       <hr />
-      <div id="greeting"></div>
+      <div id="greeting">Hi</div>
       <hr />
       <select id="voice-select"></select>
       <input type="button" id="speak-btn" value="Play">

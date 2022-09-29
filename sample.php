@@ -55,6 +55,7 @@ flock($fp, LOCK_UN);
   <link rel="stylesheet" href="background.css" />
   <link rel="stylesheet" href="all.css" />
   <link rel="stylesheet" href="flash.css" />
+  <link rel="stylesheet" href="submit/style.css" />
   <style>
     #enter {
       box-sizing: border-box;

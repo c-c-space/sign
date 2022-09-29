@@ -6,10 +6,6 @@
     padding: 2.5%;
 }
 
-#enter #greeting {
-    padding: 2.5% 0;
-}
-
 #enter input[type="submit"] {
     position: absolute;
     top: 0;
@@ -27,8 +23,13 @@
     writing-mode: vertical-rl;
 }
 
-#enter #voice-select,
-#enter input[type="button"] {
+
+#fin #greeting {
+    padding: 2.5% 0;
+}
+
+#fin #voice-select,
+#fin input[type="button"] {
     color: #000;
     font-size: 1rem;
     padding: 0.5rem 1rem;

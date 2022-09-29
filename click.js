@@ -17,7 +17,7 @@ $("#sign .click").click(function (e) {
     click.triggerAttackRelease(number[numberNote], "10n");
 });
 
-$("#menu a, #enter").click(function (e) {
+$("#menu a").click(function (e) {
     var numberNote = Math.floor(Math.random() * number.length);
     click.triggerAttackRelease(number[numberNote], "5n");
 });

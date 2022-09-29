@@ -59,6 +59,10 @@ flock($fp, LOCK_UN);
   <title>自分の気持ちを知る・表す</title>
   <meta name="description" content="これは、35 の 記号 と 18 の 色 を使って 自分の気持ちを知る・表す コミュニケーションツール です。">
 
+  <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+  <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+  <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+  <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="background.css" />
   <link rel="stylesheet" href="all.css" />

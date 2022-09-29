@@ -393,6 +393,7 @@ flock($fp, LOCK_UN);
         </ul>
       </div>
     </div>
+    
     <div id="flash" class="change">
       <ul id="random" class="flash">
         <?php if (!empty($rows)) : ?>

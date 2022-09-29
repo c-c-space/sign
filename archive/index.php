@@ -7,7 +7,7 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-if(isset($_POST["today"])) {
+if (isset($_POST["today"])) {
     $today = $_POST["today"];
 }
 
@@ -48,125 +48,14 @@ fclose($fp);
     <link rel="stylesheet" href="../all/style.css" />
     <link rel="stylesheet" href="../background/style.css" />
     <link rel="stylesheet" href="../flash/style.css" />
-    
+
     <style type="text/css">
     </style>
 </head>
 
 <body id="open">
 
-<div id="menu" class="nlc">
-    <div>
-        <a class="tab" href="#flash">
-            #<?php
-            if(isset($_POST["today"])) {
-                $today = $_POST["today"];
-                echo $today;
-            }
-            ?>MONTH__
-        </a>
-        <span class="check"><b>✔</b></span>
-    </div>
-    <div>
-        <a id="showTime" class="tab" href="#log">
-            <?php
-            echo sizeof(file($source_file));
-            ?>
-            Posts
-        </a>
-        <span class="check"><b>✔</b></span>
-    </div>
-</div>
-
-<div id="background">
-    <ul id="gradient">
-        <li class="bg" style="background-image: linear-gradient(180deg,
-            <?php if (!empty($rows)): ?>
-            <?php foreach ($rows as $row): ?>
-            #<?=h($row[1])?>,
-            <?php endforeach; ?>
-            <?php else: ?>
-            <?php endif; ?>
-            #fff);">
-        </li>
-    </ul>
-</div>
-
-<div id="flash" class="change">
-        <ul id="random" class="flash">
-            <?php if (!empty($rows)): ?>
-            <?php foreach ($rows as $row): ?>
-            <li>
-                <span class="color" style="background:#<?=h($row[1])?>;">
-                  <b class="symbol" style="color:#<?=h($row[1])?>;"><?=h($row[0])?></b>
-                </span>
-            </li>
-            <?php endforeach; ?>
-            <?php else: ?>
-            <li>
-                <span class="color" style="background:#fff;">
-                  <b class="symbol" style="color:#fff;">?</b>
-                </span>
-            </li>
-            <?php endif; ?>
-        </ul>
-        <section id="speed">
-            <input type="range" id="flash_speed" value="" min="0" max="5000">
-        </section>
-</div>
-
-<div id="log" class="change">
-    <div id="mod">
-        <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
-        <p id="today">
-            <sup style="text-transform: uppercase;">
-            #<?php
-            if(isset($_POST["today"])) {
-                $today = $_POST["today"];
-                echo $today;
-            }
-            ?>MONTH__
-            を表す
-            <br/>
-            <?php
-            echo sizeof(file($source_file));
-            ?>
-            の 色と記号
-            </sup>
-        </p>
-
-        <div id="credit">
-            <b class="print">Colors and Symbols</b>
-            <span class="print">This is The Collection of Colors and Symbols That Fits On Month ____.</span>
-            <span class="print">令和__年__月 の 気持ちを知る・表す 色と記号</span>
-        </div>
-    </div>
-    <ul id="log_items">
-        <?php if (!empty($rows)): ?>
-            <?php foreach ($rows as $row): ?>
-                <li>
-                    <p>
-                        <u style="background:#<?=h($row[1])?>;"><span><?=h($row[0])?></span></u>
-                        <b class="post" style="color:#<?=h($row[1])?>; user-select:none; pointer-events:none; filter: invert();"><?=h($row[3])?></b>
-                    </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
-                        <?=h($row[2])?>
-                    </p>
-                </li>
-            <?php endforeach; ?>
-            <?php else: ?>
-                <li>
-                    <p>
-                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
-                    </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
-                </li>
-        <?php endif; ?>
-    </ul>
-</div>
-
-<form id="date" action="" method="POST">
+    <form id="date" action="" method="POST">
         <select name="today">
             <option value="">令和__年__月</option>
             <option value="01">1 日 (月)</option>
@@ -191,27 +80,97 @@ fclose($fp);
             <option value="20">20 日 (土)</option>
             <option value="21">21 日 (日)</option>
         </select>
-        <input type="submit" name="submit" value="View The Collection"/>
+        <input type="submit" name="submit" value="View The Collection" />
     </form>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript">
-    $(function() {
-        $('.change').hide();
+    <div id="menu" class="nlc">
+        <div>
+            <a class="tab" href="#flash">
+                #<?php
+                    if (isset($_POST["today"])) {
+                        $today = $_POST["today"];
+                        echo $today;;
+                    }
+                    print(date('My'))
+                    ?>
+            </a>
+            <span class="check"><b>✔</b></span>
+        </div>
+        <div>
+            <a id="showTime" class="tab" href="#all">
+                <?php
+                echo sizeof(file($source_file));
+                ?>
+                Posts
+            </a>
+            <span class="check"><b>✔</b></span>
+        </div>
+    </div>
 
-        $('.tab').on('click', function() {
-            $('.change').not($($(this).attr('href'))).hide();
-            $($(this).attr('href')).fadeToggle(1000);
-        });
-    });
+    <main id="gradient">
+        <section class="bg" style="background-image: linear-gradient(0deg,
+        <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+        #fff);">
+        </section>
+    </main>
 
-    $('a[href^="#"]').click(function() {
-        var href = $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        return false;
-    });
-</script>
+    <div id="flash" class="change">
+        <ul id="random" class="flash">
+            <?php if (!empty($rows)) : ?>
+                <?php foreach ($rows as $row) : ?>
+                    <li>
+                        <span class="color" style="background:#<?= h($row[1]) ?>;">
+                            <b class="symbol" style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
+                        </span>
+                    </li>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <li>
+                    <span class="color" style="background:#fff;">
+                        <b class="symbol" style="color:#fff;">?</b>
+                    </span>
+                </li>
+            <?php endif; ?>
+        </ul>
+        <section id="speed">
+            <input type="range" id="flash_speed" value="" min="0" max="5000">
+        </section>
+    </div>
+
+    <div id="all" class="change">
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)) : ?>
+                    <?php foreach ($rows as $row) : ?>
+                        <li>
+                            <p>
+                                <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
+                                <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                            </p>
+                            <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                                <?= h($row[2]) ?>
+                            </p>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <li>
+                        <p>
+                            <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                            <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        </p>
+                        <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>

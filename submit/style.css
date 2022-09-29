@@ -178,6 +178,7 @@ body {
 
     #post {
         top: 55%;
+        transform: rotate(90deg);
     }
 
     #symbol ul,

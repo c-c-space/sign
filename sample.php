@@ -91,6 +91,19 @@ flock($fp, LOCK_UN);
 
 <body id="box">
 
+  <main id="gradient">
+    <section class="bg" style="background-image: linear-gradient(180deg,
+        <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+        #fff);">
+    </section>
+  </main>
+
   <?php if ($page_flag === 1) : ?>
     <section id="info">
       <form method="post">

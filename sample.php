@@ -80,7 +80,7 @@ flock($fp, LOCK_UN);
     #enter input[type="button"] {
       pointer-events: auto;
       user-select: text;
-      color: #fff;
+      color: #000;
       font-size: 1rem;
       padding: 0.5rem 1rem;
       margin: 0.25rem 0.5rem 0.25rem 0;

@@ -7,13 +7,14 @@ function h($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("d");
-if (isset($_POST["today"])) {
-    $today = $_POST["today"];
+$day = date("d");
+if (isset($_POST["day"])) {
+    $day = $_POST["day"];
 }
 
-$month = date("Ym");
-$source_file = "../" . $month . $today . ".csv";
+$year = date("Y");
+$month = date("m");
+$source_file = "../" . $year . "/" . $month . "/" . $day . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -58,7 +59,7 @@ fclose($fp);
 <body id="open">
 
     <form id="date" action="" method="POST">
-        <select name="today">
+        <select name="day">
             <option value="">令和__年__月</option>
             <option value="01">1 日 (月)</option>
             <option value="02">2 日 (火)</option>
@@ -89,7 +90,7 @@ fclose($fp);
         <div>
             <a class="tab" href="#flash">
                 <?php
-                print "#" . $today;
+                print "#" . $day;
                 print(date('My'))
                 ?>
             </a>

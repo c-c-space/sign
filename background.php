@@ -1,12 +1,5 @@
 <?php
 
-date_default_timezone_set('Asia/Tokyo');
-
-function h($str)
-{
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
-}
-
 $today = date("Ymd");
 $source_file =  $today . ".csv";
 

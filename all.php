@@ -1,0 +1,85 @@
+<?php
+
+$today = date("Ymd");
+$source_file =  $today . ".csv";
+
+$fp = fopen($source_file, 'a+b');
+
+flock($fp, LOCK_SH);
+while ($row = fgetcsv($fp)) {
+    $rows[] = $row;
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>自分の気持ちを知る・表す</title>
+    <link rel="stylesheet" href="all.css" />
+</head>
+
+<body>
+    <div id="all">
+        <div id="mod">
+            <b id="ed">𝕹𝖊𝖜 𝕷𝖎𝖋𝖊 𝕮𝖔𝖑𝖑𝖊𝖈𝖙𝖎𝖔𝖓</b>
+            <p id="today">
+                <sup id="no" style="text-transform: uppercase;">
+                    #
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "" . date("jMyD", $mod);
+                    ?>
+                </sup>
+                <sup id="time" style="text-transform: uppercase;">
+                    Last Modified
+                    <?php
+                    $mod = filemtime($source_file);
+                    date_default_timezone_set('Asia/Tokyo');
+                    print "" . date("g:i:s A T", $mod);
+                    ?>
+                </sup>
+                <sup id="post" style="text-transform: uppercase;">
+                    <?php
+                    echo sizeof(file($source_file));
+                    ?>
+                    Posts
+                </sup>
+            </p>
+            <p id="credit"><img src="qr.png" width="100%"></p>
+        </div>
+
+        <div id="log">
+            <ul id="log_items">
+                <?php if (!empty($rows)) : ?>
+                    <?php foreach ($rows as $row) : ?>
+                        <li>
+                            <p>
+                                <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
+                                <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                            </p>
+                            <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                                <?= h($row[2]) ?>
+                            </p>
+                        </li>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <li>
+                        <p>
+                            <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                            <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+                        </p>
+                        <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

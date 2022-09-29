@@ -93,25 +93,6 @@
     padding: 0.25rem 2.5%;
 }
 
-#fin #greeting {
-    padding: 2.5% 0;
-}
-
-#fin #voice-select,
-#fin input[type="button"] {
-    color: #000;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    margin: 0.25rem 0.5rem 0.25rem 0;
-    border: 1px solid;
-    border-radius: 2rem;
-    background: transparent;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 500;
-    text-decoration: none;
-}
-
 @media screen and (max-width: 550px) {
     #menu {
         padding: 0.25rem 0.5rem;

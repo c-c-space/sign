@@ -59,15 +59,27 @@ flock($fp, LOCK_UN);
   <title>自分の気持ちを知る・表す</title>
   <meta name="description" content="これは、35 の 記号 と 18 の 色 を使って 自分の気持ちを知る・表す コミュニケーションツール です。">
 
+  <meta property="og:title" content="自分の気持ちを知る・表す" />
+  <meta property="og:description" content="これは、35 の 記号 と 18 の 色 を使って 自分の気持ちを知る・表す コミュニケーションツール です。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://creative-community.space/sign/" />
+  <meta property="og:image" content="イメージファイルのURL（1200x630 以上、8MB 以下、縦横比 1.91:1 の画像を推奨）" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" sizes="32x32" href="ファビコンのURL (ICO or PNG,GIF)">
+  <link rel="icon" sizes="192x192" href="アンドロイド端末用WEBクリップアイコンのURL (PNG)">
+  <link rel="apple-touch-icon" sizes="180x180" href="アップル端末用WEBクリップアイコンのURL (PNG)">
+
   <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
   <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
   <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
   <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
 
   <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="background.css" />
-  <link rel="stylesheet" href="all.css" />
-  <link rel="stylesheet" href="flash.css" />
+  <link rel="stylesheet" href="background/style.css" />
+  <link rel="stylesheet" href="all/style.css" />
+  <link rel="stylesheet" href="flash/style.css" />
   <link rel="stylesheet" href="submit/style.css" />
 </head>
 
@@ -325,14 +337,7 @@ flock($fp, LOCK_UN);
 
   <?php elseif ($page_flag === 2) : ?>
 
-    <section id="fin" method="post">
-      <select id="voice-select"></select>
-      <input type="button" id="speak-btn" value="Play">
-      <input type="button" id="cancel-btn" value="Stop">
-      <input type="hidden" id="pause-btn" value="Pause">
-      <input type="hidden" id="resume-btn" value="Resume">
-      <div id="greeting">Hi</div>
-    </section>
+    <section id="fin" method="post"></section>
 
 
   <?php else : ?>
@@ -412,9 +417,8 @@ flock($fp, LOCK_UN);
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="index.js"></script>
   <script src="click.js"></script>
-  <script src="flash.js"></script>
+  <script src="flash/script.js"></script>
   <script src="now.js"></script>
-  <script src="/speech.js"></script>
 </body>
 
 </html>

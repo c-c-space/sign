@@ -8,7 +8,7 @@ function h($str)
 }
 
 $today = date("Ymd");
-$source_file =  $today . ".csv";
+$source_file =  "../" . $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

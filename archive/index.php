@@ -10,7 +10,7 @@ if(isset($_POST["today"])) {
     $today = $_POST["today"];
 }
 
-$source_file = $today . ".csv";
+$source_file = "../" . $today . ".csv";
 
 $fp = fopen($source_file, 'r');
 

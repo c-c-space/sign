@@ -10,8 +10,8 @@ function h($str)
 }
 
 $day = date("d");
-if (isset($_POST["day"])) {
-    $day = $_POST["day"];
+if (isset($_GET["day"])) {
+  $day = $_GET["day"];
 }
 
 $month = date("Ym");
@@ -86,6 +86,7 @@ flock($fp, LOCK_UN);
   <link rel="stylesheet" href="all/style.css" />
   <link rel="stylesheet" href="flash/style.css" />
   <link rel="stylesheet" href="submit/style.css" />
+  <link rel="stylesheet" href="archive/style.css" />
 </head>
 
 <body id="box">
@@ -346,7 +347,96 @@ flock($fp, LOCK_UN);
 
   <?php elseif ($page_flag === 2) : ?>
 
-    <section id="fin" method="post"></section>
+    <form id="collection" method="GET">
+      <select id="date" name="day"></select>
+      <input type="submit" name="submit" value="View The Collection" />
+      <script src="collection.js"></script>
+    </form>
+
+    <div id="menu" class="nlc">
+      <div>
+        <a class="tab" href="#flash">
+          <?php
+          print "#" . $day;
+          print(date('My'))
+          ?>
+        </a>
+        <span class="check"><b>✔</b></span>
+      </div>
+      <div>
+        <a class="tab" href="#all">
+          <?php
+          echo sizeof(file($source_file));
+          ?>
+          Posts
+        </a>
+        <span class="check"><b>✔</b></span>
+      </div>
+    </div>
+
+    <main id="gradient">
+      <section class="bg" style="background-image: linear-gradient(0deg,
+        <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+        #fff);">
+      </section>
+    </main>
+
+    <div id="flash" class="change">
+      <ul id="random" class="flash">
+        <?php if (!empty($rows)) : ?>
+          <?php foreach ($rows as $row) : ?>
+            <li>
+              <span class="color" style="background:#<?= h($row[1]) ?>;">
+                <b class="symbol" style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
+              </span>
+            </li>
+          <?php endforeach; ?>
+        <?php else : ?>
+          <li>
+            <span class="color" style="background:#fff;">
+              <b class="symbol" style="color:#fff;">?</b>
+            </span>
+          </li>
+        <?php endif; ?>
+      </ul>
+      <section id="speed">
+        <input type="range" id="flash_speed" value="" min="0" max="5000">
+      </section>
+    </div>
+
+    <div id="all" class="change">
+      <div id="log">
+        <ul id="log_items">
+          <?php if (!empty($rows)) : ?>
+            <?php foreach ($rows as $row) : ?>
+              <li>
+                <p>
+                  <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
+                  <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                </p>
+                <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                  <?= h($row[2]) ?>
+                </p>
+              </li>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <li>
+              <p>
+                <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+              </p>
+              <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+    </div>
 
 
   <?php else : ?>
@@ -398,7 +488,7 @@ flock($fp, LOCK_UN);
         </ul>
       </div>
     </div>
-    
+
     <div id="flash" class="change">
       <ul id="random" class="flash">
         <?php if (!empty($rows)) : ?>

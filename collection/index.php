@@ -50,12 +50,11 @@ fclose($fp);
     </style>
 </head>
 
-<body id="open">
-
+<body>
     <form id="collection" method="GET">
         <select id="date" name="day"></select>
         <input type="submit" name="submit" value="View The Collection" />
-        <script src="collection.js"></script>
+        <script src="script.js"></script>
     </form>
 
     <div id="menu" class="nlc">

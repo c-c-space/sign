@@ -421,12 +421,12 @@ flock($fp, LOCK_UN);
       <section id="speed">
         <input type="range" id="flash_speed" value="" min="0" max="5000">
       </section>
-      
-      <script src="index.js"></script>
-      <script src="now.js"></script>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="flash.js"></script>
+
+      <script src="index.js"></script>
+      <script src="now.js"></script>
     </div>
   <?php else : ?>
 

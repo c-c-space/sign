@@ -32,8 +32,6 @@ body {
     margin: 0;
     display: -webkit-flex;
     display: flex;
-    -webkit-align-items: end;
-    align-items: end;
     -webkit-flex-direction: column;
     flex-direction: column;
 }

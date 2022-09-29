@@ -179,9 +179,9 @@ body {
 
     #post input[type="submit"],
     #post input[type="button"] {
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 0.25rem 1rem;
-        margin: 0.25rem;
+        margin: 0.5rem;
         border-radius: 2rem;
         border: #000 solid 0.1rem;
     }

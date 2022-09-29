@@ -10,10 +10,6 @@ function h($str)
 }
 
 $day = date("d");
-if (isset($_POST["day"])) {
-    $day = $_POST["day"];
-}
-
 $year = date("Y");
 $month = date("m");
 $source_file = $year . "/" . $month . "/" . $day . ".csv";

@@ -389,12 +389,6 @@ flock($fp, LOCK_UN);
       <section id="speed">
         <input type="range" id="flash_speed" value="" min="0" max="5000">
       </section>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="flash.js"></script>
-
-      <script src="index.js"></script>
-      <script src="now.js"></script>
     </div>
   <?php else : ?>
 
@@ -407,9 +401,80 @@ flock($fp, LOCK_UN);
       <input type="hidden" id="pause-btn" value="Pause">
       <input type="hidden" id="resume-btn" value="Resume">
     </form>
-    <script src="/speech.js"></script>
+
+    <div id="menu" class="nlc">
+      <div>
+        <a class="tab" href="#all">
+          <?php
+          date_default_timezone_set('Asia/Tokyo');
+          print(date('Y 年 n 月 j 日') . " ($week_name[$w])")
+          ?>
+        </a>
+        <span class="check"><b>✔</b></span>
+      </div>
+      <div>
+        <a id="showTime" class="tab" href="#flash"></a>
+        <span class="check"><b>✔</b></span>
+      </div>
+    </div>
+
+    <div id="all" class="change">
+      <div id="log">
+        <ul id="log_items">
+          <?php if (!empty($rows)) : ?>
+            <?php foreach ($rows as $row) : ?>
+              <li>
+                <p>
+                  <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
+                  <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                </p>
+                <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
+                  <?= h($row[2]) ?>
+                </p>
+              </li>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <li>
+              <p>
+                <u style="background:#000;"><span style="color:#fff;">?</span></u>
+                <b class="post" style="color:#000; user-select:none; pointer-events:none;">Under Construction</b>
+              </p>
+              <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+    </div>
+    <div id="flash" class="change">
+      <ul id="random" class="flash">
+        <?php if (!empty($rows)) : ?>
+          <?php foreach ($rows as $row) : ?>
+            <li>
+              <span class="color" style="background:#<?= h($row[1]) ?>;">
+                <b class="symbol" style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
+              </span>
+            </li>
+          <?php endforeach; ?>
+        <?php else : ?>
+          <li>
+            <span class="color" style="background:#fff;">
+              <b class="symbol" style="color:#fff;">?</b>
+            </span>
+          </li>
+        <?php endif; ?>
+      </ul>
+      <section id="speed">
+        <input type="range" id="flash_speed" value="" min="0" max="5000">
+      </section>
+    </div>
 
   <?php endif; ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="flash.js"></script>
+  <script src="now.js"></script>
+  <script src="/speech.js"></script>
 </body>
 
 </html>

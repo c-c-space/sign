@@ -1,54 +1,31 @@
 <?php
 
-mb_language("ja");
-mb_internal_encoding("UTF-8");
 date_default_timezone_set('Asia/Tokyo');
 
 function h($str)
 {
-  return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-$today = date("Ymd");
+if(isset($_POST["today"])) {
+    $today = $_POST["today"];
+}
+
 $source_file = "../" . $today . ".csv";
 
-$symbol = (string)filter_input(INPUT_POST, 'symbol');
-$color = (string)filter_input(INPUT_POST, 'color');
-$timestamp = date("j.M.y.D g:i:s A");
-
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
-
 $fp = fopen($source_file, 'a+b');
-
-$w = date("w");
-$week_name = array("日", "月", "火", "水", "木", "金", "土");
-
-// 変数の初期化
-$page_flag = 0;
-
-if (!empty($_POST['enter'])) {
-  $page_flag = 1;
-  session_start();
-  $_SESSION['page'] = true;
-} elseif (!empty($_POST['submit'])) {
-  session_start();
-  if (!empty($_SESSION['page']) && $_SESSION['page'] === true) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     flock($fp, LOCK_EX);
     fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
     rewind($fp);
-    $page_flag = 2;
-  } else {
-    $page_flag = 0;
-  }
 }
-
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
-  $rows[] = $row;
+    $rows[] = $row;
 }
 flock($fp, LOCK_UN);
+fclose($fp);
+
 ?>
 
 <!DOCTYPE html>

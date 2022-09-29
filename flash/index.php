@@ -37,7 +37,7 @@ fclose($fp);
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
-    <link rel="stylesheet" href="flash.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

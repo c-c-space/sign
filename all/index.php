@@ -33,7 +33,7 @@ fclose($fp);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>自分の気持ちを知る・表す</title>
-    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>

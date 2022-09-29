@@ -80,9 +80,8 @@ body {
     }
 
     #log_items {
-        width: 75%;
+        width: 70%;
         height: 75vh;
-        padding: 5vw;
     }
 
     #log_items u {

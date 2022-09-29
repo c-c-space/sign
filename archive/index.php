@@ -60,6 +60,7 @@ fclose($fp);
     <form id="collection" method="POST">
         <select id="date" name="day"></select>
         <input type="submit" name="submit" value="View The Collection" />
+        <script src="collection.js"></script>
     </form>
 
     <div id="menu" class="nlc">

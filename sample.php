@@ -86,7 +86,7 @@ flock($fp, LOCK_UN);
   <link rel="stylesheet" href="all/style.css" />
   <link rel="stylesheet" href="flash/style.css" />
   <link rel="stylesheet" href="submit/style.css" />
-  <link rel="stylesheet" href="archive/style.css" />
+  <link rel="stylesheet" href="collection/style.css" />
 </head>
 
 <body id="box">
@@ -350,7 +350,7 @@ flock($fp, LOCK_UN);
     <form id="collection" method="GET">
       <select id="date" name="day"></select>
       <input type="submit" name="submit" value="View The Collection" />
-      <script src="collection.js"></script>
+      <script src="collection/script.js"></script>
     </form>
 
     <div id="menu" class="nlc">

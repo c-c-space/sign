@@ -9,6 +9,8 @@ flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
     $rows[] = $row;
 }
+flock($fp, LOCK_UN);
+fclose($fp);
 
 ?>
 

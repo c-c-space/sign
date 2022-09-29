@@ -63,6 +63,7 @@ flock($fp, LOCK_UN);
   <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
   <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
   <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
+
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="background.css" />
   <link rel="stylesheet" href="all.css" />
@@ -71,6 +72,19 @@ flock($fp, LOCK_UN);
 </head>
 
 <body id="box">
+
+  <main id="gradient">
+    <section class="bg" style="background-image: linear-gradient(180deg,
+        <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+        #fff);">
+    </section>
+  </main>
 
   <?php if ($page_flag === 1) : ?>
     <section id="sign">
@@ -396,19 +410,6 @@ flock($fp, LOCK_UN);
     <script src="/speech.js"></script>
 
   <?php endif; ?>
-
-  <main id="gradient">
-    <section class="bg" style="background-image: linear-gradient(180deg,
-        <?php if (!empty($rows)) : ?>
-        <?php foreach ($rows as $row) : ?>
-        #<?= h($row[1]) ?>,
-        <?php endforeach; ?>
-        <?php else : ?>
-        #000,
-        <?php endif; ?>
-        #fff);">
-    </section>
-  </main>
 </body>
 
 </html>

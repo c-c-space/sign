@@ -340,7 +340,7 @@ flock($fp, LOCK_UN);
 
     <form id="menu" class="nlc" method="post">
       <div>
-        <input type="submit" name="enter" class="tab" value="自分の気持ちを知る・表す">
+        <input type="submit" name="enter" class="nlc tab" value="自分の気持ちを知る・表す">
         <span class="check"><b>✔</b></span>
       </div>
       <div>

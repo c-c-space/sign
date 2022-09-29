@@ -30,9 +30,8 @@
             <a class="tab" href="#all">
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
-                print(date('Y 年 n 月 j 日') . " ($week_name[$w])")
+                print(date('Y 年 n 月 j 日'). " ($week_name[$w])")
                 ?>
-                log
             </a>
             <span class="check"><b>✔</b></span>
         </div>
@@ -43,7 +42,6 @@
     </div>
 
     <div id="background"></div>
-    
     <div id="all" class="change"></div>
     <div id="flash" class="change"></div>
 
@@ -51,7 +49,7 @@
     <script src="index.js"></script>
     <script src="now.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $("#background").load("gradient.php");
             $("#all").load("all.php");
             $("#flash").load("flash.php");

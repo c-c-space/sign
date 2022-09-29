@@ -176,6 +176,10 @@ body {
         transform: rotate(90deg);
     }
 
+    #post {
+        top: 55%;
+    }
+
     #symbol ul,
     #color ul {
         top: 65%;

@@ -1,24 +1,54 @@
 <?php
 
+mb_language("ja");
+mb_internal_encoding("UTF-8");
 date_default_timezone_set('Asia/Tokyo');
 
-function h($str) {
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+function h($str)
+{
+  return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-if(isset($_POST["today"])) {
-    $today = $_POST["today"];
-}
-
+$today = date("Ymd");
 $source_file = "../" . $today . ".csv";
 
-$fp = fopen($source_file, 'r');
+$symbol = (string)filter_input(INPUT_POST, 'symbol');
+$color = (string)filter_input(INPUT_POST, 'color');
+$timestamp = date("j.M.y.D g:i:s A");
+
+$forwardedFor = $_SERVER["REMOTE_ADDR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
+$fp = fopen($source_file, 'a+b');
+
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
+
+// 変数の初期化
+$page_flag = 0;
+
+if (!empty($_POST['enter'])) {
+  $page_flag = 1;
+  session_start();
+  $_SESSION['page'] = true;
+} elseif (!empty($_POST['submit'])) {
+  session_start();
+  if (!empty($_SESSION['page']) && $_SESSION['page'] === true) {
+    flock($fp, LOCK_EX);
+    fputcsv($fp, [$symbol, $color, $timestamp, $ip,]);
+    rewind($fp);
+    $page_flag = 2;
+  } else {
+    $page_flag = 0;
+  }
+}
 
 flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
-    $rows[] = $row;
+  $rows[] = $row;
 }
-
+flock($fp, LOCK_UN);
 ?>
 
 <!DOCTYPE html>
@@ -34,77 +64,15 @@ while ($row = fgetcsv($fp)) {
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
-    <script src="https://creative-community.space/sign/flash.js"></script>
+    <script src="../flash/script.js"></script>
 
-    <link rel="stylesheet" href="https://creative-community.space/sign/index.css" />
-    <link rel="stylesheet" href="https://creative-community.space/sign/all.css" />
-    <link rel="stylesheet" href="https://creative-community.space/sign/background.css" />
-    <link rel="stylesheet" href="https://creative-community.space/sign/flash.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../all/style.css" />
+    <link rel="stylesheet" href="../background/style.css" />
+    <link rel="stylesheet" href="../flash/style.css" />
     
     <style type="text/css">
-        #background,
-        #flash,
-        #submit {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-        }
-
-        #flash,
-        #submit {
-            z-index: 1;
-        }
-        
-        #background {
-            z-index: -1;
-        }
-
-        #date {
-            position:fixed;
-            top:0;
-            margin: 1.25%;
-            width:97.5%;
-        }
-        
-        #date select {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:70%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:left;
-
-        }
-        
-        #date input[type="submit"] {
-            font-size: 1rem;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            transform: scale(1, 1.1);
-            word-spacing: -.25ch;
-            width:20%;
-            padding: 1.25%;
-            margin: 1.25%;
-            display:block;
-            float:right;
-        }
-        
-        @media print {
-            #menu,
-            #date {
-                display: none;
-            }
-        }
     </style>
 </head>
 

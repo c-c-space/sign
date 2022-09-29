@@ -16,6 +16,7 @@
     left: 0;
     box-sizing: border-box;
     width: 100%;
+    margin: 0;
     padding: 0.25rem 2.5%;
     font-size: 1rem;
     display: flex;
@@ -65,12 +66,12 @@
     opacity: 1;
 }
 
-.check b {
+#menu .check b {
     opacity: 0;
     transition: all 1000ms ease;
 }
 
-.tab:hover+.check b {
+#menu .tab:hover+.check b {
     opacity: 1;
     transition: all 1000ms ease;
 }

@@ -64,67 +64,9 @@ flock($fp, LOCK_UN);
   <link rel="stylesheet" href="all.css" />
   <link rel="stylesheet" href="flash.css" />
   <link rel="stylesheet" href="submit/style.css" />
-  <style>
-    #enter {
-      box-sizing: border-box;
-      position: relative;
-      z-index: 5;
-      width: 100%;
-      padding: 2.5%;
-    }
-
-    #enter #greeting {
-      padding: 2.5% 0;
-    }
-
-    #enter input[type="submit"] {
-      position: absolute;
-      top: 0;
-      right: 0;
-      color: #000;
-      font-size: 1rem;
-      border: none;
-      margin: 2.5%;
-      cursor: pointer;
-      background: transparent;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 500;
-      -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-    }
-
-    #enter #voice-select,
-    #enter input[type="button"] {
-      color: #000;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      margin: 0.25rem 0.5rem 0.25rem 0;
-      border: 1px solid;
-      border-radius: 2rem;
-      background: transparent;
-      cursor: pointer;
-      display: inline-block;
-      font-weight: 500;
-      text-decoration: none;
-    }
-  </style>
 </head>
 
 <body id="box">
-
-  <main id="gradient">
-    <section class="bg" style="background-image: linear-gradient(180deg,
-        <?php if (!empty($rows)) : ?>
-        <?php foreach ($rows as $row) : ?>
-        #<?= h($row[1]) ?>,
-        <?php endforeach; ?>
-        <?php else : ?>
-        #000,
-        <?php endif; ?>
-        #fff);">
-    </section>
-  </main>
 
   <?php if ($page_flag === 1) : ?>
     <section id="sign">
@@ -451,6 +393,18 @@ flock($fp, LOCK_UN);
 
   <?php endif; ?>
 
+  <main id="gradient">
+    <section class="bg" style="background-image: linear-gradient(180deg,
+        <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+        #fff);">
+    </section>
+  </main>
 </body>
 
 </html>

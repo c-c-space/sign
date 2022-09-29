@@ -68,11 +68,6 @@ flock($fp, LOCK_UN);
       padding: 2.5% 0;
     }
 
-    #enter hr {
-      border: none;
-      margin: 2.5% 0;
-    }
-
     #enter a,
     #enter #voice-select,
     #enter input[type="submit"],
@@ -111,12 +106,8 @@ flock($fp, LOCK_UN);
   <?php else : ?>
 
     <form id="enter" method="post">
-      <p class="enter">
-        <input type="submit" name="enter" value="自分の気持ちを知る・表す">
-      </p>
-      <hr />
+      <input type="submit" name="enter" value="自分の気持ちを知る・表す">
       <div id="greeting">Hi</div>
-      <hr />
       <select id="voice-select"></select>
       <input type="button" id="speak-btn" value="Play">
       <input type="button" id="cancel-btn" value="Stop">

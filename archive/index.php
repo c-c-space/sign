@@ -11,7 +11,8 @@ if (isset($_POST["today"])) {
     $today = $_POST["today"];
 }
 
-$source_file = "../" . $today . ".csv";
+$month = date("Ym");
+$source_file = "../" . $month . $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

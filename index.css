@@ -47,6 +47,7 @@
 #menu .tab {
     color: #000;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all 500ms ease;
 }
 

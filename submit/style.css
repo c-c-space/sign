@@ -180,6 +180,11 @@ body {
         transform: rotate(90deg);
     }
 
+    #post input[type="submit"],
+    #post input[type="button"] {
+        font-size: 1.25rem;
+    }
+
     #symbol ul,
     #color ul {
         top: 65%;

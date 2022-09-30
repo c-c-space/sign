@@ -117,6 +117,7 @@ flock($fp, LOCK_UN);
     #fff);">
 
     <?php if ($page_flag === 1) : ?>
+        <section id="about"></section>
         <section id="sign">
             <form method="post">
 
@@ -531,6 +532,7 @@ flock($fp, LOCK_UN);
     <script type="text/javascript">
         $(function() {
             $("#cc").load("../menu.html");
+            $("#about").load("submit/about.html");
         })
     </script>
 </body>

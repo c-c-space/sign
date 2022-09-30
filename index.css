@@ -41,7 +41,7 @@
     margin: 0;
     cursor: pointer;
     background: transparent;
-    border: solid;
+    border: 1px solid;
     border-radius: 2rem;
 }
 

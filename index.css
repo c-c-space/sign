@@ -16,7 +16,6 @@
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding: 0.25rem 2.5%;
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
@@ -26,24 +25,23 @@
 #enter {
     top: 0;
     left: 0;
+    padding: 1rem 2.5%;
 }
 
 #index {
     bottom: 0;
     left: 0;
+    padding: 0.25rem 2.5%;
 }
 
 #enter input[type="submit"] {
     color: #000;
     font-size: 1rem;
-    padding: 0;
+    padding: 0.5rem 1rem;
     margin: 0;
-    border: none;
     cursor: pointer;
     background: transparent;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 500ms ease;
+    border-radius: 2rem;
 }
 
 #index .tab {
@@ -90,6 +88,9 @@
 }
 
 @media screen and (max-width: 550px) {
+    #enter {
+        padding: 1rem 0.5rem;
+    }
     #index {
         padding: 0.25rem 0.5rem;
     }

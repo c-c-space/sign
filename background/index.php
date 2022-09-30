@@ -36,19 +36,15 @@ fclose($fp);
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    <main id="gradient">
-        <section class="bg" style="background-image: linear-gradient(180deg,
-            <?php if (!empty($rows)) : ?>
-            <?php foreach ($rows as $row) : ?>
-            #<?= h($row[1]) ?>,
-            <?php endforeach; ?>
-            <?php else : ?>
-            #000,
-            <?php endif; ?>
-            #fff);">
-        </section>
-    </main>
+<body id="gradient" class="bg" style="background-image: linear-gradient(180deg,
+<?php if (!empty($rows)) : ?>
+    <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+    #fff);">
 </body>
 
 </html>

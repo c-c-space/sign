@@ -1,5 +1,7 @@
 <?php
 
+mb_language("ja");
+mb_internal_encoding("UTF-8");
 date_default_timezone_set('Asia/Tokyo');
 
 function h($str)
@@ -24,21 +26,19 @@ flock($fp, LOCK_UN);
 fclose($fp);
 
 ?>
-
-<!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>自分の気持ちを知る・表す</title>
+    <meta name="description" content="これは、35 の 記号 と 18 の 色 を使って 自分の気持ちを知る・表す コミュニケーションツール です。">
 
     <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
-    <script src="../flash/script.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../index.css" />

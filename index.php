@@ -82,8 +82,8 @@ flock($fp, LOCK_UN);
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="background/style.css" />
     <link rel="stylesheet" href="all/style.css" />
+    <link rel="stylesheet" href="background/style.css" />
     <link rel="stylesheet" href="flash/style.css" />
     <link rel="stylesheet" href="submit/style.css" />
     <link rel="stylesheet" href="collection/style.css" />

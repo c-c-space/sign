@@ -67,6 +67,7 @@ fclose($fp);
         <div>
             <a class="tab" href="#flash">
                 <?php
+                print(date('w '));
                 print $day;
                 print(date(' M Y'));
                 ?>

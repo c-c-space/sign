@@ -51,6 +51,7 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: all 500ms ease;
+    mix-blend-mode: difference;
 }
 
 #menu .tab:hover,

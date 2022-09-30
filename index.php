@@ -527,7 +527,7 @@ flock($fp, LOCK_UN);
     <script src="index.js"></script>
     <script src="flash/script.js"></script>
     <script src="submit/script.js"></script>
-    <script src="/now.js"></script>
+    <script src="/live/now.js"></script>
     <script type="text/javascript">
         $(function() {
             $("#cc").load("../menu.html");

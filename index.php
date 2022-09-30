@@ -342,7 +342,7 @@ flock($fp, LOCK_UN);
 
   <?php elseif ($page_flag === 2) : ?>
 
-    <form id="collection" method="GET">
+    <form id="collection" action="collection/" method="GET">
       <select id="date" name="day"></select>
       <input type="submit" name="submit" value="View The Collection" />
       <script src="collection/script.js"></script>

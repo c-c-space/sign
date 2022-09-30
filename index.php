@@ -107,8 +107,8 @@ flock($fp, LOCK_UN);
 </head>
 
 <body id="box" style="background-image: linear-gradient(0deg,
-<?php if (!empty($rows)) : ?>
-    <?php foreach ($rows as $row) : ?>
+    <?php if (!empty($rows)) : ?>
+        <?php foreach ($rows as $row) : ?>
         #<?= h($row[1]) ?>,
         <?php endforeach; ?>
         <?php else : ?>

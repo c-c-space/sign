@@ -53,7 +53,7 @@ fclose($fp);
         <?php else : ?>
             <li>
                 <span class="color" style="background:#fff;">
-                    <b class="symbol" style="color:#fff;">?</b>
+                    <b class="symbol" style="color:#fff;"></b>
                 </span>
             </li>
         <?php endif; ?>

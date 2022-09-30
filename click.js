@@ -1,4 +1,4 @@
-var volume = new Tone.Volume(-10);
+var volume = new Tone.Volume(-20);
 var click = new Tone.PolySynth(3, Tone.Synth).chain(volume, Tone.Master);
 var number = Tone.Frequency("B5").harmonize([
     7, 10, 12,

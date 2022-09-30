@@ -70,21 +70,25 @@ fclose($fp);
                 <?php foreach ($rows as $row) : ?>
                     <li>
                         <p>
-                            <u style="background:#<?= h($row[1]) ?>;"><span><?= h($row[0]) ?></span></u>
-                            <b class="post" style="color:#<?= h($row[1]) ?>; user-select:none; pointer-events:none; filter: invert();"><?= h($row[3]) ?></b>
+                            <u style="background:#<?= h($row[1]) ?>;">
+                                <span><?= h($row[0]) ?></span>
+                            </u>
+                            <b style="color:#<?= h($row[1]) ?>;"><?= h($row[3]) ?></b>
                         </p>
-                        <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">
-                            <?= h($row[2]) ?>
-                        </p>
+                        <p class="date"><?= h($row[2]) ?></p>
                     </li>
                 <?php endforeach; ?>
             <?php else : ?>
                 <li>
                     <p>
-                        <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                        <b class="post" style="color:#000; user-select:none; pointer-events:none;">Nothing Here</b>
+                        <u style="background:#000;">
+                            <span style="color:#fff;">?</span>
+                        </u>
+                        <b>Nothing Here</b>
                     </p>
-                    <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
+                    <p class="date">IP
+                        <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i>
+                    </p>
                 </li>
             <?php endif; ?>
         </ul>

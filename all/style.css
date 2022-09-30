@@ -72,6 +72,14 @@ body {
 
 #log_items b {
     font-size: 150%;
+    filter: invert();
+}
+
+#log_items b,
+#log_items .date {
+    user-select:none;
+    pointer-events:none;
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 550px) {

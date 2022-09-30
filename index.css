@@ -10,7 +10,7 @@
 }
 
 #enter,
-#menu {
+#index {
     position: fixed;
     z-index: 100;
     box-sizing: border-box;
@@ -28,7 +28,7 @@
     left: 0;
 }
 
-#menu {
+#index {
     bottom: 0;
     left: 0;
 }
@@ -46,7 +46,7 @@
     transition: all 500ms ease;
 }
 
-#menu .tab {
+#index .tab {
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
@@ -54,14 +54,14 @@
     mix-blend-mode: difference;
 }
 
-#menu .tab:hover,
-#menu .check b {
+#index .tab:hover,
+#index .check b {
     cursor: pointer;
     color: #fff;
     transition: all 500ms ease;
 }
 
-#menu .check {
+#index .check {
     float: left;
     display: block;
     width: 2.5rem;
@@ -69,28 +69,28 @@
     text-align: center;
 }
 
-#menu .check:before {
+#index .check:before {
     content: '[';
     opacity: 1;
 }
 
-#menu .check:after {
+#index .check:after {
     content: ']';
     opacity: 1;
 }
 
-#menu .check b {
+#index .check b {
     opacity: 0;
     transition: all 1000ms ease;
 }
 
-#menu .tab:hover+.check b {
+#index .tab:hover+.check b {
     opacity: 1;
     transition: all 1000ms ease;
 }
 
 @media screen and (max-width: 550px) {
-    #menu {
+    #index {
         padding: 0.25rem 0.5rem;
     }
 }

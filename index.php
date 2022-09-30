@@ -98,7 +98,7 @@ flock($fp, LOCK_UN);
 
         #menu,
         .open #enter,
-        .open #menu,
+        .open #index,
         .open #all,
         .open #flash {
             display: none;
@@ -365,7 +365,7 @@ flock($fp, LOCK_UN);
             <script src="collection/script.js"></script>
         </form>
 
-        <div id="menu" class="nlc">
+        <div id="index" class="nlc">
             <div>
                 <a class="tab" href="#flash">
                     <?php
@@ -446,7 +446,7 @@ flock($fp, LOCK_UN);
             <input type="submit" name="enter" class="nlc tab" value="自分の気持ちを知る・表す">
         </form>
 
-        <div id="menu" class="nlc">
+        <div id="index" class="nlc">
             <div>
                 <a class="tab" href="#all">
                     <?php

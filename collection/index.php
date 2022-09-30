@@ -66,7 +66,7 @@ fclose($fp);
         <script src="script.js"></script>
     </form>
 
-    <div id="menu" class="nlc">
+    <div id="index" class="nlc">
         <div>
             <a class="tab" href="#flash">
                 <?php

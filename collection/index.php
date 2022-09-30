@@ -32,7 +32,7 @@ fclose($fp);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>令和__年__月 の 色と記号</title>
+    <title>自分の気持ちを知る・表す</title>
 
     <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>

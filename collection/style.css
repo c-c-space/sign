@@ -1,26 +1,18 @@
 #collection {
     position: fixed;
+    box-sizing: border-box;
     top: 0;
-    margin: 1.25%;
-    width: 97.5%;
+    left: 0;
+    width: 100%;
+    padding: 0.25rem 2.5%;
+    margin: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-#date {
-    font-size: 1rem;
-    font-family: 'Times New Roman', serif;
-    font-weight: 500;
-    font-stretch: condensed;
-    font-variant: common-ligatures tabular-nums;
-    transform: scale(1, 1.1);
-    word-spacing: -.25ch;
-    padding: 1.25%;
-    margin: 1.25%;
-    display: block;
-    float: left;
-
-}
-
+#date,
 #collection input[type="submit"] {
     font-size: 1rem;
     font-family: 'Times New Roman', serif;
@@ -28,9 +20,26 @@
     font-stretch: condensed;
     font-variant: common-ligatures tabular-nums;
     transform: scale(1, 1.1);
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border: 1px solid;
     word-spacing: -.25ch;
-    padding: 1.25%;
-    margin: 1.25%;
     display: block;
-    float: right;
+}
+
+#date {
+
+}
+
+#collection input[type="submit"] {
+    background: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 550px) {
+    #collection {
+        padding: 0.25rem 0.5rem;
+    }
 }

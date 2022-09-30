@@ -481,7 +481,7 @@ flock($fp, LOCK_UN);
                         <li>
                             <p>
                                 <u style="background:#000;"><span style="color:#fff;">?</span></u>
-                                <b class="post" style="color:#000; user-select:none; pointer-events:none;">Nothing Here. It's Empty</b>
+                                <b class="post" style="color:#000; user-select:none; pointer-events:none;">Nothing Here</b>
                             </p>
                             <p class="post" style="user-select:none; pointer-events:none; text-transform: uppercase;">IP <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i></p>
                         </li>

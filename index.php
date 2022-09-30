@@ -89,7 +89,7 @@ flock($fp, LOCK_UN);
   <link rel="stylesheet" href="collection/style.css" />
 </head>
 
-<body id="gradient" style="background-image: linear-gradient(180deg,
+<body id="gradient" style="background-image: linear-gradient(0deg,
 <?php if (!empty($rows)) : ?>
     <?php foreach ($rows as $row) : ?>
         #<?= h($row[1]) ?>,

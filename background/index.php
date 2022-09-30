@@ -36,7 +36,7 @@ fclose($fp);
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="box" style="height:100vh; background-image: linear-gradient(180deg,
+<body id="box" style="height:100vh; background-image: linear-gradient(0deg,
 <?php if (!empty($rows)) : ?>
     <?php foreach ($rows as $row) : ?>
         #<?= h($row[1]) ?>,

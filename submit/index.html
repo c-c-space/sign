@@ -2,102 +2,258 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>自分の気持ちを知る・表す</title>
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        
-        #about {
-            position: relative;
-            width: 90%;
-            max-width: 70rem;
-            margin: 10vh auto;
-        }
-        
-        .members {
-            width: 100%;
-            margin: 5rem 0;
-        }
-        
-        .members a,
-        .members u {
-            color: #000;
-            text-decoration: none;
-            background-color: #fff;
-            border: 2px solid;
-            padding: 0.5rem 2rem;
-            border-radius: 50%;
-        }
-        
-        #about h1,
-        #about b {
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            transform: scale(1, 1.1);
-            word-spacing: -.125ch;
-        }
-        
-        #about h1 {
-            font-size: 1.5rem;
-            line-height: 200%;
-            text-align: center;
-        }
-        
-        #about p {
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0.5rem;
-            font-family: "SimSong", "MS Mincho", serif;
-        }
-        
-        #about b {
-            display: inline-block;
-            font-size: 125%;
-            line-height: 150%;
-        }
-        
-        hr {
-            border: none;
-            margin: 1rem;
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#submit").load("submit.html");
-        })
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>投稿する | 自分の気持ちを知る・表す</title>
+    <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
+    <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <section id="sign">
+        <form method="post">
 
-    <div id="about">
-        <!--
-        <h1>This is a Online Communication Tool that Using Colors and Symbols That Suits on Now Feelings.</h1>
-        <hr/>
-        -->
-        <p>これは、35 の <b>記号</b> と 18 の <b>色</b> を使って <b>自分の気持ちを知る・表す</b> コミュニケーションツール です。</p>
-        <hr/>
-        <br/>
-        <p><u>仕様</u></p>
-        <p>このページは、日毎に投稿された色と記号によって、毎日変化します。</p>
-        <p>ページ背景のグラデーションカラーは、投稿された色が上から下へと連なり生成される、みんなの気持ちを集めた色です。
-            <br/> ※ グラデーションが流れる速度は、投稿数に比例し加速します。</p>
-        <p>ページ下部の日付をクリックすると、投稿された全ての色と記号の記録が表示されます。
-            <br/> ※ 投稿記録は、日本時間24:00に、毎日リセットされます。</p>
-        <p>ページ下部の現在時刻をクリックすると、投稿された色と記号がフルディスプレイサイズで一つずつランダムに表示されます。
-            <br/> 記号の色は、投稿した色の反対色で表示され、自分の気持ちの反対を表します。
-            <br/> ※ ページ上部のメーターを操作すると、色と記号が入れ替わる速度が変化します。</p>
-    </div>
-    <div id="submit"></div>
+            <div id="symbol">
+                <p class="title">
+                    <b>Choose A Symbol That Suits on Now Feelings</b>
+                    <br />今の気持ちに合う記号を選んでください。
+                </p>
+                <ul>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⎮" id="a" required>
+                        <label for="a" class="label">⎮</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="／" id="b" required>
+                        <label for="b" class="label">／</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="-" id="c" required>
+                        <label for="c" class="label">-</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⧹" id="d" required>
+                        <label for="d" class="label">⧹</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∥" id="e" required>
+                        <label for="e" class="label">∥</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∧" id="f" required>
+                        <label for="f" class="label">∧</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="┐" id="g" required>
+                        <label for="g" class="label">┐</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∟" id="h" required>
+                        <label for="h" class="label">∟</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⟩" id="i" required>
+                        <label for="i" class="label">⟩</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∠" id="j" required>
+                        <label for="j" class="label">∠</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⁔" id="k" required>
+                        <label for="k" class="label">⁔</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="◡" id="l" required>
+                        <label for="l" class="label">◡</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="৲" id="m" required>
+                        <label for="m" class="label">৲</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="〜" id="n" required>
+                        <label for="n" class="label">〜</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⌇" id="0" required>
+                        <label for="0" class="label">⌇</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="°" id="p" required>
+                        <label for="p" class="label">°</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="・" id="q" required>
+                        <label for="q" class="label">・</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⦂" id="r" required>
+                        <label for="r" class="label">⦂</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="…" id="s" required>
+                        <label for="s" class="label">…</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⋰" id="t" required>
+                        <label for="t" class="label">⋰</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="❜" id="u" required>
+                        <label for="u" class="label">❜</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="❞" id="v" required>
+                        <label for="v" class="label">❞</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="“" id="w" required>
+                        <label for="w" class="label">“</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∝" id="x" required>
+                        <label for="x" class="label">∝</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⍥" id="y" required>
+                        <label for="y" class="label">⍥</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="∰" id="z" required>
+                        <label for="z" class="label">∰</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⟡" id="aa" required>
+                        <label for="aa" class="label">⟡</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="▱" id="ab" required>
+                        <label for="ab" class="label">▱</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="♯" id="ac" required>
+                        <label for="ac" class="label">♯</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="*" id="ad" required>
+                        <label for="ad" class="label">*</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⧘" id="ae" required>
+                        <label for="ae" class="label">⧘</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⌠" id="af" required>
+                        <label for="af" class="label">⌠</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⥾" id="ag" required>
+                        <label for="ag" class="label">⥾</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="¶" id="ah" required>
+                        <label for="ah" class="label">¶</label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="symbol" value="⎷" id="ai" required>
+                        <label for="ai" class="label">⎷</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="color">
+                <p class="title">
+                    <b>Choose A Color That Suits on Now Feelings</b>
+                    <br />今の気持ちに合う色を選んでください。
+                </p>
+                <ul>
+                    <li class="click">
+                        <input type="radio" name="color" value="ff0000" id="ff0000" required>
+                        <label for="ff0000" class="label" style="background:#ff0000;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="fffafa" id="fffafa" required>
+                        <label for="fffafa" class="label" style="background:#fffafa;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="f0ffff" id="f0ffff" required>
+                        <label for="f0ffff" class="label" style="background:#f0ffff;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="808080" id="808080" required>
+                        <label for="808080" class="label" style="background:#808080;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="b0c4de" id="b0c4de" required>
+                        <label for="b0c4de" class="label" style="background:#b0c4de;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="800000" id="800000" required>
+                        <label for="800000" class="label" style="background:#800000;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="0000cd" id="0000cd" required>
+                        <label for="0000cd" class="label" style="background:#0000cd;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="ff8c00" id="ff8c00" required>
+                        <label for="ff8c00" class="label" style="background:#ff8c00;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="483d8b" id="483d8b" required>
+                        <label for="483d8b" class="label" style="background:#483d8b;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="b8860b" id="b8860b" required>
+                        <label for="b8860b" class="label" style="background:#b8860b;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="ba55d3" id="ba55d3" required>
+                        <label for="ba55d3" class="label" style="background:#ba55d3;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="d2b48c" id="d2b48c" required>
+                        <label for="d2b48c" class="label" style="background:#d2b48c;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="ffb6c1" id="ffb6c1" required>
+                        <label for="ffb6c1" class="label" style="background:#ffb6c1;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="556b2f" id="556b2f" required>
+                        <label for="556b2f" class="label" style="background:#556b2f;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="ffdab9" id="ffdab9" required>
+                        <label for="ffdab9" class="label" style="background:#ffdab9;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="008080" id="008080" required>
+                        <label for="008080" class="label" style="background:#008080;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="fff000" id="fff000" required>
+                        <label for="fff000" class="label" style="background:#fff000;"></label>
+                    </li>
+                    <li class="click">
+                        <input type="radio" name="color" value="90ee90" id="90ee90" required>
+                        <label for="90ee90" class="label" style="background:#90ee90;"></label>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="post">
+                <input type="submit" name="submit" value="Submit">
+                <input type="button" value="Back" onClick="history.back(); return false;">
+            </div>
+        </form>
+    </section>
+    <script src="../click.js></script>
 </body>
 
 </html>

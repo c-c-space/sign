@@ -93,6 +93,7 @@ flock($fp, LOCK_UN);
             position: fixed;
             top: 0;
             right: 0;
+            z-index: 1000;
         }
 
         #menu,

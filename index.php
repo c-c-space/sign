@@ -62,10 +62,10 @@ flock($fp, LOCK_UN);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>今日の気持ちを知る・表す</title>
-    <meta name="description" content="これは、18 の 色 と 35 の 記号 を使って 自分の気持ちを知る・表す オンライン・コミュニケーションツール です。">
+    <meta name="description" content="これは、18 の 色 と 35 の 記号 を使って 今日の気持ちを知る・表す オンライン・コミュニケーションツール です。">
 
     <meta property="og:title" content="今日の気持ちを知る・表す" />
-    <meta property="og:description" content="これは、18 の 色 と 35 の 記号 を使って 自分の気持ちを知る・表す オンライン・コミュニケーションツール です。" />
+    <meta property="og:description" content="これは、18 の 色 と 35 の 記号 を使って 今日の気持ちを知る・表す オンライン・コミュニケーションツール です。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://creative-community.space/sign/" />
     <meta property="og:image" content="イメージファイルのURL（1200x630 以上、8MB 以下、縦横比 1.91:1 の画像を推奨）" />
@@ -448,7 +448,7 @@ flock($fp, LOCK_UN);
         <div id="cc"></div>
 
         <form id="enter" method="post">
-            <input type="submit" name="enter" class="nlc tab" value="自分の気持ちを知る・表す">
+            <input type="submit" name="enter" class="nlc tab" value="今日の気持ちを知る・表す">
         </form>
 
         <div id="index" class="nlc">

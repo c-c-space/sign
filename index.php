@@ -520,6 +520,11 @@ flock($fp, LOCK_UN);
     <script src="click.js"></script>
     <script src="now.js"></script>
     <script src="flash/script.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#cc").load("../menu.html");
+        })
+    </script>
 </body>
 
 </html>

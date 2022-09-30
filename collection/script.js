@@ -11,7 +11,7 @@ let dayCount = 1 // 日にちのカウント
 let calendarHtml = '' // HTMLを組み立てる変数
 
 
-for (let d = 0; d < 31; d++) {
+for (let d = 0; d < today; d++) {
     if (d < 9) {
         calendarHtml += '<option value="0' + dayCount + '">0' + dayCount + '</option>'
         dayCount++

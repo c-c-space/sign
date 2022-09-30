@@ -50,7 +50,16 @@ fclose($fp);
     </style>
 </head>
 
-<body>
+<body id="gradient" style="background-image: linear-gradient(180deg,
+<?php if (!empty($rows)) : ?>
+    <?php foreach ($rows as $row) : ?>
+        #<?= h($row[1]) ?>,
+        <?php endforeach; ?>
+        <?php else : ?>
+        #000,
+        <?php endif; ?>
+    #fff);">
+    
     <form id="collection" method="GET">
         <select id="date" name="day"></select>
         <input type="submit" name="submit" value="View The Collection" />
@@ -77,19 +86,6 @@ fclose($fp);
             <span class="check"><b>✔</b></span>
         </div>
     </div>
-
-    <main id="gradient">
-        <section class="bg" style="background-image: linear-gradient(0deg,
-        <?php if (!empty($rows)) : ?>
-        <?php foreach ($rows as $row) : ?>
-        #<?= h($row[1]) ?>,
-        <?php endforeach; ?>
-        <?php else : ?>
-        #000,
-        <?php endif; ?>
-        #fff);">
-        </section>
-    </main>
 
     <div id="flash" class="change">
         <ul id="random" class="flash">

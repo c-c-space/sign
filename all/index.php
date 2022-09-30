@@ -32,13 +32,13 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>自分の気持ちを知る・表す</title>
+    <title>今日の気持ちを知る・表す</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div id="mod">
-        <b id="ed">自分の気持ちを知る・表す</b>
+        <b id="ed">今日の気持ちを知る・表す</b>
         <p id="today">
             <sup id="no" style="text-transform: uppercase;">
                 <?php

@@ -61,10 +61,10 @@ flock($fp, LOCK_UN);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>自分の気持ちを知る・表す</title>
+    <title>今日の気持ちを知る・表す</title>
     <meta name="description" content="これは、18 の 色 と 35 の 記号 を使って 自分の気持ちを知る・表す オンライン・コミュニケーションツール です。">
 
-    <meta property="og:title" content="自分の気持ちを知る・表す" />
+    <meta property="og:title" content="今日の気持ちを知る・表す" />
     <meta property="og:description" content="これは、18 の 色 と 35 の 記号 を使って 自分の気持ちを知る・表す オンライン・コミュニケーションツール です。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://creative-community.space/sign/" />

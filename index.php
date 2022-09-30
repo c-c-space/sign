@@ -99,19 +99,6 @@ flock($fp, LOCK_UN);
         <?php endif; ?>
     #fff);">
 
-  <main id="gradient">
-    <section class="bg" style="background-image: linear-gradient(0deg,
-        <?php if (!empty($rows)) : ?>
-        <?php foreach ($rows as $row) : ?>
-        #<?= h($row[1]) ?>,
-        <?php endforeach; ?>
-        <?php else : ?>
-        #000,
-        <?php endif; ?>
-        #fff);">
-    </section>
-  </main>
-
   <?php if ($page_flag === 1) : ?>
     <section id="sign">
       <form method="post">

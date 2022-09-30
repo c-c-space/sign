@@ -8,7 +8,7 @@ function h($str)
 }
 
 $today = date("Ymd");
-$source_file =  "../" . $today . ".csv";
+$source_file =  "https://creative-community.space/sign/" . $today . ".csv";
 
 $fp = fopen($source_file, 'a+b');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,7 +36,7 @@ fclose($fp);
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="box" style="position:fixed; height:100vh; background-image: linear-gradient(180deg,
+<body id="box" style="height:100vh; background-image: linear-gradient(180deg,
 <?php if (!empty($rows)) : ?>
     <?php foreach ($rows as $row) : ?>
         #<?= h($row[1]) ?>,

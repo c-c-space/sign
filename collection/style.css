@@ -13,7 +13,7 @@
 }
 
 #date,
-#collection input[type="submit"] {
+#collection button[type="submit"] {
     font-size: 1rem;
     font-family: 'Times New Roman', serif;
     font-weight: 500;
@@ -30,7 +30,7 @@
     padding: 0.5rem;
 }
 
-#collection input[type="submit"] {
+#collection button[type="submit"] {
     background: transparent;
     border-radius: 2rem;
     cursor: pointer;

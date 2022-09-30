@@ -45,9 +45,6 @@ fclose($fp);
     <link rel="stylesheet" href="../all/style.css" />
     <link rel="stylesheet" href="../background/style.css" />
     <link rel="stylesheet" href="../flash/style.css" />
-
-    <style type="text/css">
-    </style>
 </head>
 
 <body id="box" style="background-image: linear-gradient(0deg,
@@ -62,7 +59,7 @@ fclose($fp);
 
     <form id="collection" method="GET">
         <select id="date" name="day"></select>
-        <input type="submit" name="submit" value="View The Collection" />
+        <button type="submit" name="submit">View The Collection</button>
         <script src="script.js"></script>
     </form>
 

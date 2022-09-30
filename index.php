@@ -361,7 +361,7 @@ flock($fp, LOCK_UN);
 
         <form id="collection" action="collection/" method="GET">
             <select id="date" name="day"></select>
-            <input type="submit" name="submit" value="View The Collection" />
+            <button type="submit" name="submit">View The Collection</button>
             <script src="collection/script.js"></script>
         </form>
 

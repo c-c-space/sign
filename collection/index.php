@@ -67,9 +67,8 @@ fclose($fp);
         <div>
             <a class="tab" href="#flash">
                 <?php
-                print(date('D '));
                 print $day;
-                print(date(' M Y'));
+                print(date(' M Y D'));
                 ?>
             </a>
             <span class="check"><b>✔</b></span>

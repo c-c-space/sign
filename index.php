@@ -117,8 +117,8 @@ flock($fp, LOCK_UN);
     #fff);">
 
     <?php if ($page_flag === 1) : ?>
-        <section id="sign">
         <section id="about"></section>
+        <section id="sign">
             <form method="post">
 
                 <div id="symbol">

@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>投稿する | 今日の気持ちを知る・表す</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/jquery-ui.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
+    <script src="script.js"></script>
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../background/style.css" />
 </head>
 
-<body>
+<body id="submit">
     <section id="about"></section>
     <form action="/sign/" method="post">
-        <section id="sign">
+        <fieldset id="sign">
             <div id="symbol">
                 <p class="title">
                     <b>Choose A Symbol That Suits on Now Feelings</b>
@@ -246,7 +251,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </fieldset>
 
         <div id="post">
             <input type="submit" name="submit" value="Submit">
@@ -254,8 +259,6 @@
         </div>
     </form>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#about").load("about.html");

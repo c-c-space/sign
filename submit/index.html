@@ -15,9 +15,8 @@
 
 <body>
     <section id="about"></section>
-    <section id="sign">
-        <form action="/sign/" method="post">
-
+    <form action="/sign/" method="post">
+        <section id="sign">
             <div id="symbol">
                 <p class="title">
                     <b>Choose A Symbol That Suits on Now Feelings</b>
@@ -247,18 +246,18 @@
                     </li>
                 </ul>
             </div>
+        </section>
 
-            <div id="post">
-                <input type="submit" name="submit" value="Submit">
-                <input type="button" value="Back" onClick="history.back(); return false;">
-            </div>
-        </form>
-    </section>
+        <div id="post">
+            <input type="submit" name="submit" value="Submit">
+            <input type="button" value="Back" onClick="history.back(); return false;">
+        </div>
+    </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $("#about").load("about.html");
         })
     </script>

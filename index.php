@@ -118,9 +118,8 @@ flock($fp, LOCK_UN);
 
     <?php if ($page_flag === 1) : ?>
         <section id="about"></section>
-        <section id="sign">
-            <form method="post">
-
+        <form action="/sign/" method="post">
+            <section id="sign">
                 <div id="symbol">
                     <p class="title">
                         <b>Choose A Symbol That Suits on Now Feelings</b>
@@ -350,13 +349,13 @@ flock($fp, LOCK_UN);
                         </li>
                     </ul>
                 </div>
+            </section>
 
-                <div id="post">
-                    <input type="submit" name="submit" value="Submit">
-                    <input type="button" value="Back" onClick="history.back(); return false;">
-                </div>
-            </form>
-        </section>
+            <div id="post">
+                <input type="submit" name="submit" value="Submit">
+                <input type="button" value="Back" onClick="history.back(); return false;">
+            </div>
+        </form>
 
     <?php elseif ($page_flag === 2) : ?>
 

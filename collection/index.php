@@ -113,7 +113,7 @@ fclose($fp);
                 <li>
                     <a href="/sign/">
                         <p style="color:#fff;">
-                            <b>今日の色と記号を投稿する</b>
+                            <b>色と記号を投稿する</b>
                         </p>
                         <p class="date">Submit Today's Color and Symbol</p>
                     </a>

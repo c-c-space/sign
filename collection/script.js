@@ -13,7 +13,7 @@ let calendarHtml = '' // HTMLを組み立てる変数
 
 for (let d = 0; d < today; d++) {
     if (d < 9) {
-        calendarHtml += '<option value="0' + dayCount + '">0' + dayCount + month + year +'</option>'
+        calendarHtml += '<option value="0' + dayCount + '">0'  + year  + month + dayCount + '</option>'
         dayCount++
     }
     else if (dayCount > today) {

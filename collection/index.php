@@ -111,7 +111,7 @@ fclose($fp);
         <div id="log">
             <ul id="log_items">
                 <li>
-                    <a href="/sign/submit/">
+                    <a href="/sign/">
                         <p><b>今日の色と記号を投稿する</b></p>
                         <p class="date">Submit Today's Color and Symbol</p>
                     </a>

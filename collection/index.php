@@ -110,7 +110,7 @@ fclose($fp);
     <div id="all" class="change">
         <div id="log">
             <ul id="log_items">
-                <li style="mix-blend-mode: difference;">
+                <li>
                     <a href="/sign/submit/">
                         <p style="color:#fff;">
                             <b>色と記号を投稿する</b>

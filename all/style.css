@@ -43,6 +43,11 @@ body {
     word-break: break-word;
 }
 
+#log_items li a {
+    color: #000;
+    text-decoration: none;
+}
+
 #log_items p {
     margin: 0;
     font-size: 75%;
@@ -77,8 +82,8 @@ body {
 
 #log_items b,
 #log_items .date {
-    user-select:none;
-    pointer-events:none;
+    user-select: none;
+    pointer-events: none;
     text-transform: uppercase;
 }
 

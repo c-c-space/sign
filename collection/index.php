@@ -115,7 +115,7 @@ fclose($fp);
                         <p style="mix-blend-mode: difference;">
                             <b>色と記号を投稿する</b>
                         </p>
-                        <p class="date">Submit Today's Color and Symbol</p>
+                        <p class="date">Submit Color and Symbol</p>
                     </a>
                 </li>
                 <?php if (!empty($rows)) : ?>

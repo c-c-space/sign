@@ -450,7 +450,7 @@ flock($fp, LOCK_UN);
         <div id="cc"></div>
 
         <form id="enter" method="post">
-            <input type="submit" name="enter" class="nlc tab" value="投稿する | Submit">
+            <input type="submit" name="enter" class="nlc tab" value="今日の気持ちを知る・表す">
         </form>
 
         <div id="index" class="nlc">

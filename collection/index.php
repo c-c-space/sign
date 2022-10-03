@@ -111,7 +111,7 @@ fclose($fp);
         <div id="log">
             <ul id="log_items">
                 <li>
-                    <a href="/sign/">
+                    <a href="/sign/submit/">
                         <p style="color:#fff;">
                             <b>色と記号を投稿する</b>
                         </p>

@@ -37,6 +37,7 @@
 #enter input[type="submit"] {
     color: #000;
     font-size: 1rem;
+    width: 2rem;
     padding: 0.25rem 1rem;
     margin: 0;
     cursor: pointer;

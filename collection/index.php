@@ -110,12 +110,6 @@ fclose($fp);
     <div id="all" class="change">
         <div id="log">
             <ul id="log_items">
-                <li>
-                    <a href="/sign/">
-                        <p><b>今日の色と記号を投稿する</b></p>
-                        <p class="date">Submit Today's Color and Symbol</p>
-                    </a>
-                </li>
                 <?php if (!empty($rows)) : ?>
                     <?php foreach ($rows as $row) : ?>
                         <li>
@@ -130,15 +124,17 @@ fclose($fp);
                     <?php endforeach; ?>
                 <?php else : ?>
                     <li>
-                        <p>
-                            <u style="background:#000;">
-                                <span style="color:#fff;">?</span>
-                            </u>
-                            <b>Nothing Here</b>
-                        </p>
-                        <p class="date">IP
-                            <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i>
-                        </p>
+                        <a href="/sign/">
+                            <p>
+                                <u style="background:#000;">
+                                    <span style="color:#fff;">?</span>
+                                </u>
+                                <b>Nothing Here</b>
+                            </p>
+                            <p class="date">IP
+                                <i><?php echo $_SERVER['REMOTE_ADDR']; ?></i>
+                            </p>
+                        </a>
                     </li>
                 <?php endif; ?>
             </ul>

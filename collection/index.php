@@ -112,9 +112,7 @@ fclose($fp);
             <ul id="log_items">
                 <li>
                     <a href="/sign/submit/">
-                        <p style="mix-blend-mode: difference;">
-                            <b>今日の色と記号を投稿する</b>
-                        </p>
+                        <p><b>今日の色と記号を投稿する</b></p>
                         <p class="date">Submit Today's Color and Symbol</p>
                     </a>
                 </li>

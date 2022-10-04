@@ -45,6 +45,16 @@ fclose($fp);
     <link rel="stylesheet" href="../all/style.css" />
     <link rel="stylesheet" href="../background/style.css" />
     <link rel="stylesheet" href="../flash/style.css" />
+    <style>
+        .Etiquette {
+            font-family: "Etiquette";
+        }
+
+        @font-face {
+            font-family: "Etiquette";
+            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        }
+    </style>
 </head>
 
 <body id="box" style="background-image: linear-gradient(0deg,
@@ -73,7 +83,7 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-            <a href="/sign/" target="_parent">SIGN</a>
+        <a class="Etiquette" href="/sign/" target="_parent">SIGN</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>

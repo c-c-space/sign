@@ -56,8 +56,11 @@ fclose($fp);
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
-            filter: invert();
             padding-bottom: 0.25rem;
+        }
+
+        #screensaver span {
+            filter: invert();
         }
 
         #screensaver h1 {

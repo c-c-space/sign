@@ -390,6 +390,7 @@ flock($fp, LOCK_UN);
                 </a>
                 <span class="check"><b>✔</b></span>
             </div>
+            <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
             <div>
                 <a class="tab" href="#flash">Flash</a>
                 <span class="check"><b>✔</b></span>

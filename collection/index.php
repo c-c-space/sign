@@ -95,6 +95,12 @@ fclose($fp);
             font-stretch: condensed;
             transform: scale(1, 1.1);
         }
+
+        #index a {
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+            font-size: 300%;
+        }
     </style>
 </head>
 
@@ -124,7 +130,7 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-        <a class="Etiquette" href="/sign/" target="_parent" style="text-transform: capitalize; font-size: 250%;">Sign</a>
+        <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>

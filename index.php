@@ -139,7 +139,7 @@ flock($fp, LOCK_UN);
 
         .screensaver i {
             display: inline-block;
-            padding-left: 0.25rem;
+            margin-left: 0.25rem;
             font-size: 45%;
             font-style: normal;
             font-family: 'Times New Roman', serif;

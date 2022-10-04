@@ -118,6 +118,7 @@ flock($fp, LOCK_UN);
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             text-align: center;
+            font-size: 4.5rem;
             font-weight: 500;
             width: 100%;
             max-width: 750px;
@@ -125,6 +126,7 @@ flock($fp, LOCK_UN);
 
         #screensaver h2 {
             position: absolute;
+            font-size: 2.5rem;
             top: 2.5rem;
             left: 2.5rem;
             font-weight: 500;

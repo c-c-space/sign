@@ -187,7 +187,7 @@ fclose($fp);
             </u>
             <br />
             <span class="Etiquette">Colors</span>
-            <i class="Etiquette">&</i>
+            <i class="Etiquette">and</i>
             <span class="Etiquette">Symbols</span>
         </h1>
     </div>

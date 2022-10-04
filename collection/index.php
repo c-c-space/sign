@@ -72,9 +72,7 @@ fclose($fp);
                 Posts
             </a>
             <span class="check"><b>✔</b></span>
-        </div>
-            <a href="/sign/" target="_parent">SIGN</a>
-        <div>
+            <button>?</button>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>
         </div>

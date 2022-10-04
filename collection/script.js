@@ -1,7 +1,7 @@
-const date = new Date()
-const today = date.getDate()
-const year = date.getFullYear() 
-const month = date.getmonth() + 1
+const date = new Date();
+const today = date.getDate();
+const year = date.getFullYear() ;
+const month = date.getmonth() + 1;
 
 const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
 const endDate = new Date(year, month, 0) // 月の最後の日を取得

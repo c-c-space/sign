@@ -12,6 +12,19 @@
             margin: 0;
         }
 
+        @font-face {
+            font-family: "Etiquette";
+            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        }
+
+        .Etiquette {
+            font-family: "Etiquette";
+            font-size: 200%;
+            font-weight: 900;
+            filter: invert();
+            padding-bottom: 0.25rem;
+        }
+
         .about {
             position: relative;
             width: 75%;
@@ -28,6 +41,18 @@
             font-variant: common-ligatures tabular-nums;
             transform: scale(1, 1.1);
             word-spacing: -.125ch;
+        }
+
+        .about #logo {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .about u {
+            font-size: 50%;
+            background-color: #fff;
+            text-decoration: none;
+            padding: 0.25rem;
         }
 
         .about h1 {
@@ -73,6 +98,7 @@
 
 <body>
     <div class="about">
+        <h1 id="logo"><span class="Etiquette">Sign</span><br /><u>今日の気持ちを知る・表す</u></h1>
         <h1>This is Online Communication Tool by Uses Colors and Symbols that Suits on Today.</h1>
         <p>これは、18 の <b>色</b> と 35 の <b>記号</b> を使って <b>今日の気持ちを知る・表す</b> オンライン・コミュニケーションツール です。</p>
         <hr />

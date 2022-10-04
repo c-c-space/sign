@@ -47,6 +47,11 @@ fclose($fp);
     <link rel="stylesheet" href="../flash/style.css" />
     <link rel="stylesheet" href="https://creative-community.space/coding/js/screensaver/style.css">
     <style>
+        @font-face {
+            font-family: "Etiquette";
+            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        }
+
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
@@ -66,9 +71,11 @@ fclose($fp);
             max-width: 750px;
         }
 
-        @font-face {
-            font-family: "Etiquette";
-            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        .screensaver u {
+            font-size: 25%;
+            background-color: #fff;
+            text-decoration: none;
+            padding: 0.25rem;
         }
     </style>
 </head>
@@ -168,12 +175,12 @@ fclose($fp);
             <b class="Etiquette">Colors</b>
             and
             <b class="Etiquette">Symbols</b>
-            <br/>
+            <br />
             <u>
-            <?php
-            date_default_timezone_set('Asia/Tokyo');
-            print(date($month).($day))
-            ?>
+                <?php
+                date_default_timezone_set('Asia/Tokyo');
+                print(date($month) . ($day))
+                ?>
             </u>
         </h1>
     </div>

@@ -90,8 +90,10 @@ flock($fp, LOCK_UN);
     <style>
         .Etiquette {
             font-family: "Etiquette";
+            font-size: 200%;
             font-weight: 900;
             filter: invert();
+            padding-bottom: 0.25rem;
         }
         
         @font-face {
@@ -455,7 +457,7 @@ flock($fp, LOCK_UN);
         <div id="cc"></div>
 
         <form id="enter" method="post">
-            <input type="submit" name="enter" class="Etiquette tab" value="Sign">
+            <input type="submit" name="enter" class="nlc tab" value="?">
         </form>
 
         <div id="index" class="nlc">

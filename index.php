@@ -535,13 +535,13 @@ flock($fp, LOCK_UN);
                 <input type="range" id="flash_speed" value="" min="0" max="5000">
             </section>
         </div>
+        <div id="screensaver" class="screensaver"></div>
+        <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
 
     <?php endif; ?>
 
-    <div id="screensaver" class="screensaver"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://creative-community.space/coding/js/speech/script.js"></script>
     <script src="index.js"></script>
     <script src="flash/script.js"></script>
     <script src="submit/script.js"></script>

@@ -593,7 +593,8 @@ flock($fp, LOCK_UN);
                 <u>今日の気持ちを知る・表す</u>
                 <br />
                 <span class="Etiquette">Colors</span>
-                <i>&</i><span class="Etiquette">Symbols</span>
+                <i>&</i>
+                <span class="Etiquette">Symbols</span>
             </h1>
         </div>
 

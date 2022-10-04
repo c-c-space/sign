@@ -193,7 +193,8 @@ fclose($fp);
             </u>
             <br />
             <span class="Etiquette">Colors</span>
-            <i>&</i><span class="Etiquette">Symbols</span>
+            <i>&</i>
+            <span class="Etiquette">Symbols</span>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

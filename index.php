@@ -87,6 +87,7 @@ flock($fp, LOCK_UN);
     <link rel="stylesheet" href="flash/style.css" />
     <link rel="stylesheet" href="submit/style.css" />
     <link rel="stylesheet" href="collection/style.css" />
+    <link rel="stylesheet" href="https://creative-community.space/coding/js/screensaver/style.css">
     <style>
         @font-face {
             font-family: "Etiquette";
@@ -110,10 +111,17 @@ flock($fp, LOCK_UN);
             word-spacing: -.125ch;
         }
 
-        .screensaver h1 {
-            box-sizing: border-box;
-            padding-top: 25%;
+        #screensaver h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% -50%);
             text-align: center;
+            width: 100%;
+            max-width: 750px;
+        }
+
+        .screensaver h1 {
             font-size: 4.5rem;
             line-height: 125%;
         }

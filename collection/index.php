@@ -45,6 +45,7 @@ fclose($fp);
     <link rel="stylesheet" href="../all/style.css" />
     <link rel="stylesheet" href="../background/style.css" />
     <link rel="stylesheet" href="../flash/style.css" />
+    <link rel="stylesheet" href="https://creative-community.space/coding/js/screensaver/style.css">
     <style>
         .Etiquette {
             font-family: "Etiquette";
@@ -52,7 +53,17 @@ fclose($fp);
             filter: invert();
             padding-bottom: 0.25rem;
         }
-        
+
+        #screensaver h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% -50%);
+            text-align: center;
+            width: 100%;
+            max-width: 750px;
+        }
+
         @font-face {
             font-family: "Etiquette";
             src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
@@ -149,6 +160,13 @@ fclose($fp);
             </ul>
         </div>
     </div>
+
+    <div id="screensaver" class="screensaver">
+        <h1><span class="Etiquette">Sign</span>
+            <br /><u>今日の気持ちを知る・表す</u>
+        </h1>
+    </div>
+    <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../index.js"></script>

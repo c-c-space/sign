@@ -164,10 +164,12 @@ fclose($fp);
 
     <div id="screensaver" class="screensaver">
         <h1>
+            <b>
             <?php
             date_default_timezone_set('Asia/Tokyo');
-            print(date($day) . ($month))
+            print(date($month).($day))
             ?>
+            </b>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

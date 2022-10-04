@@ -61,6 +61,7 @@ fclose($fp);
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             text-align: center;
+            font-weight: 500;
             width: 100%;
             max-width: 750px;
         }
@@ -164,7 +165,10 @@ fclose($fp);
 
     <div id="screensaver" class="screensaver">
         <h1>
-            <b>Colors and Symbols</b>
+            <b class="Etiquette">Colors</b>
+            and
+            <b class="Etiquette">Symbols</b>
+            <br/>
             <u>
             <?php
             date_default_timezone_set('Asia/Tokyo');

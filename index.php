@@ -500,7 +500,7 @@ flock($fp, LOCK_UN);
                     date_default_timezone_set('Asia/Tokyo');
                     print(date('Y 年 n 月'))
                     ?>
-                    の色と記号</u>
+                    の色と記号を見る</u>
                 <br /><span class="Etiquette">Select The Date</span>
             </h2>
         </div>

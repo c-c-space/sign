@@ -186,7 +186,7 @@ fclose($fp);
             <u>
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
-                print(date($month)."年".($month)."月".($day)."日")
+                print(date($year)."年".($month)."月".($day)."日")
                 ?>
             </u>
             <br />

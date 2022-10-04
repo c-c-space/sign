@@ -49,7 +49,6 @@ fclose($fp);
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
-            font-weight: 900;
             filter: invert();
             padding-bottom: 0.25rem;
         }

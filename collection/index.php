@@ -65,21 +65,16 @@ fclose($fp);
 
     <div id="index" class="nlc">
         <div>
-            <a class="tab" href="#flash">
-                <?php
-                print $day;
-                print(date(' M Y'));
-                ?>
-            </a>
-            <span class="check"><b>✔</b></span>
-        </div>
-        <div>
             <a class="tab" href="#all">
                 <?php
                 echo sizeof(file($source_file));
                 ?>
                 Posts
             </a>
+            <span class="check"><b>✔</b></span>
+        </div>
+        <div>
+            <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>
         </div>
     </div>

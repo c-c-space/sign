@@ -77,6 +77,10 @@ fclose($fp);
             text-decoration: none;
             padding: 0.25rem;
         }
+
+        .screensaver i {
+            font-size: 55%;
+        }
     </style>
 </head>
 
@@ -172,16 +176,16 @@ fclose($fp);
 
     <div id="screensaver" class="screensaver">
         <h1>
-            <b class="Etiquette">Colors</b>
-            and
-            <b class="Etiquette">Symbols</b>
-            <br />
             <u>
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
                 print(date($month) . ($day))
                 ?>
             </u>
+            <br />
+            <b class="Etiquette">Colors</b>
+            <i>and</i>
+            <b class="Etiquette">Symbols</b>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

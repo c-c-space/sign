@@ -97,7 +97,6 @@ flock($fp, LOCK_UN);
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
-            filter: invert();
             padding-bottom: 0.25rem;
         }
 
@@ -109,6 +108,10 @@ flock($fp, LOCK_UN);
             font-variant: common-ligatures tabular-nums;
             transform: scale(1, 1.1);
             word-spacing: -.125ch;
+        }
+
+        #screensaver span {
+            filter: invert();
         }
 
         #screensaver h1 {
@@ -145,11 +148,6 @@ flock($fp, LOCK_UN);
 
         .screensaver i {
             font-size: 55%;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            transform: scale(1, 1.1);
             font-style: normal;
         }
 
@@ -599,7 +597,8 @@ flock($fp, LOCK_UN);
                 <u>今日の気持ちを知る・表す</u>
                 <br />
                 <span class="Etiquette">Colors</span>
-                <i>and</i><span class="Etiquette">Symbols</span>
+                <i class="Etiquette">&</i>
+                <span class="Etiquette">Symbols</span>
             </h1>
         </div>
 

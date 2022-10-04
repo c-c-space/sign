@@ -82,11 +82,6 @@ fclose($fp);
 
         .screensaver i {
             font-size: 55%;
-            font-family: 'Times New Roman', serif;
-            font-weight: 500;
-            font-stretch: condensed;
-            font-variant: common-ligatures tabular-nums;
-            transform: scale(1, 1.1);
             font-style: normal;
         }
     </style>
@@ -192,7 +187,8 @@ fclose($fp);
             </u>
             <br />
             <span class="Etiquette">Colors</span>
-            <i>and</i><span class="Etiquette">Symbols</span>
+            <i class="Etiquette">&</i>
+            <span class="Etiquette">Symbols</span>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

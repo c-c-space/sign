@@ -48,7 +48,8 @@ fclose($fp);
     <style>
         .Etiquette {
             font-family: "Etiquette";
-            font-size: 150%;
+            font-size: 200%;
+            mix-blend-mode: difference;
         }
 
         @font-face {

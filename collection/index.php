@@ -45,6 +45,18 @@ fclose($fp);
     <link rel="stylesheet" href="../all/style.css" />
     <link rel="stylesheet" href="../background/style.css" />
     <link rel="stylesheet" href="../flash/style.css" />
+    <style>
+        #submit,
+        .open #collection,
+        .open #index,
+        .open #flash,
+        .open #all {
+            display: none;
+        }
+        .open #submit {
+            display: block;
+        }
+    </style>
 </head>
 
 <body id="box" style="background-image: linear-gradient(0deg,
@@ -73,11 +85,14 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-            <a href="/sign/" target="_parent">?</a>
+        <a id="logo" href="#" target="_parent">?</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>
         </div>
+    </div>
+
+    <div id="submit">
     </div>
 
     <div id="flash" class="change">
@@ -141,6 +156,32 @@ fclose($fp);
     <script src="../index.js"></script>
     <script src="../flash/script.js"></script>
     <script src="../submit/script.js"></script>
+    <script>
+        $(function() {
+        $("#submit").load("../submit/");
+        })
+        let btn = document.querySelector('#logo');
+        let box = document.querySelector('#box');
+
+        let btnToggleclass = function (el) {
+            el.classList.toggle('open');
+        }
+
+        btn.addEventListener('click', function () {
+            btnToggleclass(box);
+        }, false);
+
+        $('a[href^="#"]').click(function () {
+            var speed = 500;　 //スクロールスピード
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $("html, body").animate({
+                scrollTop: position
+            }, speed, "swing");
+            return false;
+        });
+    </script>
 </body>
 
 </html>

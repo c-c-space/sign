@@ -80,6 +80,12 @@ fclose($fp);
 
         .screensaver i {
             font-size: 55%;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            transform: scale(1, 1.1);
+            font-style: normal;
         }
     </style>
 </head>

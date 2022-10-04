@@ -133,7 +133,7 @@ flock($fp, LOCK_UN);
 
         #screensaver h3 {
             position: absolute;
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: right;
             top: 4.5rem;
             right: 2.5rem;

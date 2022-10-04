@@ -112,11 +112,8 @@ flock($fp, LOCK_UN);
         }
 
         .screensaver h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding-top: 12.5%;
             text-align: center;
             font-size: 4.5rem;
             line-height: 150%;

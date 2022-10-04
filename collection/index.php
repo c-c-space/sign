@@ -96,7 +96,7 @@ fclose($fp);
             transform: scale(1, 1.1);
         }
 
-        #index a.screensaver {
+        #index .screensaver {
             margin-bottom: 1rem;
             text-transform: capitalize;
             font-size: 300%;

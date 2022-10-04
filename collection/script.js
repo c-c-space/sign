@@ -7,9 +7,9 @@ const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
 const endDate = new Date(year, month, 0) // 月の最後の日を取得
 const endDayCount = endDate.getDate() // 月の末日
 
-let dayCount = 1 // 日にちのカウント
-let thismonth = month + 1 // 日にちのカウント
-let calendarHtml = '' // HTMLを組み立てる変数
+let dayCount = 1
+let thismonth = month + 1
+let calendarHtml = ''
 
 
 for (let d = 0; d < today; d++) {

@@ -147,7 +147,7 @@ flock($fp, LOCK_UN);
         }
 
         .screensaver i {
-            font-size: 100%;
+            font-size: 150%;
             font-style: normal;
         }
 

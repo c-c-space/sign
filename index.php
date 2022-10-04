@@ -495,8 +495,13 @@ flock($fp, LOCK_UN);
         </div>
         <div id="screensaver" class="screensaver">
             <h2 id="top">
-            ↑ <u>別の日の色と記号を見る</u>
-            <br /><span class="Etiquette">Select The Date</span>
+                ↑ <u>
+                    <?php
+                    date_default_timezone_set('Asia/Tokyo');
+                    print(date('Y 年 n 月') . " ($week_name[$w])")
+                    ?>
+                    の色と記号</u>
+                <br /><span class="Etiquette">Select The Date</span>
             </h2>
         </div>
 

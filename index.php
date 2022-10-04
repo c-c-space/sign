@@ -87,8 +87,20 @@ flock($fp, LOCK_UN);
     <link rel="stylesheet" href="flash/style.css" />
     <link rel="stylesheet" href="submit/style.css" />
     <link rel="stylesheet" href="collection/style.css" />
-
     <style>
+        .Etiquette {
+            font-family: "Etiquette";
+            font-size: 200%;
+            font-weight: 900;
+            filter: invert();
+            padding-bottom: 0.25rem;
+        }
+        
+        @font-face {
+            font-family: "Etiquette";
+            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        }
+        
         #logo {
             position: fixed;
             top: 0;
@@ -445,7 +457,7 @@ flock($fp, LOCK_UN);
         <div id="cc"></div>
 
         <form id="enter" method="post">
-            <input type="submit" name="enter" class="nlc tab" value="?">
+            <input type="submit" name="enter" class="Etiquette tab" value="Sign">
         </form>
 
         <div id="index" class="nlc">

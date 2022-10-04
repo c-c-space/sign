@@ -116,7 +116,7 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-        <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
+        <a class="Etiquette" href="/sign/" target="_parent" style="filter: invert();">Sign</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>

@@ -8,7 +8,7 @@ const endDate = new Date(year, month, 0) // 月の最後の日を取得
 const endDayCount = endDate.getDate() // 月の末日
 
 let dayCount = 1
-let thismonth = month + 1
+let thismonth = date.getMonth() + 1
 let calendarHtml = ''
 
 

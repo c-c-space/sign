@@ -14,7 +14,7 @@ if (isset($_GET["day"])) {
     $day = $_GET["day"];
 }
 
-$month = date("Ym");
+$month = date("Y年m月");
 $source_file = "../" . $month . $day . ".csv";
 
 $fp = fopen($source_file, 'r');
@@ -185,7 +185,7 @@ fclose($fp);
             <u>
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
-                print(date($month) . ($day))
+                print(date($month).($day)."日")
                 ?>
             </u>
             <br />

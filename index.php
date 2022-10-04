@@ -105,6 +105,18 @@ flock($fp, LOCK_UN);
             z-index: 50;
         }
 
+        .about #top {
+            text-align: center;
+            font-size: 4.5rem;
+        }
+
+        .about u {
+            font-size: 25%;
+            background-color: #fff;
+            text-decoration: none;
+            padding: 0.25rem;
+        }
+
         #logo {
             position: fixed;
             top: 0;
@@ -535,7 +547,11 @@ flock($fp, LOCK_UN);
                 <input type="range" id="flash_speed" value="" min="0" max="5000">
             </section>
         </div>
-        <div id="screensaver" class="screensaver"></div>
+        <div id="screensaver" class="screensaver">
+            <h1 id="top"><span class="Etiquette">Sign</span>
+                <br /><u>今日の気持ちを知る・表す</u>
+            </h1>
+        </div>
         <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
 
     <?php endif; ?>
@@ -550,7 +566,6 @@ flock($fp, LOCK_UN);
         $(function() {
             $("#cc").load("../menu.html");
             $("#about").load("submit/about.html");
-            $("#screensaver").load("submit/about.html");
         })
     </script>
 </body>

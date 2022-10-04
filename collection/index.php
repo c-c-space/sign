@@ -163,8 +163,11 @@ fclose($fp);
     </div>
 
     <div id="screensaver" class="screensaver">
-        <h1><span class="Etiquette">Sign</span>
-            <br /><u>今日の気持ちを知る・表す</u>
+        <h1>
+            <?php
+            date_default_timezone_set('Asia/Tokyo');
+            print(date($day) . ($month))
+            ?>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

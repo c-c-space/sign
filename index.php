@@ -93,7 +93,6 @@ flock($fp, LOCK_UN);
             font-size: 200%;
             font-weight: 900;
             filter: invert();
-            padding-bottom: 0.25rem;
         }
         
         @font-face {

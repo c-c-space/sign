@@ -123,6 +123,13 @@ flock($fp, LOCK_UN);
             max-width: 750px;
         }
 
+        #screensaver h2 {
+            position: absolute;
+            top: 2.5rem;
+            left: 1rem;
+            font-weight: 500;
+        }
+
         .screensaver #top {
             font-size: 4.5rem;
             line-height: 125%;
@@ -485,6 +492,11 @@ flock($fp, LOCK_UN);
                 </ul>
             </div>
         </div>
+        <div id="screensaver" class="screensaver">
+            <h2 id="top"><span class="Etiquette">Select The Date</span>
+                <br /><u>別の日の色と記号を見る</u>
+            </h2>
+        </div>
 
 
     <?php else : ?>
@@ -570,12 +582,12 @@ flock($fp, LOCK_UN);
                 <br /><u>今日の気持ちを知る・表す</u>
             </h1>
         </div>
-        <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
 
     <?php endif; ?>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
     <script src="index.js"></script>
     <script src="flash/script.js"></script>
     <script src="submit/script.js"></script>

@@ -498,7 +498,7 @@ flock($fp, LOCK_UN);
                 ↑ <u>
                     <?php
                     date_default_timezone_set('Asia/Tokyo');
-                    print(date('Y 年 n 月') . " ($week_name[$w])")
+                    print(date('Y 年 n 月'))
                     ?>
                     の色と記号</u>
                 <br /><span class="Etiquette">Select The Date</span>

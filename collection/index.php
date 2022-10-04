@@ -81,7 +81,7 @@ fclose($fp);
         }
 
         .screensaver i {
-            font-size: 75%;
+            font-size: 100%;
             font-style: normal;
         }
     </style>

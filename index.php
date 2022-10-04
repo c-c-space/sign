@@ -133,7 +133,6 @@ flock($fp, LOCK_UN);
         }
 
         .screensaver #top {
-            font-size: 4.5rem;
             line-height: 125%;
         }
 

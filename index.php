@@ -88,6 +88,11 @@ flock($fp, LOCK_UN);
     <link rel="stylesheet" href="submit/style.css" />
     <link rel="stylesheet" href="collection/style.css" />
     <style>
+        @font-face {
+            font-family: "Etiquette";
+            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+        }
+
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
@@ -95,12 +100,11 @@ flock($fp, LOCK_UN);
             filter: invert();
             padding-bottom: 0.25rem;
         }
-        
-        @font-face {
-            font-family: "Etiquette";
-            src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
+
+        #screensaver {
+            z-index: 50;
         }
-        
+
         #logo {
             position: fixed;
             top: 0;
@@ -534,7 +538,10 @@ flock($fp, LOCK_UN);
 
     <?php endif; ?>
 
+    <div id="screensaver" class="screensaver"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://creative-community.space/coding/js/speech/script.js"></script>
     <script src="index.js"></script>
     <script src="flash/script.js"></script>
     <script src="submit/script.js"></script>
@@ -543,6 +550,7 @@ flock($fp, LOCK_UN);
         $(function() {
             $("#cc").load("../menu.html");
             $("#about").load("submit/about.html");
+            $("#screensaver").load("submit/about.html");
         })
     </script>
 </body>

@@ -105,12 +105,12 @@ flock($fp, LOCK_UN);
             z-index: 50;
         }
 
-        .about #top {
+        .screensaver #top {
             text-align: center;
             font-size: 4.5rem;
         }
 
-        .about u {
+        .screensaver u {
             font-size: 25%;
             background-color: #fff;
             text-decoration: none;

@@ -45,6 +45,7 @@
     border: none;
 }
 
+#index a,
 #index .tab {
     color: #000;
     text-decoration: none;
@@ -53,6 +54,7 @@
     mix-blend-mode: difference;
 }
 
+#index a:hover,
 #index .tab:hover,
 #index .check b {
     cursor: pointer;

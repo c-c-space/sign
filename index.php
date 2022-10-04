@@ -493,8 +493,9 @@ flock($fp, LOCK_UN);
             </div>
         </div>
         <div id="screensaver" class="screensaver">
-            <h2 id="top"><span class="Etiquette">Select The Date</span>
-                <br /><u>別の日の色と記号を見る</u>
+            <h2 id="top">
+            ↑<u>別の日の色と記号を見る</u>
+            <br /><span class="Etiquette">Select The Date</span>
             </h2>
         </div>
 

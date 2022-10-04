@@ -38,6 +38,7 @@
     color: #000;
     font-size: 2rem;
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
     cursor: pointer;
     background: transparent;
@@ -89,7 +90,7 @@
 
 @media screen and (max-width: 550px) {
     #enter {
-        padding: 0.25rem 1rem;
+        padding: 0.25rem 0.5rem;
     }
     #index {
         padding: 0.25rem 0.5rem;

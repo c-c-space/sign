@@ -125,8 +125,18 @@ flock($fp, LOCK_UN);
         #screensaver h2 {
             position: absolute;
             font-size: 2.5rem;
+            text-align: left;
             top: 4.5rem;
             left: 2.5rem;
+            font-weight: 500;
+        }
+
+        #screensaver h3 {
+            position: absolute;
+            font-size: 2.5rem;
+            text-align: right;
+            top: 4.5rem;
+            right: 2.5rem;
             font-weight: 500;
         }
 
@@ -508,6 +518,10 @@ flock($fp, LOCK_UN);
                     の色と記号を見る</u>
                 <br /><span class="Etiquette">Select The Date</span>
             </h2>
+            <h3 id="top">
+                <u>決定</u> ↑
+                <br /><span class="Etiquette">Click</span>
+            </h3>
         </div>
 
 

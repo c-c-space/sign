@@ -113,7 +113,7 @@ flock($fp, LOCK_UN);
 
         .screensaver h1 {
             box-sizing: border-box;
-            padding-top: 12.5%;
+            padding-top: 25%;
             text-align: center;
             font-size: 4.5rem;
             line-height: 150%;

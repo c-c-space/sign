@@ -519,8 +519,8 @@ flock($fp, LOCK_UN);
                 <br /><span class="Etiquette">Select The Date</span>
             </h2>
             <h3 id="top">
-                ↑
-                <br /><span class="Etiquette">Click</span>
+                <u>決定</u> ↑
+                <br /><span class="Etiquette">Click Here</span>
             </h3>
         </div>
 

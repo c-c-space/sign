@@ -58,9 +58,6 @@ fclose($fp);
             font-family: "Etiquette";
             font-size: 200%;
             padding-bottom: 0.25rem;
-        }
-
-        #screensaver span {
             filter: invert();
         }
 
@@ -85,8 +82,13 @@ fclose($fp);
         }
 
         .screensaver i {
-            font-size: 150%;
+            font-size: 55%;
             font-style: normal;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            transform: scale(1, 1.1);
         }
     </style>
 </head>
@@ -117,7 +119,7 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-        <a class="Etiquette" href="/sign/" target="_parent" style="filter: invert();">Sign</a>
+        <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>
@@ -191,8 +193,7 @@ fclose($fp);
             </u>
             <br />
             <span class="Etiquette">Colors</span>
-            <i class="Etiquette">&</i>
-            <span class="Etiquette">Symbols</span>
+            <i>&</i><span class="Etiquette">Symbols</span>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

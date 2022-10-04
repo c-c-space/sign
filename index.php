@@ -596,9 +596,10 @@ flock($fp, LOCK_UN);
         </div>
         <div id="screensaver" class="screensaver">
             <h1 id="top">
+                <u>今日の気持ちを知る・表す</u>
+                <br />
                 <span class="Etiquette">Colors</span>
                 <i>and</i><span class="Etiquette">Symbols</span>
-                <br /><u>今日の気持ちを知る・表す</u>
             </h1>
         </div>
 

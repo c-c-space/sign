@@ -48,6 +48,7 @@ fclose($fp);
     <style>
         .Etiquette {
             font-family: "Etiquette";
+            font-size: 150%;
         }
 
         @font-face {

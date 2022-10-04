@@ -133,7 +133,7 @@ flock($fp, LOCK_UN);
 
         #screensaver h3 {
             position: absolute;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: right;
             top: 4.5rem;
             right: 2.5rem;
@@ -519,7 +519,7 @@ flock($fp, LOCK_UN);
                 <br /><span class="Etiquette">Select The Date</span>
             </h2>
             <h3 id="top">
-                <u>決定</u> ↑
+                ↑
                 <br /><span class="Etiquette">Click</span>
             </h3>
         </div>

@@ -49,21 +49,11 @@ fclose($fp);
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
-            filter: invert();
-            padding-bottom: 0.25rem;
-        }
-
-        .BrighterMiraclesPersonalUse {
-            font-family: "BrighterMiraclesPersonalUse";
-            font-size: 200%;
+            font-weight: 900;
             filter: invert();
             padding-bottom: 0.25rem;
         }
         
-        @font-face {
-            font-family: "BrighterMiraclesPersonalUse";
-            src: url("https://creative-community.space/coding/fontbook/family/BrighterMiraclesPersonalUse-ax5Bm.otf");
-        }
         @font-face {
             font-family: "Etiquette";
             src: url("https://creative-community.space/coding/fontbook/family/Etiquette-2OGXW.ttf");
@@ -97,7 +87,7 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
-        <a class="BrighterMiraclesPersonalUse" href="/sign/" target="_parent">Sign</a>
+        <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
             <span class="check"><b>✔</b></span>

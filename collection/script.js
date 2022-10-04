@@ -1,6 +1,6 @@
 const date = new Date()
 const today = date.getDate()
-const year = date.getFullYear()
+const year = date.getFullYear() 
 const month = date.getMonth()
 
 const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得

@@ -118,7 +118,7 @@ flock($fp, LOCK_UN);
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 4.5rem;
+            font-size: 3rem;
             font-weight: 500;
             width: 100%;
             max-width: 750px;

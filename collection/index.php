@@ -67,6 +67,7 @@ fclose($fp);
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             text-align: center;
+            font-size: 3rem;
             font-weight: 500;
             width: 100%;
             max-width: 750px;
@@ -186,13 +187,12 @@ fclose($fp);
             <u>
                 <?php
                 date_default_timezone_set('Asia/Tokyo');
-                print(date($year)."年".($month)."月".($day)."日")
+                print(date($year) . "年" . ($month) . "月" . ($day) . "日")
                 ?>
             </u>
             <br />
-            <b class="Etiquette">Colors</b>
-            <i>and</i>
-            <b class="Etiquette">Symbols</b>
+            <span class="Etiquette">Colors</span>
+            <i>and</i><span class="Etiquette">Symbols</span>
         </h1>
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>

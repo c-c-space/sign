@@ -105,6 +105,10 @@ flock($fp, LOCK_UN);
             z-index: 50;
         }
 
+        .screensaver #top {
+            line-height: 100%;
+        }
+
         #screensaver h1 {
             position: absolute;
             top: 50%;
@@ -124,10 +128,6 @@ flock($fp, LOCK_UN);
             top: 4.5rem;
             left: 2.5rem;
             font-weight: 500;
-        }
-
-        .screensaver #top {
-            line-height: 125%;
         }
 
         .screensaver u {

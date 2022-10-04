@@ -143,6 +143,16 @@ flock($fp, LOCK_UN);
             padding: 0.25rem;
         }
 
+        .screensaver i {
+            font-size: 55%;
+            font-family: 'Times New Roman', serif;
+            font-weight: 500;
+            font-stretch: condensed;
+            font-variant: common-ligatures tabular-nums;
+            transform: scale(1, 1.1);
+            font-style: normal;
+        }
+
         #logo {
             position: fixed;
             top: 0;
@@ -585,7 +595,10 @@ flock($fp, LOCK_UN);
             </section>
         </div>
         <div id="screensaver" class="screensaver">
-            <h1 id="top"><span class="Etiquette">Sign</span>
+            <h1 id="top">
+                <b class="Etiquette">Colors</b>
+                <i>and</i>
+                <b class="Etiquette">Symbols</b>
                 <br /><u>今日の気持ちを知る・表す</u>
             </h1>
         </div>

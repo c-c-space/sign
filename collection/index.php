@@ -73,12 +73,9 @@ fclose($fp);
             </a>
             <span class="check"><b>✔</b></span>
         </div>
+            <a href="/sign/" target="_parent">SIGN</a>
         <div>
             <a class="tab" href="#flash">Flash</a>
-            <span class="check"><b>✔</b></span>
-        </div>
-        <div>
-            <a class="tab" href="/sign/" target="_parent">↩︎</a>
             <span class="check"><b>✔</b></span>
         </div>
     </div>

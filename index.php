@@ -122,7 +122,7 @@ flock($fp, LOCK_UN);
             max-width: 750px;
         }
 
-        .screensaver h1 {
+        .screensaver #top {
             font-size: 4.5rem;
             line-height: 125%;
         }

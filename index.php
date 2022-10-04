@@ -127,7 +127,7 @@ flock($fp, LOCK_UN);
         #screensaver h2 {
             position: absolute;
             font-size: 2.5rem;
-            top: 2.5rem;
+            top: 4.5rem;
             left: 2.5rem;
             font-weight: 500;
         }

@@ -49,7 +49,8 @@ fclose($fp);
         .Etiquette {
             font-family: "Etiquette";
             font-size: 200%;
-            mix-blend-mode: difference;
+            filter: invert();
+            margin-bottom: 0.5rem;
         }
 
         @font-face {

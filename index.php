@@ -90,7 +90,6 @@ flock($fp, LOCK_UN);
     <style>
         .Etiquette {
             font-family: "Etiquette";
-            font-size: 200%;
             font-weight: 900;
             filter: invert();
         }

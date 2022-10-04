@@ -82,7 +82,7 @@ fclose($fp);
         }
 
         .screensaver i {
-            font-size: 55%;
+            font-size: 45%;
             font-style: normal;
             font-family: 'Times New Roman', serif;
             font-weight: 500;

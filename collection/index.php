@@ -115,7 +115,7 @@ fclose($fp);
 
     <form id="collection" method="GET">
         <select id="date" name="day"></select>
-        <button type="submit" name="submit">View The Collection</button>
+        <button type="submit" name="submit">決定</button>
         <script src="script.js"></script>
     </form>
 
@@ -131,7 +131,7 @@ fclose($fp);
         </div>
         <a class="Etiquette" href="/sign/" target="_parent">Sign</a>
         <div>
-            <a class="tab" href="#flash">Flash</a>
+            <a class="tab" href="#flash">View The Collection</a>
             <span class="check"><b>✔</b></span>
         </div>
     </div>

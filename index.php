@@ -519,7 +519,7 @@ flock($fp, LOCK_UN);
                 <br /><span class="Etiquette">Select The Date</span>
             </h2>
             <h3 id="top">
-                <u>決定</u> ↑
+                <u>見る</u> ↑
                 <br /><span class="Etiquette">Click Here</span>
             </h3>
         </div>

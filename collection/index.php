@@ -111,7 +111,7 @@ fclose($fp);
         <?php else : ?>
         #000,
         <?php endif; ?>
-    #fff);">
+        #fff);">
 
     <form id="collection" method="GET">
         <select id="date" name="day"></select>

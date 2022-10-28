@@ -209,7 +209,7 @@ fclose($fp);
     </div>
     <script src="https://creative-community.space/coding/js/screensaver/script.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../index.js"></script>
     <script src="../flash/script.js"></script>
     <script src="../submit/script.js"></script>

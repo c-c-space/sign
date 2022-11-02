@@ -81,7 +81,6 @@ flock($fp, LOCK_UN);
     <script src="https://creative-community.space/coding/js/tone/Tone.min.js"></script>
     <script src="https://creative-community.space/coding/js/tone/StartAudioContext.js"></script>
 
-    <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="all/style.css" />
     <link rel="stylesheet" href="background/style.css" />
@@ -527,8 +526,6 @@ flock($fp, LOCK_UN);
 
 
     <?php else : ?>
-
-        <header id="header"></header>
 
         <form id="enter" method="post">
             <input type="submit" name="enter" class="nlc tab" value="?">

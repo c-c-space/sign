@@ -10,9 +10,6 @@ function h($str)
 }
 
 $day = date("d");
-if (isset($_GET["day"])) {
-  $day = $_GET["day"];
-}
 
 $month = date("Ym");
 $source_file = "log/". $month . $day . ".csv";

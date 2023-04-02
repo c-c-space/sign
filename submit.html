@@ -234,19 +234,18 @@
 </section>
 
 <script type="text/javascript">
-  const symbolAll = document.getElementsByName('symbol');
-
-  for (let symbol of symbolAll) {
-    symbol.addEventListener('change', () => {
-      let symbolValue = symbol.value;
-      document.querySelector('#symbol p b').innerHTML = symbolValue;
-      console.log(symbolValue);
-    });
-  }
-
-  const colorAll = document.getElementsByName("color");
-
   async function submitThis() {
+    const symbolAll = document.getElementsByName('symbol');
+    const colorAll = document.getElementsByName("color");
+
+    let symbolValue = "";
+    for (let i = 0; i < symbolAll.length; i++) {
+      if (symbolAll[i].checked) {//(color1[i].checked === true)と同じ
+        symbolValue = symbolAll[i].value;
+        break;
+      }
+    }
+
     let colorlValue = "";
     for (let i = 0; i < colorAll.length; i++) {
       if (colorAll[i].checked) {//(color1[i].checked === true)と同じ
@@ -256,6 +255,7 @@
     }
 
     let thisSign = {
+      symbol : symbolValue,
       color : colorlValue
     };
 

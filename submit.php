@@ -45,7 +45,16 @@ flock($fp, LOCK_UN);
   <style type="text/css">
   </style>
 </head>
-<body>
+<body style="background-image: linear-gradient(0deg,
+  <?php if (!empty($rows)) : ?>
+  <?php foreach ($rows as $row) : ?>
+  #<?= h($row[1]) ?>,
+  <?php endforeach; ?>
+  <?php else : ?>
+  #000,
+  <?php endif; ?>
+  #fff);">
+
   <script src="/js/menu.js"></script>
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>

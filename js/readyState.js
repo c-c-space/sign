@@ -13,6 +13,7 @@ function changeHidden() {
 
 const symbolAll = document.getElementsByName('symbol');
 let symbol = symbolAll.length;
+let symbolValue = '';
 
 for (let i = 0; i < symbol; i++) {
   if (symbolAll.item(i).checked) {
@@ -22,6 +23,7 @@ for (let i = 0; i < symbol; i++) {
 
 const colorAll = document.getElementsByName('color');
 let color = colorAll.length;
+let colorlValue = '';
 
 for (let i = 0; i < color; i++) {
   if (colorAll.item(i).checked) {
@@ -106,18 +108,11 @@ document.addEventListener('readystatechange', event => {
       }
       readmeMD();
     } else {
-      async function submit() {
-        fetch('submit.html')
-        .then(response => response.text())
-        .then(submit => {
-          document.querySelector('#submit').innerHTML = submit;
-        });
-      }
-      submit();
     }
   }
 
   else if (event.target.readyState === 'complete') {
+
   }
 });
 

@@ -81,7 +81,7 @@ document.addEventListener('readystatechange', event => {
     const signJSON = JSON.stringify(thisSign);
 
     async function submitThis() {
-      let url = 'log.php';
+      let url = 'log/index.php';
       let response = await fetch(url, {
         method: 'POST',
         headers: {

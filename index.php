@@ -11,8 +11,9 @@ function h($str)
 
 $day = date("d");
 
-$month = date("Ym");
-$source_file = "log/". $month . $day . ".csv";
+$year = date("Y");
+$month = date("m");
+$source_file = $year. "/". $month . $day . ".csv";
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 $ips = explode(",", $forwardedFor);

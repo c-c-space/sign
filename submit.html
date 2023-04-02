@@ -257,13 +257,13 @@
 
   for (let i = 0; i < colorAll.length; i++) {
     if (colorAll[i].checked) {
-      thisColor = `#${colorAll[i].value}`;
+      colorlValue = `#${colorAll[i].value}`;
     }
   }
 
   let thisSign = {
     symbol : symbolValue,
-    color : thisColor
+    color : colorlValue
   };
 
   const signJSON = JSON.stringify(thisSign);

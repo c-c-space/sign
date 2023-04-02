@@ -255,8 +255,8 @@
   }
 
   let thisSign = {
-    symbol : symbolValue,
-    color : colorlValue
+    symbol : document.querySelector('#symbol p b').innerHTML,
+    color : document.querySelector('#color').style.background
   };
 
   const signJSON = JSON.stringify(thisSign);

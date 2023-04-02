@@ -235,17 +235,16 @@
 
 <script type="text/javascript">
   const symbolAll = document.getElementsByName('symbol');
-  let symbolValue = '';
 
   for (let symbol of symbolAll) {
     symbol.addEventListener('change', () => {
       let symbolValue = symbol.value;
+      document.querySelector('#symbol p b').innerHTML = symbolValue;
       console.log(symbolValue);
     });
   }
 
   const colorAll = document.getElementsByName("color");
-  let colorlValue = '#fff';
 
   for (let color of colorAll) {
     color.addEventListener('change', () => {
@@ -253,12 +252,6 @@
       document.querySelector('#color').style.background = colorlValue;
       console.log(colorlValue);
     });
-  }
-
-  for (let i = 0; i < colorAll.length; i++) {
-    if (colorAll[i].checked) {
-      colorlValue = `#${colorAll[i].value}`;
-    }
   }
 
   let thisSign = {

@@ -246,14 +246,6 @@
 
   const colorAll = document.getElementsByName("color");
 
-  for (let color of colorAll) {
-    color.addEventListener('change', () => {
-      let colorlValue = `#${color.value}`;
-      document.querySelector('#color').style.background = colorlValue;
-      console.log(colorlValue);
-    });
-  }
-
   async function submitThis() {
     let colorlValue = "";
     for (let i = 0; i < colorAll.length; i++) {

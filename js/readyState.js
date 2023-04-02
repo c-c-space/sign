@@ -11,56 +11,6 @@ function changeHidden() {
   })
 }
 
-const symbolAll = document.getElementsByName('symbol');
-let symbolValue = '';
-
-for (let i = 0; i < symbolAll.length; i++) {
-  if (symbolAll[i].checked) {
-    symbolValue = symbolAll[i].value;
-    console.log(symbolValue)
-  }
-}
-
-const colorAll = document.getElementsByName('color');
-let colorlValue = '';
-
-for (let i = 0; i < colorAll.length; i++) {
-  if (colorAll[i].checked) {
-    colorlValue = colorAll[i].value;
-    console.log(colorlValue)
-  }
-}
-
-let thisSign = {
-  symbol : symbolValue,
-  color : colorlValue
-};
-
-const signJSON = JSON.stringify(thisSign);
-
-async function submitThis() {
-  let url = 'log.php';
-  let response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: signJSON
-  })
-
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => {
-    console.log(error)
-  });
-
-  setTimeout(() => {
-    location.reload();
-  }, 1000);
-}
-
 function allView() {
   let all = document.querySelector('#all');
   let flash = document.querySelector('#flash');

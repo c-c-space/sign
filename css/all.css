@@ -28,6 +28,7 @@
 #all {
   box-sizing: border-box;
   margin: 12.5vh auto 0;
+overflow: auto;
   height: 75%;
   width: 90%;
   max-width: 400px;

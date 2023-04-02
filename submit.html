@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
   <link rel="stylesheet" href="css/submit.css" />
-<style type="text/css">
-  body {
-    width: 100%;
-    height: 100vh;
-    max-height: -webkit-fill-available;
-  }
-</style>
+  <style type="text/css">
+    body {
+      width: 100%;
+      height: 100vh;
+      max-height: -webkit-fill-available;
+    }
+  </style>
 </head>
 <body>
   <fieldset id="symbol">
@@ -248,5 +248,56 @@
     <input type="button" id="submitBtn" value="Submit" onClick="submitThis()">
     <input type="button" id="backBtn" value="Back" onClick="changeHidden()">
   </section>
+  <script type="text/javascript">
+    'use strict'
+
+    async function submitThis() {
+      const symbolAll = document.getElementsByName('symbol');
+      const colorAll = document.getElementsByName("color");
+
+      let symbolValue = "";
+      for (let i = 0; i < symbolAll.length; i++) {
+        if (symbolAll[i].checked) {//(color1[i].checked === true)と同じ
+          symbolValue = symbolAll[i].value;
+          break;
+        }
+      }
+
+      let colorlValue = "";
+      for (let i = 0; i < colorAll.length; i++) {
+        if (colorAll[i].checked) {//(color1[i].checked === true)と同じ
+          colorlValue = colorAll[i].value;
+          break;
+        }
+      }
+
+      let thisSign = {
+        symbol : symbolValue,
+        color : colorlValue
+      };
+
+      const signJSON = JSON.stringify(thisSign);
+      let url = 'log.php';
+      let response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: signJSON
+      })
+
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(error => {
+        console.log(error)
+      });
+
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    }
+  </script>
 </body>
 </html>

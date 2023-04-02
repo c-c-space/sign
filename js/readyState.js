@@ -11,6 +11,35 @@ function changeHidden() {
   })
 }
 
+const symbol = document.getElementsByName('symbol').value;
+const color = document.getElementsByName('color').value;
+
+let thisSign = {
+  symbol : symbol,
+  color : color
+};
+
+const signJSON = JSON.stringify(thisSign);
+
+async function submitThis() {
+  let url = 'log.php';
+  let response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8'
+    },
+    body: signJSON
+  })
+
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.log(error)
+  });
+}
+
 function allView() {
   let all = document.querySelector('#all');
   let flash = document.querySelector('#flash');
@@ -70,34 +99,6 @@ document.addEventListener('readystatechange', event => {
   }
 
   else if (event.target.readyState === 'complete') {
-    const symbol = document.getElementsByName('symbol').value;
-    const color = document.getElementsByName('color').value;
-
-    let thisSign = {
-      symbol : symbol,
-      color : color
-    };
-
-    const signJSON = JSON.stringify(thisSign);
-
-    async function submitThis() {
-      let url = 'log/index.php';
-      let response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: signJSON
-      })
-
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-      })
-      .catch(error => {
-        console.log(error)
-      });
-    }
   }
 });
 

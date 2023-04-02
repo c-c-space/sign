@@ -22,6 +22,6 @@ $output = array(
   '"'. $ip .'"'
 );
 
-$result = implode(', ', $output);
+$result = implode(',', $output);
 file_put_contents(LOGFILE, $result."\n", FILE_APPEND | LOCK_EX);
 echo json_encode($data);

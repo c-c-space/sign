@@ -140,7 +140,6 @@
   padding: 1rem;
 }
 
-#post input[type="submit"],
 #post input[type="button"] {
   font-weight: normal;
   font-style: italic;
@@ -153,7 +152,6 @@
   border: #000 solid 0.1rem;
 }
 
-#post input[type="submit"]:hover ,
 #post input[type="button"]:hover {
   cursor: pointer;
   background: #eee;
@@ -226,7 +224,6 @@
     padding: 2vw;
   }
 
-  #post input[type="submit"],
   #post input[type="button"] {
     font-size: 5.5vw;
     padding: 1.25vw 4vw;

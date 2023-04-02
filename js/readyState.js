@@ -21,7 +21,7 @@ for (let i = 0; i < symbol; i++){
   }
 }
 
-const colorAll = document.getElementsByName('color').value;
+const colorAll = document.getElementsByName('color');
 let color = colorAll.length;
 let colorlValue = '';
 

@@ -11,12 +11,29 @@ function changeHidden() {
   })
 }
 
-const symbol = document.getElementsByName('symbol').value;
-const color = document.getElementsByName('color').value;
+const symbolAll = document.getElementsByName('symbol');
+let symbol = symbolAll.length;
+let symbolValue = '';
+
+for (let i = 0; i < symbol; i++){
+  if (symbolAll.item(i).checked){
+    symbolValue = symbolAll.item(i).value;
+  }
+}
+
+const colorAll = document.getElementsByName('color').value;
+let color = colorAll.length;
+let colorlValue = '';
+
+for (let i = 0; i < color; i++){
+  if (colorAll.item(i).checked){
+    colorlValue = colorAll.item(i).value;
+  }
+}
 
 let thisSign = {
-  symbol : symbol,
-  color : color
+  symbol : symbolValue,
+  color : colorlValue
 };
 
 const signJSON = JSON.stringify(thisSign);
@@ -91,6 +108,14 @@ document.addEventListener('readystatechange', event => {
       }
       readmeMD();
     } else {
+      async function submit() {
+        fetch('submit.html')
+        .then(response => response.text())
+        .then(submit => {
+          document.querySelector('#submit').innerHTML = submit;
+        });
+      }
+      submit();
     }
   }
 

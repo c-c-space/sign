@@ -255,9 +255,15 @@
     });
   }
 
+  for (let i = 0; i < colorAll.length; i++) {
+    if (colorAll[i].checked) {
+      thisColor = `#${colorAll[i].value}`;
+    }
+  }
+
   let thisSign = {
     symbol : symbolValue,
-    color : document.querySelector('#color').style.background
+    color : thisColor
   };
 
   const signJSON = JSON.stringify(thisSign);

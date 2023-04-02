@@ -12,24 +12,22 @@ function changeHidden() {
 }
 
 const symbolAll = document.getElementsByName('symbol');
-let symbol = symbolAll.length;
 let symbolValue = '';
 
-for (let i = 0; i < symbol; i++) {
-  if (symbolAll.item(i).checked) {
-    symbolValue = symbolAll.item(i).value;
-console.log(symbolValue)
+for (let i = 0; i < symbolAll.length; i++) {
+  if (symbolAll[i].checked) {
+    symbolValue = symbolAll[i].value;
+    console.log(symbolValue)
   }
 }
 
 const colorAll = document.getElementsByName('color');
-let color = colorAll.length;
 let colorlValue = '';
 
-for (let i = 0; i < color; i++) {
-  if (colorAll.item(i).checked) {
-    colorlValue = colorAll.item(i).value;
-console.log(colorlValue)
+for (let i = 0; i < colorAll.length; i++) {
+  if (colorAll[i].checked) {
+    colorlValue = colorAll[i].value;
+    console.log(colorlValue)
   }
 }
 

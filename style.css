@@ -1,0 +1,116 @@
+#now select,
+#now button {
+  font-family: "Arial Narrow", "Yu Gothic", "游ゴシック体", Arial, sans-serif;
+}
+
+#enter-btn,
+#now button {
+  display: inline-block;
+  font-family: 'Times New Roman', serif;
+  font-weight: 500;
+  font-stretch: condensed;
+  font-variant: common-ligatures tabular-nums;
+  transform: scale(1, 1.1);
+  word-spacing: -0.25ch;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  background-size: 500% 500%;
+  animation: gradient 50s ease infinite;
+}
+
+button,
+input {
+  color: #000;
+  background: transparent;
+  pointer-events: auto;
+  user-select: text;
+  transition: 1s;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  appearance : none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#enter-btn,
+#now {
+  position: fixed;
+}
+
+#enter-btn {
+  border: solid 1px transparent;
+  border-radius: 50%;
+  font-size: 200%;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1.3rem;
+  margin: 0.5rem;
+  z-index: 100;
+}
+
+#now {
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1rem;
+  flex-flow: wrap row;
+  justify-content: space-between;
+}
+
+#now {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#now button {
+  font-size: 125%;
+  padding: 0.25rem;
+  margin: 0.5rem;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #enter-btn {
+    font-size: 10vw;
+    padding: 0.5vw 4.5vw;
+    margin: 2vw;
+    z-index: 100;
+  }
+
+  #now {
+    font-size: 4vw;
+  }
+
+  #now button {
+    padding: 1vw;
+    margin: 1vw;
+  }
+}

@@ -1,0 +1,92 @@
+#all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#all,
+#all ul {
+  padding: 0;
+  margin: 0;
+}
+
+#all ul,
+#all ul li,
+#all ul p {
+  clear: both;
+  width: 100%;
+}
+
+#all {
+  font-size: 1rem;
+  transition: 2.5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+#all {
+  box-sizing: border-box;
+  margin: 12.5vh auto 0;
+  height: 75%;
+  width: 90%;
+  max-width: 400px;
+}
+
+#all ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+#all ul li {
+  font-family: "MS Mincho", "SimSong", serif;
+  padding: 1rem;
+}
+
+#all ul p {
+  padding: 0;
+  margin: 0.5rem;
+}
+
+#all ul li u {
+  display: grid;
+  float: left;
+  place-items: center;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#all ul li u span {
+  font-size: 150%;
+}
+
+#all ul li b {
+  display: inline-block;
+  font-size: 150%;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 550px) {
+  #all {
+    font-size: 4vw;
+  }
+
+  #all ul li {
+    padding: 2.5vw;
+  }
+
+  #all ul p {
+    margin: 2vw;
+  }
+
+  #all ul li u {
+    margin-right: 1vw;
+    width: 10vw;
+    height: 10vw;
+  }
+
+  #all ul li b {
+    margin: 2vw;
+  }
+}

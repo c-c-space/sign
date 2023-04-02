@@ -13,20 +13,18 @@ function changeHidden() {
 
 const symbolAll = document.getElementsByName('symbol');
 let symbol = symbolAll.length;
-let symbolValue = '';
 
-for (let i = 0; i < symbol; i++){
-  if (symbolAll.item(i).checked){
+for (let i = 0; i < symbol; i++) {
+  if (symbolAll.item(i).checked) {
     symbolValue = symbolAll.item(i).value;
   }
 }
 
 const colorAll = document.getElementsByName('color');
 let color = colorAll.length;
-let colorlValue = '';
 
-for (let i = 0; i < color; i++){
-  if (colorAll.item(i).checked){
+for (let i = 0; i < color; i++) {
+  if (colorAll.item(i).checked) {
     colorlValue = colorAll.item(i).value;
   }
 }

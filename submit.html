@@ -255,6 +255,14 @@
   }
 
   async function submitThis() {
+    let colorlValue = "";
+    for (let i = 0; i < colorAll.length; i++) {
+      if (colorAll[i].checked) {//(color1[i].checked === true)と同じ
+        colorlValue = colorAll[i].value;
+        break;
+      }
+    }
+
     let thisSign = {
       symbol : symbolValue,
       color : colorlValue

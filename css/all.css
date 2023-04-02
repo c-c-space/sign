@@ -68,7 +68,8 @@
 }
 
 #all ul li b {
-  display: inline-block;
+  display: block;
+  float: right;
   font-size: 150%;
   margin: 0.5rem;
 }

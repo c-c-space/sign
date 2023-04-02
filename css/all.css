@@ -5,6 +5,10 @@
   right: 0;
 }
 
+#all ul * {
+box-sizing: border-box;
+}
+
 #all,
 #all ul {
   padding: 0;
@@ -71,7 +75,7 @@
   display: block;
   float: right;
   font-size: 150%;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 550px) {

@@ -73,7 +73,6 @@ box-sizing: border-box;
 
 #all ul li b {
   display: block;
-  float: right;
   font-size: 150%;
   margin: 0.5rem 0;
 }

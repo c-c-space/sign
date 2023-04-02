@@ -254,14 +254,13 @@
     });
   }
 
-  let thisSign = {
-    symbol : document.querySelector('#symbol p b').innerHTML,
-    color : document.querySelector('#color').style.background
-  };
-
-  const signJSON = JSON.stringify(thisSign);
-
   async function submitThis() {
+    let thisSign = {
+      symbol : symbolValue,
+      color : colorlValue
+    };
+
+    const signJSON = JSON.stringify(thisSign);
     let url = 'log.php';
     let response = await fetch(url, {
       method: 'POST',

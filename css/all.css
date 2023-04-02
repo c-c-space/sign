@@ -52,6 +52,7 @@
 #all ul li u {
   display: grid;
   float: left;
+  text-decoration: none;
   place-items: center;
   margin-right: 0.5rem;
   width: 2.5rem;

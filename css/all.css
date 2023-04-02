@@ -28,7 +28,6 @@
 #all {
   box-sizing: border-box;
   margin: 12.5vh auto 0;
-overflow: auto;
   height: 75%;
   width: 90%;
   max-width: 400px;
@@ -37,6 +36,9 @@ overflow: auto;
 #all ul {
   list-style: none;
   list-style-position: inside;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 
 #all ul li {

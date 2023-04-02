@@ -18,6 +18,7 @@ let symbolValue = '';
 for (let i = 0; i < symbol; i++) {
   if (symbolAll.item(i).checked) {
     symbolValue = symbolAll.item(i).value;
+console.log(symbolValue)
   }
 }
 
@@ -28,6 +29,7 @@ let colorlValue = '';
 for (let i = 0; i < color; i++) {
   if (colorAll.item(i).checked) {
     colorlValue = colorAll.item(i).value;
+console.log(colorlValue)
   }
 }
 
@@ -108,6 +110,14 @@ document.addEventListener('readystatechange', event => {
       }
       readmeMD();
     } else {
+      async function submit() {
+        fetch('submit.html')
+        .then(response => response.text())
+        .then(submit => {
+          document.querySelector('#submit').innerHTML = submit;
+        });
+      }
+      submit();
     }
   }
 

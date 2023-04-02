@@ -34,6 +34,8 @@
 }
 
 #all ul {
+  display: flex;
+  flex-flow: column-reverse;
   list-style: none;
   list-style-position: inside;
   width: 100%;

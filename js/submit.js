@@ -6,6 +6,14 @@ function changeHidden() {
     if (main.hidden == false) {
       main.hidden = true;
     } else {
+      main.animate (
+        [
+          {opacity: 0},
+          {opacity: 1}
+        ], {
+          duration: 1000
+        }
+      )
       main.hidden = false;
     }
   })

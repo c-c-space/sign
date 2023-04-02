@@ -38,6 +38,10 @@ async function submitThis() {
   .catch(error => {
     console.log(error)
   });
+
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
 }
 
 function allView() {

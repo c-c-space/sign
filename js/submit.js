@@ -16,6 +16,7 @@ const submitForm = document.querySelector('#submit');
 submitForm.addEventListener('submit', submitThis);
 
 async function submitThis() {
+  event.preventDefault();
   const symbolAll = document.getElementsByName('symbol');
   const colorAll = document.getElementsByName("color");
 

@@ -1,7 +1,7 @@
 'use strict'
 
 function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit');
+  const mainAll = document.querySelectorAll('#submit, main');
   mainAll.forEach(main => {
     if (main.hidden == false) {
       main.hidden = true;

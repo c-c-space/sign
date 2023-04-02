@@ -1,3 +1,33 @@
+<?php
+mb_language("ja");
+mb_internal_encoding("UTF-8");
+date_default_timezone_set('Asia/Tokyo');
+
+$month = date("Ym");
+$day = date("d");
+$source_file = "log/". $month . $day . ".csv";
+
+$forwardedFor = $_SERVER["REMOTE_ADDR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
+$fp = fopen($source_file, 'a+b');
+
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
+
+function h($str)
+{
+  return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
+
+flock($fp, LOCK_SH);
+while ($row = fgetcsv($fp)) {
+  $rows[] = $row;
+}
+flock($fp, LOCK_UN);
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>

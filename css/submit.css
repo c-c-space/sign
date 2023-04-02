@@ -140,7 +140,8 @@
   padding: 1rem;
 }
 
-#post input[type="button"] {
+#post input[type="button"],
+#post input[type="submit"] {
   font-weight: normal;
   font-style: italic;
   font-family: "MS 明朝", "MS Mincho", serif;
@@ -152,7 +153,8 @@
   border: #000 solid 0.1rem;
 }
 
-#post input[type="button"]:hover {
+#post input[type="button"]:hover,
+#post input[type="submit"]:hover {
   cursor: pointer;
   background: #eee;
   transition: .5s all;
@@ -224,7 +226,8 @@
     padding: 2vw;
   }
 
-  #post input[type="button"] {
+  #post input[type="button"],
+  #post input[type="submit"] {
     font-size: 5.5vw;
     padding: 1.25vw 4vw;
     border-radius: 7.5vw;

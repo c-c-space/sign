@@ -11,6 +11,10 @@ function changeHidden() {
   })
 }
 
+
+const submitForm = document.querySelector('#submit');
+submitForm.addEventListener('submit', submitThis);
+
 async function submitThis() {
   const symbolAll = document.getElementsByName('symbol');
   const colorAll = document.getElementsByName("color");

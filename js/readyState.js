@@ -91,9 +91,6 @@ document.addEventListener('readystatechange', event => {
       }
       readmeMD();
     } else {
-      $(function() {
-        $("#submit").load("submit.html")
-      })
     }
   }
 

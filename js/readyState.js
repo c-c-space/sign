@@ -1,17 +1,5 @@
 'use strict'
 
-
-function changeHidden() {
-  const mainAll = document.querySelectorAll('main');
-  mainAll.forEach(main => {
-    if (main.hidden == false) {
-      main.hidden = true;
-    } else {
-      main.hidden = false;
-    }
-  })
-}
-
 const symbolAll = document.getElementsByName('symbol');
 let symbolValue = '';
 

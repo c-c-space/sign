@@ -1,5 +1,16 @@
 'use strict'
 
+function changeHidden() {
+  const mainAll = document.querySelectorAll('#submit');
+  mainAll.forEach(main => {
+    if (main.hidden == false) {
+      main.hidden = true;
+    } else {
+      main.hidden = false;
+    }
+  })
+}
+
 async function submitThis() {
   const symbolAll = document.getElementsByName('symbol');
   const colorAll = document.getElementsByName("color");

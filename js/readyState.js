@@ -97,14 +97,6 @@ document.addEventListener('readystatechange', event => {
       }
       readmeMD();
     } else {
-      async function submit() {
-        fetch('submit.html')
-        .then(response => response.text())
-        .then(submit => {
-          document.querySelector('#submit').innerHTML = submit;
-        });
-      }
-      submit();
     }
   }
 

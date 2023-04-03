@@ -33,9 +33,6 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-
-  <script src="../js/index.js" async></script>
-
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/flash.css" />

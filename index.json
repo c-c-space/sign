@@ -10,12 +10,12 @@
 
   "contents" : [
     {
-      "date" : "Speech to Text to Text to Speech",
-      "name" : "Hello こんにちは",
-      "url" : "/hello/",
+      "date" : "View The Collection",
+      "name" : "今月の色と記号",
+      "url" : "/sign/log/",
       "type" : "news",
-      "caption" : "inline-block",
-      "note" : "音声認識・音声合成"
+      "caption" : "none",
+      "note" : "View The Collection"
     }
   ]
 }

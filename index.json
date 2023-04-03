@@ -1,6 +1,6 @@
 {
   "title" : "今日の気持ちを知る・表す",
-  "description" : "これは、18 の 色 と 35 の 記号 を使って 今日の気持ちを知る・表す オンライン・コミュニケーションツール です。",
+  "description" : "Colors and Symbols that Suits on Today",
   "author" : "∧°┐",
   "email" : "pehu@creative-community.space",
   "type" : "website",
@@ -10,7 +10,7 @@
 
   "contents" : [
     {
-      "date" : "Today",
+      "date" : "Colors and Symbols that Suits on Today",
       "name" : "今日の気持ちを知る・表す",
       "url" : "/sign/",
       "type" : "news",
@@ -18,12 +18,12 @@
       "note" : ""
     },
     {
-      "date" : "This Month",
+      "date" : "View The Collection",
       "name" : "今月の色と記号",
       "url" : "/sign/log/",
       "type" : "news",
-      "caption" : "inline-block",
-      "note" : "View The Collection"
+      "caption" : "none",
+      "note" : ""
     }
   ]
 }

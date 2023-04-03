@@ -80,13 +80,13 @@ flock($fp, LOCK_UN);
         <?php if (!empty($rows)) : ?>
           <?php foreach ($rows as $row) : ?>
             <li>
+              <p><?= h($row[2]) ?></p>
               <p>
                 <u style="background:#<?= h($row[1]) ?>;">
                   <span><?= h($row[0]) ?></span>
                 </u>
                 <b style="color:#<?= h($row[1]) ?>;"><?= h($row[3]) ?></b>
               </p>
-              <p><?= h($row[2]) ?></p>
             </li>
           <?php endforeach; ?>
         <?php else : ?>

@@ -10,7 +10,15 @@
 
   "contents" : [
     {
-      "date" : "Colors and Symbols",
+      "date" : "Today",
+      "name" : "今日の気持ちを知る・表す",
+      "url" : "/sign/",
+      "type" : "news",
+      "caption" : "none",
+      "note" : ""
+    },
+    {
+      "date" : "This Month",
       "name" : "今月の色と記号",
       "url" : "/sign/log/",
       "type" : "news",

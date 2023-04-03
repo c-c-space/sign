@@ -111,7 +111,7 @@ fclose($fp);
           <?php endforeach; ?>
         <?php else : ?>
           <li style="background:#aaa;">
-            <b style="color:#aaa;">✔︎</b>
+            <b style="color:#aaa;">?</b>
           </li>
         <?php endif; ?>
       </ul>

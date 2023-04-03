@@ -124,7 +124,7 @@ fclose($fp);
 
     <nav id="log">
       <button type="button" onclick="flashView()">
-        <span><?php echo $year . $month . $day;?></span>
+        <span><?php echo $year .'<br/>'. $month . $day;?></span>
       </button>
       <button type="button" id="allBtn" onclick="allView()">
         <span><?php echo $post;?> Posts</span>

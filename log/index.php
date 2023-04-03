@@ -46,7 +46,8 @@ fclose($fp);
   #000,
   <?php endif; ?>
   #fff);">
-  <form id="now" method="GET">
+
+  <form id="now" action="" method="GET">
     <select id="select" name="day"></select>
     <button type="submit" name="submit">決定</button>
     <script src="../js/log.js"></script>

@@ -13,6 +13,11 @@ $month = date("m");
 $source_file = $year . $month . $day . ".csv";
 $fp = fopen($source_file, 'a+b');
 
+$post = sizeof(file($source_file));
+
+$title = $year .'年'. $month .'月の気持ちを知る・表す';
+$description = $post. 'の色と記号';
+
 function h($str)
 {
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
@@ -102,11 +107,11 @@ fclose($fp);
     </section>
 
     <nav id="log">
-      <button type="button" onclick="flashView()">
-        <span>Flash</span>
-      </button>
       <button type="button" id="allBtn" onclick="allView()">
-        <span>View All</span>
+        <span><?php echo $post;?></span>
+      </button>
+      <button type="button" onclick="flashView()">
+        <span>色と記号</span>
       </button>
     </nav>
 

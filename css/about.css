@@ -23,10 +23,25 @@
   font-size: 125%;
 }
 
+#back-btn {
+  border-radius: 3rem;
+  border: #000 solid 0.1rem;
+  color: #000;
+  font-size: 100%;
+  font-weight: normal;
+  padding: 0.5rem 0.75rem;
+}
+
 @media screen and (max-width: 550px) {
   #about {
     font-size: 3vw;
-    padding: 15vw 5vw 5vw;
+    padding: 17.5vw 5vw 5vw;
     margin: 0 auto;
+  }
+
+  #back-btn {
+    border-radius: 5vw;
+    border: #000 solid 0.45vw;
+    padding: 1.5vw 2.5vw;
   }
 }

@@ -19,7 +19,7 @@ $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));
 
-$title = $year .'年'. $month .'月の気持ちを知る・表す';
+$title = $year .'年'. date("n") .'月の気持ちを知る・表す';
 $description = $post. 'の色と記号';
 
 function h($str)

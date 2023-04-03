@@ -16,14 +16,6 @@
       "type" : "news",
       "caption" : "inline-block",
       "note" : "音声認識・音声合成"
-    },
-    {
-      "date" : "Access Log",
-      "name" : "あなたの通信情報／ブラウザ等情報",
-      "url" : "/log/",
-      "type" : "news",
-      "caption" : "none",
-      "note" : ""
     }
   ]
 }

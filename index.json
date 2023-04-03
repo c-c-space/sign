@@ -18,6 +18,14 @@
       "note" : "音声認識・音声合成"
     },
     {
+      "date" : "Colors and Symbols",
+      "name" : "今日の気持ちを知る・表す",
+      "url" : "/sign/",
+      "type" : "news",
+      "caption" : "none",
+      "note" : ""
+    },
+    {
       "date" : "Access Log",
       "name" : "あなたの通信情報／ブラウザ等情報",
       "url" : "/log/",

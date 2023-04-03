@@ -10,11 +10,11 @@
 
   "contents" : [
     {
-      "date" : "View The Collection",
+      "date" : "Colors and Symbols",
       "name" : "今月の色と記号",
       "url" : "/sign/log/",
       "type" : "news",
-      "caption" : "none",
+      "caption" : "inline-block",
       "note" : "View The Collection"
     }
   ]

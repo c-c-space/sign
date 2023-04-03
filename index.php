@@ -8,8 +8,6 @@ $day = date("d");
 $source_file = "log/". $month . $day . ".csv";
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
-$ips = explode(",", $forwardedFor);
-$ip = $ips[0];
 
 $fp = fopen($source_file, 'a+b');
 
@@ -81,18 +79,16 @@ flock($fp, LOCK_UN);
         <?php if (!empty($rows)) : ?>
           <?php foreach ($rows as $row) : ?>
             <li>
-              <p><?= h($row[2]) ?></p>
               <p>
                 <u style="background:#<?= h($row[1]) ?>;">
                   <span><?= h($row[0]) ?></span>
                 </u>
-                <b style="color:#<?= h($row[1]) ?>;"><?= h($row[3]) ?></b>
+                <b style="color:#<?= h($row[1]) ?>;"><?= h($row[2]) ?></b>
               </p>
             </li>
           <?php endforeach; ?>
         <?php else : ?>
           <li>
-            <p>IP <i><?php echo $ip ?></i></p>
             <p>
               <u style="background:#000;">
                 <span style="color:#fff;">?</span>

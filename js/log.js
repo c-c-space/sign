@@ -13,7 +13,7 @@ let calendarHtml = ''
 
 for (let d = 0; d < today; d++) {
   if (d < 9) {
-    calendarHtml += '<option value="0' + dayCount + '">' + year + '年' + thismonth + '月0' + dayCount + '日' + '</option>'
+    calendarHtml += '<option value="0' + dayCount + '">' + year + '年' + thismonth + '月' + dayCount + '日' + '</option>'
     dayCount++
   }
   else if (dayCount > today) {

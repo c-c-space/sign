@@ -69,7 +69,7 @@ fclose($fp);
 
   <form id="now" method="GET">
     <select id="select" name="day"></select>
-    <button type="submit" name="submit">View The Collection</button>
+    <button type="submit">View The Collection</button>
     <script src="../js/log.js"></script>
   </form>
 

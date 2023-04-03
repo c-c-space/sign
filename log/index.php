@@ -123,11 +123,11 @@ fclose($fp);
     </section>
 
     <nav id="log">
-      <button type="button" id="allBtn" onclick="allView()">
-        <span><?php echo $post;?></span>
-      </button>
       <button type="button" onclick="flashView()">
         <span>色と記号</span>
+      </button>
+      <button type="button" id="allBtn" onclick="allView()">
+        <span><?php echo $post;?> Posts</span>
       </button>
     </nav>
 

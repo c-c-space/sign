@@ -83,7 +83,7 @@
   }
 
   #all ul li {
-    padding: 2.5vw;
+    padding: 2vw;
   }
 
   #all ul p {
@@ -97,7 +97,4 @@
     height: 10vw;
   }
 
-  #all ul li b {
-    margin: 2vw;
-  }
 }

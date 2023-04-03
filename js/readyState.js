@@ -38,12 +38,12 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if(!localStorage.getItem('yourInfo')) {
-      document.querySelector('#submit').innerHTML = ""
+      document.querySelector('#submit').innerHTML = "";
       async function readmeMD() {
-        fetch('readne.md')
+        fetch('about.html')
         .then(response => response.text())
-        .then(readme => {
-          document.querySelector('#submit').innerHTML = readme.replace(/\n/g, "<br>");
+        .then(about => {
+          document.querySelector('#submit').innerHTML = about;
         });
       }
       readmeMD();

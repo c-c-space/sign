@@ -39,6 +39,7 @@ flock($fp, LOCK_UN);
   <script src="js/readyState.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="css/flash.css" />
   <link rel="stylesheet" href="css/submit.css" />

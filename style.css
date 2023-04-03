@@ -101,7 +101,7 @@ input[type="submit"],
   border-radius: 2.5rem;
   font-size: 100%;
   padding: 0.25rem 0.5rem;
-  margin: 0.5rem;
+  margin: 0.75rem 0.5rem;
 }
 
 @keyframes gradient {
@@ -134,5 +134,12 @@ input[type="submit"],
   #now button {
     padding: 1vw;
     margin: 1vw;
+  }
+
+  #now select {
+    border: solid 0.25vw;
+    border-radius: 5vw;
+    padding: 1vw 2vw;
+    margin: 2.5vw;
   }
 }

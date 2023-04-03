@@ -11,8 +11,7 @@ if (isset($_GET["day"])) {
 $year = date("Y");
 $month = date("m");
 $source_file = $year . $month . $day . ".csv";
-
-$fp = fopen($source_file, 'r');
+$fp = fopen($source_file, 'a+b');
 
 function h($str)
 {

@@ -1,55 +1,5 @@
 'use strict'
 
-const symbolAll = document.getElementsByName('symbol');
-let symbolValue = '';
-
-for (let symbol of symbolAll) {
-  symbol.addEventListener('change', () => {
-    let symbolValue = symbol.value;
-    console.log(symbolValue);
-  });
-}
-
-const colorAll = document.getElementsByName("color");
-let colorlValue = '#fff';
-
-for (let color of colorAll) {
-  color.addEventListener('change', () => {
-    let colorlValue = `#${color.value}`;
-    console.log(colorlValue);
-  });
-}
-
-let thisSign = {
-  symbol : symbolValue,
-  color : colorlValue
-};
-
-const signJSON = JSON.stringify(thisSign);
-
-async function submitThis() {
-  let url = 'log.php';
-  let response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: signJSON
-  })
-
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => {
-    console.log(error)
-  });
-
-  setTimeout(() => {
-    location.reload();
-  }, 1000);
-}
-
 function allView() {
   let all = document.querySelector('#all');
   let flash = document.querySelector('#flash');

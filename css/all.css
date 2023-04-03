@@ -97,4 +97,7 @@
     height: 10vw;
   }
 
+  #all ul li b {
+    font-size: 125%;
+  }
 }

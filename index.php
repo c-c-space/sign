@@ -52,7 +52,6 @@ flock($fp, LOCK_UN);
     filter: invert();
   }
   </style>
-  </style>
 </head>
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>

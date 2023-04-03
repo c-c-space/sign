@@ -9,7 +9,7 @@ const endDayCount = endDate.getDate() // 月の末日
 
 let dayCount = 1
 let thismonth = date.getMonth() + 1
-let calendarHtml = ''
+let calendarHtml = '<option selected disabled>Select Date</option>'
 
 for (let d = 0; d < today; d++) {
   if (d < 9) {

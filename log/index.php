@@ -69,7 +69,7 @@ fclose($fp);
 
   <form id="now" action="" method="GET">
     <select id="select" name="day"></select>
-    <button type="submit" name="submit">決定</button>
+    <button type="submit" name="submit">View The Collection</button>
     <script src="../js/log.js"></script>
   </form>
 
@@ -124,7 +124,7 @@ fclose($fp);
 
     <nav id="log">
       <button type="button" onclick="flashView()">
-        <span>色と記号</span>
+        <span><?php echo $year .'年'. date("n") .'月'. $day .'日';?></span>
       </button>
       <button type="button" id="allBtn" onclick="allView()">
         <span><?php echo $post;?> Posts</span>

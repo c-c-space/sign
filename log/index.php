@@ -101,7 +101,7 @@ fclose($fp);
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
-      <script src="js/flash.js" async></script>
+      <script src="../js/flash.js" async></script>
     </section>
 
     <nav id="log">

@@ -10,6 +10,7 @@
 }
 
 #submit {
+  font-family: "SimSong", "MS Mincho", serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,7 +23,6 @@
 #symbol,
 #color {
   border: none;
-  font-family: "SimSong", "MS Mincho", serif;
   font-weight: 500;
   position: relative;
   width: 50%;

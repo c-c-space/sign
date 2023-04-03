@@ -37,7 +37,8 @@ document.addEventListener('readystatechange', event => {
     enterBtn.setAttribute('onClick','changeHidden()')
     document.body.prepend(enterBtn)
 
-    if(!localStorage.getItem('yourInfo')) {
+    if(!localStorage.getItem('')) {
+      document.querySelector('#submit').innerHTML = ""
       async function readmeMD() {
         fetch('readne.md')
         .then(response => response.text())

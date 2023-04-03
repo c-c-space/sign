@@ -92,13 +92,13 @@ flock($fp, LOCK_UN);
           <?php endforeach; ?>
         <?php else : ?>
           <li>
+            <p>IP <i><?php echo $ip ?></i></p>
             <p>
               <u style="background:#000;">
                 <span style="color:#fff;">?</span>
               </u>
               <b>Nothing Here</b>
             </p>
-            <p>IP <i><?php echo $ip ?></i></p>
           </li>
         <?php endif; ?>
       </ul>

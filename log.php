@@ -5,9 +5,11 @@ date_default_timezone_set("Asia/Tokyo");
 
 $month = date("Ym");
 $day = date("d");
+$w = date("w");
+$week_name = array("日", "月", "火", "水", "木", "金", "土");
 $source_file = "log/". $month . $day . ".csv";
 
-$timestamp = date("j.M.y.D g:i:s A");
+$timestamp = date('Y 年 n 月 j 日') . " ($week_name[$w])";
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 $ips = explode(",", $forwardedFor);
 $ip = $ips[0];

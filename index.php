@@ -97,10 +97,7 @@ flock($fp, LOCK_UN);
               </u>
               <b>Nothing Here</b>
             </p>
-            <p>
-              IP
-              <i><?php echo $ip ?></i>
-            </p>
+            <p>IP <i><?php echo $ip ?></i></p>
           </li>
         <?php endif; ?>
       </ul>

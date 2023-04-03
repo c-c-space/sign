@@ -67,8 +67,8 @@ fclose($fp);
   <?php endif; ?>
   #fff);">
 
-  <form id="now" action="" method="GET">
-    <select id="select" name="day"></select>
+  <form id="now" method="GET">
+    <select id="select"></select>
     <button type="submit" name="submit">View The Collection</button>
     <script src="../js/log.js"></script>
   </form>

@@ -33,6 +33,7 @@ document.addEventListener('readystatechange', event => {
     const enterBtn = document.createElement('input')
     enterBtn.setAttribute('type','button')
     enterBtn.setAttribute('id','enter-btn')
+    enterBtn.setAttribute('class','hidden')
     enterBtn.setAttribute('value','?')
     enterBtn.setAttribute('onClick','changeHidden()')
     document.body.prepend(enterBtn)

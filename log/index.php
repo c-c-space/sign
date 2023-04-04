@@ -56,6 +56,16 @@ fclose($fp);
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/flash.css" />
+  <style type="text/css">
+  header {
+    mix-blend-mode: difference;
+  }
+
+  #js-button,
+  #contents a {
+    filter: invert();
+  }
+  </style>
 </head>
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>

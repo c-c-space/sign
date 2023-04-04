@@ -68,8 +68,18 @@ fclose($fp);
   #fff);">
 
   <form id="now" method="GET">
-    <select id="select" name="day"></select>
-    <button type="submit">View The Collection</button>
+    <section>
+      <button type="button" onclick="flashView()">
+        <span><?php echo $year . $month . $day;?></span>
+      </button>
+      <button type="button" id="allBtn" onclick="allView()">
+        <span><?php echo $post;?> Posts</span>
+      </button>
+    </section>
+    <section>
+      <select id="select" name="day"></select>
+      <button type="submit">View The Collection</button>
+    </section>
     <script src="../js/log.js"></script>
   </form>
 
@@ -121,12 +131,6 @@ fclose($fp);
     </section>
 
     <nav id="log">
-      <button type="button" onclick="flashView()">
-        <span><?php echo $year . $month . $day;?></span>
-      </button>
-      <button type="button" id="allBtn" onclick="allView()">
-        <span><?php echo $post;?> Posts</span>
-      </button>
     </nav>
 
     <script type="text/javascript">

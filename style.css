@@ -142,4 +142,10 @@ input[type="submit"],
     padding: 1vw 2vw;
     margin: 2.5vw;
   }
+
+  #now section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }

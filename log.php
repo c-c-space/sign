@@ -9,6 +9,10 @@ $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
 $source_file = "log/". $month . $day . ".csv";
 
+$forwardedFor = $_SERVER["REMOTE_ADDR"];
+$ips = explode(",", $forwardedFor);
+$ip = $ips[0];
+
 $timestamp = date('Y年n月j日') . "($week_name[$w]) " .date("g:i:s A");
 
 define("LOGFILE", $source_file);
@@ -17,7 +21,8 @@ $data = json_decode(file_get_contents("php://input"), true);
 $output = array(
   $data["symbol"],
   $data["color"],
-  $timestamp
+  $timestamp,
+  $ip
 );
 
 $result = implode(',', $output);

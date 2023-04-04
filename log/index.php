@@ -92,7 +92,7 @@ fclose($fp);
     </nav>
   </header>
 
-  <form id="now" method="GET">
+  <form id="now" class="hidden" method="GET">
     <section>
       <button type="button" onclick="flashView()">
         <span><?php echo $year . $month . $day;?></span>

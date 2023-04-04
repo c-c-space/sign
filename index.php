@@ -155,7 +155,7 @@ flock($fp, LOCK_UN);
     </script>
   </main>
 
-  <form id="submit" method="post" hidden>
+  <form id="submit" class="hidden" method="post" hidden>
     <fieldset id="symbol">
       <p>
         <b>Choose A Symbol That Suits on Now Feelings</b>

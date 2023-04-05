@@ -117,6 +117,8 @@ flock($fp, LOCK_UN);
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="js/flash.js" async></script>
     </section>
 
@@ -134,7 +136,6 @@ flock($fp, LOCK_UN);
       </button>
     </nav>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
     function set10(num) {
       let ret;
@@ -151,20 +152,6 @@ flock($fp, LOCK_UN);
       const showTime = nowHour + ":" + nowMin + ":" + nowSec;
       document.querySelector("#showTime").textContent = showTime;
     }
-
-    setInterval('nowOn()', 1000);
-
-    function shuffleContent(container) {
-      let content = container.find("> *");
-      let total = content.length;
-      content.each(function() {
-        content.eq(Math.floor(Math.random() * total)).prependTo(container);
-      });
-    }
-
-    $(function() {
-      shuffleContent($("#flash ul"));
-    });
     </script>
   </main>
 

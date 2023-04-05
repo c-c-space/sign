@@ -20,3 +20,17 @@ function viewSlide(className, i = -1) {
     viewSlide(className, i);
   }, msec);
 }
+
+setInterval('nowOn()', 1000);
+
+function shuffleContent(container) {
+  let content = container.find("> *");
+  let total = content.length;
+  content.each(function() {
+    content.eq(Math.floor(Math.random() * total)).prependTo(container);
+  });
+}
+
+$(function() {
+  shuffleContent($("#flash ul"));
+});

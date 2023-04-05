@@ -134,7 +134,20 @@ flock($fp, LOCK_UN);
       </button>
     </nav>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
+    function shuffleContent(container) {
+      let content = container.find("> *");
+      let total = content.length;
+      content.each(function() {
+        content.eq(Math.floor(Math.random() * total)).prependTo(container);
+      });
+    }
+
+    $(function() {
+      shuffleContent($("#flash ul"));
+    });
+
     function set10(num) {
       let ret;
       if (num < 10) { ret = "0" + num; }

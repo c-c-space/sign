@@ -1,7 +1,8 @@
 #enter-btn,
 #now button,
 #now select,
-#log button {
+#log button,
+.list li {
   display: inline-block;
   font-family: 'Times New Roman', serif;
   font-weight: 500;

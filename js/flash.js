@@ -21,8 +21,6 @@ function viewSlide(className, i = -1) {
   }, msec);
 }
 
-setInterval('nowOn()', 1000);
-
 function shuffleContent(container) {
   let content = container.find("> *");
   let total = content.length;

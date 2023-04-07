@@ -152,6 +152,8 @@ flock($fp, LOCK_UN);
       const showTime = nowHour + ":" + nowMin + ":" + nowSec;
       document.querySelector("#showTime").textContent = showTime;
     }
+
+    setInterval('nowOn()', 1000);
     </script>
   </main>
 

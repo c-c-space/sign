@@ -24,6 +24,14 @@
       "type" : "news",
       "caption" : "none",
       "note" : ""
+    },
+    {
+      "date" : "Speech to Text to Text to Speech",
+      "name" : "Hello こんにちは",
+      "url" : "/hello/",
+      "type" : "news",
+      "caption" : "none",
+      "note" : ""
     }
   ]
 }

@@ -81,7 +81,7 @@ flock($fp, LOCK_UN);
             <li>
               <p>
                 <u style="background:#<?= h($row[1]) ?>;">
-                  <span><?= h($row[0]) ?></span>
+                  <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
                 </u>
                 <b style="color:#<?= h($row[1]) ?>;"><?= h($row[2]) ?></b>
               </p>

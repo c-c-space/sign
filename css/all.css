@@ -67,6 +67,7 @@
 
 #all ul li u span {
   font-size: 150%;
+  filter: invert();
 }
 
 #all ul li b {

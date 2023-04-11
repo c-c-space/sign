@@ -116,7 +116,7 @@ fclose($fp);
             <li>
               <p>
                 <u style="background:#<?= h($row[1]) ?>;">
-                  <span><?= h($row[0]) ?></span>
+                  <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
                 </u>
                 <b style="color:#<?= h($row[1]) ?>;"><?= h($row[2]) ?></b>
               </p>
@@ -126,7 +126,7 @@ fclose($fp);
           <li>
             <p>
               <u style="background:#000;">
-                <span style="color:#fff;">?</span>
+                <span style="color:#000;">?</span>
               </u>
               <b>Nothing Here</b>
             </p>

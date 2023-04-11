@@ -148,3 +148,10 @@ input[type="submit"],
     width: 100%;
   }
 }
+
+@media print {
+  body {
+    background-size: 100% 100%;
+    animation: gradient none;
+  }
+}

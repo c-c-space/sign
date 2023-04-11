@@ -16,6 +16,20 @@ body {
   margin: 0;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -104,20 +118,6 @@ input[type="submit"],
   margin: 0.75rem 0.5rem;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 100% 0%;
-  }
-
-  50% {
-    background-position: 100% 100%;
-  }
-
-  100% {
-    background-position: 100% 0%;
-  }
-}
-
 @media screen and (max-width: 550px) {
   #enter-btn {
     font-size: 10vw;
@@ -153,5 +153,10 @@ input[type="submit"],
   body {
     background-size: 100% 100%;
     animation: gradient none;
+  }
+
+  #menu,
+  #now {
+    display: none;
   }
 }

@@ -101,7 +101,7 @@ fclose($fp);
         <?php if (!empty($rows)) : ?>
           <?php foreach ($rows as $row) : ?>
             <li style="background:#<?= h($row[1]) ?>;">
-              <span><?= h($row[0]) ?></span>
+              <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
             </li>
           <?php endforeach; ?>
         <?php else : ?>

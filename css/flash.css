@@ -41,7 +41,7 @@
 }
 
 #flash ul li b {
-  font-family: "YuGothic", "Yu Gothic", "游ゴシック体";
+  font-family: 'Times New Roman', serif;
   font-size: 5rem;
   filter: invert();
 }

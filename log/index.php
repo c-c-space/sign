@@ -35,6 +35,9 @@ fclose($fp);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
 
+  <script src="../../js/index.js" async></script>
+  <script src="../js/readyState.js"></script>
+
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/flash.css" />
@@ -66,14 +69,6 @@ fclose($fp);
       <a href="/" target="_parent">
         <p><b>creative-community.space</b></p>
         <u>Index</u>
-      </a>
-      <a href="/sign/" target="_parent">
-        <i>Colors and Symbols that Suits on Today</i>
-        <p>今日の気持ちを知る・表す</p>
-      </a>
-      <a href="/sign/log/" target="_parent">
-        <i>View The Collection</i>
-        <p>今月の色と記号</p>
       </a>
     </nav>
   </header>
@@ -142,32 +137,6 @@ fclose($fp);
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>
-
-    <script type="text/javascript">
-    function allView() {
-      let all = document.querySelector('#all');
-      let flash = document.querySelector('#flash');
-      if (all.style.opacity == 1) {
-        all.style.opacity = 0;
-        flash.style.opacity = 0;
-      } else {
-        all.style.opacity = 1;
-        flash.style.opacity = 0;
-      }
-    }
-
-    function flashView() {
-      let flash = document.querySelector('#flash');
-      let all = document.querySelector('#all');
-      if (flash.style.opacity == 1) {
-        flash.style.opacity = 0;
-        all.style.opacity = 0;
-      } else {
-        flash.style.opacity = 1;
-        all.style.opacity = 0;
-      }
-    }
-    </script>
   </main>
 </body>
 </html>

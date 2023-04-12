@@ -181,7 +181,7 @@ fclose($fp);
     }
 
     const selectModal = document.querySelector('#log select');
-    const optionModal = document.querySelectorAll("#log option");
+    const optionModal = document.querySelectorAll("#log select option");
 
     selectModal.addEventListener('change', function() {
       const index =  this.selectedIndex;

@@ -13,7 +13,7 @@ $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));
 
-$title = '令和三年三月の気持ちを知る・表す';
+$title = '令和三年三月';
 $description = $post. 'の色と記号';
 
 function h($str)
@@ -35,10 +35,10 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <title><?php echo $title; ?></title>
-  <meta name="description" content="<?php echo $title . $description; ?>">
-  <meta property="og:title" content="<?php echo $title; ?>" />
-  <meta property="og:description" content="<?php echo $title . $description; ?>" />
+  <title><?php echo $title ."の気持ちを知る・表す"; ?></title>
+  <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
+  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>" />
+  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>" />
   <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>" />
   <meta property="og:url" content="<?php echo $url; ?>" />
   <meta property="og:type" content="website" />
@@ -91,7 +91,7 @@ fclose($fp);
 
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
-      <span>令和三年三月</span>
+      <span><?php echo $title;?></span>
     </button>
     <button type="button" id="allBtn" onclick="allView()">
       <span><?php echo $post;?> の色と記号</span>

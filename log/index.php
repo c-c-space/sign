@@ -138,5 +138,9 @@ fclose($fp);
       <script src="../js/flash.js" async></script>
     </section>
   </main>
+
+  <form id="submit" class="hidden" method="post" hidden>
+HHH
+  </form>
 </body>
 </html>

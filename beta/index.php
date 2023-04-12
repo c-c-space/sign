@@ -141,8 +141,8 @@ fclose($fp);
     <select>
       <option selected disabled>今日の気持ちを知る・表す</option>
     </select>
-
-    <script src="script.js"></script>
   </nav>
+
+  <script src="script.js"></script>
 </body>
 </html>

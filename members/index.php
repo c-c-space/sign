@@ -73,20 +73,39 @@ fclose($fp);
 
   <form id="now" class="hidden" method="GET">
     <section>
+      <button type="button" onclick="flashView()">
+        <span><?php echo $month;?>号</span>
+      </button>
+      <button type="button" onclick="allView()">
+        <span><?php echo $post;?> の色と記号</span>
+      </button>
+    </section>
+    <section>
       <select id="month" name="month">
         <option disabled selected hidden>Members Only</option>
       </select>
       <button type="submit">View The Collection</button>
     </section>
-    <section>
-      <button type="button" id="allBtn" onclick="flashView()">
-        <span><?php echo $post;?> の色と記号</span>
-      </button>
-    </section>
-    <script src="month.js"></script>
+    <script src="script.js"></script>
   </form>
 
   <main>
+    <section id="all">
+      <ul>
+        <?php if (!empty($rows)) : ?>
+          <?php foreach ($rows as $row) : ?>
+            <li style="background:#<?= h($row[1]) ?>;">
+              <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
+            </li>
+          <?php endforeach; ?>
+        <?php else : ?>
+          <li style="background:#000;">
+            <span style="color:#fff;">?</span>
+          </li>
+        <?php endif; ?>
+      </ul>
+    </section>
+
     <section id="flash">
       <ul>
         <?php if (!empty($rows)) : ?>
@@ -107,21 +126,6 @@ fclose($fp);
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>
-
-    <nav id="log"></nav>
-
-    <script type="text/javascript">
-    function flashView() {
-      let flash = document.querySelector('#flash');
-      if (flash.style.opacity == 1) {
-        flash.style.opacity = 0;
-        flash.style.zIndex = 0;
-      } else {
-        flash.style.opacity = 1;
-        flash.style.zIndex = 1;
-      }
-    }
-    </script>
   </main>
 </body>
 </html>

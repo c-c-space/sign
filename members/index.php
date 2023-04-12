@@ -78,10 +78,9 @@ fclose($fp);
       </select>
       <button type="submit">View The Collection</button>
     </section>
-    <span><?php echo $month;?></span>
     <section>
       <button type="button" id="allBtn" onclick="flashView()">
-        <span><?php echo $post;?> の色と記号</span>
+        <span><?php echo $month . $post;?> の色と記号</span>
       </button>
     </section>
     <script src="month.js"></script>

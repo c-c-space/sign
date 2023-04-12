@@ -180,7 +180,7 @@ fclose($fp);
       }
     }
 
-    const selectModal = document.querySelector('#log');
+    const selectModal = document.querySelector('#log select');
     const optionModal = document.querySelectorAll("#log option");
 
     selectModal.addEventListener('change', function() {

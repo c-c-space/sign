@@ -71,6 +71,8 @@ fclose($fp);
     </nav>
   </header>
 
+  <span><?php echo $month;?></span>
+
   <form id="now" class="hidden" method="GET">
     <section>
       <select id="month" name="month">

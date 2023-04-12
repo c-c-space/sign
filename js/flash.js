@@ -2,18 +2,6 @@
 
 window.addEventListener('load', function () {
   viewSlide('#flash ul li');
-
-  function shuffleContent(container) {
-    let content = container.find("> *");
-    let total = content.length;
-    content.each(function() {
-      content.eq(Math.floor(Math.random() * total)).prependTo(container);
-    });
-  }
-
-  $(function() {
-    shuffleContent($("#flash ul"));
-  });
 });
 
 function viewSlide(className, i = -1) {

@@ -80,7 +80,7 @@ fclose($fp);
     </section>
     <section>
       <button type="button" id="allBtn" onclick="flashView()">
-        <span><?php echo $month;?> の色と記号</span>
+        <span><?php echo $post;?> の色と記号</span>
       </button>
     </section>
     <script src="month.js"></script>

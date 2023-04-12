@@ -98,17 +98,6 @@ fclose($fp);
     </button>
   </form>
 
-<nav id="log">
-    <select>
-      <option selected disabled>今日の気持ちを知る・表す</option>
-      <option value="202104.php">令和三年四月</option>
-      <option value="202105.php">令和三年五月</option>
-      <option value="202106.php">令和三年六月</option>
-      <option value="202107.php">令和三年七月</option>
-      <option value="202108.php">令和三年八月</option>
-    </select>
-</nav>
-
   <main>
     <section id="all">
       <ul>
@@ -146,48 +135,19 @@ fclose($fp);
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>
-
-    <script type="text/javascript">
-    function allView() {
-      let all = document.querySelector('#all');
-      let flash = document.querySelector('#flash');
-      if (all.style.opacity == 1) {
-        all.style.opacity = 0;
-        flash.style.opacity = 0;
-        all.style.zIndex = 0;
-        flash.style.zIndex = 0;
-      } else {
-        all.style.opacity = 1;
-        flash.style.opacity = 0;
-        all.style.zIndex = 1;
-        flash.style.zIndex = 0;
-      }
-    }
-
-    function flashView() {
-      let flash = document.querySelector('#flash');
-      let all = document.querySelector('#all');
-      if (flash.style.opacity == 1) {
-        flash.style.opacity = 0;
-        all.style.opacity = 0;
-        flash.style.zIndex = 0;
-        all.style.zIndex = 0;
-      } else {
-        flash.style.opacity = 1;
-        all.style.opacity = 0;
-        flash.style.zIndex = 1;
-        all.style.zIndex = 0;
-      }
-    }
-
-    const selectModal = document.querySelector('#log select');
-    const optionModal = document.querySelectorAll("#log select option");
-
-    selectModal.addEventListener('change', function() {
-      const index =  this.selectedIndex;
-      window.location.assign(optionModal[index].value);
-    });
-    </script>
   </main>
+
+  <nav id="log">
+    <select>
+      <option selected disabled>今日の気持ちを知る・表す</option>
+      <option value="202104.php">令和三年四月</option>
+      <option value="202105.php">令和三年五月</option>
+      <option value="202106.php">令和三年六月</option>
+      <option value="202107.php">令和三年七月</option>
+      <option value="202108.php">令和三年八月</option>
+    </select>
+
+    <script src="text/script.js"></script>
+  </nav>
 </body>
 </html>

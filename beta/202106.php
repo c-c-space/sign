@@ -37,9 +37,9 @@ fclose($fp);
   <meta name="format-detection" content="telephone=no" />
   <title><?php echo $title ."の気持ちを知る・表す"; ?></title>
   <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
-  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>" />
-  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>" />
-  <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>" />
+  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>">
+  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
+  <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
   <meta property="og:url" content="<?php echo $url; ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
@@ -135,43 +135,19 @@ fclose($fp);
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>
-
-    <nav id="log">
-    </nav>
-
-    <script type="text/javascript">
-    function allView() {
-      let all = document.querySelector('#all');
-      let flash = document.querySelector('#flash');
-      if (all.style.opacity == 1) {
-        all.style.opacity = 0;
-        flash.style.opacity = 0;
-        all.style.zIndex = 0;
-        flash.style.zIndex = 0;
-      } else {
-        all.style.opacity = 1;
-        flash.style.opacity = 0;
-        all.style.zIndex = 1;
-        flash.style.zIndex = 0;
-      }
-    }
-
-    function flashView() {
-      let flash = document.querySelector('#flash');
-      let all = document.querySelector('#all');
-      if (flash.style.opacity == 1) {
-        flash.style.opacity = 0;
-        all.style.opacity = 0;
-        flash.style.zIndex = 0;
-        all.style.zIndex = 0;
-      } else {
-        flash.style.opacity = 1;
-        all.style.opacity = 0;
-        flash.style.zIndex = 1;
-        all.style.zIndex = 0;
-      }
-    }
-    </script>
   </main>
+
+  <nav id="log">
+    <select>
+      <option selected disabled>今日の気持ちを知る・表す</option>
+      <option value="202104.php">令和三年四月</option>
+      <option value="202105.php">令和三年五月</option>
+      <option value="202106.php">令和三年六月</option>
+      <option value="202107.php">令和三年七月</option>
+      <option value="202108.php">令和三年八月</option>
+    </select>
+
+    <script src="text/script.js"></script>
+  </nav>
 </body>
 </html>

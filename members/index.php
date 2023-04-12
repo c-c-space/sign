@@ -6,7 +6,7 @@ date_default_timezone_set('Asia/Tokyo');
 $site = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}";
 $url = "{$site}" . "{$_SERVER['REQUEST_URI']}";
 
-$month = date("m");
+$month = '202104';
 if (isset($_GET["month"])) {
   $month = $_GET["month"];
 }

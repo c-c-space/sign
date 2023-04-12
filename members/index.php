@@ -74,7 +74,7 @@ fclose($fp);
   <form id="now" class="hidden" method="GET">
     <section>
       <button type="button" onclick="flashView()">
-        <span><?php echo $month;?>号</span>
+        <span><?php echo $month;?></span>
       </button>
       <button type="button" onclick="allView()">
         <span><?php echo $post;?> の色と記号</span>
@@ -86,7 +86,6 @@ fclose($fp);
       </select>
       <button type="submit">View The Collection</button>
     </section>
-    <script src="script.js"></script>
   </form>
 
   <main>
@@ -127,5 +126,6 @@ fclose($fp);
       <script src="../js/flash.js" async></script>
     </section>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

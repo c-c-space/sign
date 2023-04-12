@@ -1,7 +1,6 @@
 <?php
 mb_language("ja");
 mb_internal_encoding("UTF-8");
-date_default_timezone_set('Asia/Tokyo');
 
 $month = "202104";
 if (isset($_GET["month"])) {
@@ -10,7 +9,6 @@ if (isset($_GET["month"])) {
 
 $source_file = $month . ".csv";
 $fp = fopen($source_file, 'a+b');
-
 $post = sizeof(file($source_file));
 
 function h($str)
@@ -75,37 +73,20 @@ fclose($fp);
 
   <form id="now" class="hidden" method="GET">
     <section>
-      <button type="button" onclick="flashView()">
-        <span><?php echo $month;?></span>
-      </button>
-      <button type="button" id="allBtn" onclick="allView()">
-        <span><?php echo $post;?> の色と記号</span>
-      </button>
+      <select id="month" name="month">
+        <option disabled selected hidden>View The Collection</option>
+      </select>
+      <button type="submit">GET</button>
     </section>
     <section>
-      <select id="month" name="month"></select>
-      <button type="submit">View The Collection</button>
+      <button type="button" id="allBtn" onclick="flashView()">
+        <span><?php echo $post;?> の色と記号</span>
+      </button>
     </section>
     <script src="month.js"></script>
   </form>
 
   <main>
-    <section id="all">
-      <ul>
-        <?php if (!empty($rows)) : ?>
-          <?php foreach ($rows as $row) : ?>
-            <li style="background:#<?= h($row[1]) ?>;">
-              <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
-            </li>
-          <?php endforeach; ?>
-        <?php else : ?>
-          <li style="background:#000;">
-            <span style="color:#fff;">?</span>
-          </li>
-        <?php endif; ?>
-      </ul>
-    </section>
-
     <section id="flash">
       <ul>
         <?php if (!empty($rows)) : ?>
@@ -130,35 +111,14 @@ fclose($fp);
     <nav id="log"></nav>
 
     <script type="text/javascript">
-    function allView() {
-      let all = document.querySelector('#all');
-      let flash = document.querySelector('#flash');
-      if (all.style.opacity == 1) {
-        all.style.opacity = 0;
-        flash.style.opacity = 0;
-        all.style.zIndex = 0;
-        flash.style.zIndex = 0;
-      } else {
-        all.style.opacity = 1;
-        flash.style.opacity = 0;
-        all.style.zIndex = 1;
-        flash.style.zIndex = 0;
-      }
-    }
-
     function flashView() {
       let flash = document.querySelector('#flash');
-      let all = document.querySelector('#all');
       if (flash.style.opacity == 1) {
         flash.style.opacity = 0;
-        all.style.opacity = 0;
         flash.style.zIndex = 0;
-        all.style.zIndex = 0;
       } else {
         flash.style.opacity = 1;
-        all.style.opacity = 0;
         flash.style.zIndex = 1;
-        all.style.zIndex = 0;
       }
     }
     </script>

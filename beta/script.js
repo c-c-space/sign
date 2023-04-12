@@ -32,14 +32,12 @@ function allView() {
     selectModal.style.opacity = 0;
     all.style.zIndex = 0;
     flash.style.zIndex = 0;
-    selectModal.style.opacity = 0;
   } else {
     all.style.opacity = 1;
     flash.style.opacity = 0;
     selectModal.style.opacity = 0;
     all.style.zIndex = 1;
     flash.style.zIndex = 0;
-    selectModal.style.opacity = 0;
   }
 }
 

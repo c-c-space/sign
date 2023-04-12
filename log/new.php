@@ -77,7 +77,7 @@ fclose($fp);
   <form id="now" class="hidden" method="GET">
     <section>
       <button type="button" onclick="flashView()">
-        <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
+        <span><?php echo date("n");?> 月 <?php echo $day;?> 日</span>
       </button>
       <button type="button" id="allBtn" onclick="allView()">
         <span><?php echo $post;?> の色と記号</span>

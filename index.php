@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Tokyo');
 
 $month = date("Ym");
 $day = date("d");
-$source_file = "log/". $month . $day . ".csv";
+$source_file = "log/". $month ."/". $day . ".csv";
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 

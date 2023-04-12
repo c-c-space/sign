@@ -147,7 +147,7 @@ fclose($fp);
       <option value="202108.php">令和三年八月</option>
     </select>
 
-    <script src="text/script.js"></script>
+    <script src="script.js"></script>
   </nav>
 </body>
 </html>

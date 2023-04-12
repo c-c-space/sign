@@ -125,7 +125,7 @@ while ($row = fgetcsv($fp)) {
         <span>
           <?php
           date_default_timezone_set('Asia/Tokyo');
-          print(date('Y 年 n 月 j 日') . " ($week_name[$w])")
+          print(date('n 月 j 日') . " ($week_name[$w])")
           ?>
         </span>
       </button>

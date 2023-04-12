@@ -7,7 +7,7 @@ $month = date("Ym");
 $day = date("d");
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");
-$source_file = "log/". $month . $day . ".csv";
+$source_file = "log/". $month ."/". $day . ".csv";
 
 $forwardedFor = $_SERVER["REMOTE_ADDR"];
 $ips = explode(",", $forwardedFor);

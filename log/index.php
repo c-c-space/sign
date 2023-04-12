@@ -71,6 +71,10 @@ fclose($fp);
         <i>Colors and Symbols that Suits on Today</i>
         <p>今日の気持ちを知る・表す</p>
       </a>
+      <a href="/sign/log/" target="_parent">
+        <i>View The Collection</i>
+        <p>今月の色と記号</p>
+      </a>
     </nav>
   </header>
 

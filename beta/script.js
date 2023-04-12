@@ -34,7 +34,7 @@ function allView() {
     log.style.opacity = 1;
     all.style.zIndex = 0;
     flash.style.zIndex = 0;
-    log.style.zIndex = 1;
+    log.style.zIndex = 100;
   } else {
     all.style.opacity = 1;
     flash.style.opacity = 0;
@@ -52,7 +52,7 @@ function flashView() {
     log.style.opacity = 1;
     flash.style.zIndex = 0;
     all.style.zIndex = 0;
-    log.style.zIndex = 1;
+    log.style.zIndex = 100;
   } else {
     flash.style.opacity = 1;
     all.style.opacity = 0;

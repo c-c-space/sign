@@ -1,7 +1,8 @@
 #enter-btn,
 #now button,
 #now select,
-#log button {
+#log button,
+#log select {
   display: inline-block;
   font-family: 'Times New Roman', serif;
   font-weight: 500;
@@ -50,7 +51,8 @@ input {
 button,
 input[type="button"],
 input[type="submit"],
-#now select {
+#now select,
+#log select {
   appearance : none;
   border: none;
   cursor: pointer;
@@ -110,12 +112,15 @@ input[type="submit"],
   user-select: auto;
 }
 
-#now select {
+#now select,
+#log select {
   border: solid 1px;
   border-radius: 2.5rem;
   font-size: 100%;
   padding: 0.25rem 0.5rem;
   margin: 0.75rem 0.5rem;
+  pointer-events: auto;
+  user-select: auto;
 }
 
 @media screen and (max-width: 550px) {
@@ -135,7 +140,8 @@ input[type="submit"],
     margin: 0 2.5vw 2.5vw;
   }
 
-  #now select {
+  #now select,
+  #log select {
     border: solid 0.25vw;
     border-radius: 5vw;
     padding: 1vw 2vw;

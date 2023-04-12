@@ -37,9 +37,9 @@ fclose($fp);
   <meta name="format-detection" content="telephone=no" />
   <title><?php echo $title ."の気持ちを知る・表す"; ?></title>
   <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
-  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>" />
-  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>" />
-  <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>" />
+  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>">
+  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
+  <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
   <meta property="og:url" content="<?php echo $url; ?>" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
@@ -98,6 +98,17 @@ fclose($fp);
     </button>
   </form>
 
+<nav id="log">
+    <select>
+      <option selected disabled>今日の気持ちを知る・表す</option>
+      <option value="202104.php">令和三年四月</option>
+      <option value="202105.php">令和三年五月</option>
+      <option value="202106.php">令和三年六月</option>
+      <option value="202107.php">令和三年七月</option>
+      <option value="202108.php">令和三年八月</option>
+    </select>
+</nav>
+
   <main>
     <section id="all">
       <ul>
@@ -136,9 +147,6 @@ fclose($fp);
       <script src="../js/flash.js" async></script>
     </section>
 
-    <nav id="log">
-    </nav>
-
     <script type="text/javascript">
     function allView() {
       let all = document.querySelector('#all');
@@ -171,6 +179,14 @@ fclose($fp);
         all.style.zIndex = 0;
       }
     }
+
+    const selectModal = document.querySelector('#log');
+    const optionModal = document.querySelectorAll("#log option");
+
+    selectModal.addEventListener('change', function() {
+      const index =  this.selectedIndex;
+      window.location.assign(optionModal[index].value);
+    });
     </script>
   </main>
 </body>

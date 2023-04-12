@@ -35,8 +35,6 @@
 #flash ul li {
   opacity: 0;
   display: grid;
-  justify-items: center;
-  align-items: center;
   place-items: center;
 }
 

@@ -80,7 +80,7 @@ fclose($fp);
         <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
       </button>
       <button type="button" id="allBtn" onclick="allView()">
-        <span><?php echo $post ."の";?> 色と記号</span>
+        <span><?php echo $post;?> の色と記号</span>
       </button>
     </section>
     <section>

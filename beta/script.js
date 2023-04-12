@@ -7,19 +7,19 @@ getMonth = {
   '202108.php': ['令和三年八月'],
 }
 
-const selectModal = document.querySelector('#log select');
+const selectMonth = document.querySelector('#log select');
 const monthAll = Object.entries(getMonth)
 monthAll.forEach((month) => {
   const optionMonth = document.createElement('option')
   optionMonth.setAttribute("value", month[0])
   optionMonth.innerText = Object.values(month[1])[0]
-  selectModal.appendChild(optionMonth)
+  selectMonth.appendChild(optionMonth)
 });
 
-selectModal.addEventListener('change', function() {
-  const optionModal = document.querySelectorAll("#log select option");
+selectMonth.addEventListener('change', function() {
+  const selectOption = document.querySelectorAll("#log select option");
   const index =  this.selectedIndex;
-  window.location.assign(optionModal[index].value);
+  window.location.assign(selectOption[index].value);
 });
 
 

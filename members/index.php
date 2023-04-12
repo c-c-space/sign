@@ -46,6 +46,7 @@ fclose($fp);
   }
   </style>
 </head>
+
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>
   <?php foreach ($rows as $row) : ?>
@@ -126,6 +127,8 @@ fclose($fp);
       <script src="../js/flash.js" async></script>
     </section>
   </main>
+
   <script src="script.js"></script>
+
 </body>
 </html>

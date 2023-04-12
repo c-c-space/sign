@@ -13,12 +13,13 @@ getMonth = {
   '202209': ['令和四年九月'],
 }
 
+const selectMonth = document.querySelector('#month');
 const monthAll = Object.entries(getMonth)
 monthAll.forEach((month) => {
   const optionMonth = document.createElement('option')
   optionMonth.setAttribute("value", month[0])
   optionMonth.innerText = Object.values(month[1])[0]
-  document.querySelector('#month').appendChild(optionMonth)
+  selectMonth.appendChild(optionMonth)
 });
 
 

@@ -36,7 +36,6 @@ fclose($fp);
   <meta name="format-detection" content="telephone=no" />
 
   <script src="../../js/index.js" async></script>
-  <script src="../js/readyState.js"></script>
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
@@ -138,9 +137,40 @@ fclose($fp);
       <script src="../js/flash.js" async></script>
     </section>
   </main>
+  <script type="text/javascript">
+  'use strict'
 
-  <form id="submit" class="hidden" method="post" hidden>
-HHH
-  </form>
+  function allView() {
+    let all = document.querySelector('#all');
+    let flash = document.querySelector('#flash');
+    if (all.style.opacity == 1) {
+      all.style.opacity = 0;
+      flash.style.opacity = 0;
+      all.style.zIndex = 0;
+      flash.style.zIndex = 0;
+    } else {
+      all.style.opacity = 1;
+      flash.style.opacity = 0;
+      all.style.zIndex = 1;
+      flash.style.zIndex = 0;
+    }
+  }
+
+  function flashView() {
+    let flash = document.querySelector('#flash');
+    let all = document.querySelector('#all');
+    if (flash.style.opacity == 1) {
+      flash.style.opacity = 0;
+      all.style.opacity = 0;
+      flash.style.zIndex = 0;
+      all.style.zIndex = 0;
+    } else {
+      flash.style.opacity = 1;
+      all.style.opacity = 0;
+      flash.style.zIndex = 1;
+      all.style.zIndex = 0;
+    }
+  }
+  </script>
 </body>
 </html>

@@ -26,11 +26,9 @@ function h($str)
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-flock($fp, LOCK_SH);
 while ($row = fgetcsv($fp)) {
   $rows[] = $row;
 }
-flock($fp, LOCK_UN);
 fclose($fp);
 ?>
 

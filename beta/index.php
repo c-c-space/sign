@@ -58,6 +58,12 @@ fclose($fp);
     mix-blend-mode: difference;
   }
 
+  #log select {
+    margin: 0 1rem;
+    transform:rotate(90deg) scale(1, 1.1);
+    transform-origin: 0 100%;
+  }
+
   #js-button,
   #contents a {
     filter: invert();

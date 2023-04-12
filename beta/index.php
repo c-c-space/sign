@@ -140,11 +140,6 @@ fclose($fp);
   <nav id="log">
     <select>
       <option selected disabled>今日の気持ちを知る・表す</option>
-      <option value="202104.php">令和三年四月</option>
-      <option value="202105.php">令和三年五月</option>
-      <option value="202106.php">令和三年六月</option>
-      <option value="202107.php">令和三年七月</option>
-      <option value="202108.php">令和三年八月</option>
     </select>
 
     <script src="script.js"></script>

@@ -76,7 +76,7 @@ fclose($fp);
       <select id="month" name="month">
         <option disabled selected hidden>View The Collection</option>
       </select>
-      <button type="submit">GET</button>
+      <button type="submit">決定</button>
     </section>
     <section>
       <button type="button" id="allBtn" onclick="flashView()">

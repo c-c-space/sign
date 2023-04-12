@@ -6,19 +6,17 @@ date_default_timezone_set('Asia/Tokyo');
 $site = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}";
 $url = "{$site}" . "{$_SERVER['REQUEST_URI']}";
 
-$day = date("d");
-if (isset($_GET["day"])) {
-  $day = $_GET["day"];
+$month = date("m");
+if (isset($_GET["month"])) {
+  $month = $_GET["month"];
 }
 
-$year = date("Y");
-$month = date("m");
-$source_file = $year . $month . $day . ".csv";
+$source_file = $month . ".csv";
 $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));
 
-$title = $year .'年'. date("n") .'月の気持ちを知る・表す';
+$title = $month 'の気持ちを知る・表す';
 $description = $post. 'の色と記号';
 
 function h($str)
@@ -49,12 +47,15 @@ fclose($fp);
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:image" content="<?php echo $url; ?>card.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="<?php echo $url; ?>card.png" />
 
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/all.css" />
+  <link rel="stylesheet" href="../css/viewall.css" />
   <link rel="stylesheet" href="../css/flash.css" />
+
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">
   <style type="text/css">
   header {
     mix-blend-mode: difference;
@@ -94,17 +95,17 @@ fclose($fp);
   <form id="now" class="hidden" method="GET">
     <section>
       <button type="button" onclick="flashView()">
-        <span><?php echo $year . $month . $day;?></span>
+        <span><?php echo $month;?></span>
       </button>
       <button type="button" id="allBtn" onclick="allView()">
-        <span><?php echo $post;?> Posts</span>
+        <span><?php echo $post;?> の色と記号</span>
       </button>
     </section>
     <section>
-      <select id="select" name="day"></select>
+      <select id="month" name="month"></select>
       <button type="submit">View The Collection</button>
     </section>
-    <script src="../js/log.js"></script>
+    <script src="month.js"></script>
   </form>
 
   <main>
@@ -112,23 +113,13 @@ fclose($fp);
       <ul>
         <?php if (!empty($rows)) : ?>
           <?php foreach ($rows as $row) : ?>
-            <li>
-              <p>
-                <u style="background:#<?= h($row[1]) ?>;">
-                  <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
-                </u>
-                <b style="color:#<?= h($row[1]) ?>;"><?= h($row[2]) ?></b>
-              </p>
+            <li style="background:#<?= h($row[1]) ?>;">
+              <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
             </li>
           <?php endforeach; ?>
         <?php else : ?>
-          <li>
-            <p>
-              <u style="background:#000;">
-                <span style="color:#000;">?</span>
-              </u>
-              <b>Nothing Here</b>
-            </p>
+          <li style="background:#000;">
+            <span style="color:#fff;">?</span>
           </li>
         <?php endif; ?>
       </ul>
@@ -151,13 +142,11 @@ fclose($fp);
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
-
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>
 
-    <nav id="log">
-    </nav>
+    <nav id="log"></nav>
 
     <script type="text/javascript">
     function allView() {
@@ -166,9 +155,13 @@ fclose($fp);
       if (all.style.opacity == 1) {
         all.style.opacity = 0;
         flash.style.opacity = 0;
+        all.style.zIndex = 0;
+        flash.style.zIndex = 0;
       } else {
         all.style.opacity = 1;
         flash.style.opacity = 0;
+        all.style.zIndex = 1;
+        flash.style.zIndex = 0;
       }
     }
 
@@ -178,9 +171,13 @@ fclose($fp);
       if (flash.style.opacity == 1) {
         flash.style.opacity = 0;
         all.style.opacity = 0;
+        flash.style.zIndex = 0;
+        all.style.zIndex = 0;
       } else {
         flash.style.opacity = 1;
         all.style.opacity = 0;
+        flash.style.zIndex = 1;
+        all.style.zIndex = 0;
       }
     }
     </script>

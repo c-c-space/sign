@@ -132,7 +132,6 @@ fclose($fp);
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
-
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="../js/flash.js" async></script>
     </section>

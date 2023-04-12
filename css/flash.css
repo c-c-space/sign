@@ -67,7 +67,7 @@
   border-radius: 5rem;
   box-sizing: border-box;
   padding: 0 0.25rem;
-  margin: 1.25rem auto;
+  margin: 2.5rem auto;
   width: 75%;
   max-width: 750px;
   height: 2rem;
@@ -90,7 +90,7 @@
   #speed input[type="range"] {
     border-radius: 5vw;
     padding: 0 0.5vw;
-    margin: 5vw auto;
+    margin: 10vw auto;
     width: 55%;
     height: 7.5vw;
   }

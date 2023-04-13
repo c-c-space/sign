@@ -76,10 +76,10 @@ require('function.php');
 
     <section id="flash">
       <ul>
-        <?php if (!empty($rows)):?>
-          <?php foreach (shuffle($rows) as $row):?>
-            <li style="background:#<?= h($row[1])?>;">
-              <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
+        <?php if (!empty($shuffles)):?>
+          <?php foreach ($shuffles as $shuffle):?>
+            <li style="background:#<?= h($shuffle[1])?>;">
+              <b style="color:#<?= h($shuffle[1])?>;"><?= h($shuffle[0])?></b>
             </li>
           <?php endforeach;?>
         <?php else:?>
@@ -88,6 +88,21 @@ require('function.php');
           </li>
         <?php endif;?>
       </ul>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript">
+      function shuffleContent(container) {
+        let content = container.find("> *");
+        let total = content.length;
+        content.each(function() {
+          content.eq(Math.floor(Math.random() * total)).prependTo(container);
+        });
+      }
+
+      $(function() {
+        shuffleContent($("#flash ul"));
+      });
+      </script>
 
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">

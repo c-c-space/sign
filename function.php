@@ -18,10 +18,6 @@ function h($str)
 }
 
 while ($row = fgetcsv($fp)) {
-  $rows[] = $row;
-}
-
-while ($shuffles = fgetcsv($fp)) {
-  $shuffle[] = shuffle($shuffles);
+  $rows[] = shuffle($row);
 }
 ?>

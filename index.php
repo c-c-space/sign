@@ -76,10 +76,10 @@ require('function.php');
 
     <section id="flash">
       <ul>
-        <?php if (!empty($shuffles)):?>
-          <?php foreach ($shuffles as $shuffle):?>
-            <li style="background:#<?= h($shuffle[1])?>;">
-              <b style="color:#<?= h($shuffle[1])?>;"><?= h($shuffle[0])?></b>
+        <?php if (!empty($rows)):?>
+          <?php foreach ($rows as $row):?>
+            <li style="background:#<?= h($row[1])?>;">
+              <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
             </li>
           <?php endforeach;?>
         <?php else:?>

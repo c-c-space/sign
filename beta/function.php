@@ -16,6 +16,8 @@ array_unshift($data, array(
   "month" => $month
 ));
 
+$json = json_encode($data);
+
 $source_file = $year . $month . $day . ".csv";
 $fp = fopen($source_file, "a+b");
 $post = sizeof(file($source_file));

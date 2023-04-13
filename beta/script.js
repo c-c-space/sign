@@ -87,6 +87,15 @@ document.addEventListener('readystatechange', event => {
           },
           body: thisJSON
         })
+
+        // 返ってきたレスポンスをJSONで受け取り、次のthenへ渡す
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+        })
+        .catch(error => {
+          console.log(error)
+        });
       }
 
       functionPHP();

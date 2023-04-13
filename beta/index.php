@@ -73,21 +73,6 @@ fclose($fp);
   <?php endif; ?>
   #fff);">
 
-  <script src="/js/menu.js"></script>
-  <header id="menu" hidden>
-    <button id="js-button"><b></b></button>
-    <nav id="contents">
-      <a href="/" target="_parent">
-        <p><b>creative-community.space</b></p>
-        <u>Index</u>
-      </a>
-      <a href="/sign/" target="_parent">
-        <i>Colors and Symbols that Suits on Today</i>
-        <p>今日の気持ちを知る・表す</p>
-      </a>
-    </nav>
-  </header>
-
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
       <span><?php echo $title;?></span>

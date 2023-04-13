@@ -69,15 +69,7 @@ document.addEventListener('readystatechange', event => {
     selectLog.addEventListener('change', function() {
       const selectMonth = document.querySelectorAll('#log select option');
       const index =  this.selectedIndex;
-      const thisMonth = {
-        title : selectMonth[index].innerText,
-        year : selectMonth[index].dataset['year'],
-        month : selectMonth[index].dataset['month']
-      }
-
-      document.querySelector('#title') = selectMonth[index].innerText
-
-      const thisJSON = JSON.stringify(thisMonth);
+      window.location.assign(selectMonth[index].value + '.php');
     });
   }
 

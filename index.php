@@ -67,7 +67,7 @@ require('function.php');
           <li>
             <p>
               <u style="background:#000;">
-                <span style="color:#fff;">?</span>
+                <span style="color:#000;">?</span>
               </u>
               <b>Nothing Here</b>
             </p>

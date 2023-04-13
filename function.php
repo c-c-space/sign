@@ -17,7 +17,7 @@ function h($str)
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
-while ($row = fgetcsv($fp)) {
-  $rows[] = shuffle($row);
+while ($row = shuffle(fgetcsv($fp))) {
+  $rows[] = $row;
 }
 ?>

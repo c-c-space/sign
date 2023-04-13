@@ -75,30 +75,9 @@ document.addEventListener('readystatechange', event => {
         month : selectMonth[index].dataset['month']
       }
 
+      document.querySelector('#title') = selectMonth[index].innerText
+
       const thisJSON = JSON.stringify(thisMonth);
-
-      // Fetch APIでデータ送信
-      async function functionPHP() {
-        let url = 'function.php';
-        let response = await fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-          },
-          body: thisJSON
-        })
-
-        // 返ってきたレスポンスをJSONで受け取り、次のthenへ渡す
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-        })
-        .catch(error => {
-          console.log(error)
-        });
-      }
-
-      functionPHP();
     });
   }
 

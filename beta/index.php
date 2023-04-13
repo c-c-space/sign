@@ -64,7 +64,7 @@ require('function.php');
 
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
-      <span><?php echo $title;?></span>
+      <span id="title"><?php echo $title;?></span>
     </button>
     <button type="button" id="allBtn" onclick="allView()">
       <span><?php echo $post;?> の色と記号</span>

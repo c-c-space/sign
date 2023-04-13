@@ -8,15 +8,12 @@ require('function.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-
-  <script src="../js/index.js" async></script>
-  <script src="js/readyState.js"></script>
-
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="css/flash.css" />
   <link rel="stylesheet" href="css/submit.css" />
+
   <style type="text/css">
   header {
     mix-blend-mode: difference;
@@ -27,6 +24,8 @@ require('function.php');
     filter: invert();
   }
   </style>
+
+  <script src="../js/index.js" async></script>
 </head>
 
 <body style="background-image: linear-gradient(0deg,
@@ -158,5 +157,7 @@ require('function.php');
 
   setInterval('nowOn()', 1000);
   </script>
+
+  <script src="js/readyState.js"></script>
 </body>
 </html>

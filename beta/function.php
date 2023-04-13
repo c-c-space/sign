@@ -17,6 +17,7 @@ array_unshift($data, array(
 ));
 
 $json = json_encode($data);
+echo json_encode($json);
 
 $source_file = $year . $month . $day . ".csv";
 $fp = fopen($source_file, "a+b");

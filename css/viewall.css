@@ -16,13 +16,13 @@
 }
 
 #all {
-  transition: 2.5s;
   opacity: 0;
   overflow: auto;
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
+  transition: 2.5s;
   z-index: 0;
 }
 

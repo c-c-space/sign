@@ -40,8 +40,6 @@ function flashView() {
   }
 }
 
-
-
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'loading') {
     // 文書の読み込み中に実行する
@@ -49,27 +47,27 @@ document.addEventListener('readystatechange', event => {
 
   else if (event.target.readyState === 'interactive') {
     let getMonth = {
-      '202103.php': ['令和三年三月'],
-      '202104.php': ['令和三年四月'],
-      '202105.php': ['令和三年五月'],
-      '202106.php': ['令和三年六月'],
-      '202107.php': ['令和三年七月'],
-      '202108.php': ['令和三年八月'],
+      '令和三年三月': ['2021','03'],
+      '令和三年四月': ['2021','04'],
+      '令和三年五月': ['2021','05'],
+      '令和三年六月': ['2021','06'],
+      '令和三年七月': ['2021','07'],
+      '令和三年八月': ['2021','08'],
     }
 
     const selectMonth = document.querySelector('#log select');
     const monthAll = Object.entries(getMonth)
     monthAll.forEach((month) => {
       const optionMonth = document.createElement('option')
-      optionMonth.setAttribute("value", month[0])
-      optionMonth.innerText = Object.values(month[1])[0]
+      optionMonth.setAttribute('value', Object.values(month[1])[0] + Object.values(month[1])[1])
+      optionMonth.innerText = month[0]
       selectMonth.appendChild(optionMonth)
     });
 
     selectMonth.addEventListener('change', function() {
-      const selectOption = document.querySelectorAll("#log select option");
+      const selectOption = document.querySelectorAll('#log select option');
       const index =  this.selectedIndex;
-      window.location.assign(selectOption[index].value);
+      window.location.assign(selectOption[index].value + '.php');
     });
   }
 

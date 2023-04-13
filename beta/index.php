@@ -8,17 +8,19 @@ require('function.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <title><?php echo $title ."の気持ちを知る・表す"; ?></title>
-  <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
+  <title><?php echo $title ."の気持ちを知る・表す";?></title>
+  <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
   <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>">
-  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description; ?>">
-  <meta property="og:site_name" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
-  <meta property="og:url" content="<?php echo $url; ?>" />
+  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
+  <meta property="og:site_name" content="<?php echo $site;?>">
+  <meta property="og:url" content="<?php echo $url;?>" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
-  <meta property="og:image" content="<?php echo $url; ?>card.png" />
+  <meta property="og:image" content="<?php echo $url;?>card.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="<?php echo $url; ?>card.png" />
+  <meta name="twitter:image" content="<?php echo $url;?>card.png" />
+
+  <script src="script.js"></script>
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/flash.css" />
@@ -47,13 +49,13 @@ require('function.php');
 </head>
 
 <body style="background-image: linear-gradient(0deg,
-  <?php if (!empty($rows)) : ?>
-  <?php foreach ($rows as $row) : ?>
-  #<?= h($row[1]) ?>,
-  <?php endforeach; ?>
-  <?php else : ?>
+  <?php if (!empty($rows)):?>
+  <?php foreach ($rows as $row):?>
+  #<?= h($row[1])?>,
+  <?php endforeach;?>
+  <?php else:?>
   #000,
-  <?php endif; ?>
+  <?php endif;?>
   #fff);">
 
   <form id="now" class="hidden" method="GET">
@@ -68,33 +70,33 @@ require('function.php');
   <main>
     <section id="all">
       <ul>
-        <?php if (!empty($rows)) : ?>
-          <?php foreach ($rows as $row) : ?>
-            <li style="background:#<?= h($row[1]) ?>;">
-              <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
+        <?php if (!empty($rows)):?>
+          <?php foreach ($rows as $row):?>
+            <li style="background:#<?= h($row[1])?>;">
+              <span style="color:#<?= h($row[1])?>;"><?= h($row[0])?></span>
             </li>
-          <?php endforeach; ?>
-        <?php else : ?>
+          <?php endforeach;?>
+        <?php else:?>
           <li style="background:#000;">
             <span style="color:#fff;">?</span>
           </li>
-        <?php endif; ?>
+        <?php endif;?>
       </ul>
     </section>
 
     <section id="flash">
       <ul>
-        <?php if (!empty($rows)) : ?>
-          <?php foreach ($rows as $row) : ?>
-            <li style="background:#<?= h($row[1]) ?>;">
-              <b style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
+        <?php if (!empty($rows)):?>
+          <?php foreach ($rows as $row):?>
+            <li style="background:#<?= h($row[1])?>;">
+              <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
             </li>
-          <?php endforeach; ?>
-        <?php else : ?>
+          <?php endforeach;?>
+        <?php else:?>
           <li style="background:#aaa;">
             <b style="color:#aaa;">?</b>
           </li>
-        <?php endif; ?>
+        <?php endif;?>
       </ul>
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
@@ -108,8 +110,5 @@ require('function.php');
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
-
-  <script src="script.js"></script>
-
 </body>
 </html>

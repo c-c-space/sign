@@ -1,8 +1,9 @@
 'use strict'
 
+let all = document.querySelector('#all');
+let flash = document.querySelector('#flash');
+
 function allView() {
-  let all = document.querySelector('#all');
-  let flash = document.querySelector('#flash');
   if (all.style.opacity == 1) {
     all.style.opacity = 0;
     flash.style.opacity = 0;
@@ -17,8 +18,6 @@ function allView() {
 }
 
 function flashView() {
-  let flash = document.querySelector('#flash');
-  let all = document.querySelector('#all');
   if (flash.style.opacity == 1) {
     flash.style.opacity = 0;
     all.style.opacity = 0;

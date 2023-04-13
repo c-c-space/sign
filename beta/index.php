@@ -44,8 +44,6 @@ require('function.php');
     filter: invert();
   }
   </style>
-
-  <script src="script.js"></script>
 </head>
 
 <body style="background-image: linear-gradient(0deg,
@@ -110,5 +108,7 @@ require('function.php');
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
+
+  <script src="script.js"></script>
 </body>
 </html>

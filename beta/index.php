@@ -20,8 +20,6 @@ require('function.php');
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="<?php echo $url;?>card.png" />
 
-  <script src="script.js"></script>
-
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/flash.css" />
   <link rel="stylesheet" href="../css/viewall.css" />
@@ -110,5 +108,7 @@ require('function.php');
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
+
+  <script src="script.js"></script>
 </body>
 </html>

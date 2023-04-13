@@ -60,7 +60,7 @@ document.addEventListener('readystatechange', event => {
         fetch('submit.html')
         .then(response => response.text())
         .then(submit => {
-          document.querySelector('#submit').innerHTML = submit.replace();
+          document.querySelector('#submit').innerHTML = submit;
         });
       }
       submitHTML();

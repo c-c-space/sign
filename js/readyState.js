@@ -49,6 +49,7 @@ document.addEventListener('readystatechange', event => {
       document.querySelector('#submit').innerHTML = "";
       async function aboutHTML() {
         fetch('about.html')
+        .then(response => response.text())
         .then(about => {
           document.querySelector('#submit').innerHTML = about;
         });
@@ -57,6 +58,7 @@ document.addEventListener('readystatechange', event => {
     } else {
       async function submitHTML() {
         fetch('submit.html')
+        .then(response => response.text())
         .then(submit => {
           document.querySelector('#submit').innerHTML = submit;
         });

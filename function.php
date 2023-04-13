@@ -7,8 +7,6 @@ $month = date("m");
 $day = date("d");
 $source_file = "log/". $month ."/". $day . ".csv";
 
-$forwardedFor = $_SERVER["REMOTE_ADDR"];
-
 $fp = fopen($source_file, 'a+b');
 
 $w = date("w");

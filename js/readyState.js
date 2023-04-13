@@ -34,9 +34,7 @@ function flashView() {
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'loading') {
     // 文書の読み込み中に実行する
-  }
-
-  else if (event.target.readyState === 'interactive') {
+  } else if (event.target.readyState === 'interactive') {
     const enterBtn = document.createElement('input')
     enterBtn.setAttribute('type','button')
     enterBtn.setAttribute('id','enter-btn')
@@ -46,15 +44,14 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if(!localStorage.getItem('yourInfo')) {
-      document.querySelector('#submit').innerHTML = "";
-      async function aboutHTML() {
-        fetch('about.html')
+      async function readmeHTML() {
+        fetch('readme.html')
         .then(response => response.text())
-        .then(about => {
-          document.querySelector('#submit').innerHTML = about;
+        .then(readme => {
+          document.querySelector('#submit').innerHTML = readme;
         });
       }
-      aboutHTML();
+      readmeHTML();
     } else {
       async function submitHTML() {
         fetch('submit.html')
@@ -65,9 +62,7 @@ document.addEventListener('readystatechange', event => {
       }
       submitHTML();
     }
-  }
-
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === 'complete') {
 
   }
 });

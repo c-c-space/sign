@@ -77,76 +77,79 @@ require('function.php');
     <section id="flash">
       <ul>
         <?php if (!empty($rows)):?>
-          <?php foreach ($rows as $row):?>
-            <li style="background:#<?= h($row[1])?>;">
-              <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
-            </li>
-          <?php endforeach;?>
-        <?php else:?>
-          <li style="background:#aaa;">
-            <b style="color:#aaa;">?</b>
+          <?php
+          $shuffles = shuffle($rows);
+          foreach($shuffles as $row)
+          ?>
+          <li style="background:#<?= h($row[1])?>;">
+            <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
           </li>
-        <?php endif;?>
-      </ul>
+        <?php endforeach;?>
+      <?php else:?>
+        <li style="background:#aaa;">
+          <b style="color:#aaa;">?</b>
+        </li>
+      <?php endif;?>
+    </ul>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript">
-      function shuffleContent(container) {
-        let content = container.find("> *");
-        let total = content.length;
-        content.each(function() {
-          content.eq(Math.floor(Math.random() * total)).prependTo(container);
-        });
-      }
-
-      $(function() {
-        shuffleContent($("#flash ul"));
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+    function shuffleContent(container) {
+      let content = container.find("> *");
+      let total = content.length;
+      content.each(function() {
+        content.eq(Math.floor(Math.random() * total)).prependTo(container);
       });
-      </script>
+    }
 
-      <section id="speed">
-        <input id="flash_speed" type="range" value="" min="500" max="5000">
-      </section>
+    $(function() {
+      shuffleContent($("#flash ul"));
+    });
+    </script>
 
-      <script src="js/flash.js"></script>
+    <section id="speed">
+      <input id="flash_speed" type="range" value="" min="500" max="5000">
     </section>
 
-    <nav id="now">
-      <button type="button" id="allBtn" onclick="allView()">
-        <span>
-          <?php
-          print(date('n 月 j 日') . " ($week_name[$w])")
-          ?>
-        </span>
-      </button>
-      <button type="button" onclick="flashView()">
-        <time id="showTime"></time>
-      </button>
-    </nav>
-    <script type="text/javascript">
-    function set10(num) {
-      let ret;
-      if (num < 10) { ret = "0" + num; }
-      else { ret = num; }
-      return ret;
-    }
+    <script src="js/flash.js"></script>
+  </section>
 
-    function nowOn() {
-      const nowTime = new Date();
-      const nowHour = set10(nowTime.getHours());
-      const nowMin = set10(nowTime.getMinutes());
-      const nowSec = set10(nowTime.getSeconds());
-      const showTime = nowHour + ":" + nowMin + ":" + nowSec;
-      document.querySelector("#showTime").textContent = showTime;
-    }
+  <nav id="now">
+    <button type="button" id="allBtn" onclick="allView()">
+      <span>
+        <?php
+        print(date('n 月 j 日') . " ($week_name[$w])")
+        ?>
+      </span>
+    </button>
+    <button type="button" onclick="flashView()">
+      <time id="showTime"></time>
+    </button>
+  </nav>
+  <script type="text/javascript">
+  function set10(num) {
+    let ret;
+    if (num < 10) { ret = "0" + num; }
+    else { ret = num; }
+    return ret;
+  }
 
-    setInterval('nowOn()', 1000);
-    </script>
-  </main>
+  function nowOn() {
+    const nowTime = new Date();
+    const nowHour = set10(nowTime.getHours());
+    const nowMin = set10(nowTime.getMinutes());
+    const nowSec = set10(nowTime.getSeconds());
+    const showTime = nowHour + ":" + nowMin + ":" + nowSec;
+    document.querySelector("#showTime").textContent = showTime;
+  }
 
-  <form id="submit" class="hidden" method="post" hidden></form>
-  <script src="js/submit.js"></script>
+  setInterval('nowOn()', 1000);
+  </script>
+</main>
 
-  <script src="js/readyState.js"></script>
+<form id="submit" class="hidden" method="post" hidden></form>
+<script src="js/submit.js"></script>
+
+<script src="js/readyState.js"></script>
 </body>
 </html>

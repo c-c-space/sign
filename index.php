@@ -78,7 +78,7 @@ require('function.php');
       <ul>
         <?php if (!empty($rows)):?>
           <?php
-          foreach(shuffle($rows) as $row)
+          foreach($rows as $row)
           ?>
           <li style="background:#<?= h($row[1])?>;">
             <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>

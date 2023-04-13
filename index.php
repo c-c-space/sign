@@ -135,7 +135,7 @@ require('function.php');
     fetch('submit.html')
     .then(response => response.text())
     .then(submit => {
-      document.querySelector('#submit').innerHTML = readme.replace();
+      document.querySelector('#submit').innerHTML = submit.replace();
     });
   }
   readmeMD();

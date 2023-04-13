@@ -55,19 +55,50 @@ document.addEventListener('readystatechange', event => {
       '令和三年八月': ['2021','08'],
     }
 
-    const selectMonth = document.querySelector('#log select');
+    const selectLog = document.querySelector('#log select');
     const monthAll = Object.entries(getMonth)
     monthAll.forEach((month) => {
       const optionMonth = document.createElement('option')
       optionMonth.setAttribute('value', Object.values(month[1])[0] + Object.values(month[1])[1])
+      optionMonth.setAttribute('data-year', Object.values(month[1])[0])
+      optionMonth.setAttribute('data-month', Object.values(month[1])[1])
       optionMonth.innerText = month[0]
-      selectMonth.appendChild(optionMonth)
+      selectLog.appendChild(optionMonth)
     });
 
-    selectMonth.addEventListener('change', function() {
-      const selectOption = document.querySelectorAll('#log select option');
+    selectLog.addEventListener('change', function() {
+      const selectMonth = document.querySelectorAll('#log select option');
       const index =  this.selectedIndex;
-      window.location.assign(selectOption[index].value + '.php');
+      const thisMonth = {
+        title : selectMonth[index].innerText,
+        year : selectMonth[index].dataset['year'],
+        month : selectMonth[index].dataset['month']
+      }
+
+      const thisJSON = JSON.stringify(thisMonth);
+
+      // Fetch APIでデータ送信
+      async function functionPHP() {
+        let url = 'function.php';
+        let response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+          },
+          body: thisJSON
+        })
+
+        // 返ってきたレスポンスをJSONで受け取り、次のthenへ渡す
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+        })
+        .catch(error => {
+          console.log(error)
+        });
+      }
+
+      functionPHP();
     });
   }
 

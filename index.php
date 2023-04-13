@@ -130,15 +130,6 @@ require('function.php');
   <script src="js/submit.js"></script>
 
   <script type="text/javascript">
-  async function readmeMD() {
-    fetch('submit.html')
-    .then(response => response.text())
-    .then(submit => {
-      document.querySelector('#submit').innerHTML = submit.replace();
-    });
-  }
-  readmeMD();
-
   function set10(num) {
     let ret;
     if (num < 10) { ret = "0" + num; }

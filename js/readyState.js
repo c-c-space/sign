@@ -47,15 +47,23 @@ document.addEventListener('readystatechange', event => {
 
     if(!localStorage.getItem('yourInfo')) {
       document.querySelector('#submit').innerHTML = "";
-      async function readmeMD() {
+      async function aboutHTML() {
         fetch('about.html')
         .then(response => response.text())
         .then(about => {
           document.querySelector('#submit').innerHTML = about;
         });
       }
-      readmeMD();
+      aboutHTML();
     } else {
+      async function submitHTML() {
+        fetch('submit.html')
+        .then(response => response.text())
+        .then(submit => {
+          document.querySelector('#submit').innerHTML = submit.replace();
+        });
+      }
+      submitHTML();
     }
   }
 

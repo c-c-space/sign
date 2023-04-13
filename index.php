@@ -89,6 +89,7 @@ require('function.php');
         <?php endif;?>
       </ul>
 
+<!--
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript">
       function shuffleContent(container) {
@@ -103,6 +104,7 @@ require('function.php');
         shuffleContent($("#flash ul"));
       });
       </script>
+-->
 
       <section id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">

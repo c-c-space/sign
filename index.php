@@ -94,21 +94,6 @@ require('function.php');
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript">
-      function shuffleContent(container) {
-        let content = container.find("> *");
-        let total = content.length;
-        content.each(function() {
-          content.eq(Math.floor(Math.random() * total)).prependTo(container);
-        });
-      }
-
-      $(function() {
-        shuffleContent($("#flash ul"));
-      });
-      </script>
-
       <script src="js/flash.js" async></script>
     </section>
 

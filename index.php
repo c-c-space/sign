@@ -8,12 +8,12 @@ require('function.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
+  <script src="../js/index.js" async></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="css/flash.css" />
   <link rel="stylesheet" href="css/submit.css" />
-
   <style type="text/css">
   header {
     mix-blend-mode: difference;
@@ -24,8 +24,6 @@ require('function.php');
     filter: invert();
   }
   </style>
-
-  <script src="../js/index.js" async></script>
 </head>
 
 <body style="background-image: linear-gradient(0deg,
@@ -110,7 +108,7 @@ require('function.php');
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </section>
 
-      <script src="js/flash.js" async></script>
+      <script src="js/flash.js"></script>
     </section>
 
     <nav id="now">

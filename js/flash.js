@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
 function viewSlide(elem, i = -1) {
   let liArr = document.querySelectorAll(elem);
   if (i >= 0) {
-    liArr[i].style.display = 'none';
+    liArr[i].style.opacity = 0;
   }
   i++;
   if (i >= liArr.length) {

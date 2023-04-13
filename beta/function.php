@@ -14,10 +14,11 @@ $output = array(
   "year" => $data["year"],
   "month" => $data["month"]
 );
-
-$title = $data["title"];
-$year = $data["year"];
-$month = $data["month"];
+if (isset($output)) {
+  $title = $data["title"];
+  $year = $data["year"];
+  $month = $data["month"];
+}
 
 echo json_encode($output);
 

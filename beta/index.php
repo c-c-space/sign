@@ -56,6 +56,12 @@ require('function.php');
   <?php endif;?>
   #fff);">
 
+  <nav id="log">
+    <select>
+      <option selected disabled>自分の気持ちを知る・表す</option>
+    </select>
+  </nav>
+
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
       <span><?php echo $title;?></span>
@@ -102,12 +108,6 @@ require('function.php');
       <script src="../js/flash.js" async></script>
     </section>
   </main>
-
-  <nav id="log">
-    <select>
-      <option selected disabled>自分の気持ちを知る・表す</option>
-    </select>
-  </nav>
 
   <script src="script.js"></script>
 </body>

@@ -138,7 +138,7 @@ fclose($fp);
 
   <nav id="log">
     <select>
-      <option value="/sign/" selected>今日の気持ちを知る・表す</option>
+      <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
 

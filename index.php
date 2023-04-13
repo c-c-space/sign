@@ -124,30 +124,29 @@ require('function.php');
         <time id="showTime"></time>
       </button>
     </nav>
+    <script type="text/javascript">
+    function set10(num) {
+      let ret;
+      if (num < 10) { ret = "0" + num; }
+      else { ret = num; }
+      return ret;
+    }
+
+    function nowOn() {
+      const nowTime = new Date();
+      const nowHour = set10(nowTime.getHours());
+      const nowMin = set10(nowTime.getMinutes());
+      const nowSec = set10(nowTime.getSeconds());
+      const showTime = nowHour + ":" + nowMin + ":" + nowSec;
+      document.querySelector("#showTime").textContent = showTime;
+    }
+
+    setInterval('nowOn()', 1000);
+    </script>
   </main>
 
   <form id="submit" class="hidden" method="post" hidden></form>
   <script src="js/submit.js"></script>
-
-  <script type="text/javascript">
-  function set10(num) {
-    let ret;
-    if (num < 10) { ret = "0" + num; }
-    else { ret = num; }
-    return ret;
-  }
-
-  function nowOn() {
-    const nowTime = new Date();
-    const nowHour = set10(nowTime.getHours());
-    const nowMin = set10(nowTime.getMinutes());
-    const nowSec = set10(nowTime.getSeconds());
-    const showTime = nowHour + ":" + nowMin + ":" + nowSec;
-    document.querySelector("#showTime").textContent = showTime;
-  }
-
-  setInterval('nowOn()', 1000);
-  </script>
 
   <script src="js/readyState.js"></script>
 </body>

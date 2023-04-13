@@ -4,10 +4,10 @@ window.addEventListener('load', function () {
   viewSlide('#flash ul li');
 });
 
-function viewSlide(className, i = -1) {
-  let liArr = document.querySelectorAll(className);
+function viewSlide(elem, i = -1) {
+  let liArr = document.querySelectorAll(elem);
   if (i >= 0) {
-    liArr[i].style.opacity = 0;
+    liArr[i].style.display = 'none';
   }
   i++;
   if (i >= liArr.length) {
@@ -17,6 +17,6 @@ function viewSlide(className, i = -1) {
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
   setTimeout(function () {
-    viewSlide(className, i);
+    viewSlide(elem, i);
   }, msec);
 }

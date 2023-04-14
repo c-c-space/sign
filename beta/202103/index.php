@@ -3,7 +3,7 @@ $title = "令和三年三月";
 $year = "2021";
 $month = "03";
 
-require('function.php');
+require('../function.php');
 ?>
 
 <body style="background-image: linear-gradient(0deg,
@@ -18,7 +18,7 @@ require('function.php');
 
   <main>
     <?php
-    require('viewall.php');
+    require('../viewall.php');
     ?>
   </main>
   <script src="../js/flash.js"></script>

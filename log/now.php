@@ -1,10 +1,10 @@
 <form id="now" class="hidden" method="GET">
   <section>
     <button type="button" onclick="flashView()">
-      <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
+      <span><b><?php echo $month;?></b> 月 <b><?php echo $day;?></b> 日</span>
     </button>
     <button type="button" onclick="allView()">
-      <span><?php echo $post;?> の色と記号</span>
+      <span><b><?php echo $post;?></b> の色と記号</span>
     </button>
   </section>
   <section>

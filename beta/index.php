@@ -27,14 +27,6 @@ require('function.php');
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">
   <style type="text/css">
-  html {
-    height: -webkit-fill-available;
-  }
-
-  body {
-    min-height: -webkit-fill-available;
-  }
-
   header {
     mix-blend-mode: difference;
   }
@@ -55,6 +47,17 @@ require('function.php');
   #000,
   <?php endif;?>
   #fff);">
+
+  <script src="/js/menu.js"></script>
+  <header id="menu" hidden>
+    <button id="js-button"><b></b></button>
+    <nav id="contents">
+      <a href="/" target="_parent">
+        <p><b>creative-community.space</b></p>
+        <u>Index</u>
+      </a>
+    </nav>
+  </header>
 
   <nav id="log">
     <select>
@@ -91,7 +94,7 @@ require('function.php');
     <section id="flash">
       <ul>
         <?php if (!empty($rows)):?>
-          <?php foreach ($rows as $row):?>
+          <?php shuffle($rows); foreach ($rows as $row):?>
             <li style="background:#<?= h($row[1])?>;">
               <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
             </li>

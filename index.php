@@ -11,7 +11,6 @@ require('function.php');
 
   <script src="../js/index.js" async></script>
   <script src="js/readyState.js"></script>
-  <script src="js/viewall.js"></script>
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/about.css" />
@@ -70,6 +69,7 @@ require('function.php');
       </button>
     </nav>
   </main>
+  <script src="js/viewall.js"></script>
 
   <form id="submit" class="hidden" method="post" hidden></form>
   <script src="js/submit.js"></script>

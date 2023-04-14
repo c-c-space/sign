@@ -56,6 +56,10 @@ require('function.php');
         <p><b>creative-community.space</b></p>
         <u>Index</u>
       </a>
+      <a href="/sign/" target="_parent">
+        <i>Colors and Symbols that Suits on You</i>
+        <p>自分の気持ちを知る・表す</p>
+      </a>
     </nav>
   </header>
 

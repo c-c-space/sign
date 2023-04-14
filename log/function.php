@@ -9,7 +9,6 @@ if (isset($_GET["day"])) {
 
 $source_file = $day . ".csv";
 $fp = fopen($source_file, 'a+b');
-
 $post = sizeof(file($source_file));
 
 function h($str) {

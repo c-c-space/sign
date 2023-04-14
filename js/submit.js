@@ -19,6 +19,36 @@ function changeHidden() {
   })
 }
 
+let array = JSON.parse(localStorage.getItem("sign")) || [];
+const addData = (timestamp, symbolValue, colorlValue) => {
+  array.push({
+    timestamp,
+    symbolValue,
+    colorlValue
+  })
+
+  localStorage.setItem("sign", JSON.stringify(array))
+  return {timestamp, symbolValue, colorlValue}
+}
+
+let getWeek = new Array("日","月","火","水","木","金","土");
+const newDate = new Date();
+
+const getYear = newDate.getFullYear();
+const getMonth = newDate.getMonth() + 1;
+const getDate = newDate.getDate();
+const getDay = newDate.getDay();
+const getHours = newDate.getHours();
+const getMinutes = newDate.getMinutes();
+const getSeconds = newDate.getSeconds();
+
+const setDate = getYear + "年" + getMonth + "月" + getDate + "日";
+const setWeek = "(" + getWeek[getDay] + ")";
+const setTime = getHours + ":" + getMinutes + ":" + getSeconds;
+
+let timestamp = setDate + setWeek + setTime;
+
+
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)
 
@@ -47,6 +77,8 @@ async function submitThis() {
     symbol : symbolValue,
     color : colorlValue
   };
+
+  addData(timestamp, symbolValue, colorlValue)
 
   const signJSON = JSON.stringify(thisSign)
   let url = 'submit.php';

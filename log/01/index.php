@@ -5,16 +5,6 @@ $day = "01";
 require('../function.php');
 ?>
 
-<body style="background-image: linear-gradient(0deg,
-  <?php if (!empty($rows)) : ?>
-  <?php foreach ($rows as $row) : ?>
-  #<?= h($row[1]) ?>,
-  <?php endforeach; ?>
-  <?php else : ?>
-  #000,
-  <?php endif; ?>
-  #fff);">
-
   <script type="text/javascript">
   let thismonth = 1
   const endDate = 31

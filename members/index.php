@@ -70,6 +70,12 @@ fclose($fp);
     </nav>
   </header>
 
+  <main>
+    <?php require('../beta/viewall.php'); ?>
+  </main>
+  <script src="../js/flash.js"></script>
+  <script src="../js/viewall.js"></script>
+
   <form id="now" class="hidden" method="GET">
     <section>
       <button type="button" onclick="flashView()">
@@ -85,13 +91,7 @@ fclose($fp);
       </select>
       <button type="submit">View The Collection</button>
     </section>
+    <script src="script.js"></script>
   </form>
-  <script src="script.js"></script>
-
-  <main>
-    <?php require('../beta/viewall.php'); ?>
-  </main>
-  <script src="../js/flash.js"></script>
-  <script src="../js/viewall.js"></script>
 </body>
 </html>

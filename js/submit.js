@@ -19,6 +19,7 @@ function changeHidden() {
   })
 }
 
+
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)
 
@@ -49,7 +50,7 @@ async function submitThis() {
   };
 
   const signJSON = JSON.stringify(thisSign)
-  let url = '/sign/php/log.php';
+  let url = 'php/log.php';
   let response = await fetch(url, {
     method: 'POST',
     headers: {

@@ -44,7 +44,7 @@
 }
 
 #all ul li {
-  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 #all ul p {
@@ -83,7 +83,7 @@
   }
 
   #all ul li {
-    margin: 1vw;
+    padding: 1vw;
   }
 
   #all ul p {

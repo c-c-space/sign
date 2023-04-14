@@ -1,30 +1,11 @@
-<?php
-mb_language("ja");
-mb_internal_encoding("UTF-8");
-
-$title = "令和三年三月から令和三年九月";
-
-$site = "http".(isset($_SERVER["HTTPS"])?"s":"")."://"."{$_SERVER["HTTP_HOST"]}";
-$url = "{$site}"."{$_SERVER['REQUEST_URI']}";
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <title>自分の気持ちを知る表す</title>
-  <meta name="description" content="<?php echo $title ."の色と記号";?>">
-  <meta property="og:title" content="自分の気持ちを知る表す">
-  <meta property="og:description" content="<?php echo $title ."の色と記号";?>">
-  <meta property="og:site_name" content="<?php echo $site;?>">
-  <meta property="og:url" content="<?php echo $url;?>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ja_JP" />
-  <meta property="og:image" content="<?php echo $url;?>card.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="<?php echo $url;?>card.png" />
+
+  <script src="/js/index.js" async></script>
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/collection.css" />

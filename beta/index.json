@@ -1,0 +1,29 @@
+{
+  "title" : "Sign β ver",
+  "description" : "自分の気持ちを知る・表す | Colors and Symbols that Suits on You",
+  "author" : "creative-community.space",
+  "email" : "pehu@creative-community.space",
+  "type" : "website",
+  "twitter" : "@pe_hu_",
+  "card" : "summary",
+  "src" : "cover.png",
+
+  "contents" : [
+    {
+      "date" : "Colors and Symbols that Suits on You",
+      "name" : "自分の気持ちを知る・表す",
+      "url" : "/sign/",
+      "type" : "news",
+      "caption" : "none",
+      "note" : ""
+    },
+    {
+      "date" : "View The Collection",
+      "name" : "今月の色と記号",
+      "url" : "/sign/log/",
+      "type" : "news",
+      "caption" : "none",
+      "note" : ""
+    }
+  ]
+}

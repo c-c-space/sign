@@ -11,14 +11,14 @@ $source_file = $month . ".csv";
 $fp = fopen($source_file, 'a+b');
 $post = sizeof(file($source_file));
 
-function h($str)
-{
+function h($str) {
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
 while ($row = fgetcsv($fp)) {
   $rows[] = $row;
 }
+
 fclose($fp);
 ?>
 

@@ -9,7 +9,7 @@ for (let d = 0; d < endDate; d++) {
   else if (dayCount > endDate) {
   }
   else {
-    calendarHtml += '<option value="' + dayCount + '">' + thismonth + '月 ' + dayCount + ' 日' + '</option>'
+    calendarHtml += '<option value="' + dayCount + '">' + thismonth + ' 月 ' + dayCount + ' 日' + '</option>'
     dayCount++
   }
 }

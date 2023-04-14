@@ -33,14 +33,13 @@ fclose($fp);
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../css/all.css" />
   <link rel="stylesheet" href="../../css/flash.css" />
-</head>
+  <style type="text/css">
+  html {
+    height: -webkit-fill-available;
+  }
 
-<body style="background-image: linear-gradient(0deg,
-  <?php if (!empty($rows)) : ?>
-  <?php foreach ($rows as $row) : ?>
-  #<?= h($row[1]) ?>,
-  <?php endforeach; ?>
-  <?php else : ?>
-  #000,
-  <?php endif; ?>
-  #fff);">
+  body {
+    min-height: -webkit-fill-available;
+  }
+  </style>
+</head>

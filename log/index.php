@@ -47,7 +47,9 @@ require('../php/function.php');
   </header>
 
   <main>
-    <?php require('../php/viewall.php'); ?>
+    <?php
+    require('../php/viewall.php');
+    ?>
   </main>
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>

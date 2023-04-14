@@ -28,7 +28,7 @@
   #<?= h($row[1]) ?>,
   <?php endforeach; ?>
   <?php else : ?>
-  #000,
+  #aaa,
   <?php endif; ?>
   #fff);">
 

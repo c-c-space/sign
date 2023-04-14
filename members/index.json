@@ -1,6 +1,6 @@
 {
-  "title" : "Sign β ver",
-  "description" : "令和三年三月から令和三年九月の色と記号",
+  "title" : "Members Only",
+  "description" : "令和三年十月から令和四年九月の色と記号",
   "author" : "creative-community.space",
   "email" : "pehu@creative-community.space",
   "type" : "website",
@@ -26,9 +26,9 @@
       "note" : ""
     },
     {
-      "date" : "Members Only",
-      "name" : "令和三年十月から令和四年九月の色と記号",
-      "url" : "/sign/members/",
+      "date" : "Sign β ver",
+      "name" : "令和三年三月から令和三年九月の色と記号",
+      "url" : "/sign/beta/",
       "type" : "news",
       "caption" : "none",
       "note" : ""

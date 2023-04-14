@@ -17,7 +17,7 @@
           <u style="background:#000;">
             <span style="color:#000;">?</span>
           </u>
-          <b>Nothing Here</b>
+          <b style="color:#000;">Nothing Here</b>
         </p>
       </li>
     <?php endif; ?>

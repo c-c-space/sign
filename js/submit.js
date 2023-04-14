@@ -45,7 +45,7 @@ const getMinutes = newDate.getMinutes().toString().padStart(2, '0');
 const getSeconds = newDate.getSeconds().toString().padStart(2, '0');
 
 const setDate = getYear + "年" + getMonth + "月" + getDate + "日";
-const setWeek = "(" + getWeek[getDay] + ")";
+const setWeek = "(" + getWeek[getDay] + ") ";
 const setTime = getHours + ":" + getMinutes + ":" + getSeconds;
 
 let timestamp = setDate + setWeek + setTime;

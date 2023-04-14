@@ -14,10 +14,6 @@
   <link rel="stylesheet" href="css/flash.css" />
   <link rel="stylesheet" href="css/submit.css" />
   <style type="text/css">
-    body {
-      background-image: linear-gradient(0deg, #aaa, #fff);
-    }
-
     header {
       mix-blend-mode: difference;
     }
@@ -43,24 +39,11 @@
 
   <main>
     <section id="all">
-      <ul>
-        <li>
-          <p>
-            <u style="background:#000;">
-              <span style="color:#000;">?</span>
-            </u>
-            <b>Nothing Here</b>
-          </p>
-        </li>
-      </ul>
+      <ul></ul>
     </section>
 
     <section id="flash">
-      <ul>
-        <li style="background:#aaa;">
-          <b style="color:#aaa;">?</b>
-        </li>
-      </ul>
+      <ul></ul>
       <nav id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </nav>
@@ -68,7 +51,7 @@
 
     <nav id="now" class="hidden">
       <button type="button" onclick="flashView()">
-        <span>IP</span>
+        <span id="yourIP">IP</span>
       </button>
       <button type="button" onclick="allView()">
         <span id="yourpost"></span>

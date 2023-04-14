@@ -1,6 +1,6 @@
 {
   "title" : "Sign",
-  "description" : "今月の色と記号 | View The Collection",
+  "description" : "毎日の色と記号 | View The Collection",
   "author" : "creative-community.space",
   "email" : "pehu@creative-community.space",
   "type" : "website",
@@ -19,7 +19,7 @@
     },
     {
       "date" : "View The Collection",
-      "name" : "今月の色と記号",
+      "name" : "毎日の色と記号",
       "url" : "/sign/collection/",
       "type" : "news",
       "caption" : "none",

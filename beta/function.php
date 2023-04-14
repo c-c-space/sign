@@ -6,7 +6,7 @@ $source_file = "log.csv";
 $fp = fopen($source_file, "a+b");
 $post = sizeof(file($source_file));
 
-$description = $post. 'の色と記号';
+$description = $post .'の色と記号';
 
 $site = "http".(isset($_SERVER["HTTPS"])?"s":"")."://"."{$_SERVER["HTTP_HOST"]}";
 $url = "{$site}"."{$_SERVER['REQUEST_URI']}";

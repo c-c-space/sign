@@ -31,6 +31,24 @@ function flashView() {
   }
 }
 
+function set10(num) {
+  let ret;
+  if (num < 10) { ret = "0" + num; }
+  else { ret = num; }
+  return ret;
+}
+
+function nowOn() {
+  const nowTime = new Date();
+  const nowHour = set10(nowTime.getHours());
+  const nowMin = set10(nowTime.getMinutes());
+  const nowSec = set10(nowTime.getSeconds());
+  const showTime = nowHour + ":" + nowMin + ":" + nowSec;
+  document.querySelector("#showTime").textContent = showTime;
+}
+
+setInterval('nowOn()', 1000);
+
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'loading') {
     // 文書の読み込み中に実行する
@@ -62,25 +80,8 @@ document.addEventListener('readystatechange', event => {
       }
       submitHTML();
     }
-
-    function set10(num) {
-      let ret;
-      if (num < 10) { ret = "0" + num; }
-      else { ret = num; }
-      return ret;
-    }
-
-    function nowOn() {
-      const nowTime = new Date();
-      const nowHour = set10(nowTime.getHours());
-      const nowMin = set10(nowTime.getMinutes());
-      const nowSec = set10(nowTime.getSeconds());
-      const showTime = nowHour + ":" + nowMin + ":" + nowSec;
-      document.querySelector("#showTime").textContent = showTime;
-    }
-
-    setInterval('nowOn()', 1000);
   } else if (event.target.readyState === 'complete') {
+
   }
 });
 

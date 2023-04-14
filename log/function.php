@@ -34,18 +34,6 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <title><?php echo $title ."の気持ちを知る・表す";?></title>
-  <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
-  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>">
-  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
-  <meta property="og:site_name" content="<?php echo $site;?>">
-  <meta property="og:url" content="<?php echo $url;?>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ja_JP" />
-  <meta property="og:image" content="summary.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="summary.png" />
-
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../css/all.css" />
   <link rel="stylesheet" href="../../css/flash.css" />

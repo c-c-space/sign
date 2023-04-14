@@ -6,11 +6,6 @@ $day = "01";
 require('../function.php');
 ?>
 
-<script type="text/javascript">
-let thismonth = 1
-const endDate = 31
-</script>
-
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>
   <?php foreach ($rows as $row) : ?>
@@ -20,6 +15,12 @@ const endDate = 31
   #000,
   <?php endif; ?>
   #fff);">
+
+  <script type="text/javascript">
+  let thismonth = 1
+  const endDate = 31
+  </script>
+
   <main>
     <?php require('../../php/viewall.php'); ?>
   </main>

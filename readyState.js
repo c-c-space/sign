@@ -41,7 +41,7 @@ document.addEventListener('readystatechange', event => {
       readmeHTML();
     } else {
       async function submitHTML() {
-        fetch('submit.html')
+        fetch('php/submit.php')
         .then(response => response.text())
         .then(submit => {
           document.querySelector('#submit').innerHTML = submit;

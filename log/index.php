@@ -1,5 +1,5 @@
 <?php
-require('../function.php');
+require('../php/function.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ require('../function.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
 
-  <script src="../../js/index.js" async></script>
+  <script src="/js/index.js" async></script>
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
@@ -48,7 +48,7 @@ require('../function.php');
 
   <main>
     <?php
-    require('../viewall.php');
+    require('../php/viewall.php');
     ?>
     <script src="../js/flash.js"></script>
 

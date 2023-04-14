@@ -74,11 +74,7 @@ fclose($fp);
   </header>
 
   <main>
-    <?php
-    require('php/viewall.php');
-    ?>
-    <script src="js/flash.js"></script>
-
+    <?php require('php/viewall.php'); ?>
     <nav id="now">
       <button type="button" id="allBtn" onclick="allView()">
         <span>
@@ -92,6 +88,7 @@ fclose($fp);
       </button>
     </nav>
   </main>
+  <script src="js/flash.js"></script>
   <script src="js/viewall.js"></script>
 
   <form id="submit" class="hidden" method="post" hidden></form>

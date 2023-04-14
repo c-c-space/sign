@@ -1,7 +1,4 @@
-<?php
-require('../php/function.php');
-?>
-
+<?php require('../php/log.php'); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -25,6 +22,7 @@ require('../php/function.php');
   }
   </style>
 </head>
+
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>
   <?php foreach ($rows as $row) : ?>
@@ -47,9 +45,7 @@ require('../php/function.php');
   </header>
 
   <main>
-    <?php
-    require('../php/viewall.php');
-    ?>
+    <?php require('../php/viewall.php'); ?>
   </main>
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>

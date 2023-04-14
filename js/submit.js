@@ -50,7 +50,7 @@ async function submitThis() {
   };
 
   const signJSON = JSON.stringify(thisSign)
-  let url = 'log.php';
+  let url = 'submit.php';
   let response = await fetch(url, {
     method: 'POST',
     headers: {

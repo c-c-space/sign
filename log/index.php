@@ -1,4 +1,5 @@
 <?php require('../php/log.php'); ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -64,6 +65,6 @@
       <button type="submit">View The Collection</button>
     </section>
   </form>
-  <script src="../js/log.js"></script>
+  <script src="../js/selectdate.js"></script>
 </body>
 </html>

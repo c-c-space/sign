@@ -52,6 +52,14 @@ fclose($fp);
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">
   <style type="text/css">
+  html {
+    height: -webkit-fill-available;
+  }
+
+  body {
+    min-height: -webkit-fill-available;
+  }
+
   header {
     mix-blend-mode: difference;
   }

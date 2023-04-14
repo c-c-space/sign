@@ -19,12 +19,11 @@ if(!localStorage.getItem('sign')) {
     let symbol = youJSON[i].symbolValue
     let color = youJSON[i].colorlValue
 
-    let gradient += `#${color},`
     yourAll.innerHTML += `<li><p><u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u><b style="color:#${color};">${time}</b></p></li>`
     yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
   }
 
-  document.body.style.backgroundImage = `linear-gradient(0deg, ${gradient}, #fff)`
+  document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
 
   let yourInfo = JSON.parse(localStorage.getItem('yourInfo'));
   yourIP.innerText = yourInfo.ip

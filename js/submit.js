@@ -19,6 +19,7 @@ function changeHidden() {
   })
 }
 
+// localStorage から sign アイテムを取得
 let array = JSON.parse(localStorage.getItem("sign")) || [];
 const addData = (timestamp, symbolValue, colorlValue) => {
   array.push({
@@ -31,6 +32,7 @@ const addData = (timestamp, symbolValue, colorlValue) => {
   return {timestamp, symbolValue, colorlValue}
 }
 
+// タイムスタンプを生成
 let getWeek = new Array("日","月","火","水","木","金","土");
 const newDate = new Date();
 
@@ -38,9 +40,9 @@ const getYear = newDate.getFullYear();
 const getMonth = newDate.getMonth() + 1;
 const getDate = newDate.getDate();
 const getDay = newDate.getDay();
-const getHours = newDate.getHours();
-const getMinutes = newDate.getMinutes();
-const getSeconds = newDate.getSeconds();
+const getHours = newDate.getHours().toString().padStart(2, '0');
+const getMinutes = newDate.getMinutes().toString().padStart(2, '0');
+const getSeconds = newDate.getSeconds().toString().padStart(2, '0');
 
 const setDate = getYear + "年" + getMonth + "月" + getDate + "日";
 const setWeek = "(" + getWeek[getDay] + ")";
@@ -78,6 +80,7 @@ async function submitThis() {
     color : colorlValue
   };
 
+  // localStorage の sign アイテム に配列を追加
   addData(timestamp, symbolValue, colorlValue)
 
   const signJSON = JSON.stringify(thisSign)

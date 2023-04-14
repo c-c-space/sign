@@ -46,76 +46,36 @@ require('function.php');
     </nav>
   </header>
 
-  <form id="now" class="hidden" method="GET">
-    <section>
-      <button type="button" onclick="flashView()">
-        <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
-      </button>
-      <button type="button" onclick="allView()">
-        <span><?php echo $post;?> の色と記号</span>
-      </button>
-    </section>
-    <section>
-      <select id="select" name="day"></select>
-      <button type="submit">View The Collection</button>
-    </section>
-    <script src="../js/log.js"></script>
-  </form>
-
   <main>
-    <section id="all">
-      <ul>
-        <?php if (!empty($rows)) : ?>
-          <?php foreach ($rows as $row) : ?>
-            <li>
-              <p>
-                <u style="background:#<?= h($row[1]) ?>;">
-                  <span style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></span>
-                </u>
-                <b style="color:#<?= h($row[1]) ?>;"><?= h($row[2]) ?></b>
-              </p>
-            </li>
-          <?php endforeach; ?>
-        <?php else : ?>
-          <li>
-            <p>
-              <u style="background:#000;">
-                <span style="color:#000;">?</span>
-              </u>
-              <b>Nothing Here</b>
-            </p>
-          </li>
-        <?php endif; ?>
-      </ul>
-    </section>
+    <?php
+    require('../viewall.php');
+    ?>
+    <script src="../js/flash.js"></script>
 
-    <section id="flash">
-      <ul>
-        <?php if (!empty($rows)) : ?>
-          <?php shuffle($rows); foreach ($rows as $row) : ?>
-            <li style="background:#<?= h($row[1]) ?>;">
-              <b style="color:#<?= h($row[1]) ?>;"><?= h($row[0]) ?></b>
-            </li>
-          <?php endforeach; ?>
-        <?php else : ?>
-          <li style="background:#aaa;">
-            <b style="color:#aaa;">?</b>
-          </li>
-        <?php endif; ?>
-      </ul>
-      <section id="speed">
-        <input id="flash_speed" type="range" value="" min="500" max="5000">
+    <form id="now" class="hidden" method="GET">
+      <section>
+        <button type="button" onclick="flashView()">
+          <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
+        </button>
+        <button type="button" onclick="allView()">
+          <span><?php echo $post;?> の色と記号</span>
+        </button>
       </section>
-      <script src="../js/flash.js" async></script>
-    </section>
+      <section>
+        <select id="select" name="day"></select>
+        <button type="submit">View The Collection</button>
+      </section>
+    </form>
+    <script src="../js/log.js"></script>
   </main>
 
   <script type="text/javascript">
   'use strict'
 
+  let all = document.querySelector('#all');
+  let flash = document.querySelector('#flash');
+
   function allView() {
-    let all = document.querySelector('#all');
-    let flash = document.querySelector('#flash');
     if (all.style.opacity == 1) {
       all.style.opacity = 0;
       flash.style.opacity = 0;
@@ -130,8 +90,6 @@ require('function.php');
   }
 
   function flashView() {
-    let flash = document.querySelector('#flash');
-    let all = document.querySelector('#all');
     if (flash.style.opacity == 1) {
       flash.style.opacity = 0;
       all.style.opacity = 0;

@@ -48,11 +48,9 @@ require('function.php');
   </header>
 
   <main>
-
     <?php
     require('viewall.php');
     ?>
-
     <script src="js/flash.js"></script>
 
     <nav id="now">

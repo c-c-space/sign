@@ -28,7 +28,7 @@ document.addEventListener('readystatechange', event => {
 
     selectLog.addEventListener('change', function() {
       const selectMonth = document.querySelectorAll('#log select option');
-      const index =  this.selectedIndex;
+      const index = this.selectedIndex;
       window.location.assign(selectMonth[index].value);
     });
   }

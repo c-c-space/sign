@@ -16,12 +16,6 @@ $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));
 
-$w = date("w");
-$week_name = array("日", "月", "火", "水", "木", "金", "土");
-
-$title = date("n") .'月'. $day .'日の気持ちを知る・表す';
-$description = $post .'の色と記号';
-
 function h($str) {
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }

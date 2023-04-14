@@ -94,7 +94,7 @@ input[type="submit"],
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
 }
 
 #log {
@@ -102,7 +102,7 @@ input[type="submit"],
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   pointer-events: none;
   user-select: none;
   transition: 1s;

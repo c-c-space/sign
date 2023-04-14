@@ -77,7 +77,7 @@ fclose($fp);
     <?php require('php/viewall.php'); ?>
     <nav id="now">
       <button type="button" id="allBtn" onclick="allView()">
-        <span><b><?php echo date('n');?></b> 月 <b><?php echo date('j');?></b> 日</span>
+        <span><?php print(date('n 月 j 日') . " ($week_name[$w])") ?></span>
       </button>
       <button type="button" onclick="flashView()">
         <time id="showTime"></time>

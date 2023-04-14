@@ -5,6 +5,14 @@ const yourFlash = document.querySelector('#flash ul')
 const yourIP = document.querySelector('#yourIP')
 const yourPost = document.querySelector('#yourpost')
 
+function deleteAll() {
+  localStorage.removeItem('sign');
+
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
+}
+
 let yourInfo = JSON.parse(localStorage.getItem('yourInfo'));
 yourIP.innerText = "IP " + yourInfo.ip
 
@@ -16,14 +24,6 @@ if(!localStorage.getItem('sign')) {
 } else {
   let youJSON = JSON.parse(localStorage.getItem('sign'));
   yourPost.innerText = youJSON.length + 'の色と記号'
-
-  function deleteAll() {
-    localStorage.removeItem('sign');
-
-    setTimeout(() => {
-      location.reload();
-    }, 1000);
-  }
 
   yourAll.innerHTML += `<li><p><button type="button" onclick="deleteAll()">全消去 | Delete All</button></p></li>`
 

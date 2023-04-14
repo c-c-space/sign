@@ -13,6 +13,7 @@ document.addEventListener('readystatechange', event => {
       '令和三年六月': ['2021','06'],
       '令和三年七月': ['2021','07'],
       '令和三年八月': ['2021','08'],
+      '令和三年九月': ['2021','09'],
     }
 
     const selectLog = document.querySelector('#log select');

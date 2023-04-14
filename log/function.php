@@ -12,11 +12,6 @@ $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));
 
-$description = $post .'の色と記号';
-
-$site = "http".(isset($_SERVER["HTTPS"])?"s":"")."://"."{$_SERVER["HTTP_HOST"]}";
-$url = "{$site}"."{$_SERVER['REQUEST_URI']}";
-
 function h($str) {
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
@@ -27,14 +22,3 @@ while ($row = fgetcsv($fp)) {
 
 fclose($fp);
 ?>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no" />
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../css/all.css" />
-  <link rel="stylesheet" href="../../css/flash.css" />
-</head>

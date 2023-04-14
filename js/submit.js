@@ -20,13 +20,13 @@ function changeHidden() {
 }
 
 
-const submitForm = document.querySelector('#submit');
-submitForm.addEventListener('submit', submitThis);
+const submitForm = document.querySelector('#submit')
+submitForm.addEventListener('submit', submitThis)
 
 async function submitThis() {
   event.preventDefault();
-  const symbolAll = document.getElementsByName('symbol');
-  const colorAll = document.getElementsByName("color");
+  const symbolAll = document.getElementsByName('symbol')
+  const colorAll = document.getElementsByName("color")
 
   let symbolValue = "";
   for (let i = 0; i < symbolAll.length; i++) {
@@ -49,8 +49,8 @@ async function submitThis() {
     color : colorlValue
   };
 
-  const signJSON = JSON.stringify(thisSign);
-  let url = 'log.php';
+  const signJSON = JSON.stringify(thisSign)
+  let url = '/sign/log.php';
   let response = await fetch(url, {
     method: 'POST',
     headers: {

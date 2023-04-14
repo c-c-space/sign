@@ -48,8 +48,8 @@
 }
 
 #all ul p {
-  padding: 0;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  margin: 0;
   word-break: break-all;
 }
 
@@ -87,7 +87,7 @@
   }
 
   #all ul p {
-    margin: 2vw;
+    padding: 2vw;
   }
 
   #all ul li u {

@@ -1,9 +1,9 @@
 <?php
-$title = '令和三年七月';
+$title = '令和三年八月';
 $year = "2021";
-$month = "07";
+$month = "08";
 
-require('function.php');
+require('../function.php');
 ?>
 
 <body style="background-image: linear-gradient(0deg,
@@ -18,10 +18,10 @@ require('function.php');
 
   <main>
     <?php
-    require('viewall.php');
+    require('../viewall.php');
     ?>
   </main>
-  <script src="../js/flash.js"></script>
+  <script src="../../js/flash.js"></script>
 
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
@@ -31,6 +31,6 @@ require('function.php');
       <span><?php echo $post;?> の色と記号</span>
     </button>
   </form>
-  <script src="../js/viewall.js"></script>
+  <script src="../../js/viewall.js"></script>
 </body>
 </html>

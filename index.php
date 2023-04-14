@@ -75,21 +75,20 @@ fclose($fp);
 
   <main>
     <?php require('php/viewall.php'); ?>
+    <nav id="now">
+      <button type="button" id="allBtn" onclick="allView()">
+        <span>
+          <?php
+          print(date('n 月 j 日') . " ($week_name[$w])")
+          ?>
+        </span>
+      </button>
+      <button type="button" onclick="flashView()">
+        <time id="showTime"></time>
+      </button>
+    </nav>
   </main>
   <script src="js/flash.js"></script>
-
-  <nav id="now">
-    <button type="button" id="allBtn" onclick="allView()">
-      <span>
-        <?php
-        print(date('n 月 j 日') . " ($week_name[$w])")
-        ?>
-      </span>
-    </button>
-    <button type="button" onclick="flashView()">
-      <time id="showTime"></time>
-    </button>
-  </nav>
   <script src="js/viewall.js"></script>
 
   <form id="submit" class="hidden" method="post" hidden></form>

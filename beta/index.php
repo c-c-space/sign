@@ -33,14 +33,6 @@
         <p><b>creative-community.space</b></p>
         <u>Index</u>
       </a>
-      <a href="/sign/" target="_parent">
-        <i>Colors and Symbols that Suits on You</i>
-        <p>自分の気持ちを知る・表す</p>
-      </a>
-      <a href="/sign/log/" target="_parent">
-        <i>View The Collection</i>
-        <p>今月の色と記号</p>
-      </a>
     </nav>
   </header>
 

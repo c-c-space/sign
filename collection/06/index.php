@@ -6,7 +6,7 @@ require('../function.php');
 ?>
 
 <script type="text/javascript">
-let thismonth = 1
+let thismonth = 6
 const endDate = 30
 </script>
 

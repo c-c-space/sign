@@ -86,14 +86,12 @@ fclose($fp);
       <button type="submit">View The Collection</button>
     </section>
   </form>
+  <script src="script.js"></script>
 
   <main>
     <?php require('../beta/viewall.php'); ?>
   </main>
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>
-
-  <script src="script.js"></script>
-
 </body>
 </html>

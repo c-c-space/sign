@@ -51,12 +51,12 @@
   </nav>
 
   <section id="collection">
-    <iframe src="202103.php"></iframe>
-    <iframe src="202104.php"></iframe>
-    <iframe src="202105.php"></iframe>
-    <iframe src="202106.php"></iframe>
-    <iframe src="202107.php"></iframe>
-    <iframe src="202108.php"></iframe>
+    <iframe src="202103/"></iframe>
+    <iframe src="202104/"></iframe>
+    <iframe src="202105/"></iframe>
+    <iframe src="202106/"></iframe>
+    <iframe src="202107/"></iframe>
+    <iframe src="202108/"></iframe>
   </section>
 
   <script src="script.js"></script>

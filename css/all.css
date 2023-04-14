@@ -93,7 +93,7 @@
 
   #all ul li u {
     margin-right: 2vw;
-    margin-bottom: 2vw;
+    margin-bottom: 0;
     width: 10vw;
     height: 10vw;
   }

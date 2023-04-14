@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
+
   <script src="/js/index.js" async></script>
+  <script src="readyState.js"></script>
+
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/all.css" />
   <link rel="stylesheet" href="css/flash.css" />
+  <link rel="stylesheet" href="css/submit.css" />
   <style type="text/css">
     body {
       background-image: linear-gradient(0deg, #aaa, #fff);
@@ -56,21 +61,26 @@
           <b style="color:#aaa;">?</b>
         </li>
       </ul>
-      <section id="speed">
+      <nav id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
-      </section>
+      </nav>
     </section>
+
+    <nav id="now" class="hidden">
+      <button type="button" onclick="flashView()">
+        <span>IP</span>
+      </button>
+      <button type="button" onclick="allView()">
+        <span id="yourpost"></span>
+      </button>
+    </nav>
   </main>
   <script src="js/flash.js"></script>
   <script src="js/viewall.js"></script>
 
-  <form id="now" class="hidden" method="GET">
-    <button type="button" onclick="flashView()">
-      <span>IP</span>
-    </button>
-    <button type="button" onclick="allView()">
-      <span> の色と記号</span>
-    </button>
-  </form>
+  <form id="submit" class="hidden" method="post" hidden></form>
+  <script src="js/submit.js"></script>
+
+  <script src="js/you.js"></script>
 </body>
 </html>

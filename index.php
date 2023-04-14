@@ -83,6 +83,25 @@ fclose($fp);
         <time id="showTime"></time>
       </button>
     </nav>
+    <script type="text/javascript">
+    function set10(num) {
+      let ret;
+      if (num < 10) { ret = "0" + num; }
+      else { ret = num; }
+      return ret;
+    }
+
+    function nowOn() {
+      const nowTime = new Date();
+      const nowHour = set10(nowTime.getHours());
+      const nowMin = set10(nowTime.getMinutes());
+      const nowSec = set10(nowTime.getSeconds());
+      const showTime = nowHour + ":" + nowMin + ":" + nowSec;
+      document.querySelector("#showTime").textContent = showTime;
+    }
+
+    setInterval('nowOn()', 1000);
+    </script>
   </main>
   <script src="js/flash.js"></script>
   <script src="js/viewall.js"></script>

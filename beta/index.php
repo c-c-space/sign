@@ -9,9 +9,9 @@
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/collection.css" />
-
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">
+
   <style type="text/css">
   header {
     mix-blend-mode: difference;

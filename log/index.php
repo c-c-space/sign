@@ -11,7 +11,7 @@ if (isset($_GET["day"])) {
   $day = $_GET["day"];
 }
 
-$source_file = "log/". $month ."/". $day . ".csv";
+$source_file = $month ."/". $day . ".csv";
 $fp = fopen($source_file, 'a+b');
 
 $post = sizeof(file($source_file));

@@ -62,7 +62,7 @@ document.addEventListener('readystatechange', event => {
       }
       submitHTML();
     }
-  } else if (event.target.readyState === 'complete') {
+
     function set10(num) {
       let ret;
       if (num < 10) { ret = "0" + num; }
@@ -80,6 +80,7 @@ document.addEventListener('readystatechange', event => {
     }
 
     setInterval('nowOn()', 1000);
+  } else if (event.target.readyState === 'complete') {
   }
 });
 

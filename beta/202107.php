@@ -73,31 +73,6 @@ fclose($fp);
   <?php endif;?>
   #fff);">
 
-  <script src="/js/menu.js"></script>
-  <header id="menu" hidden>
-    <button id="js-button"><b></b></button>
-    <nav id="contents">
-      <a href="/" target="_parent">
-        <p><b>creative-community.space</b></p>
-        <u>Index</u>
-      </a>
-      <a href="/sign/" target="_parent">
-        <i>Colors and Symbols that Suits on You</i>
-        <p>自分の気持ちを知る・表す</p>
-      </a>
-      <a href="/sign/log/" target="_parent">
-        <i>View The Collection</i>
-        <p>今月の色と記号</p>
-      </a>
-    </nav>
-  </header>
-
-  <nav id="log" class="hidden">
-    <select>
-      <option selected disabled>自分の気持ちを知る・表す</option>
-    </select>
-  </nav>
-
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
       <span id="title"><?php echo $title;?></span>

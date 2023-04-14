@@ -26,9 +26,8 @@ $url = "{$site}"."{$_SERVER['REQUEST_URI']}";
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="<?php echo $url;?>card.png" />
 
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/flash.css" />
-  <link rel="stylesheet" href="../css/viewall.css" />
 
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">
@@ -69,6 +68,15 @@ $url = "{$site}"."{$_SERVER['REQUEST_URI']}";
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
+
+  <main id="collection">
+    <iframe src="202103.php"></iframe>
+    <iframe src="202104.php"></iframe>
+    <iframe src="202105.php"></iframe>
+    <iframe src="202106.php"></iframe>
+    <iframe src="202107.php"></iframe>
+    <iframe src="202108.php"></iframe>
+  </main>
 
   <script src="script.js"></script>
 </body>

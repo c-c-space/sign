@@ -1,0 +1,22 @@
+#collection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+#collection iframe {
+  border: none;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border: solid transparent;
+  width: 75vw;
+  height: 100%;
+}

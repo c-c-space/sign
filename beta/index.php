@@ -39,7 +39,6 @@ require('function.php');
 </head>
 
 <body>
-
   <script src="/js/menu.js"></script>
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>

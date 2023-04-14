@@ -1,7 +1,6 @@
 <?php
 $month = "01";
 $day = "01";
-$title = "一月"
 
 require('../function.php');
 ?>

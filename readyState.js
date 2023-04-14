@@ -32,7 +32,7 @@ document.addEventListener('readystatechange', event => {
 
     if(!localStorage.getItem('yourInfo')) {
       async function readmeHTML() {
-        fetch('readme.html')
+        fetch('php/readme.php')
         .then(response => response.text())
         .then(readme => {
           document.querySelector('#submit').innerHTML = readme;
@@ -41,7 +41,7 @@ document.addEventListener('readystatechange', event => {
       readmeHTML();
     } else {
       async function submitHTML() {
-        fetch('submit.html')
+        fetch('php/submit.php')
         .then(response => response.text())
         .then(submit => {
           document.querySelector('#submit').innerHTML = submit;

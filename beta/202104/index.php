@@ -17,20 +17,11 @@ require('../function.php');
   #fff);">
 
   <main>
-    <?php
-    require('../viewall.php');
-    ?>
+    <?php require('../viewall.php'); ?>
   </main>
   <script src="../../js/flash.js"></script>
 
-  <form id="now" class="hidden" method="GET">
-    <button type="button" onclick="flashView()">
-      <span id="title"><?php echo $title;?></span>
-    </button>
-    <button type="button" id="allBtn" onclick="allView()">
-      <span><?php echo $post;?> の色と記号</span>
-    </button>
-  </form>
+  <?php require('../now.php'); ?>
   <script src="../../js/viewall.js"></script>
 </body>
 </html>

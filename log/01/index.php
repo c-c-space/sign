@@ -5,23 +5,6 @@ $day = "01";
 require('../function.php');
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no" />
-
-  <script type="text/javascript">
-  let thismonth = 1
-  const endDate = 31
-  </script>
-
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../../css/all.css" />
-  <link rel="stylesheet" href="../../css/flash.css" />
-</head>
-
 <body style="background-image: linear-gradient(0deg,
   <?php if (!empty($rows)) : ?>
   <?php foreach ($rows as $row) : ?>
@@ -31,6 +14,11 @@ require('../function.php');
   #000,
   <?php endif; ?>
   #fff);">
+
+  <script type="text/javascript">
+  let thismonth = 1
+  const endDate = 31
+  </script>
 
   <main>
     <?php require('../../php/viewall.php'); ?>

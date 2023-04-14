@@ -20,7 +20,7 @@
     {
       "date" : "View The Collection",
       "name" : "今月の色と記号",
-      "url" : "/sign/log/",
+      "url" : "/sign/collection/",
       "type" : "news",
       "caption" : "none",
       "note" : ""

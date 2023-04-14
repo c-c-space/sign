@@ -18,17 +18,17 @@
       "note" : ""
     },
     {
-      "date" : "View The Collection",
-      "name" : "今月の色と記号",
-      "url" : "/sign/collection/",
+      "date" : "Sign β ver",
+      "name" : "令和三年三月から令和三年九月の色と記号",
+      "url" : "/sign/beta/",
       "type" : "news",
       "caption" : "none",
       "note" : ""
     },
     {
-      "date" : "Sign β ver",
-      "name" : "令和三年三月から令和三年九月の色と記号",
-      "url" : "/sign/beta/",
+      "date" : "Members Only",
+      "name" : "令和三年十月から令和四年九月の色と記号",
+      "url" : "/sign/members/",
       "type" : "news",
       "caption" : "none",
       "note" : ""

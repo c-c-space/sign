@@ -21,7 +21,7 @@ require('../function.php');
     require('../viewall.php');
     ?>
   </main>
-  <script src="../js/flash.js"></script>
+  <script src="../../js/flash.js"></script>
 
   <form id="now" class="hidden" method="GET">
     <button type="button" onclick="flashView()">
@@ -31,6 +31,6 @@ require('../function.php');
       <span><?php echo $post;?> の色と記号</span>
     </button>
   </form>
-  <script src="../js/viewall.js"></script>
+  <script src="../../js/viewall.js"></script>
 </body>
 </html>

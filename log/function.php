@@ -52,14 +52,3 @@ fclose($fp);
   #000,
   <?php endif; ?>
   #fff);">
-
-  <script src="/js/menu.js"></script>
-  <header id="menu" hidden>
-    <button id="js-button"><b></b></button>
-    <nav id="contents">
-      <a href="/" target="_parent">
-        <p><b>creative-community.space</b></p>
-        <u>Index</u>
-      </a>
-    </nav>
-  </header>

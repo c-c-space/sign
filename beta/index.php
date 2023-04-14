@@ -26,8 +26,8 @@ $url = "{$site}"."{$_SERVER['REQUEST_URI']}";
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="<?php echo $url;?>card.png" />
 
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/collection.css" />
 
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="apple-touch-icon-precomposed" href="icon.png" type="image/png">

@@ -65,7 +65,7 @@ $url = "{$site}"."{$_SERVER['REQUEST_URI']}";
 
   <nav id="log" class="hidden">
     <select>
-      <option selected disabled>自分の気持ちを知る・表す</option>
+      <option selected disabled>令和三年三月から令和三年九月</option>
     </select>
   </nav>
 

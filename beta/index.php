@@ -8,10 +8,10 @@ require('function.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <title><?php echo $title ."の気持ちを知る・表す";?></title>
-  <meta name="description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
-  <meta property="og:title" content="<?php echo $title ."の気持ちを知る・表す"; ?>">
-  <meta property="og:description" content="<?php echo $title ."の気持ちを知る・表す". $description;?>">
+  <title>自分の気持ちを知る表す</title>
+  <meta name="description" content="<?php echo $title ."の色と記号";?>">
+  <meta property="og:title" content="自分の気持ちを知る表す">
+  <meta property="og:description" content="<?php echo $title ."の色と記号";?>">
   <meta property="og:site_name" content="<?php echo $site;?>">
   <meta property="og:url" content="<?php echo $url;?>" />
   <meta property="og:type" content="website" />
@@ -38,15 +38,7 @@ require('function.php');
   </style>
 </head>
 
-<body style="background-image: linear-gradient(0deg,
-  <?php if (!empty($rows)):?>
-  <?php foreach ($rows as $row):?>
-  #<?= h($row[1])?>,
-  <?php endforeach;?>
-  <?php else:?>
-  #000,
-  <?php endif;?>
-  #fff);">
+<body>
 
   <script src="/js/menu.js"></script>
   <header id="menu" hidden>
@@ -72,53 +64,6 @@ require('function.php');
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>
   </nav>
-
-  <form id="now" class="hidden" method="GET">
-    <button type="button" onclick="flashView()">
-      <span id="title"><?php echo $title;?></span>
-    </button>
-    <button type="button" id="allBtn" onclick="allView()">
-      <span><?php echo $post;?> の色と記号</span>
-    </button>
-  </form>
-
-  <main>
-    <section id="all">
-      <ul>
-        <?php if (!empty($rows)):?>
-          <?php foreach ($rows as $row):?>
-            <li style="background:#<?= h($row[1])?>;">
-              <span style="color:#<?= h($row[1])?>;"><?= h($row[0])?></span>
-            </li>
-          <?php endforeach;?>
-        <?php else:?>
-          <li style="background:#000;">
-            <span style="color:#fff;">?</span>
-          </li>
-        <?php endif;?>
-      </ul>
-    </section>
-
-    <section id="flash">
-      <ul>
-        <?php if (!empty($rows)):?>
-          <?php shuffle($rows); foreach ($rows as $row):?>
-            <li style="background:#<?= h($row[1])?>;">
-              <b style="color:#<?= h($row[1])?>;"><?= h($row[0])?></b>
-            </li>
-          <?php endforeach;?>
-        <?php else:?>
-          <li style="background:#aaa;">
-            <b style="color:#aaa;">?</b>
-          </li>
-        <?php endif;?>
-      </ul>
-      <section id="speed">
-        <input id="flash_speed" type="range" value="" min="500" max="5000">
-      </section>
-      <script src="../js/flash.js" async></script>
-    </section>
-  </main>
 
   <script src="script.js"></script>
 </body>

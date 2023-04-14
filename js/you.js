@@ -25,7 +25,7 @@ if(!localStorage.getItem('sign')) {
     yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
   }
 
-  document.body.style.backgroundImage = "linear-gradient(0deg, " + yourGradient + ", #fff)"
+  document.body.style.backgroundImage = "linear-gradient(0deg, " + yourGradient + " #fff)"
 
   let yourInfo = JSON.parse(localStorage.getItem('yourInfo'));
   yourIP.innerText = yourInfo.ip

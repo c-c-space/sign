@@ -2,7 +2,7 @@
 mb_language("ja");
 mb_internal_encoding("UTF-8");
 
-$source_file = $year . $month . $day . ".csv";
+$source_file = "log.csv";
 $fp = fopen($source_file, "a+b");
 $post = sizeof(file($source_file));
 

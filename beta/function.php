@@ -55,14 +55,5 @@ fclose($fp);
   body {
     min-height: -webkit-fill-available;
   }
-
-  header {
-    mix-blend-mode: difference;
-  }
-
-  #js-button,
-  #contents a {
-    filter: invert();
-  }
   </style>
 </head>

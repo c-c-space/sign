@@ -65,10 +65,6 @@ fclose($fp);
         <p><b>creative-community.space</b></p>
         <u>Index</u>
       </a>
-      <a href="/sign/" target="_parent">
-        <i>Colors and Symbols that Suits on Today</i>
-        <p>今日の気持ちを知る・表す</p>
-      </a>
     </nav>
   </header>
 

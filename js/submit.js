@@ -1,25 +1,5 @@
 'use strict'
 
-function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit, main');
-  mainAll.forEach(main => {
-    if (main.hidden == false) {
-      main.hidden = true;
-    } else {
-      main.animate (
-        [
-          {opacity: 0},
-          {opacity: 1}
-        ], {
-          duration: 1000
-        }
-      )
-      main.hidden = false;
-    }
-  })
-}
-
-
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)
 
@@ -50,7 +30,7 @@ async function submitThis() {
   };
 
   const signJSON = JSON.stringify(thisSign)
-  let url = '/sign/log.php';
+  let url = '/sign/php/log.php';
   let response = await fetch(url, {
     method: 'POST',
     headers: {

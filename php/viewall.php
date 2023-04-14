@@ -38,7 +38,6 @@
       </li>
     <?php endif;?>
   </ul>
-
   <section id="speed">
     <input id="flash_speed" type="range" value="" min="500" max="5000">
   </section>

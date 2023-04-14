@@ -5,7 +5,6 @@ date_default_timezone_set('Asia/Tokyo');
 
 $year = date("Y");
 $month = date("m");
-
 $day = date("d");
 if (isset($_GET["day"])) {
   $day = $_GET["day"];

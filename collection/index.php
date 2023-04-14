@@ -1,4 +1,4 @@
-<?php require('../php/log.php'); ?>
+<?php require('../php/collection.php'); ?>
 
 <!DOCTYPE html>
 <html lang="ja">

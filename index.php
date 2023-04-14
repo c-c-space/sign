@@ -8,7 +8,7 @@ $month = date("m");
 
 $day = date("d");
 
-$source_file = "log/". $month ."/". $day . ".csv";
+$source_file = "collection/". $month ."/". $day . ".csv";
 $fp = fopen($source_file, 'a+b');
 
 $w = date("w");

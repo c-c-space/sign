@@ -19,7 +19,6 @@ function changeHidden() {
   })
 }
 
-
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)
 

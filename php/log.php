@@ -5,7 +5,7 @@ date_default_timezone_set("Asia/Tokyo");
 
 $month = date("m");
 $day = date("d");
-$source_file = "log/". $month ."/". $day . ".csv";
+$source_file = "/sign/log/". $month ."/". $day . ".csv";
 
 $w = date("w");
 $week_name = array("日", "月", "火", "水", "木", "金", "土");

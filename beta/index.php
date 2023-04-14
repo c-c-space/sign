@@ -67,7 +67,7 @@ require('function.php');
     </nav>
   </header>
 
-  <nav id="log">
+  <nav id="log" class="hidden">
     <select>
       <option selected disabled>自分の気持ちを知る・表す</option>
     </select>

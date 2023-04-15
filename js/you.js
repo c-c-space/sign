@@ -17,7 +17,7 @@ if(!localStorage.getItem('sign')) {
   yourAll.innerHTML += `<li><p><u style="background:#000;"><span style="color:#000;">?</span></u><b style="color:#fff;">Nothing Here</b></p></li>`
   yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
   yourInfo.innerText = "あなたの投稿はまだありません"
-  yourPost.innerText = 'Not Yet Signed'
+  yourPost.innerText = 'Not Signed Yet'
   document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
 } else {
   let youJSON = JSON.parse(localStorage.getItem('sign'));

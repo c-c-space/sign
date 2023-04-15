@@ -19,6 +19,10 @@
   word-spacing: -.25ch;
 }
 
+#back-btn {
+  font-family: Arial, sans-serif;
+}
+
 #about h1 {
   font-size: 200%;
   font-weight: 500;

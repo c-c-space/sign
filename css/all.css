@@ -22,6 +22,10 @@
   font-style: normal;
   font-weight: 500;
   transform: scale(1, 1.25);
+}
+
+#all ul li i,
+#ip {
   margin-bottom: 1rem;
 }
 
@@ -127,7 +131,8 @@
     font-size: 125%;
   }
 
-  #all ul li i {
+  #all ul li i,
+  #ip {
     margin-bottom: 2.5vw;
   }
 

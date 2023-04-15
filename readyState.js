@@ -77,7 +77,7 @@ document.addEventListener('readystatechange', event => {
       }
 
       const log = JSON.parse(localStorage.getItem('yourInfo'));
-      yourAll.innerHTML += `<li><p><i>Sign | creative-community.space</i><b style="color:#fff;">${log.ip}</b><small>Posted by ${log.os}</small></li>`
+      yourAll.innerHTML += `<li><p><i>Sign | creative-community.space</i><b id="ip" style="color:#fff;">${log.ip}</b><small>Posted by ${log.os}</small></li>`
 
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'

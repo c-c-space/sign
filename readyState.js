@@ -59,7 +59,7 @@ document.addEventListener('readystatechange', event => {
     if(!localStorage.getItem('sign')) {
       yourAll.innerHTML += `<li><p><u style="background:#000;"><span style="color:#000;">?</span></u><b style="color:#fff;">あなたの投稿はまだありません</b></p></li>`
       yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
-      yourInfo.innerText = "投稿はまだありません"
+      yourInfo.innerText = "まだ投稿はありません"
       yourPost.innerText = 'Not Signed Yet'
       document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
     } else {

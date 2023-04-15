@@ -16,8 +16,8 @@ function deleteAll() {
 if(!localStorage.getItem('sign')) {
   yourAll.innerHTML += `<li><p><u style="background:#000;"><span style="color:#000;">?</span></u><b style="color:#fff;">Nothing Here</b></p></li>`
   yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
-  yourInfo.innerText = "あなたの気持ちを知る・表す"
-  yourPost.innerText = '色と記号'
+  yourInfo.innerText = "あなたの投稿はまだありません"
+  yourPost.innerText = 'Not Yet Signed'
   document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
 } else {
   let youJSON = JSON.parse(localStorage.getItem('sign'));
@@ -33,7 +33,7 @@ if(!localStorage.getItem('sign')) {
     yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
   }
 
-  yourInfo.innerText = "あなたの気持ちを知る・表す"
+  yourInfo.innerText = "自分の気持ちを知る・表す"
   yourPost.innerText = youJSON.length + ' の色と記号'
   document.body.style.backgroundImage = "linear-gradient(0deg, " + yourGradient + " #fff)"
 }

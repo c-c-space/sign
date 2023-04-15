@@ -16,6 +16,14 @@
   word-spacing: -0.25ch;
 }
 
+#all ul li i {
+  display: inline-block;
+  font-family: "ipag", monospace;
+  font-style: normal;
+  font-weight: 500;
+  transform: scale(1, 1.25);
+}
+
 #all,
 #all * {
   box-sizing: border-box;

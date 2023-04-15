@@ -65,6 +65,7 @@ document.addEventListener('readystatechange', event => {
     } else {
       let youJSON = JSON.parse(localStorage.getItem('sign'));
       yourAll.innerHTML += `<li><p><button type="button" onclick="deleteAll()">全消去 | Delete All</button></p></li>`
+      yourAll.innerHTML += `<li><p>You Are<b style="color:#fff;">${log.ip}</b><small>${log.os}</small></p></li>`
 
       for (let i = 0; i < youJSON.length; i++) {
         let time = youJSON[i].timestamp
@@ -76,8 +77,9 @@ document.addEventListener('readystatechange', event => {
         yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
       }
 
+      yourAll.innerHTML += `<li><p><b style="color:#fff;">Your Sign</b><small>あなたの色と記号</small></p></li>`
+
       const log = JSON.parse(localStorage.getItem('yourInfo'));
-      yourAll.innerHTML += `<li><p><b style="color:#fff;">${log.ip}</b><small>${log.os}</small></p></li>`
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'
       document.body.style.backgroundImage = "linear-gradient(0deg," + yourGradient + "#fff)"

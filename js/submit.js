@@ -77,7 +77,8 @@ async function submitThis() {
 
   let thisSign = {
     symbol : symbolValue,
-    color : colorlValue
+    color : colorlValue,
+    timestamp : timestamp
   };
 
   // localStorage の sign アイテム に配列を追加

@@ -23,7 +23,7 @@ if(!localStorage.getItem('sign')) {
   document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
 } else {
   let youJSON = JSON.parse(localStorage.getItem('sign'));
-  yourPost.innerText = youJSON.length + 'の色と記号'
+  yourPost.innerText = youJSON.length + ' の色と記号'
 
   yourAll.innerHTML += `<li><p><button type="button" onclick="deleteAll()">全消去 | Delete All</button></p></li>`
 

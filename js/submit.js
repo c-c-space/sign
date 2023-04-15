@@ -62,7 +62,7 @@ async function submitThis() {
     timestamp : timestamp
   };
 
-  // localStorage の sign アイテム に配列を追加
+  // localStorage に sign を追加
   addData(timestamp, symbolValue, colorlValue)
 
   const signJSON = JSON.stringify(thisSign)

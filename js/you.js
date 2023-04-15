@@ -14,7 +14,7 @@ function deleteAll() {
 }
 
 let yourInfo = JSON.parse(localStorage.getItem('yourInfo'));
-yourIP.innerText = "YOU " + yourInfo.os
+yourIP.innerText = "IP " + yourInfo.ip
 
 if(!localStorage.getItem('sign')) {
   yourPost.innerText = 'Nothing Here'

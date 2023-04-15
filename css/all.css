@@ -22,7 +22,7 @@
   font-style: normal;
   font-weight: 500;
   transform: scale(1, 1.25);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #all,
@@ -127,7 +127,7 @@
   }
 
   #all ul li i {
-    margin-bottom: 2vw;
+    margin-bottom: 2.5vw;
   }
 
   #all ul li button {

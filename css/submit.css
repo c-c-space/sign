@@ -48,17 +48,21 @@
   width: 100%;
 }
 
-#symbol p b,
-#color p b {
-  display: inline-block;
+#symbol p,
+#color p {
   font-family: 'Times New Roman', serif;
-  font-size: 125%;
-  font-weight: 500;
   font-stretch: condensed;
   font-variant: common-ligatures tabular-nums;
   line-height: 200%;
   transform: scale(1, 1.1);
   word-spacing: -.25ch;
+}
+
+#symbol p b,
+#color p b {
+  display: inline-block;
+  font-size: 125%;
+  font-weight: 500;
 }
 
 #symbol ul,

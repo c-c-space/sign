@@ -6,6 +6,7 @@
 }
 
 #all ul li b,
+#all ul li small,
 #all ul li button {
   font-family: 'Times New Roman', serif;
   font-weight: 500;
@@ -38,7 +39,7 @@
   opacity: 0;
   overflow: auto;
   padding: 0;
-  margin: 12.5vh auto 0;
+  margin: 12.5% auto 0;
   height: 75%;
   width: 95%;
   max-width: 450px;
@@ -74,14 +75,13 @@
   height: 2.5rem;
 }
 
-#all ul li u span {
+#all ul li u span,
+#all ul li b {
   font-size: 150%;
   filter: invert();
 }
 
 #all ul li b {
-  font-size: 150%;
-  filter: invert();
   display: block;
   margin: 0;
 }

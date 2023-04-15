@@ -14,8 +14,12 @@
   margin: 0;
 }
 
-#flash {
+#flash,
+#flash ul li {
   opacity: 0;
+}
+
+#flash {
   z-index: 0;
   transition: 2.5s;
 }
@@ -33,7 +37,6 @@
 }
 
 #flash ul li {
-  opacity: 0;
   display: grid;
   place-items: center;
 }

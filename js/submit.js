@@ -1,25 +1,6 @@
 'use strict'
 
-function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit, main');
-  mainAll.forEach(main => {
-    if (main.hidden == false) {
-      main.hidden = true;
-    } else {
-      main.animate (
-        [
-          {opacity: 0},
-          {opacity: 1}
-        ], {
-          duration: 1000
-        }
-      )
-      main.hidden = false;
-    }
-  })
-}
-
-// localStorage から sign アイテムを取得
+// localStorage から sign を取得
 let array = JSON.parse(localStorage.getItem("sign")) || [];
 const addData = (timestamp, symbolValue, colorlValue) => {
   array.push({
@@ -35,7 +16,6 @@ const addData = (timestamp, symbolValue, colorlValue) => {
 // タイムスタンプを生成
 let getWeek = new Array("日","月","火","水","木","金","土");
 const newDate = new Date();
-
 const getYear = newDate.getFullYear();
 const getMonth = newDate.getMonth() + 1;
 const getDate = newDate.getDate();
@@ -51,6 +31,7 @@ const setTime = getHours + ":" + getMinutes + ":" + getSeconds;
 let timestamp = setDate + setWeek + setTime;
 
 
+// 色と記号を投稿する
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)
 

@@ -2,6 +2,7 @@
 
 const yourAll = document.querySelector('#all ul')
 const yourFlash = document.querySelector('#flash ul')
+const yourInfo = document.querySelector('#yourInfo')
 const yourPost = document.querySelector('#yourpost')
 
 function deleteAll() {
@@ -12,14 +13,11 @@ function deleteAll() {
   }, 1000);
 }
 
-let yourInfo = JSON.parse(localStorage.getItem('yourInfo'));
-const yourIP = document.querySelector('#yourIP')
-
 if(!localStorage.getItem('sign')) {
   yourAll.innerHTML += `<li><p><u style="background:#000;"><span style="color:#000;">?</span></u><b style="color:#fff;">Nothing Here</b></p></li>`
   yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
+  yourInfo.innerText = "あなたの気持ちを知る・表す"
   yourPost.innerText = '色と記号'
-  yourIP.innerText = "あなたの気持ちを知る・表す"
   document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
 } else {
   let youJSON = JSON.parse(localStorage.getItem('sign'));
@@ -35,7 +33,7 @@ if(!localStorage.getItem('sign')) {
     yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
   }
 
+  yourInfo.innerText = "あなたの気持ちを知る・表す"
   yourPost.innerText = youJSON.length + ' の色と記号'
-  yourIP.innerText = "IP " + yourInfo.ip
   document.body.style.backgroundImage = "linear-gradient(0deg, " + yourGradient + " #fff)"
 }

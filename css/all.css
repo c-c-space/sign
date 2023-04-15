@@ -101,6 +101,7 @@
   border-radius: 5rem;
   background: #fff;
   padding: 0.25rem 0.75rem;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 550px) {
@@ -135,5 +136,6 @@
     border-radius: 5vw;
     font-size: 100%;
     padding: 0.5vw 2.5vw;
+    margin-top: 2.5vw;
   }
 }

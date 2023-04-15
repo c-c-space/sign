@@ -24,14 +24,19 @@
   transform: scale(1, 1.25);
 }
 
-#all ul li i,
-#ip {
-  margin-bottom: 1rem;
-}
-
 #all,
 #all * {
   box-sizing: border-box;
+}
+
+#all ul li b {
+  display: block;
+  margin: 0;
+}
+
+#all ul li i,
+#ip {
+  margin-bottom: 1rem;
 }
 
 #all ul {
@@ -92,11 +97,6 @@
 #all ul li b {
   font-size: 150%;
   filter: invert();
-}
-
-#all ul li b {
-  display: block;
-  margin: 0;
 }
 
 #all ul li button {

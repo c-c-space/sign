@@ -1,5 +1,24 @@
 'use strict'
 
+function changeHidden() {
+  const mainAll = document.querySelectorAll('#submit, main');
+  mainAll.forEach(main => {
+    if (main.hidden == false) {
+      main.hidden = true;
+    } else {
+      main.animate (
+        [
+          {opacity: 0},
+          {opacity: 1}
+        ], {
+          duration: 1000
+        }
+      )
+      main.hidden = false;
+    }
+  })
+}
+
 function deleteAll() {
   localStorage.removeItem('sign');
   setTimeout(() => {

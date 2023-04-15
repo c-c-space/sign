@@ -16,14 +16,14 @@ $ip = $_SERVER["REMOTE_ADDR"];
 define("LOGFILE", $source_file);
 $data = json_decode(file_get_contents("php://input"), true);
 
-$this = array(
+$output = array(
   $data["symbol"],
   $data["color"],
   $timestamp,
   $ip
 );
 
-$result = implode(',', $this);
+$result = implode(',', $output);
 file_put_contents(LOGFILE, $result."\n", FILE_APPEND | LOCK_EX);
-echo json_encode($this);
+echo json_encode($output);
 ?>

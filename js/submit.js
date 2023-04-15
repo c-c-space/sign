@@ -1,24 +1,5 @@
 'use strict'
 
-function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit, main');
-  mainAll.forEach(main => {
-    if (main.hidden == false) {
-      main.hidden = true;
-    } else {
-      main.animate (
-        [
-          {opacity: 0},
-          {opacity: 1}
-        ], {
-          duration: 1000
-        }
-      )
-      main.hidden = false;
-    }
-  })
-}
-
 // localStorage から sign を取得
 let array = JSON.parse(localStorage.getItem("sign")) || [];
 const addData = (timestamp, symbolValue, colorlValue) => {

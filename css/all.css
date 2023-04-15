@@ -22,7 +22,7 @@
   font-style: normal;
   font-weight: 500;
   transform: scale(1, 1.25);
-  line-height: 200%;
+  margin-bottom: 0.5rem;
 }
 
 #all,
@@ -124,6 +124,10 @@
 
   #all ul li b {
     font-size: 125%;
+  }
+
+  #all ul li i {
+    margin-bottom: 2vw;
   }
 
   #all ul li button {

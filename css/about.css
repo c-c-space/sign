@@ -10,7 +10,8 @@
 }
 
 #about h1,
-#about p {
+#about p,
+#about summary {
   font-family: 'Times New Roman', serif;
   font-weight: 500;
   font-stretch: condensed;
@@ -21,6 +22,20 @@
 
 #back-btn {
   font-family: Arial, "Yu Gothic", "游ゴシック体", sans-serif;
+}
+
+#about details {
+  margin-bottom: 1rem;
+}
+
+#about summary {
+  padding: 0.5rem;
+}
+
+#about hr {
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 #about h1 {
@@ -51,6 +66,11 @@
     font-size: 3vw;
     padding: 17.5vw 5vw 5vw;
     margin: 0 auto;
+  }
+
+  #about hr {
+    padding: 2.5vw;
+    margin: 2.5vw;
   }
 
   #back-btn {

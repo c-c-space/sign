@@ -1,7 +1,7 @@
 'use strict'
 
 function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit, main');
+  const mainAll = document.querySelectorAll('#submit, main')
   mainAll.forEach(main => {
     if (main.hidden == false) {
       main.hidden = true;
@@ -14,16 +14,16 @@ function changeHidden() {
           duration: 1000
         }
       )
-      main.hidden = false;
+      main.hidden = false
     }
   })
 }
 
 function deleteAll() {
-  localStorage.removeItem('sign');
+  localStorage.removeItem('sign')
   setTimeout(() => {
-    location.reload();
-  }, 1000);
+    location.reload()
+  }, 1000)
 }
 
 document.addEventListener('readystatechange', event => {

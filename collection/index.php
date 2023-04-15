@@ -6,10 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
+
   <script src="/js/index.js" async></script>
+  <script src="readyState.js"></script>
+
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/flash.css" />
+  <link rel="stylesheet" href="../css/about.css" />
   <style type="text/css">
   header {
     mix-blend-mode: difference;
@@ -45,24 +49,25 @@
 
   <main>
     <?php require('../php/viewall.php'); ?>
+
+    <form id="now" class="hidden" method="GET">
+      <section id="viewall">
+        <button type="button" onclick="flashView()">
+          <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
+        </button>
+        <button type="button" onclick="allView()">
+          <span><?php echo $post;?> の色と記号</span>
+        </button>
+      </section>
+      <section id="members">
+        <select id="select" name="day"></select>
+        <button type="submit">View The Collection</button>
+      </section>
+    </form>
   </main>
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>
 
-  <form id="now" class="hidden" method="GET">
-    <section>
-      <button type="button" onclick="flashView()">
-        <span><?php echo $month;?> 月 <?php echo $day;?> 日</span>
-      </button>
-      <button type="button" onclick="allView()">
-        <span><?php echo $post;?> の色と記号</span>
-      </button>
-    </section>
-    <section>
-      <select id="select" name="day"></select>
-      <button type="submit">View The Collection</button>
-    </section>
-  </form>
-  <script src="../js/selectdate.js"></script>
+  <article id="submit" class="hidden" hidden></article>
 </body>
 </html>

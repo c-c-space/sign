@@ -17,6 +17,6 @@ const endDate = 31
 <script src="../../js/viewall.js"></script>
 
 <?php require('../now.php'); ?>
-<script src="../selectdate.js" async></script>
+<script src="../../js/selectdate.js" async></script>
 </body>
 </html>

@@ -38,7 +38,6 @@ document.addEventListener('readystatechange', event => {
         document.querySelector('#submit').innerHTML = readme;
       });
     }
-
     readmeHTML();
   } else if (event.target.readyState === 'complete') {
     if(!localStorage.getItem('yourInfo')) {
@@ -65,15 +64,11 @@ document.addEventListener('readystatechange', event => {
         if (d < 9) {
           calendarHtml += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
           dayCount++
-        }
-        else if (dayCount > today) {
-        }
-        else {
+        } else {
           calendarHtml += '<option value="' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
           dayCount++
         }
       }
-
       document.querySelector('#select').innerHTML = calendarHtml
     }
   }

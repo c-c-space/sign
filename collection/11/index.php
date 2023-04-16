@@ -11,7 +11,7 @@ const endDate = 30
 </script>
 
 <main>
-  <?php require('../../php/viewall.php'); ?>
+  <?php require('../../viewall.php'); ?>
 </main>
 <script src="../../js/flash.js"></script>
 <script src="../../js/viewall.js"></script>

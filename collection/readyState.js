@@ -32,7 +32,7 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     async function readmeHTML() {
-      fetch('../readme.html')
+      fetch('../about.html')
       .then(response => response.text())
       .then(readme => {
         document.querySelector('#submit').innerHTML = readme;

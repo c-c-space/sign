@@ -7,8 +7,8 @@
         </li>
       <?php endforeach;?>
     <?php else:?>
-      <li style="background:#000;">
-        <span style="color:#fff;">?</span>
+      <li style="background:#fff;">
+        <span style="color:#aaa;">?</span>
       </li>
     <?php endif;?>
   </ul>
@@ -23,8 +23,8 @@
         </li>
       <?php endforeach;?>
     <?php else:?>
-      <li style="background:#aaa;">
-        <b style="color:#aaa;">?</b>
+      <li style="background:#fff;">
+        <b style="color:#fff;">?</b>
       </li>
     <?php endif;?>
   </ul>

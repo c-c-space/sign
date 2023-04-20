@@ -62,8 +62,8 @@ fclose($fp);
     <button id="js-button"><b></b></button>
     <nav id="contents">
       <a href="/sign/" target="_parent">
-        <p><b>Colors and Symbols that Suits on You</b></p>
-        <u>自分の気持ちを知る・表す</u>
+        <i>Colors and Symbols that Suits on You</i>
+        <p>自分の気持ちを知る・表す</p>
       </a>
     </nav>
   </header>

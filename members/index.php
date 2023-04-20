@@ -61,9 +61,9 @@ fclose($fp);
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>
     <nav id="contents">
-      <a href="/" target="_parent">
-        <p><b>creative-community.space</b></p>
-        <u>Index</u>
+      <a href="/sign/" target="_parent">
+        <p><b>Colors and Symbols that Suits on You</b></p>
+        <u>自分の気持ちを知る・表す</u>
       </a>
     </nav>
   </header>

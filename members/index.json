@@ -10,9 +10,9 @@
 
   "contents" : [
     {
-      "date" : "Colors and Symbols that Suits on You",
-      "name" : "自分の気持ちを知る・表す",
-      "url" : "/sign/",
+      "date" : "View The Collection",
+      "name" : "毎日の色と記号",
+      "url" : "/sign/collection/",
       "type" : "news",
       "caption" : "none",
       "note" : ""

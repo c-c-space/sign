@@ -46,8 +46,6 @@
   font-weight: 500;
   font-stretch: condensed;
   font-variant: common-ligatures tabular-nums;
-  transform: scale(1, 1.1);
-  word-spacing: -0.25ch;
   font-size: 5rem;
   filter: invert();
 }

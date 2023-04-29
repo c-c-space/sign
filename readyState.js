@@ -70,7 +70,7 @@ document.addEventListener('readystatechange', event => {
       const log = JSON.parse(localStorage.getItem('yourInfo'));
       yourAll.innerHTML += `<li><p>
       <i>Sign | creative-community.space</i>
-      <b id="ip" style="color:#fff;">Colors and Symbols that Suits on You</b>
+      <b id="ip" style="color:#fff;">Colors & Symbols that Suits on You</b>
       <small>by ${log.os}</small>
       </p></li>`
 

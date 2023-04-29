@@ -50,7 +50,12 @@ document.addEventListener('readystatechange', event => {
     const yourPost = document.querySelector('#yourpost')
 
     if(!localStorage.getItem('sign')) {
-      yourAll.innerHTML += `<li><p><u style="background:#000;"><span style="color:#000;">?</span></u><b style="color:#fff;">あなたの投稿はまだありません</b></p></li>`
+      yourAll.innerHTML += `<li>
+      <p>
+      <u style="background:#000;"><span style="color:#000;">?</span></u>
+      <b style="color:#fff;">あなたの投稿はまだありません</b>
+      </p>
+      </li>`
       yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
       yourInfo.innerText = "まだ投稿はありません"
       yourPost.innerText = 'Not Signed Yet'
@@ -63,16 +68,23 @@ document.addEventListener('readystatechange', event => {
         let color = youJSON[i].colorlValue
         var yourGradient = `#${color},`
 
-        yourAll.innerHTML += `<li><p><u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u><b style="color:#${color};">${time}</b></p></li>`
+        yourAll.innerHTML += `<li>
+        <p>
+        <u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u>
+        <b style="color:#${color};">${time}</b>
+        </p>
+        </li>`
         yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
       }
 
       const log = JSON.parse(localStorage.getItem('yourInfo'));
-      yourAll.innerHTML += `<li><p>
+      yourAll.innerHTML += `<li>
+      <p>
       <i>Sign | creative-community.space</i>
       <b id="ip" style="color:#fff;">Colors & Symbols that Suits on You</b>
       <small>by ${log.os}</small>
-      </p></li>`
+      </p>
+      </li>`
 
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'

@@ -19,13 +19,6 @@ function changeHidden() {
   })
 }
 
-function deleteAll() {
-  localStorage.removeItem('sign')
-  setTimeout(() => {
-    location.reload()
-  }, 1000)
-}
-
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'loading') {
     // 文書の読み込み中に実行する
@@ -64,8 +57,6 @@ document.addEventListener('readystatechange', event => {
       document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
     } else {
       let youJSON = JSON.parse(localStorage.getItem('sign'));
-      yourAll.innerHTML += `<li><p><button type="button" onclick="deleteAll()">全消去 | Delete All</button></p></li>`
-
       for (let i = 0; i < youJSON.length; i++) {
         let time = youJSON[i].timestamp
         let symbol = youJSON[i].symbolValue

@@ -1,4 +1,6 @@
 <section id="all">
+  <p><?php echo $month;?> 月 <?php echo $day;?> 日 の 色と記号</p>
+
   <ul>
     <?php if (!empty($rows)) : ?>
       <?php foreach ($rows as $row) : ?>

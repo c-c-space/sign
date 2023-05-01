@@ -30,7 +30,6 @@ const setTime = getHours + ":" + getMinutes + ":" + getSeconds;
 
 let timestamp = setDate + setWeek + setTime;
 
-
 // 色と記号を投稿する
 const submitForm = document.querySelector('#submit')
 submitForm.addEventListener('submit', submitThis)

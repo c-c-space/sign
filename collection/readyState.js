@@ -31,23 +31,24 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if(!localStorage.getItem('yourInfo')) {
-      async function about() {
+
+      async function submitHTML() {
         fetch('../about.php')
         .then(response => response.text())
-        .then(about => {
-          document.querySelector('#submit').innerHTML = about
-        })
+        .then(submit => {
+          document.querySelector('#submit').innerHTML = submit;
+        });
       }
-      about();
+      submitHTML();
     } else {
-      async function about() {
+      async function submitHTML() {
         fetch('../form.html')
         .then(response => response.text())
-        .then(about => {
-          document.querySelector('#submit').innerHTML = about
-        })
+        .then(submit => {
+          document.querySelector('#submit').innerHTML = submit;
+        });
       }
-      about();
+      submitHTML();
     }
   } else if (event.target.readyState === 'complete') {
     if(!localStorage.getItem('yourInfo')) {

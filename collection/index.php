@@ -52,9 +52,7 @@
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>
 
-  <article id="submit" class="hidden" hidden>
-    <section id="about"></section>
-  </article>
+  <article id="submit" class="hidden" hidden></article>
   <script src="/js/log.js"></script>
 </body>
 </html>

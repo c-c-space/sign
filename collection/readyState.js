@@ -70,7 +70,7 @@ document.addEventListener('readystatechange', event => {
       let dayCount = 1
       let thismonth = date.getMonth() + 1
       let selectDate = '<option selected disabled>Select Date</option>'
-      for (let d = 0; d < endDate; d++) {
+      for (let d = 0; d < today; d++) {
         if (d < 9) {
           selectDate += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
           dayCount++

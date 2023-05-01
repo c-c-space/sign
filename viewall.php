@@ -23,7 +23,7 @@
     <?php endif; ?>
     <li>
       <p>
-        <b style="color:#fff;"><?php echo $month;?> 月 <?php echo $day;?> 日 の 色と記号</b>
+        <b style="color:#fff;"><?php echo $month;?> 月 <?php echo $day;?> 日 の 気持ちを知る・表す</b>
       </p>
     </li>
   </ul>

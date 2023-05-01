@@ -4,6 +4,14 @@ $hqdn = $_SERVER["REMOTE_PORT"];
 $os = $_SERVER["HTTP_USER_AGENT"];
 ?>
 
+<p hidden>
+  <?php
+  echo "IP <b id='ip'>" . $ip . "</b> | ";
+  echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
+  echo "<i id='os'>" . $os . "</i>";
+  ?>
+</p>
+
 <section id="about">
   <button type="button" id="back-btn" onclick="setLOG()">自分の気持ちを知る・表す</button>
 
@@ -11,13 +19,6 @@ $os = $_SERVER["HTTP_USER_AGENT"];
   <p>これは、<b>色</b> と <b>記号</b> を使って <b>自分の気持ちを知る・表す</b> オンライン・コミュニケーションツール です。</p>
   <p> <b>_</b></p>
   <hr/>
-  <p>
-    <?php
-    echo "IP <b id='ip'>" . $ip . "</b> | ";
-    echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
-    echo "<i id='os'>" . $os . "</i>";
-    ?>
-  </p>
 </section>
 <!--
 <p><b>色</b> と <b>記号</b> の 投稿 を 日毎 に 記録し、<b>毎日</b> の気持ちを集めた作品を制作します。</p>

@@ -40,6 +40,13 @@ document.addEventListener('readystatechange', event => {
     about();
   } else if (event.target.readyState === 'complete') {
     if(!localStorage.getItem('yourInfo')) {
+      const enterBtn = document.createElement ('button')
+      enterBtn.setAttribute('type','button')
+      enterBtn.setAttribute('id','back-btn')
+      enterBtn.setAttribute('onclick','setLOG()')
+      enterBtn.innerText = 'Enter'
+      document.querySelector('#about').append(enterBtn)
+
       const viewAll = document.querySelector('#viewall')
       viewAll.style.display = "flex"
       viewAll.style.justifyContent = "space-between"

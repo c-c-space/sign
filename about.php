@@ -15,7 +15,7 @@ $os = $_SERVER["HTTP_USER_AGENT"];
     <?php
     echo "IP <b id='ip'>" . $ip . "</b> | ";
     echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
-    echo "<small id='os'>" . $os . "</small>";
+    echo "<i id='os'>" . $os . "</i>";
     ?>
   </p>
 </section>

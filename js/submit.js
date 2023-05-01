@@ -84,6 +84,6 @@ async function submitThis() {
   });
 
   setTimeout(() => {
-    location.reload();
+    window.location.replace('/sign/');
   }, 1000);
 }

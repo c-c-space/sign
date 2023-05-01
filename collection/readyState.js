@@ -1,7 +1,7 @@
 'use strict'
 
 function changeHidden() {
-  const mainAll = document.querySelectorAll('#submit, main');
+  const mainAll = document.querySelectorAll('#submit, main')
   mainAll.forEach(main => {
     if (main.hidden == false) {
       main.hidden = true;
@@ -10,11 +10,10 @@ function changeHidden() {
         [
           {opacity: 0},
           {opacity: 1}
-        ], {
-          duration: 1000
-        }
+        ],
+        {duration: 1000}
       )
-      main.hidden = false;
+      main.hidden = false
     }
   })
 }
@@ -31,14 +30,14 @@ document.addEventListener('readystatechange', event => {
     enterBtn.setAttribute('onClick','changeHidden()')
     document.body.prepend(enterBtn)
 
-    async function readmeHTML() {
-      fetch('../about.html')
+    async function about() {
+      fetch('../about.php')
       .then(response => response.text())
-      .then(readme => {
-        document.querySelector('#submit').innerHTML = readme;
-      });
+      .then(about => {
+        document.querySelector('#about').innerHTML = about
+      })
     }
-    readmeHTML();
+    about();
   } else if (event.target.readyState === 'complete') {
     if(!localStorage.getItem('yourInfo')) {
       const viewAll = document.querySelector('#viewall')
@@ -58,18 +57,17 @@ document.addEventListener('readystatechange', event => {
 
       let dayCount = 1
       let thismonth = date.getMonth() + 1
-      let calendarHtml = '<option selected disabled>Select Date</option>'
-
+      let selectDate = '<option selected disabled>Select Date</option>'
       for (let d = 0; d < today; d++) {
         if (d < 9) {
-          calendarHtml += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+          selectDate += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
           dayCount++
         } else {
-          calendarHtml += '<option value="' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+          selectDate += '<option value="' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
           dayCount++
         }
       }
-      document.querySelector('#select').innerHTML = calendarHtml
+      document.querySelector('#select').innerHTML = selectDate
     }
   }
-});
+})

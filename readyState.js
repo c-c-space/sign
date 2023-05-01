@@ -50,10 +50,11 @@ document.addEventListener('readystatechange', event => {
     const yourPost = document.querySelector('#yourpost')
 
     if(!localStorage.getItem('sign')) {
-      yourAll.innerHTML += `<li>
+      yourAll.innerHTML += `
+      <li>
       <p>
       <u style="background:#000;"><span style="color:#000;">?</span></u>
-      <b style="color:#fff;">あなたの投稿はまだありません</b>
+      <b style="color:#fff;">Submit Color & Symbol That Suits on You</b>
       </p>
       </li>`
       yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
@@ -68,7 +69,8 @@ document.addEventListener('readystatechange', event => {
         let color = youJSON[i].colorlValue
         var yourGradient = `#${color},`
 
-        yourAll.innerHTML += `<li>
+        yourAll.innerHTML += `
+        <li onclick="changeHidden()">
         <p>
         <u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u>
         <b style="color:#${color};">${time}</b>
@@ -78,7 +80,8 @@ document.addEventListener('readystatechange', event => {
       }
 
       const log = JSON.parse(localStorage.getItem('yourInfo'));
-      yourAll.innerHTML += `<li>
+      yourAll.innerHTML += `
+      <li>
       <p>
       <i>Sign | creative-community.space</i>
       <b id="ip" style="color:#fff;">Colors & Symbols that Suits on You</b>

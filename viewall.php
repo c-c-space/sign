@@ -21,7 +21,7 @@
         </p>
       </li>
     <?php endif; ?>
-    <li><?php echo $month;?> 月 <?php echo $day;?> 日 の 色と記号</li>
+    <li><p><?php echo $month;?> 月 <?php echo $day;?> 日 の 色と記号</p></li>
   </ul>
 </section>
 

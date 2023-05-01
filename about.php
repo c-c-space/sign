@@ -5,14 +5,12 @@ $os = $_SERVER["HTTP_USER_AGENT"];
 ?>
 
 <section id="about">
-  <p>
-    <?php
-    echo "IP <b id='ip'>" . $ip . "</b> | ";
-    echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
-    echo "<small id='os'>" . $os . "</small>";
-    ?>
-  </p>
-
+  <?php
+  echo "IP <b id='ip'>" . $ip . "</b> | ";
+  echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
+  echo "<small id='os'>" . $os . "</small>";
+  ?>
+  <br/>
   <button type="button" id="back-btn" onclick="setLOG()">自分の気持ちを知る・表す</button>
 
   <h1>This is an Online Communication Tool that Using Colors and Symbols that Suit on You.</h1>

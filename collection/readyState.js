@@ -30,14 +30,25 @@ document.addEventListener('readystatechange', event => {
     enterBtn.setAttribute('onClick','changeHidden()')
     document.body.prepend(enterBtn)
 
-    async function about() {
-      fetch('../about.php')
-      .then(response => response.text())
-      .then(about => {
-        document.querySelector('#submit').innerHTML = about
-      })
+    if(!localStorage.getItem('yourInfo')) {
+      async function about() {
+        fetch('../about.php')
+        .then(response => response.text())
+        .then(about => {
+          document.querySelector('#submit').innerHTML = about
+        })
+      }
+      about();
+    } else {
+      async function about() {
+        fetch('../form.html')
+        .then(response => response.text())
+        .then(about => {
+          document.querySelector('#submit').innerHTML = about
+        })
+      }
+      about();
     }
-    about();
   } else if (event.target.readyState === 'complete') {
     if(!localStorage.getItem('yourInfo')) {
       const viewAll = document.querySelector('#viewall')

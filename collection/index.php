@@ -10,8 +10,9 @@
   <script src="readyState.js"></script>
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
-  <link rel="stylesheet" href="../css/flash.css" />
   <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/flash.css" />
+  <link rel="stylesheet" href="../css/submit.css" />
   <style type="text/css">
   header {
     mix-blend-mode: difference;
@@ -52,7 +53,8 @@
   <script src="../js/flash.js"></script>
   <script src="../js/viewall.js"></script>
 
-  <article id="submit" class="hidden" hidden></article>
+  <form id="submit" class="hidden" method="post" hidden></form>
+  <script src="../js/submit.js"></script>
   <script src="/js/log.js"></script>
 </body>
 </html>

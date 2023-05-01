@@ -51,10 +51,10 @@ document.addEventListener('readystatechange', event => {
 
     if(!localStorage.getItem('sign')) {
       yourAll.innerHTML += `
-      <li>
+      <li onclick="changeHidden()">
       <p>
       <u style="background:#000;"><span style="color:#000;">?</span></u>
-      <b style="color:#fff;">Submit Color & Symbol That Suits on You</b>
+      <b style="color:#fff;">Submit Your Color & Symbol</b>
       </p>
       </li>`
       yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`
@@ -70,7 +70,7 @@ document.addEventListener('readystatechange', event => {
         var yourGradient = `#${color},`
 
         yourAll.innerHTML += `
-        <li onclick="changeHidden()">
+        <li>
         <p>
         <u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u>
         <b style="color:#${color};">${time}</b>

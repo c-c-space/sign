@@ -76,10 +76,10 @@ fclose($fp);
 
   <form id="now" class="hidden" method="GET">
     <section>
-      <button type="button" onclick="flashView()">
+      <button type="button" onclick="allView()">
         <span><?php echo $month;?></span>
       </button>
-      <button type="button" onclick="allView()">
+      <button type="button" onclick="flashView()">
         <span><?php echo $post;?> の色と記号</span>
       </button>
     </section>

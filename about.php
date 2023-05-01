@@ -12,7 +12,7 @@
 
 <section id="about">
   <button type="button" id="back-btn" onclick="setLOG()">自分の気持ちを知る・表す</button>
-  <hr/>
+
   <h1>This is an Online Communication Tool that Using Colors and Symbols that Suit on You.</h1>
   <p>これは、<b>色</b> と <b>記号</b> を使って <b>自分の気持ちを知る・表す</b> オンライン・コミュニケーションツール です。</p>
   <hr/>

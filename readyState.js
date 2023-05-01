@@ -54,7 +54,7 @@ document.addEventListener('readystatechange', event => {
       <li onclick="changeHidden()">
       <p>
       <u style="background:#000;"><span style="color:#000;">?</span></u>
-      <b style="color:#fff;">Submit Your Color & Symbol</b>
+      <b style="color:#fff;">Submit Your Colors & Symbols</b>
       </p>
       </li>`
       yourFlash.innerHTML += `<li style="background:#aaa;"><b style="color:#aaa;">?</b></li>`

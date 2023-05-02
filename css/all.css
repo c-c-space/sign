@@ -5,7 +5,8 @@
   right: 0;
 }
 
-#you i,
+.you i,
+.you u,
 #all ul li b,
 #all ul li small,
 #all ul li button {
@@ -17,7 +18,7 @@
   word-spacing: -0.25ch;
 }
 
-#you b {
+#ip {
   display: inline-block;
   font-family: "ipag", monospace;
   font-style: normal;
@@ -30,12 +31,11 @@
   box-sizing: border-box;
 }
 
-#you i,
+.you i,
 #all ul li b {
   display: block;
 }
 
-#you i,
 #all ul li i {
   margin-bottom: 1rem;
 }
@@ -77,7 +77,7 @@
   padding: 0.5rem;
 }
 
-#you,
+.you,
 #all ul p {
   padding: 0.5rem;
   margin: 0;
@@ -95,6 +95,7 @@
   height: 2.5rem;
 }
 
+.you u,
 #all ul li u span,
 #all ul li b {
   font-size: 150%;
@@ -119,7 +120,7 @@
     padding: 1vw;
   }
 
-  #you,
+  .you,
   #all ul p {
     padding: 2vw;
   }
@@ -130,11 +131,11 @@
     height: 10vw;
   }
 
+  .you u,
   #all ul li b {
     font-size: 125%;
   }
 
-  #you i,
   #all ul li i {
     margin-bottom: 2.5vw;
   }

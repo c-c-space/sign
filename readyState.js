@@ -68,7 +68,7 @@ document.addEventListener('readystatechange', event => {
         let symbol = youJSON[i].symbolValue
         let color = youJSON[i].colorlValue
 
-        document.querySelector('#gradient').innerHTML += `#${color}, `
+        document.querySelector('#gradient').innerText += `#${color}, `
 
         yourAll.innerHTML += `
         <li>
@@ -84,11 +84,11 @@ document.addEventListener('readystatechange', event => {
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'
 
-      let gradient = document.querySelector('#gradient').innerHTML
+      let gradient = document.querySelector('#gradient').innerText
       document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)"
     }
 
     const log = JSON.parse(localStorage.getItem('yourInfo'));
-    document.querySelector('#ip').innerHTML = `by ${log.os}`
+    document.querySelector('#ip').innerHTML = `Signed by <b>${log.os}</b>`
   }
 });

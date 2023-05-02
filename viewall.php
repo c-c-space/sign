@@ -1,6 +1,6 @@
 <section id="all">
   <p class="you">
-    <i>View The Collection</i>
+    <i>Colors & Symbols</i>
     <u style="color:#fff;"><?php echo $month;?> 月 <?php echo $day;?> 日 の気持ちを知る・表す</u>
     <small id="gradient" hidden></small>
   </p>

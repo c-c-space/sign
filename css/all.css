@@ -30,12 +30,13 @@
   box-sizing: border-box;
 }
 
+#you i,
 #all ul li b {
   display: block;
 }
 
-#all ul li i,
-#ip {
+#you i,
+#all ul li i {
   margin-bottom: 1rem;
 }
 
@@ -133,8 +134,8 @@
     font-size: 125%;
   }
 
-  #all ul li i,
-  #ip {
+  #you i,
+  #all ul li i {
     margin-bottom: 2.5vw;
   }
 

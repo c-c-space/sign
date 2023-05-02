@@ -68,7 +68,7 @@ document.addEventListener('readystatechange', event => {
         let symbol = youJSON[i].symbolValue
         let color = youJSON[i].colorlValue
 
-        var yourGradient = `#${color},`
+        document.querySelector('#gradient').innerHTML += `#${color}, `
 
         yourAll.innerHTML += `
         <li>
@@ -77,22 +77,18 @@ document.addEventListener('readystatechange', event => {
         <b style="color:#${color};">${time}</b>
         </p>
         </li>`
+
         yourFlash.innerHTML += `<li style="background:#${color};"><b style="color:#${color};">${symbol}</b></li>`
       }
 
-      const log = JSON.parse(localStorage.getItem('yourInfo'));
-      yourAll.innerHTML += `
-      <li>
-      <p>
-      <i>Sign | creative-community.space</i>
-      <b id="ip" style="color:#fff;">Colors & Symbols that Suits on You</b>
-      <small>by ${log.os}</small>
-      </p>
-      </li>`
-
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'
-      document.body.style.backgroundImage = "linear-gradient(0deg," + yourGradient + "#fff)"
+
+      let gradient = document.querySelector('#gradient').innerHTML
+      document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)"
     }
+
+    const log = JSON.parse(localStorage.getItem('yourInfo'));
+    document.querySelector('#ip').innerHTML = `by ${log.os}`
   }
 });

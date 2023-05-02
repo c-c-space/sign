@@ -5,6 +5,7 @@
   right: 0;
 }
 
+#you i,
 #all ul li b,
 #all ul li small,
 #all ul li button {
@@ -16,7 +17,7 @@
   word-spacing: -0.25ch;
 }
 
-#all ul li i {
+#you b {
   display: inline-block;
   font-family: "ipag", monospace;
   font-style: normal;
@@ -75,6 +76,7 @@
   padding: 0.5rem;
 }
 
+#you,
 #all ul p {
   padding: 0.5rem;
   margin: 0;
@@ -116,6 +118,7 @@
     padding: 1vw;
   }
 
+  #you,
   #all ul p {
     padding: 2vw;
   }

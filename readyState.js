@@ -67,7 +67,7 @@ document.addEventListener('readystatechange', event => {
         let time = youJSON[i].timestamp
         let symbol = youJSON[i].symbolValue
         let color = youJSON[i].colorlValue
-        var yourGradient = `#${color},`
+        var yourGradient += `#${color},`
 
         yourAll.innerHTML += `
         <li>

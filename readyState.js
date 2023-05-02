@@ -89,6 +89,6 @@ document.addEventListener('readystatechange', event => {
     }
 
     const log = JSON.parse(localStorage.getItem('yourInfo'));
-    document.querySelector('#ip').innerHTML = `Signed by <b>${log.os}</b>`
+    document.querySelector('#ip').innerHTML = `by <b>${log.os}</b>`
   }
 });

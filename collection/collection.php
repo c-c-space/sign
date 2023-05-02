@@ -3,7 +3,6 @@ mb_language("ja");
 mb_internal_encoding("UTF-8");
 date_default_timezone_set('Asia/Tokyo');
 
-$year = date("Y");
 $month = date("m");
 $day = date("d");
 if (isset($_GET["day"])) {

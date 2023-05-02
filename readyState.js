@@ -68,6 +68,8 @@ document.addEventListener('readystatechange', event => {
         let symbol = youJSON[i].symbolValue
         let color = youJSON[i].colorlValue
 
+        var yourGradient = `#${color},`
+
         yourAll.innerHTML += `
         <li>
         <p>
@@ -90,6 +92,7 @@ document.addEventListener('readystatechange', event => {
 
       yourInfo.innerText = "自分の気持ちを知る・表す"
       yourPost.innerText = youJSON.length + ' の色と記号'
+      document.body.style.backgroundImage = "linear-gradient(0deg," + yourGradient + "#fff)"
     }
   }
 });

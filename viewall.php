@@ -1,6 +1,6 @@
 <section id="all">
   <p class="you">
-    <i>Colors & Symbols</i>
+    <i>Sign | creative-community.space</i>
     <u style="color:#fff;"><?php echo $month;?> 月 <?php echo $day;?> 日 の気持ちを知る・表す</u>
     <small id="gradient" hidden></small>
   </p>

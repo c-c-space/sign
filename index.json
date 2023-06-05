@@ -1,6 +1,6 @@
 {
   "title" : "Sign",
-  "description" : "自分の気持ちを知る・表す | Colors and Symbols that Suits on You",
+  "description" : "自分の気持ちを知る・表す | Colors and Symbols that Suit You",
   "author" : "creative-community.space",
   "email" : "pehu@creative-community.space",
   "type" : "website",
@@ -10,7 +10,7 @@
 
   "contents" : [
     {
-      "date" : "Colors and Symbols that Suits on You",
+      "date" : "Colors and Symbols that Suit You",
       "name" : "自分の気持ちを知る・表す",
       "url" : "/sign/",
       "type" : "news",

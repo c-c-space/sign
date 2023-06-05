@@ -24,7 +24,7 @@ document.addEventListener('readystatechange', event => {
     // 文書の読み込み中に実行する
   } else if (event.target.readyState === 'interactive') {
     if(!localStorage.getItem('yourInfo')) {
-      window.location.assign('/sign/collection/');
+      window.location.replace('/sign/collection/');
     } else {
       const enterBtn = document.createElement('input')
       enterBtn.setAttribute('type','button')

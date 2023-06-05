@@ -79,9 +79,16 @@
 
 .you,
 #all ul p {
-  padding: 0.5rem;
   margin: 0;
   word-break: break-all;
+}
+
+.you {
+  padding: 1rem;
+}
+
+#all ul p {
+  padding: 0.5rem;
 }
 
 #all ul li u {

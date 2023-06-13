@@ -33,8 +33,7 @@
     Your Posts are also Saved in Local Storage to Create Your Colors and Symbols.
   </h2>
   <p>
-    また、あなたが投稿した 色 と 記号 は
-    あなたの <b>ローカルストレージ</b> に 保存され、
+    また、あなたの投稿は <b>ローカルストレージ</b> にも 保存され、
     <b>あなた</b> の 気持ちを知る・表す
     <b>色</b> と <b>記号</b> を生成します。
   </p>

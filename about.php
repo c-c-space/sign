@@ -17,6 +17,7 @@
     <b>自分の気持ちを知る・表す</b>
     オンライン・コミュニケーションツール です。
   </p>
+  <br/>
   <h2>
     Create a Collection of Daily Colors and Symbols with Daily Posts.
   </h2>
@@ -28,6 +29,7 @@
     <b>気持ちを知る・表す</b>
     色 と 記号 ページを生成します。
   </p>
+  <br/>
   <h2>
     Posted Colors and Symbols are also Saved in Local Storage to Create Your Colors and Symbols.
   </h2>

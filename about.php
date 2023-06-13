@@ -12,25 +12,33 @@
 
 <section id="about">
   <button type="button" id="back-btn" onclick="setLOG()">自分の気持ちを知る・表す</button>
-
-  <h1>This is an Online Communication Tool that Using Colors and Symbols that Suit You.</h1>
-  <p>これは、<b>色</b> と <b>記号</b> を使って <b>自分の気持ちを知る・表す</b> オンライン・コミュニケーションツール です。</p>
-  <hr/>
+  <h1>This is an Online Communication Tool that Using Colors and Symbols.</h1>
+  <p>
+    これは、<b>色</b> と <b>記号</b> を使って
+    <b>自分の気持ちを知る・表す</b>
+    オンライン・コミュニケーションツール です。
+  </p>
+  <br/>
+  <h2>
+    Create a Collection of Daily Colors and Symbols with Daily Posts.
+  </h2>
+  <p>
+    <b>18</b> の 色 と <b>35</b> の 記号 から
+    選択し、投稿された
+    今の気持ちに合う <b>色</b> と <b>記号</b>
+    を日毎に記録して、<b>毎日</b> の
+    <b>気持ちを知る・表す</b>
+    色 と 記号 ページを生成します。
+  </p>
+  <br/>
+  <h2>
+    Posted Colors and Symbols are also Saved in Local Storage to Create Your Colors and Symbols.
+  </h2>
+  <p>
+    また、あなたが投稿した <b>色</b> と <b>記号</b> は
+    あなたの <b>ローカルストレージ</b> に 保存され、
+    <b>あなた</b> の
+    <b>気持ちを知る・表す</b>
+    色 と 記号 ページを生成します。
+  </p>
 </section>
-<!--
-<p><b>色</b> と <b>記号</b> の 投稿 を 日毎 に 記録し、<b>毎日</b> の気持ちを集めた作品を制作します。</p>
-<p> <b>_</b></p>
-<hr/>
-<details>
-<summary>令和三年三月から令和三年九月</summary>
-<p>18 の <b>色</b> と 35 の <b>記号</b></p>
-<button type="button" id="back-btn" onclick="location.assign('beta/')">Sign β ver</button>
-</details>
-<details>
-<summary>令和三年十月から令和四年九月</summary>
-<p>18 の <b>色</b> と 35 の <b>記号</b></p>
-<button type="button" id="back-btn" onclick="location.assign('members/')">Members Only</button>
-</details>
-<button type="button" id="back-btn" onclick="setLOG()">Enter</button>
-
--->

@@ -11,7 +11,7 @@
 </p>
 
 <section id="about">
-  <h1>This is an Online Communication Tool that Using Colors and Symbols.</h1>
+  <h1>This is an Online Communication Tool that Uses Colors and Symbols to post Your Feelings.</h1>
   <p>
     これは、<b>色</b> と <b>記号</b> を使って
     <b>自分の気持ちを知る・表す</b>
@@ -30,7 +30,7 @@
   </p>
   <br/>
   <h2>
-    Posted Colors and Symbols are also Saved in Local Storage to Create Your Colors and Symbols.
+    Your Posts are also Saved in Local Storage to Create Your Colors and Symbols.
   </h2>
   <p>
     また、あなたが投稿した 色 と 記号 は

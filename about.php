@@ -24,21 +24,19 @@
   <p>
     <b>18</b> の 色 と <b>35</b> の 記号 から
     選択し、投稿された
-    今の気持ちに合う <b>色</b> と <b>記号</b>
-    を日毎に記録して、<b>毎日</b> の
-    <b>気持ちを知る・表す</b>
-    色 と 記号 ページを生成します。
+    今の気持ちに合う 色 と 記号
+    を日毎に記録して、<b>毎日</b> の 気持ちを知る・表す
+    <b>色</b> と <b>記号</b> を生成します。
   </p>
   <br/>
   <h2>
     Posted Colors and Symbols are also Saved in Local Storage to Create Your Colors and Symbols.
   </h2>
   <p>
-    また、あなたが投稿した <b>色</b> と <b>記号</b> は
+    また、あなたが投稿した 色 と 記号 は
     あなたの <b>ローカルストレージ</b> に 保存され、
-    <b>あなた</b> の
-    <b>気持ちを知る・表す</b>
-    色 と 記号 ページを生成します。
+    <b>あなた</b> の 気持ちを知る・表す
+    <b>色</b> と <b>記号</b> を生成します。
   </p>
   <hr/>
   <button type="button" id="back-btn" onclick="setLOG()">Enter Here</button>

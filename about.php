@@ -11,7 +11,6 @@
 </p>
 
 <section id="about">
-  <button type="button" id="back-btn" onclick="setLOG()">自分の気持ちを知る・表す</button>
   <h1>This is an Online Communication Tool that Using Colors and Symbols.</h1>
   <p>
     これは、<b>色</b> と <b>記号</b> を使って
@@ -41,4 +40,6 @@
     <b>気持ちを知る・表す</b>
     色 と 記号 ページを生成します。
   </p>
+  <hr/>
+  <button type="button" id="back-btn" onclick="setLOG()">Enter Here</button>
 </section>

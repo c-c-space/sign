@@ -28,9 +28,8 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-
   <script src="/js/index.js" async></script>
-
+  <link rel="stylesheet" href="/css/menu.css" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/viewall.css" />
   <link rel="stylesheet" href="../css/flash.css" />
@@ -57,7 +56,6 @@ fclose($fp);
   <?php endif; ?>
   #fff);">
 
-  <script src="/js/menu.js"></script>
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>
     <nav id="contents">
@@ -67,6 +65,7 @@ fclose($fp);
       </a>
     </nav>
   </header>
+  <script src="/js/menu.js"></script>
 
   <main>
     <?php require('../beta/viewall.php'); ?>

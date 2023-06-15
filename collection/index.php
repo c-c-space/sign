@@ -6,7 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
+  <script src="/js/index.js" async></script>
   <script src="readyState.js"></script>
+  <link rel="stylesheet" href="/css/menu.css" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/about.css" />
@@ -34,7 +36,6 @@
   <?php endif; ?>
   #fff);">
 
-  <script src="/js/menu.js"></script>
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>
     <nav id="contents">
@@ -44,7 +45,7 @@
       </a>
     </nav>
   </header>
-  <script src="/js/index.js" async></script>
+  <script src="/js/menu.js"></script>
 
   <main>
     <?php require('../viewall.php'); ?>

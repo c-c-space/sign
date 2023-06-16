@@ -40,7 +40,6 @@ fclose($fp);
   <meta property="og:image" content="../card.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="../card.png" />
-  <link rel="stylesheet" href="/css/menu.css" />
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../../css/flash.css" />
   <link rel="stylesheet" href="../../css/viewall.css" />

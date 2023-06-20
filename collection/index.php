@@ -9,7 +9,7 @@
   <script src="/js/index.js" async></script>
   <script src="readyState.js"></script>
   <link rel="stylesheet" href="/css/menu.css" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/all.css" />
   <link rel="stylesheet" href="../css/about.css" />
   <link rel="stylesheet" href="../css/flash.css" />

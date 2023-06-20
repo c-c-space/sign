@@ -30,7 +30,7 @@ fclose($fp);
   <meta name="format-detection" content="telephone=no" />
   <script src="/js/index.js" async></script>
   <link rel="stylesheet" href="/css/menu.css" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/viewall.css" />
   <link rel="stylesheet" href="../css/flash.css" />
 

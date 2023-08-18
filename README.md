@@ -19,6 +19,7 @@
 [^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリング [all.css](css/all.css)
 [^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
 
+---
 
 ## [collection](collection/index.php)
 日毎の CSVファイル から 投稿された 色と記号 を 取得 して　ページを生成
@@ -43,8 +44,5 @@
 ニューヨークを拠点とするアーティスト、教育者、芸術管理者のナタリア・ナカザワと、クリエイティブインディペンデントが共同で開発した新年の目標を立てるワークシート。
 *※ 音・瞑想・関係性・目標の入力を終えた最後に、理想と現実を色で表す項目があります。*
 
----
 
-[are.na channel](https://www.are.na/cc-group/sign-colors-and-symbols)
-
-
+### [are.na channel](https://www.are.na/cc-group/sign-colors-and-symbols)

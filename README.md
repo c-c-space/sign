@@ -1,6 +1,36 @@
 # Sign
 色 と 記号 を使って 自分の気持ちを知る・表す
 
+**18** の 色 と **35** の 記号[^1] から 選択した
+色と記号 を 日毎の CSVファイル と ローカルストレージ に 保存[^2]
+
+[^1]: 投稿フォーム [form.html](form.html) / 投稿フォームをスタイリングするCSS [submit.css](css/submit.css)
+[^2]: 日毎の CSVファイル に 色と記号 を追加  [submit.php](submit.php) / ローカルストレージ に 色と記号 を追加 [submit.js](js/submit.js)
+
+---
+
+## [index.html](index.html)
+ローカルストレージ から 投稿された 色と記号 を 取得[^3] し、
+グラデーションカラー[^4] ・フラッシュアニメーション[^5] を生成
+
+ページ内容を [viewall.js](js/viewall.js) で 動的に変更する
+
+[^3]: ローカルストレージ から 色と記号 を 取得し、要素を生成 [readyState.js](js/readyState.js)
+[^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリングするCSS [all.css](css/all.css)
+[^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / スタイリングするCSS [flash.css](css/flash.css)
+
+---
+
+## [collection](collection/index.php)
+日毎の CSVファイル から 投稿された 色と記号 を 取得 して　ページを生成
+
+フォームコントロール[^6] から 今月の日毎の投稿[^7] を取得
+
+[^6]: トップページ・日付を選択するフォームコントロールを生成 [now.php](collection/now.php) / [readyState.js](collection/readyState.js)
+[^7]: フォームコントロールから選択した日付のCSVファイルを取得 [collection.php](collection/collection.php)
+
+***
+
 ### 参考資料・参考作品
 
 [Color Chat](https://colorchat.soft.works/)

@@ -13,13 +13,12 @@
 ローカルストレージ から 投稿された 色と記号 を 取得[^3] し、
 グラデーションカラー[^4] ・フラッシュアニメーション[^5] を生成
 
-ページ内容を [viewall.js](js/viewall.js) で 動的に変更する
+[viewall.js](js/viewall.js) ページ内容を動的に変更する
 
 [^3]: ローカルストレージ から 色と記号 を 取得し、要素を生成 [readyState.js](js/readyState.js)
 [^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリング [all.css](css/all.css)
 [^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
 
----
 
 ## [collection](collection/index.php)
 日毎の CSVファイル から 投稿された 色と記号 を 取得 して　ページを生成

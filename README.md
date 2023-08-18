@@ -19,7 +19,6 @@
 [^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリング [all.css](css/all.css)
 [^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
 
----
 
 ## [collection](collection/index.php)
 日毎の CSVファイル から 投稿された 色と記号 を 取得 して　ページを生成

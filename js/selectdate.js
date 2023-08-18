@@ -1,3 +1,5 @@
+/* for /sign/collection/01 ~ 12/ */
+
 let dayCount = 1
 let calendarHtml = '<option selected disabled>Select Date</option>'
 

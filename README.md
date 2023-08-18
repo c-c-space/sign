@@ -4,7 +4,7 @@
 **18** の 色 と **35** の 記号[^1] から 選択した
 色と記号 を 日毎の CSVファイル と ローカルストレージ に 保存[^2]
 
-[^1]: 投稿フォーム [form.html](form.html) / 投稿フォームをスタイリングするCSS [submit.css](css/submit.css)
+[^1]: 投稿フォーム [form.html](form.html) / 投稿フォームをスタイリング [submit.css](css/submit.css)
 [^2]: 日毎の CSVファイル に 色と記号 を追加  [submit.php](submit.php) / ローカルストレージ に 色と記号 を追加 [submit.js](js/submit.js)
 
 ---
@@ -16,8 +16,8 @@
 ページ内容を [viewall.js](js/viewall.js) で 動的に変更する
 
 [^3]: ローカルストレージ から 色と記号 を 取得し、要素を生成 [readyState.js](js/readyState.js)
-[^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリングするCSS [all.css](css/all.css)
-[^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / スタイリングするCSS [flash.css](css/flash.css)
+[^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリング [all.css](css/all.css)
+[^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
 
 ---
 

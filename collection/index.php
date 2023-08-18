@@ -34,7 +34,7 @@
   <?php else : ?>
   #aaa,
   <?php endif; ?>
-  #fff);">
+  #fff)">
 
   <header id="menu" hidden>
     <button id="js-button"><b></b></button>

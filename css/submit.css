@@ -31,6 +31,8 @@
 
 #symbol,
 #color,
+#symbol li,
+#color li,
 #symbol label,
 #color label {
   display: grid;

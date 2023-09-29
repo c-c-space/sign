@@ -122,6 +122,7 @@ input[type="submit"],
 }
 
 #menu button {
+  filter: invert();
   mix-blend-mode: difference;
 }
 

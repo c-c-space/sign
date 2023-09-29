@@ -46,7 +46,7 @@
   font-weight: 500;
   font-stretch: condensed;
   font-variant: common-ligatures tabular-nums;
-  font-size: 5rem;
+  font-size: 450%;
   filter: invert();
 }
 
@@ -86,11 +86,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 550px) {
-  #flash ul li b {
-    font-size: 15vw;
-  }
-
+@media (orientation: portrait) {
   #speed input[type="range"] {
     border-radius: 5vw;
     padding: 0 0.5vw;

@@ -126,45 +126,6 @@ input[type="submit"],
   mix-blend-mode: difference;
 }
 
-@media screen and (max-width: 550px) {
-  #enter-btn {
-    font-size: 10vw;
-    padding: 0.5vw 4.5vw;
-    margin: 2vw;
-  }
-
-  #now,
-  #log {
-    font-size: 4vw;
-  }
-
-  #now button {
-    padding: 1vw;
-    margin: 0 2.5vw 2.5vw;
-  }
-
-  #now select,
-  #log select {
-    border: solid 0.25vw;
-    border-radius: 5vw;
-    padding: 1vw 2vw;
-  }
-
-  #now select {
-    margin: 0 2.5vw 2.5vw;
-  }
-
-  #log select {
-    margin: 2vw 2.5vw;
-  }
-
-  #now section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-
 @media print {
   body {
     background-size: 100% 100%;

@@ -58,7 +58,7 @@
   opacity: 0;
   overflow: auto;
   padding: 0;
-  margin: 12.5vh auto 0;
+  margin: 5rem auto 0;
   height: 75%;
   width: 95%;
   max-width: 450px;
@@ -120,6 +120,7 @@
 
 @media screen and (max-width: 550px) {
   #all {
+    margin: 17.5vw auto 0;
     width: 95%;
     max-width: 95%;
   }

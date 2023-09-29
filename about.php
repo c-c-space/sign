@@ -37,5 +37,5 @@
     echo "<small id='os'>" . $os . "</small>";
     ?>
   </p>
-  <button type="button" id="back-btn">Enter Here</button>
+  <button type="submit" id="back-btn">Enter Here</button>
 </section>

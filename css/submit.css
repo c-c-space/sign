@@ -168,8 +168,9 @@
     float: left;
     width: 100%;
     max-width: 100%;
-    min-width: -webkit-fill-available;;
+    min-width: -webkit-fill-available;
     height: 100vw;
+    padding: 0 5vw;
     transform: rotate(90deg);
   }
 

@@ -20,15 +20,6 @@
   z-index: 10;
 }
 
-#submit {
-  display: flex;
-}
-
-#submit {
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
 #symbol,
 #color,
 #symbol li,
@@ -45,13 +36,30 @@
   position: relative;
   width: 50%;
   max-width: 750px;
+  height: calc(100% - 5rem);
+}
+
+#symbol {
+  float: left;
+}
+
+#color {
+  float: right;
+}
+
+#symbol,
+#color {
+  text-align: center;
 }
 
 #symbol p,
-#color p {
-  font-size: 1.25vw;
+#color p,
+#symbol p b,
+#color p b {
+  display: block;
+  font-size: 125%;
   text-align: center;
-  width: 100%;
+  line-height: 200%;
 }
 
 #symbol p,
@@ -63,14 +71,6 @@
   font-variant: common-ligatures tabular-nums;
   transform: scale(1, 1.1);
   word-spacing: -.25ch;
-}
-
-#symbol p b,
-#color p b {
-  display: inline-block;
-  font-size: 125%;
-  font-weight: 500;
-  line-height: 200%;
 }
 
 #symbol ul,
@@ -85,21 +85,21 @@
 }
 
 #symbol li {
-  width:calc(100% / 5 - 1rem);
-  height: calc(75vh / 7 - 1rem);
+  width:calc(100% / 5);
+  height: calc(75vh / 7);
 }
 
 #color li {
-  width: calc(100% / 3 - 1rem);
-  height: calc(75vh / 6 - 1rem);
+  width: calc(100% / 3);
+  height: calc(75vh / 6);
 }
 
 #symbol label,
 #color label {
   cursor: pointer;
   border: transparent solid 0.25vw;
-  width: 90%;
-  height: 90%;
+  width: 75%;
+  height: 75%;
   transition: 1s;
 }
 
@@ -129,6 +129,7 @@
 }
 
 #post {
+  clear: both;
   display: flex;
   align-items: end;
   justify-content: space-between;

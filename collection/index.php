@@ -13,20 +13,12 @@ $source_file = $month . "/" . $day . ".csv";
 require('head.php');
 ?>
 
+<script src="readyState.js"></script>
 <script src="/js/login.js"></script>
 <script type="text/javascript">
   menuJSON('../index.json')
-
-  window.addEventListener('load', function() {
-    const login = document.querySelector('#about')
-    login.addEventListener('submit', function(e) {
-      e.preventDefault();
-      setLOG()
-    }, false)
-  });
 </script>
 
-<script src="readyState.js"></script>
 <link rel="stylesheet" href="../css/about.css" />
 <link rel="stylesheet" href="../css/submit.css" />
 </head>

@@ -70,7 +70,7 @@
       </section>
     </section>
 
-    <form id="now" class="hidden" method="GET">
+    <form id="now" method="GET">
       <section id="viewall">
         <button type="button" onclick="allView()">
           <span><?php echo $month; ?> 月 <?php echo $day; ?> 日</span>

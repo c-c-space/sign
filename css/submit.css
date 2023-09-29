@@ -174,11 +174,11 @@
 
   #symbol li {
     width:calc(90% / 5);
-    height: calc(70vh / 7);
+    height: calc(70vw / 7);
   }
   
   #color li {
     width: calc(90% / 3);
-    height: calc(70vh / 6);
+    height: calc(70vw / 6);
   }
 }

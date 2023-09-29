@@ -126,12 +126,12 @@
 
 #symbol input[type="radio"]:checked+label,
 #color input[type="radio"]:checked+label {
-  border: #000 solid 0.25vw;
+  border: #000 solid 0.2rem;
 }
 
 #symbol input[type="radio"]:checked+label {
   color: #fff;
-  text-shadow: 0.1vw 0.1vw #000;
+  text-shadow: 0.1rem 0.1rem #000;
 }
 
 #post {
@@ -170,7 +170,7 @@
     max-width: 100%;
     min-width: -webkit-fill-available;
     height: 100vw;
-    padding: 0 5vw;
+    padding: 0 10vw;
     transform: rotate(90deg);
   }
 

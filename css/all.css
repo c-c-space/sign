@@ -53,7 +53,7 @@
 
 #all {
   background: #fff5;
-  font-size: 1rem;
+  font-size: 95%;
   transition: 2.5s;
   opacity: 0;
   overflow: auto;
@@ -116,42 +116,4 @@
   background: #fff;
   padding: 0.25rem 0.75rem;
   margin-top: 1rem;
-}
-
-@media screen and (max-width: 550px) {
-  #all {
-    font-size: 4vw;
-  }
-
-  #all ul li {
-    padding: 1vw;
-  }
-
-  .you,
-  #all ul p {
-    padding: 2vw;
-  }
-
-  #all ul li u {
-    margin-right: 2.5vw;
-    width: 10vw;
-    height: 10vw;
-  }
-
-  .you u,
-  #all ul li b {
-    font-size: 125%;
-  }
-
-  #all ul li i {
-    margin-bottom: 2.5vw;
-  }
-
-  #all ul li button {
-    border: solid 0.25vw;
-    border-radius: 5vw;
-    font-size: 100%;
-    padding: 0.5vw 2.5vw;
-    margin-top: 2.5vw;
-  }
 }

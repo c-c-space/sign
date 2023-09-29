@@ -1,22 +1,28 @@
 <?php
+date_default_timezone_set('Asia/Tokyo');
+
 $month = "04";
 $day = "01";
 
-require('../function.php');
+if (isset($_GET["day"])) {
+  $day = $_GET["day"];
+}
+
+$source_file = $day . ".csv";
+
+require('../head.php');
 ?>
 
 <script type="text/javascript">
-let thismonth = 4
-const endDate = 30
+  menuJSON('../../index.json')
+
+  let thismonth = 4
+  const endDate = 30
 </script>
+</head>
 
-<main>
-  <?php require('../../viewall.php'); ?>
-</main>
-<script src="../../js/flash.js"></script>
-<script src="../../js/viewall.js"></script>
-
-<?php require('../now.php'); ?>
-<script src="../../js/selectdate.js" async></script>
+<?php require('../body.php'); ?>
+<script src="../../js/selectdate.js"></script>
 </body>
+
 </html>

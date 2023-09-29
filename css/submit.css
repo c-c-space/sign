@@ -57,8 +57,13 @@
 #symbol p b,
 #color p b {
   display: block;
-  font-size: 125%;
+  font-size: 111%;
   text-align: center;
+}
+
+#symbol p b,
+#color p b {
+  font-weight: 400;
   line-height: 200%;
 }
 

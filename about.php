@@ -1,4 +1,4 @@
-<section id="about">
+<fieldset id="about">
   <h1>This is an Online Communication Tool that Uses Colors and Symbols to post Your Feelings.</h1>
   <p>
     これは、<b>色</b> と <b>記号</b> を使って
@@ -38,4 +38,4 @@
     ?>
   </p>
   <button type="submit" id="back-btn">Enter Here</button>
-</section>
+</fieldset>

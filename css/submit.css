@@ -166,11 +166,10 @@
   #symbol,
   #color {
     float: left;
-    width: 100%;
-    max-width: 100%;
-    min-width: -webkit-fill-available;
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
     height: 100vw;
-    padding: 0 10vw;
+    padding: 0 12.5vw;
     transform: rotate(90deg);
   }
 

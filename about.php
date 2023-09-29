@@ -1,15 +1,3 @@
-<p hidden>
-  <?php
-  $ip = $_SERVER["REMOTE_ADDR"];
-  $hqdn = $_SERVER["REMOTE_PORT"];
-  $os = $_SERVER["HTTP_USER_AGENT"];
-
-  echo "IP <b id='ip'>" . $ip . "</b> | ";
-  echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
-  echo "<small id='os'>" . $os . "</small>";
-  ?>
-</p>
-
 <section id="about">
   <h1>This is an Online Communication Tool that Uses Colors and Symbols to post Your Feelings.</h1>
   <p>
@@ -38,5 +26,8 @@
     <b>色</b> と <b>記号</b> を生成します。
   </p>
   <hr/>
+  <p hidden>
+    <?php require('profile/yourinfo.php'); ?>
+  </p>
   <button type="button" id="back-btn" onclick="setLOG()">Enter Here</button>
 </section>

@@ -121,6 +121,10 @@ input[type="submit"],
   user-select: auto;
 }
 
+#menu button {
+  mix-blend-mode: difference;
+}
+
 @media screen and (max-width: 550px) {
   #enter-btn {
     font-size: 10vw;

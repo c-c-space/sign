@@ -6,12 +6,12 @@ function changeHidden() {
     if (main.hidden == false) {
       main.hidden = true;
     } else {
-      main.animate (
+      main.animate(
         [
-          {opacity: 0},
-          {opacity: 1}
+          { opacity: 0 },
+          { opacity: 1 }
         ],
-        {duration: 1000}
+        { duration: 1000 }
       )
       main.hidden = false
     }
@@ -23,34 +23,41 @@ document.addEventListener('readystatechange', event => {
     // 文書の読み込み中に実行する
   } else if (event.target.readyState === 'interactive') {
     const enterBtn = document.createElement('input')
-    enterBtn.setAttribute('type','button')
-    enterBtn.setAttribute('id','enter-btn')
-    enterBtn.setAttribute('class','hidden')
-    enterBtn.setAttribute('value','?')
-    enterBtn.setAttribute('onClick','changeHidden()')
+    enterBtn.setAttribute('type', 'button')
+    enterBtn.setAttribute('id', 'enter-btn')
+    enterBtn.setAttribute('class', 'hidden')
+    enterBtn.setAttribute('value', '?')
+    enterBtn.setAttribute('onClick', 'changeHidden()')
     document.body.prepend(enterBtn)
 
-    if(!localStorage.getItem('yourInfo')) {
+    if (!localStorage.getItem('yourInfo')) {
       async function submitHTML() {
         fetch('../about.php')
-        .then(response => response.text())
-        .then(submit => {
-          document.querySelector('#submit').innerHTML = submit;
-        });
+          .then(response => response.text())
+          .then(submit => {
+            document.querySelector('#submit').innerHTML = submit;
+          });
       }
       submitHTML();
+      const login = document.querySelector('#submit')
+      login.addEventListener('submit', function (e) {
+        e.preventDefault();
+        setLOG()
+      }, false)
     } else {
       async function submitHTML() {
         fetch('../form.html')
-        .then(response => response.text())
-        .then(submit => {
-          document.querySelector('#submit').innerHTML = submit;
-        });
+          .then(response => response.text())
+          .then(submit => {
+            document.querySelector('#submit').innerHTML = submit;
+          });
       }
       submitHTML();
+      const submitForm = document.querySelector('#submit')
+      submitForm.addEventListener('submit', submitThis)
     }
   } else if (event.target.readyState === 'complete') {
-    if(!localStorage.getItem('yourInfo')) {
+    if (!localStorage.getItem('yourInfo')) {
       const viewAll = document.querySelector('#viewall')
       viewAll.style.display = "flex"
       viewAll.style.justifyContent = "space-between"

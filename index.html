@@ -9,7 +9,7 @@
   <script type="text/javascript">
     menuJSON('index.json')
   </script>
-  
+
   <script src="js/readyState.js"></script>
   <meta content="website" property="og:type">
   <title>Sign | creative-community.space</title>
@@ -76,6 +76,10 @@
 
   <form id="submit" class="hidden" method="post" hidden></form>
   <script src="js/submit.js"></script>
+  <script>
+    const submitForm = document.querySelector('#submit')
+    submitForm.addEventListener('submit', submitThis)
+  </script>
 </body>
 
 </html>

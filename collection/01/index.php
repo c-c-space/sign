@@ -10,7 +10,7 @@ if (isset($_GET["day"])) {
 
 $source_file = $day . ".csv";
 
-require('head.php');
+require('../head.php');
 ?>
 
 <script type="text/javascript">
@@ -21,7 +21,7 @@ require('head.php');
 </script>
 </head>
 
-<?php require('../../body.php'); ?>
+<?php require('../body.php'); ?>
 <script src="../../js/selectdate.js"></script>
 </body>
 

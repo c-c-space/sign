@@ -126,6 +126,14 @@ input[type="submit"],
   mix-blend-mode: difference;
 }
 
+@media (orientation: portrait) {
+  #now section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 @media print {
   body {
     background-size: 100% 100%;

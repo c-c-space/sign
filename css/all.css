@@ -117,3 +117,10 @@
   padding: 0.25rem 0.75rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 550px) {
+  #all {
+    width: 95%;
+    max-width: 95%;
+  }
+}

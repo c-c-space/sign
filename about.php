@@ -5,7 +5,7 @@
     <b>自分の気持ちを知る・表す</b>
     オンライン・コミュニケーションツール です。
   </p>
-  <br/>
+  <br />
   <h2>
     Create a Collection of Daily Colors and Symbols with Daily Posts.
   </h2>
@@ -16,7 +16,7 @@
     を日毎に記録して、<b>毎日</b> の 気持ちを知る・表す
     <b>色</b> と <b>記号</b> を生成します。
   </p>
-  <br/>
+  <br />
   <h2>
     Your Posts are also Saved in Local Storage to Create Your Colors and Symbols.
   </h2>
@@ -25,9 +25,17 @@
     <b>あなた</b> の 気持ちを知る・表す
     <b>色</b> と <b>記号</b> を生成します。
   </p>
-  <hr/>
+  <hr />
   <p hidden>
-    <?php require('profile/yourinfo.php'); ?>
+    <?php
+    $ip = $_SERVER["REMOTE_ADDR"];
+    $hqdn = $_SERVER["REMOTE_PORT"];
+    $os = $_SERVER["HTTP_USER_AGENT"];
+
+    echo "IP <b id='ip'>" . $ip . "</b> | ";
+    echo "PORT <b id='hqdn'>" . $hqdn . "</b><br/>";
+    echo "<small id='os'>" . $os . "</small>";
+    ?>
   </p>
   <button type="button" id="back-btn" onclick="setLOG()">Enter Here</button>
 </section>

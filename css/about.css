@@ -1,4 +1,5 @@
 #about {
+  border: none;
   box-sizing: border-box;
   font-size: 1rem;
   padding: 4.5rem 5rem 2.5rem;
@@ -64,22 +65,4 @@
   font-size: 100%;
   font-weight: normal;
   padding: 0.5rem 0.75rem;
-}
-
-@media screen and (max-width: 550px) {
-  #about {
-    font-size: 3vw;
-    padding: 17.5vw 5vw 2.5vw;
-  }
-
-  #about hr {
-    padding: 2.5vw;
-    margin: 2.5vw;
-  }
-
-  #back-btn {
-    border-radius: 5vw;
-    border: #000 solid 0.45vw;
-    padding: 1.5vw 2.5vw;
-  }
 }

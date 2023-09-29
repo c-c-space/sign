@@ -31,7 +31,8 @@
 
 #symbol,
 #color,
-#symbol label {
+#symbol label,
+#color label {
   display: grid;
   place-items: center;
 }
@@ -75,8 +76,10 @@
   display: flex;
   gap: 0.25rem;
   flex-wrap: wrap;
+  justify-content: space-around;
   list-style: none;
   list-style-position: inside;
+  width: 100%;
 }
 
 #symbol li {

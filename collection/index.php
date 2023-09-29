@@ -24,9 +24,8 @@ require('head.php');
 
 <?php require('body.php'); ?>
 
-<form id="submit" class="hidden" method="post" hidden></form>
+<form id="submit" method="post" hidden></form>
 <script src="../js/submit.js"></script>
-<script src="/js/log.js"></script>
 </body>
 
 </html>

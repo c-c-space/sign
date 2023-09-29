@@ -31,7 +31,6 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if(!localStorage.getItem('yourInfo')) {
-
       async function submitHTML() {
         fetch('../about.php')
         .then(response => response.text())

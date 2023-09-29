@@ -53,18 +53,19 @@
 }
 
 #symbol p,
-#color p,
-#symbol p b,
-#color p b {
-  display: block;
-  font-size: 111%;
+#color p {
   text-align: center;
 }
 
 #symbol p b,
 #color p b {
   font-weight: 400;
-  line-height: 200%;
+  font-size: 111%;
+}
+
+#symbol p small,
+#color p small {
+  font-size: 90%;
 }
 
 #symbol p,
@@ -90,13 +91,13 @@
 }
 
 #symbol li {
-  width:calc(100% / 5);
-  height: calc(75vh / 7);
+  width:calc(90% / 5);
+  height: calc(70vh / 7);
 }
 
 #color li {
-  width: calc(100% / 3);
-  height: calc(75vh / 6);
+  width: calc(90% / 3);
+  height: calc(70vh / 6);
 }
 
 #symbol label,
@@ -161,7 +162,7 @@
   transition: .5s all;
 }
 
-@media screen and (max-width: 550px) {
+@media (orientation: portrait) {
   #symbol,
   #color {
     float: left;
@@ -171,67 +172,13 @@
     transform: rotate(90deg);
   }
 
-  #symbol p,
-  #color p {
-    top: 0;
-    font-size: 2.5vw;
-    padding: 0;
-  }
-
-  #symbol ul,
-  #color ul {
-    top: 60%;
-    left: 50%;
-    width: 60%;
-    z-index: 5;
-  }
-
   #symbol li {
-    width: 20%;
-    font-size: 4.5vw;
+    width:calc(90% / 5);
+    height: calc(70vh / 7);
   }
-
+  
   #color li {
-    width: 33%;
-  }
-
-  #symbol label,
-  #color label {
-    border: transparent solid 0.5vw;
-  }
-
-  #symbol label {
-    margin: 1vw;
-    padding: 0.5vw;
-    width: 5vw;
-    height: 5vw;
-  }
-
-  #color label {
-    width: 75%;
-    height: 6vw;
-    margin: 1vw;
-  }
-
-  #symbol input[type="radio"]:checked+label {
-    color: #fff;
-    text-shadow: 0.5vw 0.5vw #000;
-  }
-
-  #symbol input[type="radio"]:checked+label,
-  #color input[type="radio"]:checked+label {
-    border: #000 solid 0.5vw;
-  }
-
-  #post {
-    padding: 2vw;
-  }
-
-  #post input[type="button"],
-  #post input[type="submit"] {
-    font-size: 5.5vw;
-    padding: 1.25vw 4vw;
-    border-radius: 7.5vw;
-    border: #000 solid 0.5vw;
+    width: calc(90% / 3);
+    height: calc(70vh / 6);
   }
 }

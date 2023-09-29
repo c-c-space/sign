@@ -66,3 +66,12 @@
   font-weight: normal;
   padding: 0.5rem 0.75rem;
 }
+
+@media (orientation: portrait) {
+  #about {
+    font-size: 3vw;
+    padding: 17.5vw 5vw 5vw;
+    width: 100%;
+    max-width: 100%;
+  }
+}

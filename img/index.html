@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="/js/menu.js"></script>
+    <script>
+        menuJSON('../index.json')
+    </script>
+</head>
+
+<body onload="icon()">
+    <header id="menu" hidden>
+        <button><b></b></button>
+        <menu id="contents">
+            <a href="#" onclick="window.history.back(); return false;">
+                <p>creative-community.space</p>
+                <u>↩︎</u>
+            </a>
+        </menu>
+    </header>
+
+    <main id="logo">
+        <section>
+            <p>
+                <small>ファビコン</small><br />
+                32 × 32 px
+            </p>
+            <canvas id="icon" width="32" height="32"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>Windows用アイコン(小)</small><br />
+                70 × 70 px
+            </p>
+            <canvas id="tile-small" width="70" height="70"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>Windows用アイコン(中)</small><br />
+                150 × 150 px
+            </p>
+            <canvas id="tile-medium" width="150" height="150"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>iOS端末用Webクリップアイコン</small><br />
+                180 × 180 px
+            </p>
+            <canvas id="apple" width="180" height="180"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>Android端末用Webクリップアイコン</small><br />
+                192 × 192 px
+            </p>
+            <canvas id="android" width="192" height="192"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>Windows用アイコン(大)・Instagram用アイコン</small><br />
+                320 × 320 px
+            </p>
+            <canvas id="instagram" width="320" height="320"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>Twitter用アイコン</small><br />
+                400 × 400 px
+            </p>
+            <canvas id="twitter" width="400" height="400"></canvas>
+        </section>
+        <section>
+            <p>
+                <small>サマリーカード・YouTube用アイコン</small><br />
+                800 × 800 px
+            </p>
+            <canvas id="youtube" width="800" height="800"></canvas>
+        </section>
+        <section>
+          <p>
+            <small>og:image</small><br />
+            1200 × 630 px
+          </p>
+          <canvas id="icon" width="1200" height="630"></canvas>
+        </section>
+    </main>
+    <script type="text/javascript">
+        function icon() {
+            const canvasAll = document.querySelectorAll('canvas');
+            for (let canvas of canvasAll) {
+                const x = (canvas.width);
+                const y = (canvas.height);
+                if (canvas.getContext) {
+                    const ctx = canvas.getContext("2d");
+                    const gradient = ctx.createLinearGradient(0, 0, 0, y);
+
+                    gradient.addColorStop(0.0, "#ff0000");
+                    gradient.addColorStop(0.1, "#fffafa");
+                    gradient.addColorStop(0.2, "#808080");
+                    gradient.addColorStop(0.3, "#b0c4de");
+                    gradient.addColorStop(0.4, "#0000cd");
+                    gradient.addColorStop(0.5, "#ff8c00");
+                    gradient.addColorStop(0.6, "#ffdab9");
+                    gradient.addColorStop(0.7, "#008080");
+                    gradient.addColorStop(0.8, "#fff000");
+                    gradient.addColorStop(0.9, "#90ee90");
+                    gradient.addColorStop(1.0, "#f0ffff");
+
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, x, y);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

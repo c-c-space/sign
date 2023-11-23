@@ -13,7 +13,7 @@ $source_file = $month . "/" . $day . ".csv";
 require('head.php');
 ?>
 
-<script src="/js/login.js"></script>
+<script src="/ver/js/login.js"></script>
 <script src="readyState.js"></script>
 <script type="text/javascript">
   menuJSON('../index.json')

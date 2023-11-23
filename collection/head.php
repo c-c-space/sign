@@ -27,7 +27,7 @@ fclose($fp);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <script src="/js/menu.js"></script>
+  <script src="/ver/js/menu.js"></script>
 
   <!--og:meta-->
   <meta content="website" property="og:type">
@@ -54,7 +54,7 @@ fclose($fp);
   <meta name="msapplication-square310x310logo" content="/sign/img/twitter.png" />
   <meta name="msapplication-TileColor" content="#fff" />
 
-  <link rel="stylesheet" href="/css/menu.css" />
+  <link rel="stylesheet" href="/ver/css/menu.css" />
   <link rel="stylesheet" href="/sign/css/style.css" />
   <link rel="stylesheet" href="/sign/css/all.css" />
   <link rel="stylesheet" href="/sign/css/flash.css" />

@@ -1,0 +1,184 @@
+#submit,
+#symbol,
+#color,
+#symbol ul,
+#color ul,
+#post {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+#symbol,
+#color,
+#symbol li,
+#color li,
+#symbol label,
+#color label {
+  display: grid;
+  place-items: center;
+}
+
+#symbol,
+#color {
+  border: none;
+  position: relative;
+  width: 50%;
+  max-width: 750px;
+  height: calc(100% - 5rem);
+}
+
+#symbol {
+  float: left;
+}
+
+#color {
+  float: right;
+}
+
+#symbol,
+#color {
+  text-align: center;
+}
+
+#symbol p,
+#color p {
+  text-align: center;
+}
+
+#symbol p b,
+#color p b {
+  font-weight: 400;
+  font-size: 111%;
+}
+
+#symbol p small,
+#color p small {
+  font-size: 90%;
+}
+
+#symbol p,
+#color p,
+#post input[type="button"],
+#post input[type="submit"] {
+  font-family: 'Times New Roman', serif;
+  font-stretch: condensed;
+  font-variant: common-ligatures tabular-nums;
+  transform: scale(1, 1.1);
+  word-spacing: -.25ch;
+}
+
+#symbol ul,
+#color ul {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  list-style-position: inside;
+  width: 100%;
+}
+
+#symbol li {
+  width:calc(90% / 5);
+  height: calc(70vh / 7);
+}
+
+#color li {
+  width: calc(90% / 3);
+  height: calc(70vh / 6);
+}
+
+#symbol label,
+#color label {
+  cursor: pointer;
+  border: transparent solid 0.25vw;
+  width: 75%;
+  height: 75%;
+  transition: 1s;
+}
+
+#symbol label {
+  background-color: #fff5;
+  border-radius: 0.5vw;
+  color: #000;
+}
+
+#color label {
+  border-radius: 1vw;
+}
+
+#symbol input[type="radio"],
+#color input[type="radio"] {
+  display: none;
+}
+
+#symbol input[type="radio"]:checked+label,
+#color input[type="radio"]:checked+label {
+  border: #000 solid 0.2rem;
+}
+
+#symbol input[type="radio"]:checked+label {
+  color: #fff;
+  text-shadow: 0.1rem 0.1rem #000;
+}
+
+#post {
+  clear: both;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+
+#post input[type="button"],
+#post input[type="submit"] {
+  font-weight: normal;
+  font-style: italic;
+  background: #fff;
+  color: #000;
+  font-size: 150%;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  border: #000 solid 0.1rem;
+}
+
+#post input[type="button"]:hover,
+#post input[type="submit"]:hover {
+  cursor: pointer;
+  background: #eee;
+  transition: .5s all;
+}
+
+@media (orientation: portrait) {
+  #symbol,
+  #color {
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0 0 0 15vw;
+    transform: rotate(90deg);
+  }
+
+  #symbol li {
+    width:calc(90% / 5);
+    height: calc(70vw / 7);
+  }
+  
+  #color li {
+    width: calc(90% / 3);
+    height: calc(70vw / 6);
+  }
+}

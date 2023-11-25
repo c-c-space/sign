@@ -1,6 +1,45 @@
-async function sign(gradient, csv) {
-    const cover = document.querySelector(gradient)
-    const response = await fetch(csv);
+const date = new Date()
+const today = date.getDate()
+const year = date.getFullYear()
+const month = date.getMonth() + 1
+const day = date.getDate()
+let csvFile = '/sign/collection/' + month + '/' + day + '.csv'
+
+const startDate = new Date(year, date.getMonth() - 1, 1) // 月の最初の日を取得
+const endDate = new Date(year, date.getMonth(), 0) // 月の最後の日を取得
+const endDayCount = endDate.getDate() // 月の末日
+
+document.addEventListener("DOMContentLoaded", () => {
+    sign()
+
+    let dayCount = 1
+    let thismonth = date.getMonth() + 1
+    let selectDate = '<option selected disabled>Select Date</option>'
+    for (let d = 0; d < today; d++) {
+        if (d < 9) {
+            selectDate += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+            dayCount++
+        } else {
+            selectDate += '<option value="' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+            dayCount++
+        }
+    }
+    document.querySelector('#select').innerHTML = selectDate
+
+    const allMonth = document.querySelectorAll(".month")
+    allMonth.forEach(thisMonth => {
+        thisMonth.textContent = month
+    }, false)
+
+    const allDay = document.querySelectorAll(".day")
+    allDay.forEach(thisDay => {
+        thisDay.textContent = day
+    }, false)
+});
+
+async function sign() {
+    const cover = document.body
+    const response = await fetch(csvFile);
     const text = await response.text();
     const data = text.trim().split('\n')
         .map(line => line.split(',').map(x => x.trim()));

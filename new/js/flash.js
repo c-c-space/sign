@@ -1,5 +1,3 @@
-'use strict'
-
 function flash(elem, i = -1) {
   let liArr = document.querySelectorAll(elem);
   if (i >= 0) {

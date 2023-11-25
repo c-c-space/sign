@@ -19,7 +19,7 @@ async function sign(gradient, csv) {
         <b style="background:#${sign[1]};">
         <span style="color:#${sign[1]};">${sign[0]}</span>
         </b>
-        ${sign[3]}
+        <button type="button">${sign[2]}</button>
         </li>
         `)
         .join('');

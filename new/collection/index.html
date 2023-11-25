@@ -8,16 +8,19 @@
 
   <script src="https://creative-community.space/ver/js/menu.js"></script>
   <script src="script.js"></script>
-  <script src="flash.js"></script>
   <script type="text/javascript">
     menuJSON('../index.json')
 
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        submitHTML('#submit', '../form.html')
+        if (!localStorage.getItem('yourInfo')) {
+          submitHTML('#submit', '../about.php')
+        } else {
+          submitHTML('#submit', '../form.html')
+        }
       } else if (event.target.readyState === 'complete') {
-        flash('#flash ul li')
-      }
+      flash('#flash ul li')
+    }
     });
   </script>
 
@@ -42,7 +45,8 @@
 
   <link rel="stylesheet" href="https://creative-community.space/ver/css/menu.css" />
   <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="submit.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/submit.css" />
 </head>
 
 <body>
@@ -86,13 +90,13 @@
         <b id="posts"></b>
         の色と記号
       </button>
-      <select name="day" id="select"></select>
     </footer>
   </main>
 
   <form id="submit" method="post" hidden></form>
 
-  <script src="viewall.js"></script>
+  <script src="../js/flash.js"></script>
+  <script src="../js/viewall.js"></script>
 </body>
 
 </html>

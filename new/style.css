@@ -48,6 +48,7 @@ footer button {
 #enter-btn {
     border-radius: 50%;
     font-size: 200%;
+    padding: 0;
     margin: 0.5rem;
     width: 3rem;
     height: 3rem;
@@ -118,6 +119,7 @@ footer {
 }
 
 #all ul,
+#all button,
 #flash ul,
 #flash li {
     padding: 0;

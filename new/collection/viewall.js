@@ -1,9 +1,6 @@
-'use strict'
-
-let all = document.querySelector('#all');
-let flash = document.querySelector('#flash');
-
 function allView() {
+  const all = document.querySelector('#all');
+  const flash = document.querySelector('#flash');
   if (all.hidden == true) {
     all.hidden = false
     flash.hidden = true
@@ -14,6 +11,8 @@ function allView() {
 }
 
 function flashView() {
+  const flash = document.querySelector('#flash');
+  const all = document.querySelector('#all');
   if (flash.hidden == true) {
     flash.hidden = false
     all.hidden = true
@@ -35,8 +34,7 @@ function changeHidden() {
           { opacity: 1 }
         ], {
         duration: 1000
-      }
-      )
+      }, false)
       main.hidden = false
     }
   })

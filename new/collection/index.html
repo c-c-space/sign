@@ -7,14 +7,15 @@
   <meta name="format-detection" content="telephone=no" />
 
   <script src="https://creative-community.space/ver/js/menu.js"></script>
-  <script src="collection/script.js"></script>
-  <script src="collection/flash.js"></script>
+  <script src="script.js"></script>
+  <script src="flash.js"></script>
+  <script src="readyState.js"></script>
   <script type="text/javascript">
-    menuJSON('index.json')
+    menuJSON('../index.json')
+
     document.addEventListener('readystatechange', event => {
       if (event.target.readyState === 'interactive') {
-        sign('body', 'index.csv')
-        submitHTML('#submit', 'form.html')
+        submitHTML('#submit', '../form.html')
       } else if (event.target.readyState === 'complete') {
         flash('#flash ul li')
       }
@@ -41,8 +42,8 @@
   <meta name="msapplication-square310x310logo" content="/sign/img/twitter.png" />
 
   <link rel="stylesheet" href="https://creative-community.space/ver/css/menu.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="collection/submit.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="submit.css" />
 </head>
 
 <body>
@@ -62,11 +63,11 @@
     <section id="all" hidden>
       <p>
         <i>Colors & Symbols that Suit You</i><br />
-        by <b id="ip">User Agent</b>
+        <b class="month"></b> 月
+        <b class="day"></b> 日
+        の 色と記号
       </p>
       <ul></ul>
-      <br>
-      <button type="button">すべて削除 Delete All</button>
     </section>
 
     <section id="flash" hidden>
@@ -78,7 +79,9 @@
 
     <footer>
       <button type="button" onclick="allView()">
-        自分の気持ちを知る・表す
+        <b class="month"></b> 月
+        <b class="day"></b> 日
+        の気持ちを知る・表す
       </button>
       <button type="button" onclick="flashView()">
         <b id="posts"></b>
@@ -89,7 +92,7 @@
 
   <form id="submit" method="post" hidden></form>
 
-  <script src="collection/viewall.js"></script>
+  <script src="viewall.js"></script>
 </body>
 
 </html>

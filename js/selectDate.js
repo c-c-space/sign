@@ -3,7 +3,7 @@
 window.addEventListener("load", () => {
   const members = document.querySelector('#members')
   const select = document.createElement('select')
-  select.appendChild(members)
+  members.appendChild(select)
 
   let selectDate = '<option selected disabled>Select Date</option>'
   
@@ -20,5 +20,5 @@ window.addEventListener("load", () => {
   const button = document.createElement('button')
   button.setAttribute('type', 'submit')
   button.textContent = 'View The Collection'
-  button.appendChild(members)
+  members.appendChild(button)
 }, false);

@@ -104,7 +104,7 @@ fclose($fp);
   <?php endif; ?>
   #fff)">
   <main>
-    <?php require('../beta/viewall.php'); ?>
+    <?php require('viewall.php'); ?>
   </main>
   <script src="/sign/js/flash.js"></script>
   <script src="/sign/js/viewall.js"></script>

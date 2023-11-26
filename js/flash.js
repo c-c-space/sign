@@ -4,7 +4,7 @@ function BGanimation() {
   const cover = document.body
   let signCount = document.querySelectorAll('#flash ul li').length;
   if (signCount == 1) {
-    cover.style.backgroundSize = `100% ${signCount * 100}%`;
+    cover.style.backgroundSize = `100% ${signCount * 200}%`;
   } else if (signCount <= 5) {
     cover.style.backgroundSize = `100% ${signCount * 100}%`;
   } else {

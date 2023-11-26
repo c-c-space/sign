@@ -1,6 +1,14 @@
 /* for /sign/collection/01 ~ 12/ */
 
 window.addEventListener("load", () => {
+  const backBtn = document.createElement('input')
+  backBtn.setAttribute('type', 'button')
+  backBtn.setAttribute('id', 'enter-btn')
+  backBtn.setAttribute('class', 'hidden')
+  backBtn.setAttribute('value', '←')
+  backBtn.setAttribute('onClick', 'hitory.back()')
+  document.body.prepend(backBtn)
+
   const members = document.querySelector('#members')
   const select = document.createElement('select')
   select.setAttribute('name', 'day')

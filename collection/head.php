@@ -33,8 +33,8 @@ fclose($fp);
   <meta content="website" property="og:type">
   <title><?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す</title>
   <meta content="<?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す" property="og:title">
-  <meta content="18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す" name="description">
-  <meta content="18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す" name="og:description">
+  <meta content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。" name="description">
+  <meta content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。" name="og:description">
 
   <!--for Twitter-->
   <meta content="summary_large_image" name="twitter:card">

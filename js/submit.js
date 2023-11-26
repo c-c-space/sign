@@ -8,13 +8,12 @@ const addData = (timestamp, symbolValue, colorlValue) => {
     symbolValue,
     colorlValue
   })
-
   localStorage.setItem("sign", JSON.stringify(array))
-  return {timestamp, symbolValue, colorlValue}
+  return { timestamp, symbolValue, colorlValue }
 }
 
 // タイムスタンプを生成
-let getWeek = new Array("日","月","火","水","木","金","土");
+let getWeek = new Array("日", "月", "火", "水", "木", "金", "土");
 const newDate = new Date();
 const getYear = newDate.getFullYear();
 const getMonth = newDate.getMonth() + 1;
@@ -33,12 +32,13 @@ let timestamp = setDate + setWeek + setTime;
 // 色と記号を投稿する
 async function submitThis(event) {
   event.preventDefault();
+
   const symbolAll = document.getElementsByName('symbol')
   const colorAll = document.getElementsByName("color")
 
   let symbolValue = "";
   for (let i = 0; i < symbolAll.length; i++) {
-    if (symbolAll[i].checked) {//(color1[i].checked === true)と同じ
+    if (symbolAll[i].checked) {
       symbolValue = symbolAll[i].value;
       break;
     }
@@ -46,16 +46,16 @@ async function submitThis(event) {
 
   let colorlValue = "";
   for (let i = 0; i < colorAll.length; i++) {
-    if (colorAll[i].checked) {//(color1[i].checked === true)と同じ
+    if (colorAll[i].checked) {
       colorlValue = colorAll[i].value;
       break;
     }
   }
 
   let thisSign = {
-    symbol : symbolValue,
-    color : colorlValue,
-    timestamp : timestamp
+    symbol: symbolValue,
+    color: colorlValue,
+    timestamp: timestamp
   };
 
   // localStorage に sign を追加
@@ -71,13 +71,13 @@ async function submitThis(event) {
     body: signJSON
   })
 
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
-  .catch(error => {
-    console.log(error)
-  });
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+    })
+    .catch(error => {
+      console.log(error)
+    });
 
   setTimeout(() => {
     window.location.replace('/sign/');

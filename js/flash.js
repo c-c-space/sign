@@ -2,15 +2,24 @@
 
 window.addEventListener("load", () => {
   viewSlide('#flash ul li');
+
   const cover = document.body
   let signCount = document.querySelectorAll('#flash ul li').length;
   if (signCount == 1) {
+    cover.style.backgroundSize = `100% ${signCount * 100}%`;
+  } else if (signCount <= 5) {
     cover.style.backgroundSize = `100% ${signCount * 100}%`;
   } else {
     cover.style.backgroundSize = `100% ${signCount * 50}%`;
   }
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
 }, false);
+
+window.addEventListener("beforeprint", (event) => {
+  const cover = document.body
+  cover.style.backgroundSize = '100% 100%';
+  cover.style.animation = 'gradient 0s ease infinite';
+});
 
 function viewSlide(elem, i = -1) {
   let liArr = document.querySelectorAll(elem);

@@ -59,9 +59,12 @@ document.addEventListener('readystatechange', event => {
       viewAll.style.width = "100%"
       members.remove()
     } else {
-      const select = createElement('select')
-      select.appendChild(members)
+      const select = document.createElement('select')
+      select.setAttribute('name', 'month')
+      members.appendChild(select)
+
       let selectMonth = '<option selected disabled>View The Collection</option>'
+
       for (let m = 1; m <= 12; m++) {
         if (m <= 9) {
           selectMonth += '<option value="0' + m + '">' + m + '月 の色と記号</option>'
@@ -69,6 +72,7 @@ document.addEventListener('readystatechange', event => {
           selectMonth += '<option value="' + m + '">' + m + '月 の色と記号</option>'
         }
       }
+      
       select.innerHTML = selectMonth
     }
   }

@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 
   let selectDate = '<option selected disabled>Select Date</option>'
   
-  for (let d = 1; d < endDate; d++) {
+  for (let d = 1; d <= endDate; d++) {
     if (d <= 9) {
       selectDate += '<option value="0' + d + '">' + thismonth + ' 月 ' + d + ' 日' + '</option>'
     } else {

@@ -14,7 +14,7 @@ require('head.php');
 ?>
 
 <script src="/ver/js/login.js"></script>
-<script src="readyState.js"></script>
+<script src="script.js"></script>
 <script type="text/javascript">
   menuJSON('../index.json')
 </script>

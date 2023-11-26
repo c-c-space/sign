@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   backBtn.setAttribute('id', 'enter-btn')
   backBtn.setAttribute('class', 'hidden')
   backBtn.setAttribute('value', '←')
-  backBtn.setAttribute('onClick', 'hitory.back()')
+  backBtn.setAttribute('onClick', hitory.back())
   document.body.prepend(backBtn)
 
   const members = document.querySelector('#members')

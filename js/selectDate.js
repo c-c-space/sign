@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
   
   select.innerHTML = selectDate
 
-  const button = createElement('button')
+  const button = document.createElement('button')
   button.setAttribute('type', 'submit')
   button.textContent = 'View The Collection'
   button.appendChild(members)

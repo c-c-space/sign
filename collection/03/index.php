@@ -22,7 +22,7 @@ require('../head.php');
 </head>
 
 <?php require('../body.php'); ?>
-<script src="../../js/selectdate.js"></script>
+<script src="../../js/selectDate.js"></script>
 </body>
 
 </html>

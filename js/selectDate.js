@@ -2,7 +2,7 @@
 
 window.addEventListener("load", () => {
   const members = document.querySelector('#members')
-  const select = createElement('select')
+  const select = document.createElement('select')
   select.appendChild(members)
 
   let selectDate = '<option selected disabled>Select Date</option>'

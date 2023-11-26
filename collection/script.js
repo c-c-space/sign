@@ -74,6 +74,10 @@ document.addEventListener('readystatechange', event => {
       }
       
       select.innerHTML = selectMonth
+      select.addEventListener('change', (event) => {
+        let getMonth = event.target.value
+        location.assign(`${getMonth}/`)
+      });
     }
   }
 })

@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   document.body.prepend(backBtn)
 
   backBtn.addEventListener('click', () => {
-    hitory.back()
+    history.back();
   })
 
   const members = document.querySelector('#members')

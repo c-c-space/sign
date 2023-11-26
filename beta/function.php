@@ -43,6 +43,11 @@ fclose($fp);
   <link rel="stylesheet" href="/sign/css/flash.css" />
   <link rel="icon" href="../icon.png" type="image/png">
   <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
     #all {
       position: absolute;
       top: 0;

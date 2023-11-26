@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
 window.addEventListener("beforeprint", () => {
   const cover = document.body
   cover.style.backgroundSize = '100% 100%';
-  cover.style.animation = 'gradient 0s ease infinite';
+  cover.style.animation = 'gradient none';
 });
 
 window.addEventListener("afterprint", () => {

@@ -131,12 +131,8 @@ input[type="submit"],
 }
 
 @media print {
-  body {
-    background-size: 100% 100%;
-    animation: gradient none;
-  }
-
   #menu,
+  #menu button,
   #enter-btn,
   #now,
   #log {

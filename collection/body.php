@@ -79,10 +79,7 @@
           <span><?php echo $post; ?> の色と記号</span>
         </button>
       </section>
-      <section id="members">
-        <select id="select" name="day"></select>
-        <button type="submit">View The Collection</button>
-      </section>
+      <section id="members"></section>
     </form>
     <script src="/sign/js/flash.js"></script>
     <script src="/sign/js/viewall.js"></script>

@@ -1,16 +1,24 @@
 /* for /sign/collection/01 ~ 12/ */
 
-let dayCount = 1
-let calendarHtml = '<option selected disabled>Select Date</option>'
+window.addEventListener("load", () => {
+  const members = document.querySelector('#members')
+  const select = createElement('select')
+  select.appendChild(members)
 
-for (let d = 0; d < endDate; d++) {
-  if (d < 9) {
-    calendarHtml += '<option value="0' + dayCount + '">' + thismonth + ' 月 ' + dayCount + ' 日' + '</option>'
-    dayCount++
-  } else {
-    calendarHtml += '<option value="' + dayCount + '">' + thismonth + ' 月 ' + dayCount + ' 日' + '</option>'
-    dayCount++
+  let selectDate = '<option selected disabled>Select Date</option>'
+  
+  for (let d = 1; d < endDate; d++) {
+    if (d <= 9) {
+      selectDate += '<option value="0' + d + '">' + thismonth + ' 月 ' + d + ' 日' + '</option>'
+    } else {
+      selectDate += '<option value="' + d + '">' + thismonth + ' 月 ' + d + ' 日' + '</option>'
+    }
   }
-}
+  
+  select.innerHTML = selectDate
 
-document.querySelector('#select').innerHTML = calendarHtml
+  const button = createElement('button')
+  button.setAttribute('type', 'submit')
+  button.textContent = 'View The Collection'
+  button.appendChild(members)
+}, false);

@@ -17,13 +17,6 @@ function changeHidden() {
     }
   })
 }
-async function submitHTML(query, url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(submit => {
-      document.querySelector(query).innerHTML = submit;
-    });
-}
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'loading') {
@@ -38,38 +31,61 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if (!localStorage.getItem('yourInfo')) {
-      submitHTML('#submit' ,'../about.php');
+      async function submitHTML() {
+        fetch('../about.php')
+          .then(response => response.text())
+          .then(submit => {
+            document.querySelector('#submit').innerHTML = submit;
+          });
+      }
+      submitHTML();
       const login = document.querySelector('#submit')
       login.addEventListener('submit', function (e) {
         e.preventDefault();
         setLOG()
       }, false)
     } else {
-      submitHTML('#submit' ,'../form.html');
+      async function submitHTML() {
+        fetch('../form.html')
+          .then(response => response.text())
+          .then(submit => {
+            document.querySelector('#submit').innerHTML = submit;
+          });
+      }
+      submitHTML();
       const submitForm = document.querySelector('#submit')
       submitForm.addEventListener('submit', submitThis)
     }
   } else if (event.target.readyState === 'complete') {
-    const members = document.querySelector('#members')
-
     if (!localStorage.getItem('yourInfo')) {
       const viewAll = document.querySelector('#viewall')
       viewAll.style.display = "flex"
       viewAll.style.justifyContent = "space-between"
       viewAll.style.width = "100%"
-      members.remove()
+      document.querySelector('#members').remove()
     } else {
-      const select = createElement('select')
-      select.appendChild(members)
-      let selectMonth = '<option selected disabled>View The Collection</option>'
-      for (let m = 1; m <= 12; m++) {
-        if (m <= 9) {
-          selectMonth += '<option value="0' + m + '">' + m + '月 の色と記号</option>'
+      const date = new Date()
+      const today = date.getDate()
+      const year = date.getFullYear()
+      const month = date.getMonth()
+
+      const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
+      const endDate = new Date(year, month, 0) // 月の最後の日を取得
+      const endDayCount = endDate.getDate() // 月の末日
+
+      let dayCount = 1
+      let thismonth = date.getMonth() + 1
+      let selectDate = '<option selected disabled>Select Date</option>'
+      for (let d = 0; d < today; d++) {
+        if (d < 9) {
+          selectDate += '<option value="0' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+          dayCount++
         } else {
-          selectMonth += '<option value="' + m + '">' + m + '月 の色と記号</option>'
+          selectDate += '<option value="' + dayCount + '">' + thismonth + '月' + dayCount + '日' + '</option>'
+          dayCount++
         }
       }
-      select.innerHTML = selectMonth
+      document.querySelector('#select').innerHTML = selectDate
     }
   }
 })

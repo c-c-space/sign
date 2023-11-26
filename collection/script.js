@@ -67,9 +67,9 @@ document.addEventListener('readystatechange', event => {
 
       for (let m = 1; m <= 12; m++) {
         if (m <= 9) {
-          selectMonth += '<option value="0' + m + '">' + m + '月 の色と記号</option>'
+          selectMonth += '<option value="0' + m + '">' + m + ' 月 の色と記号</option>'
         } else {
-          selectMonth += '<option value="' + m + '">' + m + '月 の色と記号</option>'
+          selectMonth += '<option value="' + m + '">' + m + ' 月 の色と記号</option>'
         }
       }
       

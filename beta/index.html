@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no" />
+
+  <!--og:meta-->
+  <meta content="website" property="og:type">
+  <title>自分の気持ちを知る・表す</title>
+  <meta content="自分の気持ちを知る・表す" property="og:title">
+  <meta content="令和三年三月から九月までのの気持ちを知る・表す" name="description">
+  <meta content="令和三年三月から九月までのの気持ちを知る・表す" name="og:description">
+
+  <meta property="og:url" content="https://creative-community.space/sign/beta/" />
+  
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+    #collection {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      height: 100vh;
+      max-height: -webkit-fill-available;
+    }
+
+    #collection iframe {
+      border: none;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      border: solid transparent;
+      width: 90vw;
+      max-width: 750px;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="log" class="hidden">
+    <select>
+      <option selected disabled>令和三年三月から令和三年九月</option>
+    </select>
+  </nav>
+
+  <section id="collection">
+    <iframe src="202103/"></iframe>
+    <iframe src="202104/"></iframe>
+    <iframe src="202105/"></iframe>
+    <iframe src="202106/"></iframe>
+    <iframe src="202107/"></iframe>
+    <iframe src="202108/"></iframe>
+    <iframe src="202109/"></iframe>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -2,10 +2,11 @@
 date_default_timezone_set('Asia/Tokyo');
 
 $month = "08";
-$day = "01";
 
 if (isset($_GET["day"])) {
   $day = $_GET["day"];
+} else {
+  $day = "01";
 }
 
 $source_file = $day . ".csv";

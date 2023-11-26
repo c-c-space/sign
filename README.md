@@ -4,7 +4,7 @@
 **18** の 色 と **35** の 記号[^1] から 選択した
 色と記号 を 日毎の CSVファイル と ローカルストレージ に 保存[^2]
 
-[^1]: 投稿フォーム [form.html](form.html) / 投稿フォームをスタイリング [submit.css](css/submit.css)
+[^1]: 投稿フォーム [form.html](form.html) / 投稿フォームをスタイリング [form.css](css/form.css)
 [^2]: 日毎の CSVファイル に 色と記号 を追加  [submit.php](submit.php) / ローカルストレージ に 色と記号 を追加 [submit.js](js/submit.js)
 
 ---
@@ -13,20 +13,22 @@
 ローカルストレージ から 投稿された 色と記号 を 取得[^3] し、
 グラデーションカラー[^4] ・フラッシュアニメーション[^5] を生成
 
-[viewall.js](js/viewall.js) ページ内容を動的に変更する
-
-[^3]: ローカルストレージ から 色と記号 を 取得し、要素を生成 [readyState.js](js/readyState.js)
+[^3]: ローカルストレージ から 色と記号 を 取得し、要素を生成 [readyState.js](js/readyState.js) / [viewall.js](js/viewall.js)
 [^4]: トップページをスタイリングするCSS [style.css](css/style.css) / 投稿一覧をスタイリング [all.css](css/all.css)
-[^5]: フラッシュアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
+[^5]: フラッシュ/グラデーションアニメーションを生成 [flash.js](js/flash.js) / フラッシュアニメーションをスタイリング [flash.css](css/flash.css)
 
 
 ## [collection](collection/index.php)
-日毎の CSVファイル から 投稿された 色と記号 を 取得 して　ページを生成
+日毎の CSVファイル から 今日の色と記号 を 取得 して　ページを生成
 
-フォームコントロール[^6] から 今月の日毎の投稿[^7] を取得
+月毎の色と記号ページへ移動するフォームコントロールを生成 [script.js](collection/script.js)
 
-[^6]: トップページ・日付を選択するフォームコントロールを生成 [now.php](collection/now.php) / [readyState.js](collection/readyState.js)
-[^7]: フォームコントロールから選択した日付のCSVファイルを取得 [collection.php](collection/collection.php)
+***
+
+月毎の色と記号ページの フォームコントロール[^6] から 日毎の投稿[^7] を取得
+
+[^6]: トップページ・日付を選択するフォームコントロールを生成 [selectDate.js](js/selectDate.js)
+[^7]: フォームコントロールから選択した日付のCSVファイルを取得 [head.php](collection/head.php) / [body.php](collection/body.php)
 
 ***
 

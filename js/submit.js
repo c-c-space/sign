@@ -36,19 +36,19 @@ async function submitThis(event) {
   const symbolAll = document.getElementsByName('symbol')
   const colorAll = document.getElementsByName("color")
 
-  let symbolValue = "";
+  let symbolValue
   for (let i = 0; i < symbolAll.length; i++) {
     if (symbolAll[i].checked) {
-      symbolValue = symbolAll[i].value;
-      break;
+      symbolValue = symbolAll[i].value
+      break
     }
   }
 
-  let colorlValue = "";
+  let colorlValue
   for (let i = 0; i < colorAll.length; i++) {
     if (colorAll[i].checked) {
-      colorlValue = colorAll[i].value;
-      break;
+      colorlValue = colorAll[i].value
+      break
     }
   }
 

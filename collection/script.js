@@ -38,10 +38,10 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if (!localStorage.getItem('yourInfo')) {
-      submitHTML('#submit' ,'../about.php');
+      submitHTML('#submit' ,'about.php');
       const login = document.querySelector('#submit')
-      login.addEventListener('submit', function (e) {
-        e.preventDefault();
+      login.addEventListener('submit', function (event) {
+        event.preventDefault();
         setLOG()
       }, false)
     } else {
@@ -75,8 +75,7 @@ document.addEventListener('readystatechange', event => {
       
       select.innerHTML = selectMonth
       select.addEventListener('change', (event) => {
-        let getMonth = event.target.value
-        location.assign(`${getMonth}/`)
+        location.assign(`${event.target.value}/`)
       });
     }
   }

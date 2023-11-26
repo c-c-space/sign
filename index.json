@@ -4,7 +4,7 @@
       "date" : "Colors and Symbols that Suit You",
       "name" : "自分の気持ちを知る・表す",
       "url" : "/sign/",
-      "ver": "ver.3.0",
+      "ver": "ver.3.1",
       "hidden": true
     },
     {
@@ -12,7 +12,7 @@
       "name" : "毎日の色と記号",
       "url" : "/sign/collection/",
       "type" : "news",
-      "ver": "ver.2.0",
+      "ver": "ver.2.1",
       "hidden": true
     }
   ]

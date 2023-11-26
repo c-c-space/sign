@@ -20,7 +20,7 @@ require('head.php');
 </script>
 
 <link rel="stylesheet" href="../css/about.css" />
-<link rel="stylesheet" href="../css/submit.css" />
+<link rel="stylesheet" href="../css/form.css" />
 </head>
 
 <?php require('body.php'); ?>

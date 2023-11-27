@@ -71,7 +71,6 @@
     </section>
 
     <form id="now" method="GET">
-      <section id="members"></section>
       <section id="viewall">
         <button type="button" onclick="allView()">
           <span><?php echo $month; ?> 月 <?php echo $day; ?> 日</span>
@@ -80,6 +79,7 @@
           <span><?php echo $post; ?> の色と記号</span>
         </button>
       </section>
+      <section id="members"></section>
     </form>
     <script src="/sign/js/flash.js"></script>
     <script src="/sign/js/viewall.js"></script>

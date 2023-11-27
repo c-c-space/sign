@@ -59,6 +59,14 @@ document.addEventListener('readystatechange', event => {
       viewAll.style.width = "100%"
       members.remove()
     } else {
+      const you = document.createElement('button')
+      you.setAttribute('type', 'button')
+      you.textContent = '自分の気持ちを知る・表す'
+      members.appendChild(you)
+      you.addEventListener('click', () => {
+        location.assign('/sign/')
+      });
+      
       const select = document.createElement('select')
       select.setAttribute('name', 'month')
       members.appendChild(select)
@@ -67,14 +75,14 @@ document.addEventListener('readystatechange', event => {
 
       for (let m = 1; m <= 12; m++) {
         if (m <= 9) {
-          selectMonth += '<option value="0' + m + '">' + m + ' 月 の色と記号</option>'
+          selectMonth += '<option value="0' + m + '">' + m + ' 月 の 色と記号</option>'
         } else {
-          selectMonth += '<option value="' + m + '">' + m + ' 月 の色と記号</option>'
+          selectMonth += '<option value="' + m + '">' + m + ' 月 の 色と記号</option>'
         }
       }
       
       select.innerHTML = selectMonth
-      select.addEventListener('change', (event) => {
+      select.addEventListener('change', () => {
         location.assign(`${event.target.value}/`)
       });
     }

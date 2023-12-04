@@ -70,7 +70,7 @@
       </section>
     </section>
 
-    <form id="now" method="GET">
+    <footer id="now">
       <section id="viewall">
         <button type="button" onclick="allView()">
           <span><?php echo $month; ?> 月 <?php echo $day; ?> 日</span>
@@ -80,7 +80,7 @@
         </button>
       </section>
       <section id="members"></section>
-    </form>
+    </footer>
 
     <script src="/sign/js/flash.js"></script>
     <script src="/sign/js/viewall.js"></script>

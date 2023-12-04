@@ -81,6 +81,7 @@
       </section>
       <section id="members"></section>
     </form>
+
     <script src="/sign/js/flash.js"></script>
     <script src="/sign/js/viewall.js"></script>
   </main>

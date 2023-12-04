@@ -17,6 +17,7 @@ function changeHidden() {
     }
   })
 }
+
 async function submitHTML(query, url) {
   fetch(url)
     .then(response => response.text())
@@ -26,9 +27,7 @@ async function submitHTML(query, url) {
 }
 
 document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === 'loading') {
-    // 文書の読み込み中に実行する
-  } else if (event.target.readyState === 'interactive') {
+  if (event.target.readyState === 'interactive') {
     const enterBtn = document.createElement('input')
     enterBtn.setAttribute('type', 'button')
     enterBtn.setAttribute('id', 'enter-btn')
@@ -38,14 +37,14 @@ document.addEventListener('readystatechange', event => {
     document.body.prepend(enterBtn)
 
     if (!localStorage.getItem('yourInfo')) {
-      submitHTML('#submit' ,'about.php');
+      submitHTML('#submit', 'about.php');
       const login = document.querySelector('#submit')
       login.addEventListener('submit', function (event) {
         event.preventDefault();
         setLOG()
       }, false)
     } else {
-      submitHTML('#submit' ,'../form.html');
+      submitHTML('#submit', '../form.html');
       const submitForm = document.querySelector('#submit')
       submitForm.addEventListener('submit', submitThis)
     }
@@ -66,7 +65,7 @@ document.addEventListener('readystatechange', event => {
       you.addEventListener('click', () => {
         location.assign('/sign/')
       });
-      
+
       const select = document.createElement('select')
       select.setAttribute('name', 'month')
       members.appendChild(select)
@@ -80,7 +79,7 @@ document.addEventListener('readystatechange', event => {
           selectMonth += '<option value="' + m + '">' + m + ' 月 の 色と記号</option>'
         }
       }
-      
+
       select.innerHTML = selectMonth
       select.addEventListener('change', (event) => {
         location.assign(`${event.target.value}/`)

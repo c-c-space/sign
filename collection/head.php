@@ -28,19 +28,24 @@ fclose($fp);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
   <script src="/ver/js/menu.js"></script>
-
-  <!--og:meta-->
-  <meta content="website" property="og:type">
+  
   <title><?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す</title>
-  <meta content="<?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す" property="og:title">
-  <meta content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。" name="description">
-  <meta content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。" name="og:description">
+  <meta name="description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
 
-  <!--for Twitter-->
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="<?php echo $url; ?>" property="og:url">
-  <meta content="<?php echo $site . "/sign/summary.png"; ?>" property="og:image">
-  <meta content="<?php echo $site . "/sign/summary.png"; ?>" name="twitter:image:src">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="<?php echo $url; ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す">
+  <meta property="og:description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
+  <meta property="og:image" content="/sign/img/cover.png">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="creative-community.space">
+  <meta property="twitter:url" content="<?php echo $url; ?>">
+  <meta name="twitter:title" content="<?php echo $month; ?> 月 <?php echo $day; ?> 日 の気持ちを知る・表す">
+  <meta name="twitter:description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
+  <meta name="twitter:image" content="/sign/img/cover.png">
 
   <link rel="icon" href="/sign/img/favicon.png">
   <link rel="icon" href="/sign/img/android.png" sizes="192x192">

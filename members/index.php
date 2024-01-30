@@ -31,11 +31,23 @@ fclose($fp);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
 
-  <!--og:meta-->
-  <meta content="website" property="og:type">
   <title>自分の気持ちを知る・表す</title>
-  <meta content="自分の気持ちを知る・表す" property="og:title">
   <meta content="<?php echo $month . " の気持ちを知る・表す " . $post . " の 色と記号"; ?>" name="description">
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://creative-community.space/sign/members/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="自分の気持ちを知る・表す">
+  <meta property="og:description" content="<?php echo $month . " の気持ちを知る・表す " . $post . " の 色と記号"; ?>">
+  <meta property="og:image" content="https://creative-community.space/sign/members/cover.png">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="creative-community.space">
+  <meta property="twitter:url" content="https://creative-community.space/sign/members/">
+  <meta name="twitter:title" content="自分の気持ちを知る・表す">
+  <meta name="twitter:description" content="<?php echo $month . " の気持ちを知る・表す " . $post . " の 色と記号"; ?>">
+  <meta name="twitter:image" content="https://creative-community.space/sign/members/cover.png">
 
   <link rel="icon" href="icon.png" type="image/png">
   <link rel="stylesheet" href="/sign/css/style.css" />

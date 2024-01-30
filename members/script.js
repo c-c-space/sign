@@ -15,7 +15,7 @@ let getMonth = {
   '202209': ['令和四年九月'],
 }
 
-const selectMonth = document.querySelector('#month');
+const selectMonth = document.querySelector('#month')
 const monthAll = Object.entries(getMonth)
 monthAll.forEach((month) => {
   const optionMonth = document.createElement('option')

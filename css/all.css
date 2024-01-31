@@ -8,6 +8,7 @@
 .you i,
 .you u,
 #all ul li b,
+#all ul li i,
 #all ul li small,
 #all ul li button {
   font-family: 'Times New Roman', serif;
@@ -31,9 +32,12 @@
   box-sizing: border-box;
 }
 
-.you i,
-#all ul li b {
+.you i {
   display: block;
+}
+
+#all ul li b {
+  display: inline-block;
 }
 
 #all ul li i {
@@ -78,7 +82,7 @@
 }
 
 .you,
-#all ul p {
+#all ul li p {
   margin: 0;
   word-break: break-all;
 }
@@ -87,8 +91,16 @@
   padding: 1rem;
 }
 
-#all ul p {
+#all ul li p {
   padding: 0.5rem;
+}
+
+#all ul li i {
+  color: #fff;
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  float: right;
 }
 
 #all ul li u {
@@ -116,6 +128,10 @@
   background: #fff;
   padding: 0.25rem 0.75rem;
   margin-top: 1rem;
+}
+
+#all ul li i {
+  font-size: 150%;
 }
 
 @media screen and (max-width: 550px) {

@@ -14,7 +14,7 @@ function changeHidden() {
         duration: 1000
       }
       )
-      main.hidden = false
+      main.hidden = false;
     }
   })
 }
@@ -41,6 +41,9 @@ document.addEventListener('readystatechange', event => {
       document.body.prepend(enterBtn)
 
       submitHTML('#submit', 'form.html')
+
+      const log = JSON.parse(localStorage.getItem('yourInfo'))
+      document.querySelector('#ip').innerHTML = `by <b>${log.os}</b>`;
     }
   } else if (event.target.readyState === 'complete') {
     const yourAll = document.querySelector('#all ul')
@@ -55,47 +58,54 @@ document.addEventListener('readystatechange', event => {
       <u style="background:#000;"><span style="color:#000;">?</span></u>
       <b style="color:#fff;">Submit Your Colors & Symbols</b>
       </p>
-      </li>`
+      </li>`;
 
       yourFlash.innerHTML += `
       <li style="background:#aaa;">
       <b style="color:#aaa;">?</b>
-      </li>`
+      </li>`;
 
-      yourInfo.innerText = "まだ投稿はありません"
-      yourPost.innerText = 'Not Signed Yet'
-      document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`
+      yourInfo.innerText = "まだ投稿はありません";
+      yourPost.innerText = 'Not Signed Yet';
+      document.body.style.backgroundImage = `linear-gradient(0deg, #aaa, #fff)`;
     } else {
-      let youJSON = JSON.parse(localStorage.getItem('sign'));
+      let youJSON = JSON.parse(localStorage.getItem('sign'))
       for (let i = 0; i < youJSON.length; i++) {
-        let time = youJSON[i].timestamp
-        let symbol = youJSON[i].symbolValue
-        let color = youJSON[i].colorlValue
+        let time = youJSON[i].timestamp;
+        let symbol = youJSON[i].symbolValue;
+        let color = youJSON[i].colorlValue;
 
-        document.querySelector('#gradient').innerText += `#${color}, `
+        document.querySelector('#gradient').innerText += `#${color}, `;
 
-        yourAll.innerHTML += `
-        <li>
+        const li = document.createElement('li')
+        li.innerHTML = `
         <p>
         <u style="background:#${color};"><span style="color:#${color};">${symbol}</span></u>
         <b style="color:#${color};">${time}</b>
-        </p>
-        </li>`
+        <i>×</i>
+        </p>`;
+        yourAll.appendChild(li)
+
+        li.addEventListener('click', function () {
+          let result = window.confirm('この色と記号をコレクションから削除します。 \r\n Remove This from Your Collection.')
+          if (result) {
+            youJSON.splice(i, 1)
+            localStorage.setItem('sign', JSON.stringify(youJSON))
+            location.reload()
+          }
+        })
 
         yourFlash.innerHTML += `
         <li style="background:#${color};">
         <b style="color:#${color};">${symbol}</b>
-        </li>`
+        </li>`;
       }
 
-      yourInfo.innerText = "自分の気持ちを知る・表す"
-      yourPost.innerText = youJSON.length + ' の色と記号'
+      yourInfo.innerText = "自分の気持ちを知る・表す";
+      yourPost.innerText = youJSON.length + ' の色と記号';
 
-      let gradient = document.querySelector('#gradient').innerText
-      document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)"
+      let gradient = document.querySelector('#gradient').innerText;
+      document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
     }
-
-    const log = JSON.parse(localStorage.getItem('yourInfo'));
-    document.querySelector('#ip').innerHTML = `by <b>${log.os}</b>`
   }
-});
+})

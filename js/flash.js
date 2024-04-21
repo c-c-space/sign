@@ -36,16 +36,17 @@ function viewSlide(elem) {
   })
   liArr[i].style.opacity = 1;
 
-  if (i === liArr.length - 1) {
-    i = 0;
-  } else {
-    i++;
-  }
-
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
-  if (!liArr.length == 0) {
+  if (liArr.length <= 1) {
+    speed.remove()
+  } else {
     setTimeout(function () {
+      if (i === liArr.length - 1) {
+        i = 0;
+      } else {
+        i++;
+      }
       viewSlide(elem);
     }, msec);
   }

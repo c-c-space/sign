@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <script src="https://creative-community.space/ver/js/menu.js"></script>
+    <script src="https://creative-community.space/ver/js/login.js?v=1"></script>
+
+    <title>毎日の気持ちを知る・表す 色 と 記号</title>
+    <meta name="description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
+
+    <link rel="icon" href="https://creative-community.space/sign/img/favicon.png">
+    <link rel="icon" href="https://creative-community.space/sign/img/android.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="https://creative-community.space/sign/img/ios.png" sizes="180x180">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://creative-community.space/sign/collection/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="毎日の気持ちを知る・表す 色 と 記号">
+    <meta property="og:description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
+    <meta property="og:image" content="https://creative-community.space/sign/img/cover.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="毎日の気持ちを知る・表す 色 と 記号">
+    <meta name="twitter:description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
+    <meta name="twitter:image" content="https://creative-community.space/sign/img/cover.png">
+
+    <meta name="application-name" content="creative-community.space" />
+    <meta name="msapplication-TileImage" content="https://creative-community.space/sign/img/favicon.png" />
+    <meta name="msapplication-square70x70logo" content="https://creative-community.space/sign/img/favicon.png" />
+    <meta name="msapplication-square150x150logo" content="https://creative-community.space/sign/img/ios.png" />
+    <meta name="msapplication-wide310x150logo" content="https://creative-community.space/sign/img/cover.png" />
+    <meta name="msapplication-square310x310logo" content="https://creative-community.space/sign/img/twitter.png" />
+    <meta name="msapplication-TileColor" content="#fff" />
+
+    <link rel="stylesheet" href="https://creative-community.space/ver/css/menu.css?v=1" />
+    <link rel="stylesheet" href="../css/style.css?v=1" />
+    <link rel="stylesheet" href="../css/all.css?v=1" />
+    <link rel="stylesheet" href="../css/flash.css?v=1" />
+    <link rel="stylesheet" href="../css/about.css?v=1" />
+    <link rel="stylesheet" href="../css/form.css?v=1" />
+
+    <script src="index.js?v=1"></script>
+    <script type="text/javascript">
+        // ?m=MM?d=DD
+        if (location.search) {
+            const queryString = location.search;
+            const params = new URLSearchParams(queryString)
+
+            let dirMM = params.get("m").padStart(2, '0')
+            let csvDD = params.get("d").padStart(2, '0')
+            signCSV(`${dirMM}/${csvDD}.csv`)
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const allMonth = document.querySelectorAll('.thisMonth')
+                allMonth.forEach((thisMonth) => {
+                    thisMonth.textContent = params.get("m");
+                });
+
+                const allDate = document.querySelectorAll('.thisDate')
+                allDate.forEach((thisDate) => {
+                    thisDate.textContent = params.get("d");
+                });
+            }, false)
+        } else {
+            signCSV(`${('0' + m).slice(-2)}/${('0' + d).slice(-2)}.csv`)
+            document.addEventListener('DOMContentLoaded', () => {
+                const allMonth = document.querySelectorAll('.thisMonth')
+                allMonth.forEach((thisMonth) => {
+                    thisMonth.textContent = m;
+                });
+
+                const allDate = document.querySelectorAll('.thisDate')
+                allDate.forEach((thisDate) => {
+                    thisDate.textContent = d;
+                });
+            })
+        }
+
+        menuJSON('../index.json')
+    </script>
+</head>
+
+<body>
+    <header id="menu" hidden>
+        <button type="button"><b></b></button>
+        <menu id="contents">
+            <a href="/" target="_parent">
+                <p>creative-community.space</p>
+                <u>Index</u>
+            </a>
+        </menu>
+    </header>
+
+    <input type="button" id="enter-btn" class="hidden" value="?" onclick="changeHidden()">
+
+    <main>
+        <section id="all">
+            <p class="you">
+                <i>Sign | creative-community.space</i>
+                <u style="color:#fff;">
+                    <time class="thisMonth"></time> 月
+                    <time class="thisDate"></time> 日
+                    の気持ちを知る・表す
+                </u>
+                <small id="gradient" hidden></small>
+            </p>
+            <ul></ul>
+        </section>
+        <section id="flash">
+            <ul></ul>
+            <section id="speed">
+                <input id="flash_speed" type="range" value="" min="500" max="5000">
+            </section>
+        </section>
+        <script src="../js/flash.js"></script>
+        <script src="../js/viewall.js"></script>
+
+        <form id="now">
+            <section id="viewall">
+                <button type="button" onclick="allView()">
+                    <time class="thisMonth"></time> 月
+                    <time class="thisDate"></time> 日
+                </button>
+                <button id="count" type="button" onclick="flashView()">
+                    <b></b> の色と記号
+                </button>
+            </section>
+            <section id="members">
+                <select id="selectMonth" name="month"></select>
+                <select id="selectDate" name="date"></select>
+                <button type="submit">View The Collection</button>
+            </section>
+        </form>
+    </main>
+
+    <form id="submit" method="post" hidden></form>
+    <script src="../js/submit.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,10 @@
 'use strict'
 
+window.addEventListener("load", () => {
+  const submitForm = document.querySelector('#submit')
+  submitForm.addEventListener('submit', submitThis)
+})
+
 // localStorage から sign を取得
 let array = JSON.parse(localStorage.getItem("sign")) || [];
 const addData = (timestamp, symbolValue, colorlValue) => {
@@ -14,14 +19,14 @@ const addData = (timestamp, symbolValue, colorlValue) => {
 
 // タイムスタンプを生成
 let getWeek = new Array("日", "月", "火", "水", "木", "金", "土");
-const newDate = new Date();
-const getYear = newDate.getFullYear();
+const newDate = new Date()
+const getYear = newDate.getFullYear()
 const getMonth = newDate.getMonth() + 1;
-const getDate = newDate.getDate();
-const getDay = newDate.getDay();
-const getHours = newDate.getHours().toString().padStart(2, '0');
-const getMinutes = newDate.getMinutes().toString().padStart(2, '0');
-const getSeconds = newDate.getSeconds().toString().padStart(2, '0');
+const getDate = newDate.getDate()
+const getDay = newDate.getDay()
+const getHours = newDate.getHours().toString().padStart(2, '0')
+const getMinutes = newDate.getMinutes().toString().padStart(2, '0')
+const getSeconds = newDate.getSeconds().toString().padStart(2, '0')
 
 const setDate = getYear + "年" + getMonth + "月" + getDate + "日";
 const setWeek = "(" + getWeek[getDay] + ") ";
@@ -31,7 +36,7 @@ let timestamp = setDate + setWeek + setTime;
 
 // 色と記号を投稿する
 async function submitThis(event) {
-  event.preventDefault();
+  event.preventDefault()
 
   const symbolAll = document.getElementsByName('symbol')
   const colorAll = document.getElementsByName("color")
@@ -80,6 +85,6 @@ async function submitThis(event) {
     });
 
   setTimeout(() => {
-    window.location.replace('/sign/');
-  }, 1000);
+    window.location.replace('/sign/')
+  }, 1000)
 }

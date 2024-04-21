@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no" />
-  <script src="js/readyState.v2.js"></script>
+  <link rel="icon" href="https://creative-community.space/sign/img/favicon.png">
+  <link rel="icon" href="https://creative-community.space/sign/img/android.png" sizes="192x192">
+  <link rel="apple-touch-icon-precomposed" href="https://creative-community.space/sign/img/ios.png" sizes="180x180">
+
+  <script src="js/readyState.js?v=2"></script>
+  <script src="js/submit.js?v=2"></script>
 
   <title>Sign | creative-community.space</title>
   <meta name="description" content="これは、18 の色 と 35 の記号 を使って 自分の気持ちを知る・表す オンラインコミュニケーションツールです。">
@@ -30,10 +35,6 @@
     menuJSON('index.json')
   </script>
 
-  <link rel="icon" href="https://creative-community.space/sign/img/favicon.png">
-  <link rel="icon" href="https://creative-community.space/sign/img/android.png" sizes="192x192">
-  <link rel="apple-touch-icon-precomposed" href="https://creative-community.space/sign/img/ios.png" sizes="180x180">
-
   <meta name="application-name" content="creative-community.space" />
   <meta name="msapplication-TileImage" content="https://creative-community.space/sign/img/favicon.png" />
   <meta name="msapplication-square70x70logo" content="https://creative-community.space/sign/img/favicon.png" />
@@ -42,11 +43,11 @@
   <meta name="msapplication-square310x310logo" content="https://creative-community.space/sign/img/twitter.png" />
   <meta name="msapplication-TileColor" content="#fff" />
 
-  <link rel="stylesheet" href="https://creative-community.space/ver/css/menu.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/flash.css" />
-  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="https://creative-community.space/ver/css/menu.css?v=1" />
+  <link rel="stylesheet" href="css/style.css?v=1" />
+  <link rel="stylesheet" href="css/all.css?v=1" />
+  <link rel="stylesheet" href="css/flash.css?v=1" />
+  <link rel="stylesheet" href="css/form.css?v=1" />
 </head>
 
 <body>
@@ -59,6 +60,8 @@
       </a>
     </menu>
   </header>
+
+  <form id="submit" class="hidden" method="post" hidden></form>
 
   <main id="viewall">
     <section id="all">
@@ -73,14 +76,12 @@
         <small id="ip"></small><br />
       </p>
     </section>
-
     <section id="flash">
       <ul></ul>
       <nav id="speed">
         <input id="flash_speed" type="range" value="" min="500" max="5000">
       </nav>
     </section>
-
     <nav id="now" class="hidden">
       <button type="button" onclick="allView()">
         <span id="yourInfo"></span>
@@ -90,16 +91,8 @@
       </button>
     </nav>
   </main>
-
-  <script src="js/flash.js"></script>
-  <script src="js/viewall.js"></script>
-
-  <form id="submit" class="hidden" method="post" hidden></form>
-  <script src="js/submit.js"></script>
-  <script>
-    const submitForm = document.querySelector('#submit')
-    submitForm.addEventListener('submit', submitThis)
-  </script>
+  <script src="js/flash.js?v=1"></script>
+  <script src="js/viewall.js?v=1"></script>
 </body>
 
 </html>

@@ -20,14 +20,9 @@
 
 ## [collection](collection/index.php)
 日毎の CSVファイル から 今日の色と記号 を 取得 して　ページを生成
+フォームコントロール[^6] から 日毎の投稿[^7] を取得
 
-月毎の色と記号ページへ移動するフォームコントロールを生成 [script.js](collection/script.js)
-
-***
-
-月毎の色と記号ページの フォームコントロール[^6] から 日毎の投稿[^7] を取得
-
-[^6]: トップページ・日付を選択するフォームコントロールを生成 [selectDate.js](js/selectDate.js)
+[^6]: 日付を選択するフォームコントロールを生成 [selectDate.js](js/selectDate.js)
 [^7]: フォームコントロールから選択した日付のCSVファイルを取得 [head.php](collection/head.php) / [body.php](collection/body.php)
 
 ***

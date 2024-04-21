@@ -1,5 +1,20 @@
 'use strict'
 
+window.addEventListener("load", () => {
+  viewSlide('#flash ul li')
+  BGanimation()
+}, false)
+
+window.addEventListener("beforeprint", () => {
+  const cover = document.body;
+  cover.style.backgroundSize = '100% 100%';
+  cover.style.animation = 'gradient none';
+}, false)
+
+window.addEventListener("afterprint", () => {
+  BGanimation()
+}, false)
+
 function BGanimation() {
   const cover = document.body
   let signCount = document.querySelectorAll('#flash ul li').length;
@@ -12,21 +27,6 @@ function BGanimation() {
   }
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
 }
-
-window.addEventListener("load", () => {
-  viewSlide('#flash ul li');
-  BGanimation()
-}, false);
-
-window.addEventListener("beforeprint", () => {
-  const cover = document.body
-  cover.style.backgroundSize = '100% 100%';
-  cover.style.animation = 'gradient none';
-});
-
-window.addEventListener("afterprint", () => {
-  BGanimation()
-}, false);
 
 function viewSlide(elem, i = -1) {
   let liArr = document.querySelectorAll(elem);

@@ -1,5 +1,34 @@
 'use strict'
 
+async function signCSV(csv) {
+  const response = await fetch(csv)
+  const text = await response.text()
+  const data = text.trim().split('\n')
+    .map(line => line.split(',').map(x => x.trim()))
+    .map(comma => {
+      let symbol = comma[0]
+      let color = comma[1]
+
+      const allUl = document.querySelector('#all ul')
+      const flashUl = document.querySelector('#flash ul')
+      allUl.innerHTML += `
+      <li style="background:#${color};">
+      <span style="color:#${color};">${symbol}</span>
+      </li>`;
+      flashUl.innerHTML += `
+      <li style="background:#${color};">
+      <b style="color:#${color};">${symbol}</b>
+      </li>`;
+      document.querySelector('#gradient').innerText += `#${color}, `;
+    });
+
+  let gradient = document.querySelector('#gradient').innerText;
+  document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
+
+  document.querySelector('#month').textContent = csv.replace(/.csv/g, '');
+  document.querySelector('#count b').textContent = data.length;
+}
+
 let getMonth = {
   '202110': ['令和三年十月'],
   '202111': ['令和三年十一月'],
@@ -15,11 +44,21 @@ let getMonth = {
   '202209': ['令和四年九月'],
 }
 
-const selectMonth = document.querySelector('#month')
-const monthAll = Object.entries(getMonth)
-monthAll.forEach((month) => {
-  const optionMonth = document.createElement('option')
-  optionMonth.setAttribute("value", month[0])
-  optionMonth.innerText = Object.values(month[1])[0]
-  selectMonth.appendChild(optionMonth)
-});
+document.addEventListener('readystatechange', event => {
+  if (event.target.readyState === 'interactive') {
+    const selectMonth = document.querySelector('#selectMonth')
+    const monthAll = Object.entries(getMonth)
+    monthAll.forEach((month) => {
+      const optionMonth = document.createElement('option')
+      optionMonth.setAttribute("value", month[0])
+      optionMonth.innerText = Object.values(month[1])[0]
+      selectMonth.appendChild(optionMonth)
+    }, false)
+
+    selectMonth.addEventListener('change', (event) => {
+      location.replace(`?date=${event.target.value}`)
+    }, false)
+  } else if (event.target.readyState === 'complete') {
+
+  }
+})

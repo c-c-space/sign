@@ -44,7 +44,9 @@ function viewSlide(elem) {
 
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
-  setTimeout(function () {
-    viewSlide(elem);
-  }, msec);
+  if (!liArr.length == 0) {
+    setTimeout(function () {
+      viewSlide(elem);
+    }, msec);
+  }
 }

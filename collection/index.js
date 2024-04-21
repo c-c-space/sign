@@ -102,7 +102,7 @@ async function signCSV(csv) {
     const response = await fetch(csv + '?' + Date.now())
     const text = await response.text()
     const data = text.trim().split('\n')
-    if (data.length <= 1) {
+    if (text.length <= 1) {
         const allUl = document.querySelector('#all ul')
         const flashUl = document.querySelector('#flash ul')
         allUl.innerHTML += `

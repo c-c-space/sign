@@ -6,33 +6,33 @@ let d = now.getDate();
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        if (!localStorage.getItem('yourInfo')) {
+        if (localStorage.getItem('yourInfo')) {
             submitHTML('#submit', 'about.php');
             const login = document.querySelector('#submit')
             login.addEventListener('submit', function (event) {
                 event.preventDefault();
                 setLOG()
             }, false)
-
-            let selectMonth = document.querySelector('#selectMonth');
-            for (let mm = 1; mm <= 12; mm++) {
-                if (mm === m) {
-                    selectMonth.innerHTML += '<option selected value="' + mm + '">' + mm + ' 月</option>'
-                } else {
-                    selectMonth.innerHTML += '<option value="' + mm + '">' + mm + ' 月</option>'
-                }
-            }
-
-            let selectDate = document.querySelector('#selectDate');
-            for (let dd = 1; dd <= 31; dd++) {
-                if (dd === d) {
-                    selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 月</option>'
-                } else {
-                    selectDate.innerHTML += '<option value="' + dd + '">' + dd + ' 日</option>'
-                }
-            }
         } else {
             submitHTML('#submit', '../form.html');
+        }
+
+        let selectMonth = document.querySelector('#selectMonth');
+        for (let mm = 1; mm <= 12; mm++) {
+            if (mm === m) {
+                selectMonth.innerHTML += '<option selected value="' + mm + '">' + mm + ' 月</option>'
+            } else {
+                selectMonth.innerHTML += '<option value="' + mm + '">' + mm + ' 月</option>'
+            }
+        }
+
+        let selectDate = document.querySelector('#selectDate');
+        for (let dd = 1; dd <= 31; dd++) {
+            if (dd === d) {
+                selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 月</option>'
+            } else {
+                selectDate.innerHTML += '<option value="' + dd + '">' + dd + ' 日</option>'
+            }
         }
     } else if (event.target.readyState === 'complete') {
         const now = document.querySelector('#now')

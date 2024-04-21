@@ -6,7 +6,7 @@ let d = now.getDate();
 
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
-        if (localStorage.getItem('yourInfo')) {
+        if (!localStorage.getItem('yourInfo')) {
             submitHTML('#submit', 'about.php');
             const login = document.querySelector('#submit')
             login.addEventListener('submit', function (event) {

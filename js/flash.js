@@ -28,19 +28,23 @@ function BGanimation() {
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
 }
 
-function viewSlide(elem, i = -1) {
+let i = 0;
+function viewSlide(elem) {
   let liArr = document.querySelectorAll(elem);
-  if (i >= 0) {
-    liArr[i].style.opacity = 0;
-  }
-  i++;
-  if (i >= liArr.length) {
-    i = 0;
-  }
+  liArr.forEach(liEach => {
+    liEach.style.opacity = 0;
+  })
   liArr[i].style.opacity = 1;
+
+  if (i === liArr.length - 1) {
+    i = 0;
+  } else {
+    i++;
+  }
+
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
   setTimeout(function () {
-    viewSlide(elem, i);
+    viewSlide(elem);
   }, msec);
 }

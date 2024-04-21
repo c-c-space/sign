@@ -112,12 +112,12 @@
         </section>
         <section id="flash">
             <ul></ul>
-            <section id="speed">
+            <nav id="speed">
                 <input id="flash_speed" type="range" value="" min="500" max="5000">
-            </section>
+            </nav>
         </section>
-        <script src="../js/flash.js"></script>
-        <script src="../js/viewall.js"></script>
+        <script src="../js/flash.js?v=2"></script>
+        <script src="../js/viewall.js?v=1"></script>
 
         <form id="now">
             <section id="viewall">
@@ -130,8 +130,10 @@
                 </button>
             </section>
             <section id="members">
-                <select id="selectMonth" name="month"></select>
-                <select id="selectDate" name="date"></select>
+                <div>
+                    <select id="selectMonth" name="month"></select>
+                    <select id="selectDate" name="date"></select>
+                </div>
                 <button type="submit">View The Collection</button>
             </section>
         </form>

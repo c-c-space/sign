@@ -13,8 +13,6 @@ document.addEventListener('readystatechange', event => {
             submitHTML('#submit', '../form.html')
         }
     } else if (event.target.readyState === 'complete') {
-        viewFlash('#flash ul li')
-
         const now = document.querySelector('#now')
         now.addEventListener('submit', (e) => {
             e.preventDefault()
@@ -82,18 +80,22 @@ async function signCSV(csv) {
         document.querySelector('#count b').textContent = data.length;
     }
 
-    const cover = document.body;
-    let gradient = document.querySelector('#gradient').innerText;
-    cover.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
-    let signCount = document.querySelectorAll('#all ul li').length;
-    if (signCount == 1) {
-        cover.style.backgroundSize = `100% ${signCount * 200}%`;
-    } else if (signCount <= 5) {
-        cover.style.backgroundSize = `100% ${signCount * 100}%`;
-    } else {
-        cover.style.backgroundSize = `100% ${signCount * 50}%`;
-    }
-    cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
+    window.addEventListener('load', () => {
+        const cover = document.body;
+        let gradient = document.querySelector('#gradient').innerText;
+        cover.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
+        let signCount = document.querySelectorAll('#all ul li').length;
+        if (signCount == 1) {
+            cover.style.backgroundSize = `100% ${signCount * 200}%`;
+        } else if (signCount <= 5) {
+            cover.style.backgroundSize = `100% ${signCount * 100}%`;
+        } else {
+            cover.style.backgroundSize = `100% ${signCount * 50}%`;
+        }
+        cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
+
+        viewFlash('#flash ul li')
+    })
 }
 
 function changeHidden() {

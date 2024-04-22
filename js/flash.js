@@ -3,7 +3,7 @@
 window.addEventListener("load", () => {
   viewSlide('#flash ul li')
   BGanimation()
-}, false)
+})
 
 window.addEventListener("beforeprint", () => {
   const cover = document.body;
@@ -14,6 +14,36 @@ window.addEventListener("beforeprint", () => {
 window.addEventListener("afterprint", () => {
   BGanimation()
 }, false)
+
+let i = 0;
+function viewSlide(elem) {
+  let liArr = document.querySelectorAll(elem)
+  const speed = document.querySelector('#flash_speed')
+  let msec = speed.max - speed.value;
+
+  if (liArr.length <= 1) {
+    speed.remove()
+    liArr.forEach(liEach => {
+      liEach.style.opacity = 1;
+    })
+  } else {
+    liArr.forEach(liEach => {
+      liEach.style.opacity = 0;
+    })
+
+    liArr[i].style.opacity = 1;
+
+    if (i < liArr.length - 1) {
+      i++;
+    } else {
+      i = 0;
+    }
+
+    setTimeout(function () {
+      viewSlide(elem);
+    }, msec);
+  }
+}
 
 function BGanimation() {
   const cover = document.body
@@ -26,33 +56,4 @@ function BGanimation() {
     cover.style.backgroundSize = `100% ${signCount * 50}%`;
   }
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
-}
-
-let i = 0;
-function viewSlide(elem) {
-  let liArr = document.querySelectorAll(elem);
-  const speed = document.querySelector('#flash_speed')
-  let msec = speed.max - speed.value;
-
-  if (liArr.length <= 1) {
-    liArr[0].style.opacity = 1;
-    speed.remove()
-  } else {
-    liArr.forEach(liEach => {
-      liEach.style.opacity = 0;
-    })
-
-    liArr[i].style.opacity = 1;
-
-    if (i < liArr.length - 1) {
-      i++;
-      liArr[i].style.opacity = 1;
-    } else {
-      i = 0;
-    }
-
-    setTimeout(function () {
-      viewSlide(elem);
-    }, msec);
-  }
 }

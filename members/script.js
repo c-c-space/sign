@@ -12,7 +12,7 @@ async function signCSV(csv) {
     </li>`;
     flashUl.innerHTML += `
     <li style="background:#aaa;">
-    <b style="color:#aaa;">?}</b>
+    <b style="color:#aaa;">?</b>
     </li>`;
     document.querySelector('#gradient').innerText += `#aaa, `;
     document.querySelector('#count b').textContent = '0';

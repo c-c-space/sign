@@ -3,30 +3,42 @@
 async function signCSV(csv) {
   const response = await fetch(csv)
   const text = await response.text()
-  const data = text.trim().split('\n')
-    .map(line => line.split(',').map(x => x.trim()))
-    .map(comma => {
-      let symbol = comma[0]
-      let color = comma[1]
-
-      const allUl = document.querySelector('#all ul')
-      const flashUl = document.querySelector('#flash ul')
-      allUl.innerHTML += `
-      <li style="background:#${color};">
-      <span style="color:#${color};">${symbol}</span>
-      </li>`;
-      flashUl.innerHTML += `
-      <li style="background:#${color};">
-      <b style="color:#${color};">${symbol}</b>
-      </li>`;
-      document.querySelector('#gradient').innerText += `#${color}, `;
-    });
-
+  if (text.length <= 1) {
+    const allUl = document.querySelector('#all ul')
+    const flashUl = document.querySelector('#flash ul')
+    allUl.innerHTML += `
+    <li style="background:#aaa;">
+    <span style="color:#aaa;">?</span>
+    </li>`;
+    flashUl.innerHTML += `
+    <li style="background:#aaa;">
+    <b style="color:#aaa;">?}</b>
+    </li>`;
+    document.querySelector('#gradient').innerText += `#aaa, `;
+    document.querySelector('#count b').textContent = '0';
+  } else {
+    const data = text.trim().split('\n')
+      .map(line => line.split(',').map(x => x.trim()))
+      .map(comma => {
+        let symbol = comma[0]
+        let color = comma[1]
+        const allUl = document.querySelector('#all ul')
+        const flashUl = document.querySelector('#flash ul')
+        allUl.innerHTML += `
+        <li style="background:#${color};">
+        <span style="color:#${color};">${symbol}</span>
+        </li>`;
+        flashUl.innerHTML += `
+        <li style="background:#${color};">
+        <b style="color:#${color};">${symbol}</b>
+        </li>`;
+        document.querySelector('#gradient').innerText += `#${color}, `;
+      });
+    document.querySelector('#count b').textContent = data.length;
+  }
   let gradient = document.querySelector('#gradient').innerText;
   document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
-
-  document.querySelector('#month').textContent = csv.replace(/.csv/g, '');
-  document.querySelector('#count b').textContent = data.length;
+  document.querySelector('#month').textContent = csv.replace(/.csv/g, '')
 }
 
 let getMonth = {
@@ -58,7 +70,5 @@ document.addEventListener('readystatechange', event => {
     selectMonth.addEventListener('change', (event) => {
       location.replace(`?date=${event.target.value}`)
     }, false)
-  } else if (event.target.readyState === 'complete') {
-
   }
 })

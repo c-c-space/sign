@@ -31,23 +31,27 @@ function BGanimation() {
 let i = 0;
 function viewSlide(elem) {
   let liArr = document.querySelectorAll(elem);
-  liArr.forEach(liEach => {
-    liEach.style.opacity = 0;
-  })
-
-  liArr[i].style.opacity = 1;
-
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
-  if (liArr.length >= 1) {
+
+  if (liArr.length <= 1) {
+    liArr[0].style.opacity = 1;
     speed.remove()
   } else {
+    liArr.forEach(liEach => {
+      liEach.style.opacity = 0;
+    })
+
+    liArr[i].style.opacity = 1;
+
+    if (i < liArr.length - 1) {
+      i++;
+      liArr[i].style.opacity = 1;
+    } else {
+      i = 0;
+    }
+
     setTimeout(function () {
-      if (i >= liArr.length - 1) {
-        i++;
-      } else {
-        i = 0;
-      }
       viewSlide(elem);
     }, msec);
   }

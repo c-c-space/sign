@@ -7,31 +7,31 @@ let d = now.getDate();
 document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'interactive') {
         if (!localStorage.getItem('yourInfo')) {
-            submitHTML('#submit', 'about.php');
+            submitHTML('#submit', 'about.php')
             const login = document.querySelector('#submit')
             login.addEventListener('submit', function (event) {
-                event.preventDefault();
+                event.preventDefault()
                 setLOG()
             }, false)
         } else {
-            submitHTML('#submit', '../form.html');
+            submitHTML('#submit', '../form.html')
         }
 
-        let selectMonth = document.querySelector('#selectMonth');
+        let selectMonth = document.querySelector('#selectMonth')
         for (let mm = 1; mm <= 12; mm++) {
             if (mm === m) {
-                selectMonth.innerHTML += '<option selected value="' + mm + '">' + mm + ' 月</option>'
+                selectMonth.innerHTML += '<option selected value="' + mm + '">' + mm + ' 月</option>';
             } else {
-                selectMonth.innerHTML += '<option value="' + mm + '">' + mm + ' 月</option>'
+                selectMonth.innerHTML += '<option value="' + mm + '">' + mm + ' 月</option>';
             }
         }
 
         let selectDate = document.querySelector('#selectDate');
         for (let dd = 1; dd <= 31; dd++) {
             if (dd === d) {
-                selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 月</option>'
+                selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 月</option>';
             } else {
-                selectDate.innerHTML += '<option value="' + dd + '">' + dd + ' 日</option>'
+                selectDate.innerHTML += '<option value="' + dd + '">' + dd + ' 日</option>';
             }
         }
     } else if (event.target.readyState === 'complete') {
@@ -93,7 +93,7 @@ function changeHidden() {
                 ],
                 { duration: 1000 }
             )
-            main.hidden = false
+            main.hidden = false;
         }
     })
 }
@@ -101,7 +101,6 @@ function changeHidden() {
 async function signCSV(csv) {
     const response = await fetch(csv + '?' + Date.now())
     const text = await response.text()
-    const data = text.trim().split('\n')
     if (text.length <= 1) {
         const allUl = document.querySelector('#all ul')
         const flashUl = document.querySelector('#flash ul')
@@ -121,13 +120,12 @@ async function signCSV(csv) {
         document.querySelector('#gradient').innerText += '#aaa, ';
         document.querySelector('#count b').textContent = '0';
     } else {
-        text.trim().split('\n')
+        const data = text.trim().split('\n')
             .map(line => line.split(',').map(x => x.trim()))
             .map(comma => {
                 let symbol = comma[0]
                 let color = comma[1]
                 let time = comma[2]
-
                 const allUl = document.querySelector('#all ul')
                 const flashUl = document.querySelector('#flash ul')
                 allUl.innerHTML += `

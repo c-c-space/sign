@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="../css/about.css?v=1" />
     <link rel="stylesheet" href="../css/form.css?v=1" />
 
-    <script src="index.js?v=111"></script>
+    <script src="index.js?v=2"></script>
     <script type="text/javascript">
         // ?m=MM?d=DD
         if (location.search) {
@@ -58,12 +58,11 @@
                 const allMonth = document.querySelectorAll('.thisMonth')
                 allMonth.forEach((thisMonth) => {
                     thisMonth.textContent = params.get("m");
-                });
-
+                })
                 const allDate = document.querySelectorAll('.thisDate')
                 allDate.forEach((thisDate) => {
                     thisDate.textContent = params.get("d");
-                });
+                })
             }, false)
         } else {
             signCSV(`${('0' + m).slice(-2)}/${('0' + d).slice(-2)}.csv`)
@@ -71,12 +70,11 @@
                 const allMonth = document.querySelectorAll('.thisMonth')
                 allMonth.forEach((thisMonth) => {
                     thisMonth.textContent = m;
-                });
-
+                })
                 const allDate = document.querySelectorAll('.thisDate')
                 allDate.forEach((thisDate) => {
                     thisDate.textContent = d;
-                });
+                })
             })
         }
 
@@ -116,7 +114,7 @@
                 <input id="flash_speed" type="range" value="" min="500" max="5000">
             </nav>
         </section>
-        <script src="../js/flash.js?v=22"></script>
+        <script src="../js/flash.js?v=222"></script>
         <script src="../js/viewall.js?v=1"></script>
 
         <form id="now">

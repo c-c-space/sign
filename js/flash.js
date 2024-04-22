@@ -1,10 +1,5 @@
 'use strict'
 
-window.addEventListener("load", () => {
-  viewSlide('#flash ul li')
-  BGanimation()
-})
-
 window.addEventListener("beforeprint", () => {
   const cover = document.body;
   cover.style.backgroundSize = '100% 100%';
@@ -16,7 +11,7 @@ window.addEventListener("afterprint", () => {
 }, false)
 
 let i = 0;
-function viewSlide(elem) {
+function viewFlash(elem) {
   let liArr = document.querySelectorAll(elem)
   const speed = document.querySelector('#flash_speed')
   let msec = speed.max - speed.value;
@@ -40,13 +35,13 @@ function viewSlide(elem) {
     }
 
     setTimeout(function () {
-      viewSlide(elem);
+      viewFlash(elem);
     }, msec);
   }
 }
 
 function BGanimation() {
-  const cover = document.body
+  const cover = document.body;
   let signCount = document.querySelectorAll('#flash ul li').length;
   if (signCount == 1) {
     cover.style.backgroundSize = `100% ${signCount * 200}%`;

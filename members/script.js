@@ -3,6 +3,7 @@
 async function signCSV(csv) {
   const response = await fetch(csv)
   const text = await response.text()
+
   if (text.length <= 1) {
     const allUl = document.querySelector('#all ul')
     const flashUl = document.querySelector('#flash ul')
@@ -36,9 +37,15 @@ async function signCSV(csv) {
       });
     document.querySelector('#count b').textContent = data.length;
   }
+
   let gradient = document.querySelector('#gradient').innerText;
   document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
   document.querySelector('#month').textContent = csv.replace(/.csv/g, '')
+
+  window.addEventListener("load", () => {
+    viewFlash('#flash ul li')
+    BGanimation()
+  })
 }
 
 let getMonth = {

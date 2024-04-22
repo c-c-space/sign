@@ -80,22 +80,10 @@ async function signCSV(csv) {
         document.querySelector('#count b').textContent = data.length;
     }
 
-    window.addEventListener('load', () => {
-        const cover = document.body;
-        let gradient = document.querySelector('#gradient').innerText;
-        cover.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
-        let signCount = document.querySelectorAll('#all ul li').length;
-        if (signCount == 1) {
-            cover.style.backgroundSize = `100% ${signCount * 200}%`;
-        } else if (signCount <= 5) {
-            cover.style.backgroundSize = `100% ${signCount * 100}%`;
-        } else {
-            cover.style.backgroundSize = `100% ${signCount * 50}%`;
-        }
-        cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
-
-        viewFlash('#flash ul li')
-    })
+    let gradient = document.querySelector('#gradient').innerText;
+    document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
+    BGanimation()
+    viewFlash('#flash ul li')
 }
 
 function changeHidden() {

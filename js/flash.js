@@ -2,6 +2,16 @@
 
 let i = 0;
 
+window.addEventListener("beforeprint", () => {
+  const cover = document.body;
+  cover.style.backgroundSize = '100% 100%';
+  cover.style.animation = 'gradient none';
+}, false)
+
+window.addEventListener("afterprint", () => {
+  BGanimation()
+}, false)
+
 function viewFlash(elem) {
   let liArr = document.querySelectorAll(elem)
   const speed = document.querySelector('#flash_speed')
@@ -33,7 +43,7 @@ function viewFlash(elem) {
 
 function BGanimation() {
   const cover = document.body;
-  let signCount = document.querySelectorAll('#flash ul li').length;
+  let signCount = document.querySelectorAll('#all ul li').length;
   if (signCount == 1) {
     cover.style.backgroundSize = `100% ${signCount * 200}%`;
   } else if (signCount <= 5) {
@@ -43,13 +53,3 @@ function BGanimation() {
   }
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
 }
-
-window.addEventListener("beforeprint", () => {
-  const cover = document.body;
-  cover.style.backgroundSize = '100% 100%';
-  cover.style.animation = 'gradient none';
-}, false)
-
-window.addEventListener("afterprint", () => {
-  BGanimation()
-}, false)

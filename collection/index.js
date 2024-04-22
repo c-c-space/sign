@@ -13,6 +13,9 @@ document.addEventListener('readystatechange', event => {
             submitHTML('#submit', '../form.html')
         }
     } else if (event.target.readyState === 'complete') {
+        viewFlash('#flash ul li')
+        BGanimation()
+
         const now = document.querySelector('#now')
         now.addEventListener('submit', (e) => {
             e.preventDefault()
@@ -82,11 +85,6 @@ async function signCSV(csv) {
 
     let gradient = document.querySelector('#gradient').innerText;
     document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
-
-    window.addEventListener("load", () => {
-        viewFlash('#flash ul li')
-        BGanimation()
-    })
 }
 
 function changeHidden() {

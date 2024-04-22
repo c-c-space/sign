@@ -1,16 +1,7 @@
 'use strict'
 
-window.addEventListener("beforeprint", () => {
-  const cover = document.body;
-  cover.style.backgroundSize = '100% 100%';
-  cover.style.animation = 'gradient none';
-}, false)
-
-window.addEventListener("afterprint", () => {
-  BGanimation()
-}, false)
-
 let i = 0;
+
 function viewFlash(elem) {
   let liArr = document.querySelectorAll(elem)
   const speed = document.querySelector('#flash_speed')
@@ -52,3 +43,13 @@ function BGanimation() {
   }
   cover.style.animation = `gradient ${signCount * 5}s ease infinite`;
 }
+
+window.addEventListener("beforeprint", () => {
+  const cover = document.body;
+  cover.style.backgroundSize = '100% 100%';
+  cover.style.animation = 'gradient none';
+}, false)
+
+window.addEventListener("afterprint", () => {
+  BGanimation()
+}, false)

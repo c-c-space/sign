@@ -1,10 +1,5 @@
 'use strict'
 
-window.addEventListener("load", () => {
-  const submitForm = document.querySelector('#submit')
-  submitForm.addEventListener('submit', submitThis)
-})
-
 // localStorage から sign を取得
 let array = JSON.parse(localStorage.getItem("sign")) || [];
 const addData = (timestamp, symbolValue, colorlValue) => {
@@ -35,56 +30,59 @@ const setTime = getHours + ":" + getMinutes + ":" + getSeconds;
 let timestamp = setDate + setWeek + setTime;
 
 // 色と記号を投稿する
-async function submitThis(event) {
-  event.preventDefault()
+window.addEventListener("load", () => {
+  const submitForm = document.querySelector('#submit')
+  submitForm.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-  const symbolAll = document.getElementsByName('symbol')
-  const colorAll = document.getElementsByName("color")
+    const symbolAll = document.getElementsByName('symbol')
+    const colorAll = document.getElementsByName("color")
 
-  let symbolValue
-  for (let i = 0; i < symbolAll.length; i++) {
-    if (symbolAll[i].checked) {
-      symbolValue = symbolAll[i].value
-      break
+    let symbolValue
+    for (let i = 0; i < symbolAll.length; i++) {
+      if (symbolAll[i].checked) {
+        symbolValue = symbolAll[i].value
+        break
+      }
     }
-  }
 
-  let colorlValue
-  for (let i = 0; i < colorAll.length; i++) {
-    if (colorAll[i].checked) {
-      colorlValue = colorAll[i].value
-      break
+    let colorlValue
+    for (let i = 0; i < colorAll.length; i++) {
+      if (colorAll[i].checked) {
+        colorlValue = colorAll[i].value
+        break
+      }
     }
-  }
 
-  let thisSign = {
-    symbol: symbolValue,
-    color: colorlValue,
-    timestamp: timestamp
-  };
+    let thisSign = {
+      symbol: symbolValue,
+      color: colorlValue,
+      timestamp: timestamp
+    };
 
-  // localStorage に sign を追加
-  addData(timestamp, symbolValue, colorlValue)
+    // localStorage に sign を追加
+    addData(timestamp, symbolValue, colorlValue)
 
-  const signJSON = JSON.stringify(thisSign)
-  let url = 'submit.php';
-  let response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: signJSON
-  })
-
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
+    const signJSON = JSON.stringify(thisSign)
+    let url = 'submit.php';
+    let response = fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: signJSON
     })
-    .catch(error => {
-      console.log(error)
-    });
 
-  setTimeout(() => {
-    window.location.replace('/sign/')
-  }, 1000)
-}
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      })
+      .catch(error => {
+        console.log(error)
+      });
+
+    setTimeout(() => {
+      window.location.replace('/sign/')
+    }, 1000)
+  })
+})

@@ -55,7 +55,7 @@
 
             let dirMM = params.get("m").padStart(2, '0')
             let csvDD = params.get("d").padStart(2, '0')
-            signCSV(`${dirMM}/${csvDD}.csv`)
+            signCSV(`${dirMM}/${csvDD}.csv?${Date.now()}`)
 
             document.addEventListener('DOMContentLoaded', () => {
                 const allMonth = document.querySelectorAll('.thisMonth')
@@ -68,7 +68,7 @@
                 })
             }, false)
         } else {
-            signCSV(`${('0' + m).slice(-2)}/${('0' + d).slice(-2)}.csv`)
+            signCSV(`${('0' + m).slice(-2)}/${('0' + d).slice(-2)}.csv?${Date.now()}`)
             document.addEventListener('DOMContentLoaded', () => {
                 const allMonth = document.querySelectorAll('.thisMonth')
                 allMonth.forEach((thisMonth) => {

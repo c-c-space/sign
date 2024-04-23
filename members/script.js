@@ -42,10 +42,8 @@ async function signCSV(csv) {
   document.body.style.backgroundImage = "linear-gradient(0deg, " + gradient + "#fff)";
   document.querySelector('#month').textContent = csv.replace(/.csv/g, '')
 
-  window.addEventListener("load", () => {
-    viewFlash('#flash ul li')
-    BGanimation()
-  })
+  viewFlash('#flash ul li')
+  BGanimation()
 }
 
 let getMonth = {

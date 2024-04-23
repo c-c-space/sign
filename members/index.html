@@ -78,6 +78,8 @@
       filter: invert();
     }
   </style>
+  <script src="../js/flash.js?v=4"></script>
+  <script src="../js/viewall.js?v=4"></script>
   <script src="script.js?v=2"></script>
   <script>
     // ?id=ID
@@ -104,21 +106,19 @@
       </nav>
     </section>
     <nav id="now" class="hidden">
-      <section>
+      <div>
         <button id="month" type="button" onclick="allView()"></button>
         <button id="count" type="button" onclick="flashView()">
           <b></b> の色と記号
         </button>
-      </section>
-      <section id="members">
+      </div>
+      <span>
         <select id="selectMonth" name="month">
           <option disabled selected hidden>Members Only</option>
         </select>
-      </section>
+      </span>
     </nav>
   </main>
-  <script src="../js/flash.js?v=4"></script>
-  <script src="../js/viewall.js?v=4"></script>
 </body>
 
 </html>

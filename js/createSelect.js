@@ -18,7 +18,7 @@ document.addEventListener('readystatechange', event => {
         let selectDate = document.querySelector('#selectDate');
         for (let dd = 1; dd <= 31; dd++) {
             if (dd === d) {
-                selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 月</option>';
+                selectDate.innerHTML += '<option selected value="' + dd + '">' + dd + ' 日</option>';
             } else {
                 selectDate.innerHTML += '<option value="' + dd + '">' + dd + ' 日</option>';
             }
